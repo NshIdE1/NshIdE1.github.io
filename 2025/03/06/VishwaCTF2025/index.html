@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="VishwaCTF2025" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="CTF, RE, WritesUp, Abroad, Unity, NshIdE&#39;s blog" />
+
+
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/default" title="NshIdE's blog" >
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://NshIdE1.github.io/2025/03/06/VishwaCTF2025/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>VishwaCTF2025 - NshIdE&#39;s blog</title>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">NshIdE&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">NshIdE's blog</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      VishwaCTF2025
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2025-03-06
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/VishwaCTF2025/">VishwaCTF2025</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VishwaCTF2025-%E9%83%A8%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">VishwaCTF2025(部分)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hungry-Friends"><span class="toc-number">1.0.1.</span> <span class="toc-text">Hungry Friends</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Safe-Box"><span class="toc-number">1.0.2.</span> <span class="toc-text">Safe Box</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <h1 id="VishwaCTF2025-部分"><a href="#VishwaCTF2025-部分" class="headerlink" title="VishwaCTF2025(部分)"></a>VishwaCTF2025(部分)</h1><h3 id="Hungry-Friends"><a href="#Hungry-Friends" class="headerlink" title="Hungry Friends"></a>Hungry Friends</h3><p>就是一个贪吃蛇游戏，但是运行不了，就算找到了提示所缺的dll，也没用，所以patch没用，只能硬扒代码下来跑，但是一开始解密的数据找不到，然后交叉引用encrypted，就找到了</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250304215107724.png" alt="image-20250304215107724"></p>
+<p>外面显示的是38位，但是进去之后用插件提数据只提到37位qword，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250304215217263.png" alt="image-20250304215217263"></p>
+<p>然后仿写个脚本出</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解密函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">decrypt</span><span class="params">(<span class="type">uint64_t</span> *data, <span class="type">size_t</span> data_size, <span class="type">char</span> *output)</span> &#123;</span><br><span class="line">    <span class="type">uint32_t</span> v13 = <span class="number">0xF96007CB</span>; <span class="comment">// 初始密钥</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; data_size; i++) &#123;</span><br><span class="line">        <span class="type">uint64_t</span> v11 = data[i]; <span class="comment">// 当前数据块</span></span><br><span class="line">        <span class="comment">// 解密逻辑</span></span><br><span class="line">        output[i] = (<span class="type">char</span>)((v11 - (v13 ^ (<span class="number">1337</span> * i))) / <span class="number">0x11</span>);</span><br><span class="line">        <span class="comment">// 更新密钥</span></span><br><span class="line">        v13 ^= (<span class="type">uint32_t</span>)v11; <span class="comment">// 确保 v13 是 32 位</span></span><br><span class="line">    &#125;</span><br><span class="line">    output[data_size] = <span class="string">&#x27;\0&#x27;</span>; <span class="comment">// 字符串结尾</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 示例数据（需要解密的数据块）</span></span><br><span class="line">    <span class="type">uint64_t</span> data[] = &#123;</span><br><span class="line">        <span class="number">0xF9600D81</span>, <span class="number">0x166C</span>, <span class="number">0x1DF7</span>, <span class="number">0x1562</span>, </span><br><span class="line">        <span class="number">0x083E</span>, <span class="number">0x0D01</span>, <span class="number">0x134D</span>, <span class="number">0x2BE2</span>, </span><br><span class="line">        <span class="number">0x0591</span>, <span class="number">0x0BDE</span>, <span class="number">0x1B0A</span>, <span class="number">0x0BFD</span>, </span><br><span class="line">        <span class="number">0x0C9A</span>, <span class="number">0x8076</span>, <span class="number">0xF5CC</span>, <span class="number">0x073B</span>, </span><br><span class="line">        <span class="number">0x1D84</span>, <span class="number">0x145F</span>, <span class="number">0x21BC</span>, <span class="number">0x092B</span>, </span><br><span class="line">        <span class="number">0x043D</span>, <span class="number">0x08AA</span>, <span class="number">0x1A31</span>, <span class="number">0x0D90</span>, </span><br><span class="line">        <span class="number">0x1205</span>, <span class="number">0xE6F3</span>, <span class="number">0x0715</span>, <span class="number">0x138B</span>, </span><br><span class="line">        <span class="number">0x08DA</span>, <span class="number">0x1369</span>, <span class="number">0x1ADE</span>, <span class="number">0x368C</span>, </span><br><span class="line">        <span class="number">0x0AE5</span>, <span class="number">0x05FF</span>, <span class="number">0x22C0</span>, <span class="number">0x46B0</span>, </span><br><span class="line">        <span class="number">0x79C1</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="type">size_t</span> data_size = <span class="keyword">sizeof</span>(data) / <span class="keyword">sizeof</span>(data[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 分配输出缓冲区</span></span><br><span class="line">    <span class="type">char</span> *output = (<span class="type">char</span> *)<span class="built_in">malloc</span>(data_size + <span class="number">1</span>); <span class="comment">// +1 用于字符串结尾</span></span><br><span class="line">    <span class="keyword">if</span> (!output) &#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Failed to allocate memory\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用解密函数</span></span><br><span class="line">    decrypt(data, data_size, output);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出解密结果</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Decrypted string: %s\n&quot;</span>, output);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 释放内存</span></span><br><span class="line">    <span class="built_in">free</span>(output);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>补个   }</p>
+<p><strong>VishwaCTF{th3r3_4r3_5n4k35_all_4r0und}</strong></p>
+<hr>
+<h3 id="Safe-Box"><a href="#Safe-Box" class="headerlink" title="Safe Box"></a>Safe Box</h3><p>一道unity，题目名字也很形象了，就是一个保险箱，输入正确的密码就能开箱，然后里面就是flag</p>
+<p>dnSpy打开，发现有混淆，但其实可以用de4dot进行去混淆，然后逻辑就很清晰了</p>
+<p>这里就是check，并且还限制了输入密码的次数</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// Token: 0x0600000F RID: 15 RVA: 0x00002654 File Offset: 0x00000854</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method_2</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>.int_4 &gt;= <span class="number">3</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">this</span>.d.text = <span class="string">&quot;Too Many Wrong Passwords&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">string</span> b = <span class="keyword">this</span>.method_28(<span class="keyword">new</span> <span class="built_in">string</span>[]</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="string">&quot;ENTER PASSWORD: &quot;</span>,</span><br><span class="line">		<span class="keyword">this</span>.method_17(<span class="keyword">this</span>.int_0, <span class="number">1</span>).ToString(),</span><br><span class="line">		<span class="keyword">this</span>.method_18(<span class="keyword">this</span>.int_0, <span class="keyword">this</span>.int_2).ToString(),</span><br><span class="line">		<span class="keyword">this</span>.method_20(<span class="keyword">this</span>.int_0, <span class="keyword">this</span>.method_19(<span class="keyword">this</span>.int_3, <span class="number">1</span>)).ToString(),</span><br><span class="line">		<span class="keyword">this</span>.method_18(<span class="keyword">this</span>.method_17(<span class="keyword">this</span>.method_21(<span class="keyword">this</span>.int_1, <span class="number">2</span>), <span class="keyword">this</span>.method_21(<span class="keyword">this</span>.int_2, <span class="number">2</span>)), <span class="keyword">this</span>.method_19(<span class="keyword">this</span>.int_3, <span class="number">5</span>)).ToString(),</span><br><span class="line">		<span class="keyword">this</span>.method_22(<span class="keyword">this</span>.int_1, <span class="keyword">this</span>.method_21(<span class="keyword">this</span>.int_0, <span class="number">2</span>)).ToString()</span><br><span class="line">	&#125;);</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>.d.text == b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">this</span>.float_0 = <span class="number">1f</span>;</span><br><span class="line">		I0.J();</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.d.color = Color.red;</span><br><span class="line">	<span class="keyword">this</span>.d.text = <span class="string">&quot;Wrong&quot;</span>;</span><br><span class="line">	<span class="keyword">this</span>.K0();</span><br><span class="line">	Debug.Log(<span class="keyword">this</span>.int_4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是在这里直接改if语句并不能起到很好的效果，但是我们在找Assembly-CSharp.dll的时候看到了Mono.Security.dll，mono的通用套路就是<strong>使用dnspy 分析代码+修改IL指令字节码</strong>，然后我们找到重载的这个类</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250305104332037.png" alt="image-20250305104332037"></p>
+<p>完了进行il语句修改，就修改为和下面这个类一样，不等就好</p>
+<p>把</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250305104415341.png" alt="image-20250305104415341"></p>
+<p>修改为</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/d38cf3518ea2e839eb6d44ef5c30e20d.png" alt="d38cf3518ea2e839eb6d44ef5c30e20d"></p>
+<p>然后保存，运行程序，随便数一个数字就开箱了</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250305104519129.png" alt="image-20250305104519129"></p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>Author: </span>
+    <a href="https://NshIdE1.github.io">NshIdE</a>
+  </p>
+  <p class="copyright-item">
+    <span>Link: </span>
+    <a href="https://nshide1.github.io/2025/03/06/VishwaCTF2025/">https://nshide1.github.io/2025/03/06/VishwaCTF2025/</a>
+  </p>
+  <p class="copyright-item">
+    <span>License: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/CTF/">CTF</a>
+      
+      <a href="/tags/RE/">RE</a>
+      
+      <a href="/tags/WritesUp/">WritesUp</a>
+      
+      <a href="/tags/Abroad/">Abroad</a>
+      
+      <a href="/tags/Unity/">Unity</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2025/03/11/TPCTF%202025/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">TPCTF 2025</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2025/03/03/HGAME%20RE/">  
+        <span class="next-text nav-default">HGAME-RE-WEEK1</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:1621925986@qq.com" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://www.zhihu.com/" class="iconfont icon-weibo" title="weibo"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+  <span class="division">|</span>
+  <span class="hosting-info">
+    footer.hosting
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">NshIdE</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>
