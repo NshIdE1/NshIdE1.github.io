@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Frida入门 | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Android , Frida ">
+  <meta name="description" content="Frida入门 | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:1621925986@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(22)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(13)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(6)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="22">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Frida入门" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Frida入门</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Frida入门">Frida入门</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Android</a>
+            
+            <a class="color1">Frida</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-04-14 18:47:37'>2025-04-14 18:47</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Frida%E5%85%A5%E9%97%A8"><span class="toc-text">Frida入门</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80-Frida%E7%9A%84%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="toc-text">一.Frida的相关链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C-%E5%AE%89%E5%8D%93%E8%84%B1%E5%A3%B3%E2%80%93Xposed-%E5%8F%8D%E5%B0%84%E5%A4%A7%E5%B8%88"><span class="toc-text">二.安卓脱壳–Xposed&amp;反射大师</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89-Frida-%E7%94%A8%E6%B3%95%EF%BC%881%EF%BC%89-js%E8%84%9A%E6%9C%AChook%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-text">三.Frida 用法（1）.js脚本hook一个方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%9B-Frida-%E7%94%A8%E6%B3%95%EF%BC%882%EF%BC%89-js%E8%84%9A%E6%9C%AChook%E4%B8%80%E4%B8%AA%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-text">四.Frida 用法（2） .js脚本hook一个静态方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%94-Frida-%E7%94%A8%E6%B3%95%EF%BC%883%EF%BC%89-js%E8%84%9A%E6%9C%AC%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC"><span class="toc-text">五.Frida 用法（3）.js脚本更改变量的值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%AD-Frida-%E7%94%A8%E6%B3%95%EF%BC%884%EF%BC%89-js%E8%84%9A%E6%9C%AC%E5%88%9B%E5%BB%BA%E7%B1%BB%E5%AE%9E%E4%BE%8B"><span class="toc-text">六. Frida 用法（4）.js脚本创建类实例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%83-Frida-%E7%94%A8%E6%B3%95%EF%BC%885%EF%BC%89-js%E8%84%9A%E6%9C%AC%E5%9C%A8%E7%8E%B0%E6%9C%89%E5%AE%9E%E4%BE%8B%E4%B8%8A%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">七.Frida 用法（5） .js脚本在现有实例上调用方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%AB-Frida%E7%94%A8%E6%B3%95%EF%BC%886%EF%BC%89-js%E8%84%9A%E6%9C%AC-%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1%E5%8F%82%E6%95%B0%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">八.Frida用法（6） .js脚本 使用对象参数调用的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B9%9D-Frida%E7%94%A8%E6%B3%95%EF%BC%887%EF%BC%89-js%E8%84%9A%E6%9C%AC-Hook%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">九.Frida用法（7） .js脚本 Hook构造函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%81-Frida%E7%94%A8%E6%B3%95%EF%BC%888%EF%BC%89-js%E8%84%9A%E6%9C%AC-Hook-native%E5%87%BD%E6%95%B0"><span class="toc-text">十.Frida用法（8） .js脚本 Hook native函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%81%E4%B8%80-Frida%E7%94%A8%E6%B3%95%EF%BC%889%EF%BC%89-js%E8%84%9A%E6%9C%AC-%E6%9B%B4%E6%94%B9native%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">十一.Frida用法（9）.js脚本 更改native函数的返回值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C-Frida%E7%94%A8%E6%B3%95%EF%BC%8810%EF%BC%89-js%E8%84%9A%E6%9C%AC%E8%B0%83%E7%94%A8native%E5%87%BD%E6%95%B0"><span class="toc-text">十二.Frida用法（10） .js脚本调用native函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%81%E4%B8%89-Frida%E7%94%A8%E6%B3%95%EF%BC%8811%EF%BC%89-js%E8%84%9A%E6%9C%AC-%E4%BD%BF%E7%94%A8ARM64Writer%E4%BF%AE%E6%94%B9%E6%8C%87%E4%BB%A4"><span class="toc-text">十三.Frida用法（11） .js脚本 使用ARM64Writer修改指令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B-Android-JAVA%E5%B1%82root%E6%A3%80%E6%B5%8B%E7%BB%95%E8%BF%87"><span class="toc-text">十四.Android JAVA层root检测绕过</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Frida入门"><a href="#Frida入门" class="headerlink" title="Frida入门"></a>Frida入门</h1><h5 id="一-Frida的相关链接"><a href="#一-Frida的相关链接" class="headerlink" title="一.Frida的相关链接"></a>一.Frida的相关链接</h5><p>1.Frida server下载：<a target="_blank" rel="noopener" href="https://github.com/frida/frida/releases?page=2">Releases · frida&#x2F;frida (github.com)</a></p>
+<p>2.Frida例题：<a target="_blank" rel="noopener" href="https://github.com/DERE-ad2001/Frida-Labs">DERE-ad2001&#x2F;Frida-Labs: The repo contains a series of challenges for learning Frida for Android Exploitation. (github.com)</a></p>
+<p><strong>相关指令：</strong></p>
+<p>1.adb version ：显示 adb 版本</p>
+<p>2.adb help：帮助信息，查看adb所支持的所有命令</p>
+<p>3.adb devices：查看当前连接的设备，已连接的设备会显示出来</p>
+<p>4.adb get-serialno：也可以查看设备号</p>
+<p>5.adb root：获取Android管理员（root用户）的权限</p>
+<p>6.adb shell：登录设备 shell，该命令将登录设备的shell（内核），登录shell后，可以使用 cd，ls，rm 等Linux命令</p>
+<p>7.adb -d：如果同时连了usb，又开了模拟器，连接当前唯一通过usb连接的安卓设备</p>
+<p>8.adb -e shell：指定当前连接此电脑的唯一的一个模拟器</p>
+<p>9.adb -s &lt;设备号&gt; shell：当电脑插多台手机或模拟器时，指定一个设备号进行连接</p>
+<p>10.exit：退出</p>
+<p>11.adb kill-server：杀死当前adb服务，如果连不上设备时，杀掉重启。（没事不要用它）</p>
+<p>12.adb start-server：杀掉后重启</p>
+<p>13.adb shell pm list packages：列出当前设备&#x2F;手机，所有的包名</p>
+<p>14.adb shell pm list packages -f：显示包和包相关联的文件(安装路径)</p>
+<p>15.adb shell pm list packages -d：显示禁用的包名<br>16.adb shell pm list packages -e：显示当前启用的包名<br>17.adb shell pm list packages -s：显示系统应用包名<br>18.adb shell pm list packages -3：显示已安装第三方的包名<br>19.adb shell pm list packages xxxx：加需要过滤的包名，如：xxx &#x3D; taobao<br>20.adb install &lt;文件路径\apk&gt;：将本地的apk软件安装到设备(手机)上。如手机外部安装需要密码，        记得手机输入密码。   </p>
+<p>21.adb install -r &lt;文件路径\apk&gt;：覆盖安装</p>
+<p>22.adb install -d &lt;文件路径\apk&gt;：允许降级覆盖安装<br>23.adb install -g &lt;文件路径\apk&gt;：授权&#x2F;获取权限，安装软件时把所有权限都打开<br>24.adb uninstall &lt;包名&gt;：卸载该软件&#x2F;app。<br>      注意：安装时安装的是apk，卸载时是包名，可以通过 adb shell pm list packages 查看需要卸载的包名。<br>25.adb shell pm uninstall -k &lt;包名&gt;：虽然把此应用卸载，但仍保存此应用的数据和缓存<br>26.adb shell am force-stop &lt;包名&gt;：强制退出该应用&#x2F;app</p>
+<p>27.adb push &lt;本地路径\文件或文件夹&gt; &lt;手机端路径&gt;：把本地(pc机)的文件或文件夹复制到设备(手 机)</p>
+<p>注意点1：pc机路径与Android机路径，分隔符是不同的。</p>
+<p>注意点2：复制失败，大概率是无权限。可先使用上面介绍过的两个命令：adb root；adb remount。在使用 adb push 命令</p>
+<p>**adb pull &lt;手机端路径&#x2F;文件或文件夹&gt; &lt;pc机路径&gt;：把设备(手机)的文件或文件夹复制到本地。**注意点同上</p>
+<p>28.更多：</p>
+<p>adb shell logcat -c：清理现有日志<br>adb shell logcat -v time ：输出日志，信息输出在控制台<br>adb shell logcat -v time &gt; &lt;存放路径\log.txt&gt;：输出日志并保存在本地文件<br>Ctrl+C：终止日志抓取<br>adb shell logcat -v time *:E &gt; &lt;存放路径\log.txt&gt;：打印级别为Error的信息<br>日志的等级：<br>-v：Verbse（明细）<br>-d：Debug（调试）<br>-i：Info（信息）<br>-w：Warn（警告）<br>-e：Error（错误）<br>-f：Fatal（严重错误）<br>抓取日志的步骤先输入命令启动日志，然后操作 App，复现 bug，再 ctrl+c 停止日志，分析本地保存的文件。<br>：日志是记录手机系统在运行app时有什么异常的事件<br>EXCEPTION<br>也可以把更详细得Anr日志拉取出来：adb shell pull &#x2F;data&#x2F;anr&#x2F;traces.txt &lt;存放路径&gt;</p>
+<p><strong>adb shell getprop ro.product.model：获取设备型号</strong></p>
+<p><strong>adb shell getprop ro.build.version.release：获取Android系统版本</strong></p>
+<p><strong>adb get-serialno：获取设备的序列号（设备号）</strong></p>
+<p><strong>adb shell wm size：获取设备屏幕分辨率</strong></p>
+<p><strong>adb shell screencap -p &#x2F;sdcard&#x2F;mms.png：屏幕截图<br>adb shell screencap -p &#x2F;sdcard&#x2F;screenshot.png：屏幕截图</strong></p>
+<p><strong>adb pull &#x2F;sdcard&#x2F;mms.png &lt;存放的路径&gt;：将截图导出到本地<br>adb pull &#x2F;sdcard&#x2F;screenshot.png &lt;存放的路径&gt;：将截图导出到本地</strong></p>
+<p><strong>adb shell dumpsys activity |find “mResumedActivity”：查看前台应用包名，必须先启动app，适用于Android 8.0以上</strong></p>
+<p><strong>adb shell cat &#x2F;proc&#x2F;meminfo：获取手机内存信息</strong></p>
+<p><strong>adb shell df：获取手机存储信息</strong></p>
+<p><strong>adb shell screenrecord &lt;存放路径&#x2F;xxx.mp4&gt;：录屏，命名以.mp4结尾<br>adb shell screenrecord –time-limit 10 &lt;存放路径&#x2F;xxx.mp4&gt;：录屏时间为10秒</strong></p>
+<hr>
+<h5 id="二-安卓脱壳–Xposed-反射大师"><a href="#二-安卓脱壳–Xposed-反射大师" class="headerlink" title="二.安卓脱壳–Xposed&amp;反射大师"></a>二.安卓脱壳–Xposed&amp;反射大师</h5><p>例题：[XYCTF]Trust me</p>
+<p><strong>1.分辨是否加壳</strong></p>
+<p>用jadx打开，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/f2f181ff-9b1d-4381-a3a2-51da7e72f5cd.png" alt="f2f181ff-9b1d-4381-a3a2-51da7e72f5cd"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/08d77483-4d7f-4a79-a46e-1997406c9bfe.png" alt="08d77483-4d7f-4a79-a46e-1997406c9bfe"></p>
+<p>可以看到两个包名不是同一个，也就是说真正的程序入口和jadx反编译出来的不一样，说明可能加壳了，同时还有不少安卓第一代壳的特征，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/498ee0a5-3841-49b5-a312-8a6f78c4f076.png" alt="498ee0a5-3841-49b5-a312-8a6f78c4f076"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/a3010d65-ac47-4c92-87b6-064828defcdd.png" alt="a3010d65-ac47-4c92-87b6-064828defcdd"></p>
+<p>那么这里我们可以用Xposed&amp;反射大师来脱壳，具体安装这里不做过多说明，网上有。我这里用的<strong>夜神模拟器</strong>，<strong>Xposed</strong>，<strong>反射大师</strong>。</p>
+<p>在模拟器上打开反射大师，点击我们需要脱壳的app，然后点击选择这个软件</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/01eaa759-4c60-4920-ad43-1e90d3529783.png" alt="01eaa759-4c60-4920-ad43-1e90d3529783"></p>
+<p>然后点击，打开</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/39db2c26-8297-44b2-ba57-93c9b812cffc.png" alt="39db2c26-8297-44b2-ba57-93c9b812cffc"></p>
+<p>可以看到软件页面中心有个红色六芒星</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/44a5cd61-c8ac-45e7-b856-b2f1b4feaecc.png" alt="44a5cd61-c8ac-45e7-b856-b2f1b4feaecc"></p>
+<p>点击六芒星，可以看到</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/a45c7382-94f6-4784-a3f7-f8651b42e3d7.png" alt="a45c7382-94f6-4784-a3f7-f8651b42e3d7"></p>
+<p>再点击当前ACTIVITY</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/205988b5-9415-4caa-9415-5175e8d3e1f4.png" alt="205988b5-9415-4caa-9415-5175e8d3e1f4"></p>
+<p>长按写出DEX，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/bbaf31a4-2198-42ec-b173-0b2a96e86b7a.png" alt="bbaf31a4-2198-42ec-b173-0b2a96e86b7a"></p>
+<p>点击确定，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/aca4393d-5e0b-4b33-9f8c-8da436036d8d.png" alt="aca4393d-5e0b-4b33-9f8c-8da436036d8d"></p>
+<p>然后点击复制，方便后续pull</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/8d8a410d-8a05-4314-ad89-cb4492500104.png" alt="8d8a410d-8a05-4314-ad89-cb4492500104"></p>
+<p>这里pull出来的文件就是在我们cmd的路径，文件名就叫dump</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/379bc70f-d5e5-4841-9100-5c2b865bfc85.png" alt="379bc70f-d5e5-4841-9100-5c2b865bfc85"></p>
+<p>里面的class.dex就是dump下来的文件，用jadx就可以继续分析了。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/0d64aed0-449e-436a-a3c2-7426b63cc7a9.png" alt="0d64aed0-449e-436a-a3c2-7426b63cc7a9"></p>
+<p>这就是真正正确的app入口，函数整体逻辑就是对数据库的加密，可以用spl注入的万能钥匙，直接秒了，或者就是正在逆向分析，可以找到数据文件，进行异或，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/3a0e97a5-4d3b-4219-a08d-017b117c9e87.png" alt="3a0e97a5-4d3b-4219-a08d-017b117c9e87"></p>
+<p>就是异或0xFF，这里这个数据库不能用jadx打开，会卡死，可以改文件后缀名，然后找到文件，用010editor打开，进行异或，就可以找到flag。</p>
+<hr>
+<h5 id="三-Frida-用法（1）-js脚本hook一个方法"><a href="#三-Frida-用法（1）-js脚本hook一个方法" class="headerlink" title="三.Frida 用法（1）.js脚本hook一个方法"></a>三.Frida 用法（1）.js脚本hook一个方法</h5><p>1.工具：1.jadx—-用于进行静态分析，也可以进行动态调试（JEB似乎更好）。 </p>
+<p>雷神模拟器 9（Android 9）—-原本自带的adb.exe好像有问题，建议另行自找。（需要root）</p>
+<p>Frida   Frida server</p>
+<p>例题：Frida 0x1</p>
+<p>2.拿到附件，一个.apk文件，我们可以先用MT管理器看看APP入口<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721640027318.png" title="" alt="1721640027318" data-align="left"></p>
+<p>找到了之后，就可以用jadx打开，先静态分析看看逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0x1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.text.TextUtils;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.EditText;</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    TextView t1;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle bundle)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(bundle);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="keyword">final</span> <span class="type">EditText</span> <span class="variable">editText</span> <span class="operator">=</span> (EditText) findViewById(R.id.editTextTextPassword);</span><br><span class="line">        <span class="built_in">this</span>.t1 = (TextView) findViewById(R.id.textview1);</span><br><span class="line">        <span class="keyword">final</span> <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> get_random();</span><br><span class="line">        ((Button) findViewById(R.id.button)).setOnClickListener(<span class="keyword">new</span> <span class="title class_">View</span>.OnClickListener() &#123; <span class="comment">// from class: com.ad2001.frida0x1.MainActivity.1</span></span><br><span class="line">            <span class="meta">@Override</span> <span class="comment">// android.view.View.OnClickListener</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View view)</span> &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">obj</span> <span class="operator">=</span> editText.getText().toString();</span><br><span class="line">                <span class="keyword">if</span> (TextUtils.isDigitsOnly(obj)) &#123;</span><br><span class="line">                    MainActivity.<span class="built_in">this</span>.check(i, Integer.parseInt(obj));</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;Enter a valid number !!&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="title function_">get_random</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Random</span>().nextInt(<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">check</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> i2)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> ((i * <span class="number">2</span>) + <span class="number">4</span> == i2) &#123;</span><br><span class="line">            Toast.makeText(getApplicationContext(), <span class="string">&quot;Yey you guessed it right&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">            <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i3</span> <span class="operator">=</span> <span class="number">0</span>; i3 &lt; <span class="number">20</span>; i3++) &#123;</span><br><span class="line">                <span class="type">char</span> <span class="variable">charAt</span> <span class="operator">=</span> <span class="string">&quot;AMDYV&#123;WVWT_CJJF_0s1&#125;&quot;</span>.charAt(i3);</span><br><span class="line">                <span class="keyword">if</span> (charAt &lt; <span class="string">&#x27;a&#x27;</span> || charAt &gt; <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (charAt &gt;= <span class="string">&#x27;A&#x27;</span>) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (charAt &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">                            charAt = (<span class="type">char</span>) (charAt - <span class="number">21</span>);</span><br><span class="line">                            <span class="keyword">if</span> (charAt &gt;= <span class="string">&#x27;A&#x27;</span>) &#123;</span><br><span class="line">                            &#125;</span><br><span class="line">                            charAt = (<span class="type">char</span>) (charAt + <span class="number">26</span>);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    sb.append(charAt);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    charAt = (<span class="type">char</span>) (charAt - <span class="number">21</span>);</span><br><span class="line">                    <span class="keyword">if</span> (charAt &gt;= <span class="string">&#x27;a&#x27;</span>) &#123;</span><br><span class="line">                        sb.append(charAt);</span><br><span class="line">                    &#125;</span><br><span class="line">                    charAt = (<span class="type">char</span>) (charAt + <span class="number">26</span>);</span><br><span class="line">                    sb.append(charAt);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">this</span>.t1.setText(sb.toString());</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Toast.makeText(getApplicationContext(), <span class="string">&quot;Try again&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        可以看到，APP中位于<strong>com.ad2001.frida0x1</strong>包<strong>MainActivity</strong>类的onCreate方法在程序初始化时会调用get_random()<strong>方法生成一个介于0到100之间的随机数并赋值给变量i。同时，监听</strong>button<strong>的点击，当按下按钮后，程序首先判断输入的内容是不是数字，如果是数字就将其从string转化为int，并将该整数与生成的随机数一起传递给</strong>check<strong>方法。接下来，继续分析</strong>check**方法实现了哪些功能。 </p>
+<p>​         <strong>check</strong>方法被传入了两个参数，一个是我们在APP页面输入后提交的的数字i2，一个是程序启动时调用get_random方法生成的<strong>随机数</strong>i。该方法会检查表达式**(i * 2) + 4 &#x3D;&#x3D; i2)**是否成立，如果成立则将正确的flag输出到绑定的textView控件上，反之则会提示“Try again”。 </p>
+<p>​        当然，这个题其实是可以直接逆的，写脚本爆破，但是为了学习frida的用法，我们使用frida来hook出每次程序运行时所生成的随机数i是多少，然后我们再将正确答案输入，便可得到正确flag。</p>
+<p>​         PS：因为使用frida进行hook，也是属于动态调.apk文件，所以我们得在aok文件的AndroidMainfestxml清单里查看application中是否有可调式的属性，如果没有得自行加入。<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721640598097.png" title="" alt="1721640598097" data-align="left"></p>
+<p>然后就可以开始使用frida进行hook了。</p>
+<p>3.具体操作</p>
+<p>首先先查看adb的连接是否有问题，在终端输入<strong>adb devices</strong><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721640935229.png" title="" alt="1721640935229" data-align="left"></p>
+<p>然后输入<strong>adb shell</strong>进入手机，接着输入<strong>su</strong>进入超级管理，再输入<strong>cd &#x2F;data&#x2F;local&#x2F;tmp</strong>进入相应目录（网上大部分都是将frida server存入此文件夹。（<strong>注</strong>：frida和frida server版本需一致，同时frida server的类型需与虚拟机（手机）的架构一直，可用指令<strong>adb shell getprop ro.product.cpu.abi</strong>查看具体信息）。进入目录之后，可以看看文件夹里是否有frida server这个文件，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721641241680.png" title="" alt="1721641241680" data-align="left"></p>
+<p>然后修改文件权限<strong>chmod 755 frida-server-16.2\ .1-android-x86_64</strong>，紧接着就可以运行了。然后，我另外再打开一个终端窗口，分别输入<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721641449576.png" alt="1721641449576"></p>
+<p><strong>adb forward tcp:27042 tcp:27042</strong><br><strong>adb forward tcp:27043 tcp:27043</strong>  进行端口转发监听</p>
+<p>最后输入<strong>frida-ps -U</strong>或者<strong>frida-ps -R</strong>看看能否成功输出进程列表，检查frida能否正常使用，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721641646506.png" alt="1721641646506"></p>
+<p>我们还需编写脚本</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用Java.perform函数创建一个特殊的Java上下文，用于执行挂钩和Java类操作</span></span><br><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;                                               </span><br><span class="line">    <span class="comment">// 获取应用程序中com.ad2001.frida0x1.MainActivity类的引用</span></span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">MainActivity</span> = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.ad2001.frida0x1.MainActivity&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 重写MainActivity类的get_random方法的实现</span></span><br><span class="line">    <span class="title class_">MainActivity</span>.<span class="property">get_random</span>.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 当get_random方法被调用时，输出一条日志信息</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;MainActivity.get_random is called&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用原始的get_random方法并获取其返回值</span></span><br><span class="line">        <span class="keyword">var</span> ret_val = <span class="variable language_">this</span>.<span class="title function_">get_random</span>();                                </span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出get_random方法的返回结果</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;MainActivity.get_random result is &quot;</span> + ret_val);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回原始方法的返回值</span></span><br><span class="line">        <span class="keyword">return</span> ret_val;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>保存好，然后我们使用<strong>frida -U -f com.ad2001.frida0x1 -l test.js</strong>(test.js是脚本的绝对路径)<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721642126293.png" alt="1721642126293"></p>
+<p>再在jadx中点击运行，就可以看到输出了此次app运行时生成的随机数是多少，再计算 (74 * 2) + 4 &#x3D; 152，输入，就可得到flag</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1721642239103.png" alt="1721642239103"></p>
+<p>这就是利用frida hook一个方法的完整过程。</p>
+<p>对应附件：Frida 0X1_1.apk</p>
+<p><strong>总结</strong>：Frida Hook方法的脚本模板：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123; </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> &lt;class_reference&gt; = <span class="title class_">Java</span>.<span class="title function_">use</span>(“&lt;package_name&gt;.&lt;<span class="keyword">class</span>&gt;”); </span><br><span class="line"></span><br><span class="line">&lt;class_reference&gt;.&lt;method_to_hook&gt;.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params">&lt;args&gt;</span>) &#123; </span><br><span class="line"></span><br><span class="line">     <span class="comment">/* </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       我们自己的方法实现 </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">     */</span> </span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<h5 id="四-Frida-用法（2）-js脚本hook一个静态方法"><a href="#四-Frida-用法（2）-js脚本hook一个静态方法" class="headerlink" title="四.Frida 用法（2） .js脚本hook一个静态方法"></a>四.Frida 用法（2） .js脚本hook一个静态方法</h5><p>1.工具：还是那几样东西。</p>
+<p>2.例题：Frida 0x2</p>
+<p>3.分析：</p>
+<p>拿到附件apk文件，先安装到雷电9里运行一下，</p>
+<p>没有输入，就是很直白，hook。那么接下来我们用jadx反编译为java看看静态逻辑。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0x2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.util.Base64;</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.Cipher;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.spec.IvParameterSpec;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes3.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> TextView t1;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        t1 = (TextView) findViewById(R.id.textview);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">get_flag</span><span class="params">(<span class="type">int</span> a)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (a == <span class="number">4919</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="type">SecretKeySpec</span> <span class="variable">secretKeySpec</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SecretKeySpec</span>(<span class="string">&quot;HILLBILLWILLBINN&quot;</span>.getBytes(), <span class="string">&quot;AES&quot;</span>);</span><br><span class="line">                <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;AES/CBC/PKCS5Padding&quot;</span>);</span><br><span class="line">                <span class="type">IvParameterSpec</span> <span class="variable">iv</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">IvParameterSpec</span>(<span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">16</span>]);</span><br><span class="line">                cipher.init(<span class="number">2</span>, secretKeySpec, iv);</span><br><span class="line">                <span class="type">byte</span>[] decryptedBytes = cipher.doFinal(Base64.decode(<span class="string">&quot;q7mBQegjhpfIAr0OgfLvH0t/D0Xi0ieG0vd+8ZVW+b4=&quot;</span>, <span class="number">0</span>));</span><br><span class="line">                <span class="type">String</span> <span class="variable">decryptedText</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(decryptedBytes);</span><br><span class="line">                t1.setText(decryptedText);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>逻辑很简单，有一个静态方法<strong>get_flag</strong>，比较一个参数a是不是4919，是的话就会解密输出flag，一个AES加密，但是，这里没有任何方法会调用这个静态方法，那么我们就可以利用frida编写脚本调用这个静态方法，并且将参数a的值改为正确的，那么就可以输出flag。使用frida的前期工作和例题一一样，但是因为这是静态方法，如果使用指令<strong>frida -U -f 包名 -l 脚本</strong>会出现hook不上的情况，所以我们可以先运行程序，然后使用指令<strong>frida -U ‘Frida 0x2’ -l .\Hook.js</strong>，就可以输出flag了。</p>
+<p>脚本：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明了一个变量a来表示目标Android应用程序中的Java类。</span></span><br><span class="line">    <span class="comment">// Java.use函数指定要使用com.ad2001.frida0x2包中的MainActivity类。</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.ad2001.frida0x2.MainActivity&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用get_flag方法并传入参数4919</span></span><br><span class="line">    a.<span class="title function_">get_flag</span>(<span class="number">4919</span>);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行脚本：</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/bf377131-0114-495d-9e73-890184a88bf5.png" alt="bf377131-0114-495d-9e73-890184a88bf5"></p>
+<p>得到flag</p>
+<p><strong>总结</strong>：Frida 调用静态方法的脚本模板：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>)&#123; </span><br><span class="line"></span><br><span class="line">     <span class="keyword">var</span> &lt;class_reference&gt; = <span class="title class_">Java</span>.<span class="title function_">use</span>(“&lt;package_name&gt;.&lt;<span class="keyword">class</span>&gt;”); </span><br><span class="line"></span><br><span class="line">     a.<span class="keyword">function</span>(<span class="params">val</span>); <span class="comment">// 需要调用的方法名称 </span></span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<h5 id="五-Frida-用法（3）-js脚本更改变量的值"><a href="#五-Frida-用法（3）-js脚本更改变量的值" class="headerlink" title="五.Frida 用法（3）.js脚本更改变量的值"></a>五.Frida 用法（3）.js脚本更改变量的值</h5><p>1.拿到附件apk文件，依旧先安装到雷电模拟器上运行一下看看回显，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/592dae50-4a8b-4703-a6f8-ae27fc3af21f.png" alt="592dae50-4a8b-4703-a6f8-ae27fc3af21f"></p>
+<p>框框一顿点没什么用，那么就开始用jadx静态分析一波吧，看看函数逻辑，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0x3;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> java.nio.charset.Charset;</span><br><span class="line"><span class="keyword">import</span> java.security.InvalidKeyException;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"><span class="keyword">import</span> java.util.Base64;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.BadPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.Cipher;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.IllegalBlockSizeException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.NoSuchPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes3.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    TextView t1;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="type">Button</span> <span class="variable">btn</span> <span class="operator">=</span> (Button) findViewById(R.id.button);</span><br><span class="line">        <span class="built_in">this</span>.t1 = (TextView) findViewById(R.id.textView);</span><br><span class="line">        btn.setOnClickListener(<span class="keyword">new</span> <span class="title class_">View</span>.OnClickListener() &#123; <span class="comment">// from class: com.ad2001.frida0x3.MainActivity.1</span></span><br><span class="line">            <span class="meta">@Override</span> <span class="comment">// android.view.View.OnClickListener</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View v)</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (Checker.code == <span class="number">512</span>) &#123;</span><br><span class="line">                    <span class="type">byte</span>[] bArr = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">0</span>];</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;YOU WON!!!&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">                    <span class="type">byte</span>[] KeyData = <span class="string">&quot;glass123&quot;</span>.getBytes();</span><br><span class="line">                    <span class="type">SecretKeySpec</span> <span class="variable">KS</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SecretKeySpec</span>(KeyData, <span class="string">&quot;Blowfish&quot;</span>);</span><br><span class="line">                    <span class="type">byte</span>[] ecryptedtexttobytes = Base64.getDecoder().decode(<span class="string">&quot;MKxsZsY9Usw3ozXKKzTF0ymIaC8rs0AY74GnaKqkUrk=&quot;</span>);</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;Blowfish&quot;</span>);</span><br><span class="line">                        cipher.init(<span class="number">2</span>, KS);</span><br><span class="line">                        <span class="type">byte</span>[] decrypted = cipher.doFinal(ecryptedtexttobytes);</span><br><span class="line">                        <span class="type">String</span> <span class="variable">decryptedString</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(decrypted, Charset.forName(<span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line">                        MainActivity.<span class="built_in">this</span>.t1.setText(decryptedString);</span><br><span class="line">                        <span class="keyword">return</span>;</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InvalidKeyException e) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e2) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e2);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (BadPaddingException e3) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e3);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (IllegalBlockSizeException e4) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e4);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (NoSuchPaddingException e5) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e5);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;TRY AGAIN&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>逻辑还是很清晰的，就是<strong>com.ad2001.frida0x3</strong>包的<strong>Checker</strong>类中检查参数code的值是否是512，是的话就会输出flag，再来看看<strong>Checker</strong>类的逻辑，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/b84316aa-77aa-4e8b-9af1-a0c7c1c42edf.png" alt="b84316aa-77aa-4e8b-9af1-a0c7c1c42edf"></p>
+<p>        有个<strong>increase</strong>方法，主函数中有个检测按钮的点击次数，点一次就加2，那么这个题要解出来的话，要么点256次，要么直接解密，但似乎加密的逻辑不是很清晰，再一个方法就是用frida修改code的值，直接改为512，这样一来就可以直接输出flag了。</p>
+<p><strong>脚本</strong>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*** </span></span><br><span class="line"><span class="comment"> * Java.perform 是Frida中的一个函数，用于为脚本创建特殊上下文，</span></span><br><span class="line"><span class="comment"> * 进入此上下文后，可以执行挂钩方法或访问Java类等操作来控制或观察应用程序的行为。</span></span><br><span class="line"><span class="comment"> **/</span> </span><br><span class="line"></span><br><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明了一个变量a来表示目标Android应用程序中的Java类。</span></span><br><span class="line">    <span class="comment">// Java.use函数指定要使用com.ad2001.frida0x3包中的Checker类。</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.ad2001.frida0x3.Checker&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用变量a将所选类的code变量值修改为512</span></span><br><span class="line">    a.<span class="property">code</span>.<span class="property">value</span> = <span class="number">512</span>; </span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>        使用frida还是和前面的步骤一样，然后我们输入指令<strong>frida -U -f com.ad2001.frida0x3 -l hook.js</strong>，然后再使用jadx进行动态调试，为的是控制程序运行，点击两次运行，会出现最开始的页面，最后点击Click me，就会出现flag</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/b2eeb84c-a1a9-482b-adc6-f1434a6d376c.png" alt="b2eeb84c-a1a9-482b-adc6-f1434a6d376c"></p>
+<p>得到flag</p>
+<p><strong>总结</strong>：Frida 更改变量值的脚本模板</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>)&#123; </span><br><span class="line"></span><br><span class="line">     <span class="keyword">var</span> &lt;class_reference&gt; = <span class="title class_">Java</span>.<span class="title function_">use</span>(“&lt;package_name&gt;.&lt;<span class="keyword">class</span>&gt;”); </span><br><span class="line"></span><br><span class="line">     &lt;class_reference&gt;.&lt;variable&gt;.<span class="property">value</span> = &lt;value&gt;; <span class="comment">//需要修改的变量 </span></span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="六-Frida-用法（4）-js脚本创建类实例"><a href="#六-Frida-用法（4）-js脚本创建类实例" class="headerlink" title="六. Frida 用法（4）.js脚本创建类实例"></a>六. Frida 用法（4）.js脚本创建类实例</h5><p>工具不变，拿到附件apk文件，依旧先安装到雷神模拟器上安装运行一下。没有任何输入框或者按钮，只有一个打招呼的。那么就丢到jadx里分析看看具体函数逻辑，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/bc871d60-adf0-4209-8577-98455a572801.png" alt="bc871d60-adf0-4209-8577-98455a572801"></p>
+<p>这是<strong>MainActivity</strong>类，没啥有用的信息。再看看<strong>Check</strong>类<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/22979e97-83bc-4149-83e5-29d9e1f54005.png" alt="22979e97-83bc-4149-83e5-29d9e1f54005"></p>
+<p>判断参数a的值是否是1337，是的话就会把解码的flag输出，但是，这个类以及类中的方法并没有在程序的任何地方被使用，因此我们仅仅打开程序无法获取到flag的值，同时，这里的get_flag方法并不是静态方法。所以我们就可以利用frida创建一个实例，再用这个实例来调用这个方法，进而输出flag。</p>
+<p>那么我们就可以开始操作了，前期开始工作是一样的，然后我们直接使用脚本，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> check = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.ad2001.frida0x4.Check&quot;</span>);</span><br><span class="line">    <span class="comment">// 声明了一个变量 check 来表示目标 Android 应用程序中的 Java 类。</span></span><br><span class="line">    <span class="comment">// Java.use 函数指定要使用 com.ad2001.frida0x4 包的 Check 类。</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> check_obj = check.$new(); </span><br><span class="line">    <span class="comment">// $new() 是 Frida 中的方法，用于实例化特定类的对象；</span></span><br><span class="line">    <span class="comment">// 使用 $new() 方法创建 Check 类的实例 check_obj。</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> res = check_obj.<span class="title function_">get_flag</span>(<span class="number">1337</span>); </span><br><span class="line">    <span class="comment">// 使用 check_obj 实例调用 get_flag，并传入参数 1337。</span></span><br><span class="line">    <span class="comment">// 创建一个变量 res 来保存 get_flag 方法的返回值。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;FLAG：&quot;</span> + res);</span><br><span class="line">    <span class="comment">// 将保存的 flag 输出到脚本运行日志中。</span></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/0feeea01-c0ea-429c-9631-9c1d5e923db3.png" alt="0feeea01-c0ea-429c-9631-9c1d5e923db3"></p>
+<p>拿到flag</p>
+<p><strong>总结</strong>：Frida 创建类实例的脚本模板</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> &lt;class_reference&gt; = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;&lt;package_name&gt;.&lt;class&gt;&quot;</span>);</span><br><span class="line">  <span class="keyword">var</span> &lt;class_instance&gt; = &lt;class_reference&gt;.$new(); <span class="comment">// 创建类的实例</span></span><br><span class="line">  &lt;class_instance&gt;.&lt;method&gt;(); <span class="comment">// 调用该实例中的方法</span></span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="七-Frida-用法（5）-js脚本在现有实例上调用方法"><a href="#七-Frida-用法（5）-js脚本在现有实例上调用方法" class="headerlink" title="七.Frida 用法（5） .js脚本在现有实例上调用方法"></a>七.Frida 用法（5） .js脚本在现有实例上调用方法</h5><p>1.拿到附件，还是老样子，先到模拟器运行一下</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/335d30a1-e545-422d-9d15-ce5d9c46ba1a.png" alt="335d30a1-e545-422d-9d15-ce5d9c46ba1a"></p>
+<p>没什么有用的信息，就是一个提示词，没了。开jadx看看逻辑吧，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/a2b28eb3-0581-4eee-ac41-5e1b64740e01.png" alt="a2b28eb3-0581-4eee-ac41-5e1b64740e01"></p>
+<p>可以看到逻辑还是很清晰的，有一个<strong>flag</strong>方法，如果<strong>code</strong>的值是1337，那么就会输出flag，但是该方法没有在程序的任何位置被调用，我们需要借助Frida框架来调用这个方法，以获取flag。跟上一用法相同的是我们需要通过flag方法所在的MainActivity类的实例来调用该方法，但在使用Frida脚本创建MainActivity类的实例会出现错误。</p>
+<p>原因：<strong>flag方法是属于MainActivity实例的，而上一题（4）中，check是单独的一个类实例，而MainActivity是Android组件，由于Android的生命周期和线程规则，Android组件需要依赖于应用程序上下文运行，在Frida中，我们缺少必要的上下文。例如：Android UI组件通常需要具有关联Looper的特定线程，如果涉及UI任务，需要在具有活动Looper的主线程上执行。总之，创建MainActivity的实例可能需要应用处于特定状态，并通过Frida管理整个生命周期，并不建议这样做。</strong></p>
+<p>解决方法：<strong>由于创建MainActivity实例是Android应用程序生命周期的一部分，当Android应用程序启动时，系统会创建MainActivity的一个实例（或AndroidManifest.xml文件中指定的启动器活动）。因此，我们可以使用Frida获取MainActivity的实例，然后调用flag方法来获取我们的标志。</strong></p>
+<p>脚本：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Java.performNow是Frida中的一个函数，用于在Java运行时环境中执行代码。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Java</span>.<span class="title function_">performNow</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&#x27;com.ad2001.frida0x5.MainActivity&#x27;</span>, &#123;</span><br><span class="line">    <span class="comment">// Java.choose在运行时枚举作为第一个参数传入的Java类的实例。</span></span><br><span class="line">    <span class="comment">// 第二个参数需要传入包含onMatch和onComplete两个回调函数的选项对象。</span></span><br><span class="line"></span><br><span class="line">      <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">instance</span>) &#123; </span><br><span class="line">        <span class="comment">// 处理匹配到的类实例的回调函数</span></span><br><span class="line">        <span class="comment">// instance参数表示MainActivity类的每个匹配实例</span></span><br><span class="line"></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Instance found&quot;</span>);</span><br><span class="line">        <span class="comment">// 找到实例时打印一条提示信息。</span></span><br><span class="line">        instance.<span class="title function_">flag</span>(<span class="number">1337</span>); </span><br><span class="line">        <span class="comment">// 调用flag方法，并传入参数1337。</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onComplete</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">    <span class="comment">// 完成操作后的回调函数</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这个题和第二个题一样，需要在app运行起来，然后输入frida -U ‘Frida 0x5’ -l F:\桌面\5.js，就可以输出flag</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/e3f1e801-52ef-4c98-af8d-e41be264623f.png" alt="e3f1e801-52ef-4c98-af8d-e41be264623f"></p>
+<p>总结：<strong>Frida 在现有实例上调用方法的脚本模板</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  <span class="title class_">Java</span>.<span class="title function_">performNow</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&#x27;&lt;Package&gt;.&lt;class_Name&gt;&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">instance</span>) &#123;</span><br><span class="line">      <span class="comment">// 匹配到类实例时进行的操作</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onComplete</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">    <span class="comment">// 完成操作后的回调函数</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="八-Frida用法（6）-js脚本-使用对象参数调用的方法"><a href="#八-Frida用法（6）-js脚本-使用对象参数调用的方法" class="headerlink" title="八.Frida用法（6） .js脚本 使用对象参数调用的方法"></a>八.Frida用法（6） .js脚本 使用对象参数调用的方法</h5><p>1.拿到apk文件，模拟器运行一下，还是和上一题一样，没有任何可以输入的东西，就一个提示词，没了。</p>
+<p>2.看代码逻辑吧，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/5de480a5-6ed3-46ec-9813-69be4e34c6c7.png" alt="5de480a5-6ed3-46ec-9813-69be4e34c6c7"></p>
+<p>代码看下来，就是主要逻辑在<strong>get_flag</strong>方法里，可是这个方法没有被调用，该方法对传入的<strong>Checker</strong>类型参数A进行检查，如果参数A的<strong>num1</strong>变量值等于1234且<strong>num2</strong>变量值等于4321，就会将flag解码并输出。</p>
+<p>为了得到方法中的flag，我们需要<strong>获取MainActivity类的实例</strong>来调用这个方法，同时还需要满足方法内部对传入参数A.num1和A.num2变量值的验证。因此，我们还需要<strong>创建</strong>一个<strong>Checker类的实例</strong>，并设置好实例中<strong>num1</strong>和<strong>num2</strong>变量的值，在调用get_flag方法时将这个实例作为参数传递。</p>
+<p>那么就可以编写脚本了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Java.performNow是Frida中的一个函数，用于在Java运行时环境中执行代码。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Java</span>.<span class="title function_">performNow</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&#x27;com.ad2001.frida0x6.MainActivity&#x27;</span>, &#123;</span><br><span class="line">    <span class="comment">// Java.choose在运行时枚举MainActivity类的实例。</span></span><br><span class="line">    <span class="comment">// 第二个参数需要传入包含onMatch和onComplete两个回调函数的选项对象。</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">instance</span>) &#123;</span><br><span class="line">      <span class="comment">// 处理匹配到的类实例的回调函数</span></span><br><span class="line"></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Instance found&quot;</span>);</span><br><span class="line">       <span class="comment">// 处理匹配到的类实例的回调函数</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> checker = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.ad2001.frida0x6.Checker&quot;</span>);</span><br><span class="line">       <span class="comment">// Java.use函数指定要使用com.ad2001.frida0x6包的Check类。</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> checker_obj  = checker.$new();  </span><br><span class="line">       <span class="comment">// 使用$new()方法创建Check类的实例check_obj。</span></span><br><span class="line">      checker_obj.<span class="property">num1</span>.<span class="property">value</span> = <span class="number">1234</span>; </span><br><span class="line">       <span class="comment">// 将check_obj实例的num1变量值设置为1234</span></span><br><span class="line">      checker_obj.<span class="property">num2</span>.<span class="property">value</span> = <span class="number">4321</span>; </span><br><span class="line">       <span class="comment">// 将check_obj实例的num2变量值设置为4321</span></span><br><span class="line"></span><br><span class="line">      instance.<span class="title function_">get_flag</span>(checker_obj); </span><br><span class="line">       <span class="comment">// 使用check_obj作为参数；</span></span><br><span class="line">       <span class="comment">// 通过获取到的MainActivity类的实例instance调用get_flag方法</span></span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onComplete</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>运行脚本，还是一样，先让程序运行起来，然后运行脚本去获取<strong>MainActivity</strong>实例。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/c08a65da-6ad9-4ec7-a418-49658949b813.png" alt="c08a65da-6ad9-4ec7-a418-49658949b813"></p>
+<p>得到flag</p>
+<p>总结：<strong>Frida 使用对象参数调用方法的脚本模板</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">performNow</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Java</span>.<span class="title function_">choose</span>(<span class="string">&#x27;&lt;Package&gt;.&lt;class_Name&gt;&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">onMatch</span>: <span class="keyword">function</span>(<span class="params">instance</span>) &#123;</span><br><span class="line">      <span class="keyword">var</span> &lt;class_reference&gt; = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;&lt;package_name&gt;.&lt;class&gt;&quot;</span>);</span><br><span class="line">      <span class="keyword">var</span> &lt;class_instance&gt; = &lt;class_reference&gt;.$new(); <span class="comment">// 创建类的实例</span></span><br><span class="line">      <span class="comment">/*</span></span><br><span class="line"><span class="comment">      设置实例参数</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">      instance.&lt;method&gt;(class_instance); <span class="comment">// 使用对象参数调用方法</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onComplete</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">    <span class="comment">// 完成操作后的回调函数</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="九-Frida用法（7）-js脚本-Hook构造函数"><a href="#九-Frida用法（7）-js脚本-Hook构造函数" class="headerlink" title="九.Frida用法（7） .js脚本 Hook构造函数"></a>九.Frida用法（7） .js脚本 Hook构造函数</h5><p>1.拿到apk安装包，还是先安装到模拟器中运行一下看看先，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/a95132d6-0271-4f2f-a4fa-ec9ea5c416f9.png" alt="a95132d6-0271-4f2f-a4fa-ec9ea5c416f9"></p>
+<p>还是一样，没有输入框，只有一句提示词，那就用jadx反编译看看吧，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0x7;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> java.security.InvalidKeyException;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"><span class="keyword">import</span> java.util.Base64;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.BadPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.Cipher;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.IllegalBlockSizeException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.NoSuchPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes3.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    TextView t1;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="built_in">this</span>.t1 = (TextView) findViewById(R.id.textview);</span><br><span class="line">        <span class="type">Checker</span> <span class="variable">ch</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Checker</span>(<span class="number">123</span>, <span class="number">321</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            flag(ch);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InvalidKeyException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e2) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e2);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (BadPaddingException e3) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e3);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalBlockSizeException e4) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e4);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchPaddingException e5) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e5);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">flag</span><span class="params">(Checker A)</span> <span class="keyword">throws</span> NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException &#123;</span><br><span class="line">        <span class="keyword">if</span> (A.num1 &gt; <span class="number">512</span> &amp;&amp; <span class="number">512</span> &lt; A.num2) &#123;</span><br><span class="line">            <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;AES&quot;</span>);</span><br><span class="line">            <span class="type">SecretKeySpec</span> <span class="variable">secretKeySpec</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SecretKeySpec</span>(<span class="string">&quot;MySecureKey12345&quot;</span>.getBytes(), <span class="string">&quot;AES&quot;</span>);</span><br><span class="line">            cipher.init(<span class="number">2</span>, secretKeySpec);</span><br><span class="line">            <span class="type">byte</span>[] decryptedBytes = Base64.getDecoder().decode(<span class="string">&quot;cL/bBqDmfO0IXXJCVFwYLeHp1k3mQr+SP6rlQGUPZTY=&quot;</span>);</span><br><span class="line">            <span class="type">String</span> <span class="variable">decrypted</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(cipher.doFinal(decryptedBytes));</span><br><span class="line">            <span class="built_in">this</span>.t1.setText(decrypted);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析代码逻辑，并不难，就是有一个<strong>Checker</strong>类的对象，调用flag方法传入该对象，然后对num1和num2的两个值分别进行判断，两个参数必须都大于512，那么就会对flag进行解密输出。</p>
+<p>逻辑明白之后，我们就可以编写脚本进行hook，Hook Checker类对象的构造函数Checker(int a, int b)，将参数a，b修改为大于512的值来绕过检验。</p>
+<p>脚本：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> a = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;com.ad2001.frida0x7.Checker&quot;</span>);</span><br><span class="line">    <span class="comment">// 声明了一个变量a来表示目标Android应用程序中的Java类。</span></span><br><span class="line">    <span class="comment">// Java.use函数指定要使用com.ad2001.frida0x7包中的Checker类。</span></span><br><span class="line"></span><br><span class="line">  a.<span class="property">$init</span>.<span class="property">implementation</span> = <span class="keyword">function</span> (<span class="params">a,b</span>)&#123;</span><br><span class="line">    <span class="comment">// $init关键字Hook Checker类对象创建时执行的构造函数</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Origin num：&quot;</span>,a,b);</span><br><span class="line">    <span class="comment">// 打印a,b变量初始化时设置的值</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.$init(<span class="number">1000</span>,<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">// 调用Checker类构造函数将a,b变量值修改为600</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>运行脚本，然后利用jadx控制程序运行</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/5173e46c-b3cf-419f-8c72-a6696551909f.png" alt="5173e46c-b3cf-419f-8c72-a6696551909f"></p>
+<p>拿到flag</p>
+<p>总结：<strong>Frida Hook构造函数的脚本模板</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> &lt;class_reference&gt; = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&quot;&lt;package_name&gt;.&lt;class&gt;&quot;</span>);</span><br><span class="line">  &lt;class_reference&gt;.<span class="property">$init</span>.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params">&lt;args&gt;</span>)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    我们自己的方法实现</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="十-Frida用法（8）-js脚本-Hook-native函数"><a href="#十-Frida用法（8）-js脚本-Hook-native函数" class="headerlink" title="十.Frida用法（8） .js脚本 Hook native函数"></a>十.Frida用法（8） .js脚本 Hook native函数</h5><p>1.拿到附件，安装到模拟器中运行一下，可以看到可以让我们输入字符或者数字，然后点击提交，报错，没了。</p>
+<p>2.用jadx静态分析吧，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0x8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.EditText;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> com.ad2001.frida0x8.databinding.ActivityMainBinding;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes4.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> ActivityMainBinding binding;</span><br><span class="line">    Button btn;</span><br><span class="line">    EditText edt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">native</span> <span class="type">int</span> <span class="title function_">cmpstr</span><span class="params">(String str)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">&quot;frida0x8&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        <span class="type">ActivityMainBinding</span> <span class="variable">inflate</span> <span class="operator">=</span> ActivityMainBinding.inflate(getLayoutInflater());</span><br><span class="line">        <span class="built_in">this</span>.binding = inflate;</span><br><span class="line">        setContentView(inflate.getRoot());</span><br><span class="line">        <span class="built_in">this</span>.edt = (EditText) findViewById(R.id.editTextText);</span><br><span class="line">        <span class="type">Button</span> <span class="variable">button</span> <span class="operator">=</span> (Button) findViewById(R.id.button);</span><br><span class="line">        <span class="built_in">this</span>.btn = button;</span><br><span class="line">        button.setOnClickListener(<span class="keyword">new</span> <span class="title class_">View</span>.OnClickListener() &#123; <span class="comment">// from class: com.ad2001.frida0x8.MainActivity.1</span></span><br><span class="line">            <span class="meta">@Override</span> <span class="comment">// android.view.View.OnClickListener</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View v)</span> &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">ip</span> <span class="operator">=</span> MainActivity.<span class="built_in">this</span>.edt.getText().toString();</span><br><span class="line">                <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> MainActivity.<span class="built_in">this</span>.cmpstr(ip);</span><br><span class="line">                <span class="keyword">if</span> (res == <span class="number">1</span>) &#123;</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="built_in">this</span>, <span class="string">&quot;YEY YOU GOT THE FLAG &quot;</span> + ip, <span class="number">1</span>).show();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    Toast.makeText(MainActivity.<span class="built_in">this</span>, <span class="string">&quot;TRY AGAIN&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析代码逻辑，我们可以知道，只有当我们输入的内容是正确的flag时，<strong>cmpstr</strong>方法的返回值是1时，就会输出表示正确的提示词，然后再输出flag。但是我们可以看到该方法是<strong>native</strong>层的，</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/7fd743f8-b07c-4e52-b19d-957af40378e5.png" alt="7fd743f8-b07c-4e52-b19d-957af40378e5"></p>
+<p>那么我们就去<strong>native层</strong>查看该函数的逻辑。我们将附件中的apk文件的后缀，apk改成zip，然后解压缩，然后我们在路径lib-&gt;x86_64-&gt;libfrida0x8.so，打开libfrida0x8.so文件，用ida64分析，然后找到，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/038ef7a8-82f7-45b0-8363-2b9ddcf7e43d.png" alt="038ef7a8-82f7-45b0-8363-2b9ddcf7e43d"></p>
+<p>就可以看到伪代码，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/636e6848-d88a-497a-8b9b-e6886d1836db.png" alt="636e6848-d88a-497a-8b9b-e6886d1836db"></p>
+<p>可以看到就是<strong>aGsjebObujwfMbo</strong>字符串每一个元素都减一，然后将结果给到Password，最后进行比较，如果与我们输入的字符串进行比较，一样就返回1，否则返回0。由于password 参数只在 native 库中调用的 strcmp 函数中被作为参数传递，那么这里我们就可以通过 Frida 脚本 Hook strcmp 函数来实现。</p>
+<p>我们需要编写一个js脚本Hook 应用程序加载的 frida0x8 native 库中 cmpstr 函数使用的 strcmp 函数，并获取函数中使用的参数 password 的值。</p>
+<p>以下就是脚本：</p>
+<p>第一种：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strcmp_adr =  <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libc.so&quot;</span>, <span class="string">&quot;strcmp&quot;</span>);</span><br><span class="line"><span class="comment">// 使用Module.findExportByName()获取libc.so库中strcmp函数的地址。</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(strcmp_adr, &#123;</span><br><span class="line">  <span class="comment">// Hook strcmp_adr地址对应的函数，将onEnter和onLeave回调函数附加到strcmp_adr地址中</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">onEnter</span>: <span class="keyword">function</span> (<span class="params">args</span>) &#123;</span><br><span class="line">    <span class="comment">// 在strcmp函数被调用之前执行的回调函数，args是一个指针数组，提供对函数参数的访问。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hooking the strcmp function&quot;</span>);</span><br><span class="line">    <span class="comment">// 进入strcmp函数时打印提示语&quot;Hooking the strcmp function&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> flag = <span class="title class_">Memory</span>.<span class="title function_">readUtf8String</span>(args[<span class="number">1</span>]); </span><br><span class="line">    <span class="comment">// 使用Memory.readUtf8String()获取password参数；</span></span><br><span class="line">    <span class="comment">// password参数在strcmp函数中的地址为arg[1]。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;The flag is &quot;</span>+ flag);</span><br><span class="line">    <span class="comment">// 打印获取到的password参数值。</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">onLeave</span>: <span class="keyword">function</span> (<span class="params">retval</span>) &#123;</span><br><span class="line">    <span class="comment">// 在strcmp函数被调用之后执行的回调函数，它提供对返回值retval的访问。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>但是，这个脚本会把程序中所有的strcmp函数都打印出来，因此，我们可以输入一个特定的字符串（例如：”HELLO”），将其作为 Hook 脚本的过滤器。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strcmp_adr = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;libc.so&quot;</span>, <span class="string">&quot;strcmp&quot;</span>);</span><br><span class="line"><span class="comment">// 使用Module.findExportByName()获取libc.so库中strcmp函数的地址。</span></span><br><span class="line">Z</span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(strcmp_adr, &#123;</span><br><span class="line">  <span class="comment">// Hook strcmp_adr地址对应的函数，将onEnter和onLeave回调函数附加到strcmp_adr地址中</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">onEnter</span>: <span class="keyword">function</span> (<span class="params">args</span>) &#123;</span><br><span class="line">      <span class="comment">// 在strcmp函数被调用之前执行的回调函数，args是一个指针数组，提供对函数参数的访问。</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> arg0 = <span class="title class_">Memory</span>.<span class="title function_">readUtf8String</span>(args[<span class="number">0</span>]);</span><br><span class="line">          <span class="comment">// 使用Memory.readUtf8String()读取第一参数inputStr内容。</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> flag = <span class="title class_">Memory</span>.<span class="title function_">readUtf8String</span>(args[<span class="number">1</span>]);</span><br><span class="line">          <span class="comment">// 使用Memory.readUtf8String()获取第二个参数password内容。</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (arg0.<span class="title function_">includes</span>(<span class="string">&quot;HELLO&quot;</span>)) &#123;</span><br><span class="line">          <span class="comment">// 只有当第一个参数值是我们输入的特定字符串&quot;HELLO&quot;时才执行下面的操作。</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hookin the strcmp function&quot;</span>);</span><br><span class="line">             <span class="comment">// 打印提示语&quot;Hooking the strcmp function&quot;</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Input &quot;</span> + arg0);</span><br><span class="line">             <span class="comment">// 打印第一个参数inputStr的值。</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;The flag is &quot;</span>+ flag);</span><br><span class="line">             <span class="comment">// 打印第二个参数password的值。</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onLeave</span>: <span class="keyword">function</span> (<span class="params">retval</span>) &#123;</span><br><span class="line">        <span class="comment">// 在strcmp函数被调用之后执行的回调函数，它提供对返回值retval的访问。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Memory.readUtf8String()是Frida中用于读取内存中UTF-8编码字符串的函数。它的作用是从指定的内存地址读取UTF-8编码的字符串，并将其转换为JavaScript中的字符串类型。</p>
+</blockquote>
+<p>拿到flag</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/c5626169-66af-46d4-85a7-ae73bd1cbca7.png" alt="c5626169-66af-46d4-85a7-ae73bd1cbca7"></p>
+<p>总结：<strong>Frida Hook native 函数的脚本模板</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(targetAddress, &#123;</span><br><span class="line">  <span class="comment">// 将回调附加到指定的函数地址，targetAddress为我们想要挂钩的native函数的地址。</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">onEnter</span>: <span class="keyword">function</span> (<span class="params">args</span>) &#123;</span><br><span class="line">    <span class="comment">// 在目标函数被调用之前执行的回调函数，提供对函数参数args的访问。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Entering &#x27;</span> + functionName);</span><br><span class="line">    <span class="comment">// 根据需要修改或记录参数</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">onLeave</span>: <span class="keyword">function</span> (<span class="params">retval</span>) &#123;</span><br><span class="line">    <span class="comment">// 在目标函数被调用之后执行的回调函数，它提供对返回值retval的访问。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Leaving &#x27;</span> + functionName);</span><br><span class="line">    <span class="comment">// 根据需要修改或记录参数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>补充</strong>：</p>
+<p>在前面的学习我们知道，Hook一个函数需要知道调用这个函数的程序包名和类名。而Hook native 函数，我们需要知道这个 native 函数的地址，然后使用 Frida 的 Interceptor API 进行 Hook。</p>
+<blockquote>
+<p>Interceptor API是Frida中一个功能强大的模块，能够帮助我们 Hook C 函数、Objective-C 方法。</p>
+<p>Interceptor模块中Interceptor.attach()函数用于拦截函数调用，需要传递两个参数，第一个参数是要拦截的函数地址，第二个参数是包含回调函数的对象，用于定义在目标函数被调用时执行的回调函数，通常包含以下两个回调函数：</p>
+<ul>
+<li><p>onEnter：在目标函数被调用之前执行的回调函数。在这个回调函数中，可以访问函数的参数，修改参数的值，记录函数调用信息等操作。</p>
+</li>
+<li><p>onLeave：在目标函数被调用之后执行的回调函数。在这个回调函数中，可以访问函数的返回值，修改返回值，记录函数执行结果等操作。</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>导出函数表</strong>：指的是库文件提供给外部使用的函数或变量。</p>
+<p><strong>导入函数表</strong>：指库文件引用的函数或变量。</p>
+<p>在Frida 0x8 的这个例子中，我们的目标函数是 strcmp函数，所以我们可以从 libfrida0x8.so 的导入表或者 libc 的导出表中找到该函数地址。</p>
+<p>输出libfrida0x8.so的导出表：Module.enumerateExports(“libfrida0x8.so”)</p>
+<p>找strcmp函数的地址：Module.findExportByName(“libc.so”, “strcmp”)或者                                            Module.enumerateImports(“libfrida0x8.so”)[4]</p>
+<hr>
+<p>找cmpstr函数的地址：Module.getExportByName(“libfrida0x8.so”, “Java_com_ad2001_frida0x8_MainActivity_cmpstr”)</p>
+<p>Module.findExportByName(“libfrida0x8.so”, “Java_com_ad2001_frida0x8_MainActivity_cmpstr”)</p>
+<p>Module.findExportByName与 Module.getExportByName 相同。唯一的区别是，如果找不到导出符号，Module.getExportByName 会引发异常，而 Module.findExportByName 会返回 null。</p>
+<p>有时，如果上面的 API 获取不到指定函数地址，我们可以使用 Module.getBaseAddress，这个 API 返回给定模块的基地址，我们可以用它来找到 libfrida0x8.so 库的基地址。如果我们想找到一个特定函数的地址，可以在基地址的基础上添加偏移量。cmpstr 函数的偏移量，我们可以在 IDA 中查看</p>
+<p>Module.getBaseAddress(“libfrida0x8.so”).add(0x864)   （0x864是偏移量，可以在ida中看到）<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/ebecd84b-9b14-4c80-9ee6-8a238b859c11.png" alt="ebecd84b-9b14-4c80-9ee6-8a238b859c11"></p>
+<hr>
+<p><strong>注</strong>：由于 Android 默认启用 ASLR 安全机制，系统启动或程序加载时随机化内存地址空间，如果你重新启动了 APP，前后两次获取到的指定函数地址会有差异。</p>
+<p>查看libfrida0x8.so导入符号信息：Module.enumerateImports(“libfrida0x8.so”)</p>
+<p>接着，可以利用下标来访问其中的函数的地址：Module.enumerateImports(“libfrida0x8.so”)[4][“address”]    [4]就是下标。</p>
+<hr>
+<h5 id="十一-Frida用法（9）-js脚本-更改native函数的返回值"><a href="#十一-Frida用法（9）-js脚本-更改native函数的返回值" class="headerlink" title="十一.Frida用法（9）.js脚本 更改native函数的返回值"></a>十一.Frida用法（9）.js脚本 更改native函数的返回值</h5><p>1.首先还是一样，拿到apk文件，先安装到模拟器上运行一下，结果还是一样，一顿点，然后九只有提示你try angin</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1e770054-8c1c-47c3-aaa7-4d66432e4def.png" alt="1e770054-8c1c-47c3-aaa7-4d66432e4def"></p>
+<p>2.接着用jadx打开，静态分析一下反编译的Java代码，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.a0x9;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> com.ad2001.a0x9.databinding.ActivityMainBinding;</span><br><span class="line"><span class="keyword">import</span> java.security.InvalidKeyException;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"><span class="keyword">import</span> java.util.Base64;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.BadPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.Cipher;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.IllegalBlockSizeException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.NoSuchPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.spec.SecretKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes3.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> ActivityMainBinding binding;</span><br><span class="line">    Button btn;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">native</span> <span class="type">int</span> <span class="title function_">check_flag</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">&quot;a0x9&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        <span class="type">ActivityMainBinding</span> <span class="variable">inflate</span> <span class="operator">=</span> ActivityMainBinding.inflate(getLayoutInflater());</span><br><span class="line">        <span class="built_in">this</span>.binding = inflate;</span><br><span class="line">        setContentView(inflate.getRoot());</span><br><span class="line">        <span class="type">Button</span> <span class="variable">button</span> <span class="operator">=</span> (Button) findViewById(R.id.button);</span><br><span class="line">        <span class="built_in">this</span>.btn = button;</span><br><span class="line">        button.setOnClickListener(<span class="keyword">new</span> <span class="title class_">View</span>.OnClickListener() &#123; <span class="comment">// from class: com.ad2001.a0x9.MainActivity.1</span></span><br><span class="line">            <span class="meta">@Override</span> <span class="comment">// android.view.View.OnClickListener</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View v)</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (MainActivity.<span class="built_in">this</span>.check_flag() == <span class="number">1337</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;AES&quot;</span>);</span><br><span class="line">                        <span class="type">SecretKeySpec</span> <span class="variable">secretKeySpec</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SecretKeySpec</span>(<span class="string">&quot;3000300030003003&quot;</span>.getBytes(), <span class="string">&quot;AES&quot;</span>);</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            cipher.init(<span class="number">2</span>, secretKeySpec);</span><br><span class="line">                            <span class="type">byte</span>[] decryptedBytes = Base64.getDecoder().decode(<span class="string">&quot;hBCKKAqgxVhJMVTQS8JADelBUPUPyDiyO9dLSS3zho0=&quot;</span>);</span><br><span class="line">                            <span class="keyword">try</span> &#123;</span><br><span class="line">                                <span class="type">String</span> <span class="variable">decrypted</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(cipher.doFinal(decryptedBytes));</span><br><span class="line">                                Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;You won &quot;</span> + decrypted, <span class="number">1</span>).show();</span><br><span class="line">                                <span class="keyword">return</span>;</span><br><span class="line">                            &#125; <span class="keyword">catch</span> (BadPaddingException e) &#123;</span><br><span class="line">                                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">                            &#125; <span class="keyword">catch</span> (IllegalBlockSizeException e2) &#123;</span><br><span class="line">                                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e2);</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (InvalidKeyException e3) &#123;</span><br><span class="line">                            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e3);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e4) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e4);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (NoSuchPaddingException e5) &#123;</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e5);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;Try again&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到在<strong>MainActivity</strong> 类中，有一段native功能声明，使用native关键字定义了一个native函数check_flag，该函数不接受任何参数，同时返回一个参数，然后将 a0x9 库加载到程序中，System.loadLibrary 方法提示我们 a0x9 是 native 库文件，check_flag 函数在 a0x9 库中实现。同时，MainActivity 类中还定义了一个 onClick 方法来监控按钮的点击，当点击应用程序按钮时，onClick 方法会将 check_flag 函数的返回值与1337进行比较，如果它们相等，就会解密 flag 并显示在应用程序界面。否则，打印“Try again”。接下来我们需要使用 IDA 来分析 a0x9 库中的 check_flag 函数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">native</span> <span class="type">int</span> <span class="title function_">check_flag</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">&quot;a0x9&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View v)</span> &#123;</span><br><span class="line"><span class="keyword">if</span> (MainActivity.<span class="built_in">this</span>.check_flag() == <span class="number">1337</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">Cipher</span> <span class="variable">cipher</span> <span class="operator">=</span> Cipher.getInstance(<span class="string">&quot;AES&quot;</span>);</span><br><span class="line">        <span class="type">SecretKeySpec</span> <span class="variable">secretKeySpec</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SecretKeySpec</span>(<span class="string">&quot;3000300030003003&quot;</span>.getBytes(), <span class="string">&quot;AES&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            cipher.init(<span class="number">2</span>, secretKeySpec);</span><br><span class="line">            <span class="type">byte</span>[] decryptedBytes = Base64.getDecoder().decode(<span class="string">&quot;hBCKKAqgxVhJMVTQS8JADelBUPUPyDiyO9dLSS3zho0=&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">decrypted</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(cipher.doFinal(decryptedBytes));</span><br><span class="line">                Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;You won &quot;</span> + decrypted, <span class="number">1</span>).show();</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125; </span><br><span class="line">                ...</span><br><span class="line">        &#125;</span><br><span class="line">        Toast.makeText(MainActivity.<span class="built_in">this</span>.getApplicationContext(), <span class="string">&quot;Try again&quot;</span>, <span class="number">1</span>).show();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>还是一样，改一下文件后缀名，然后找到liba0x9.so文件，然后用ida64打开，找到对应函数，发现啥逻辑没用，就是一个返回1，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/9768b234-8316-4ac0-abf7-27afb009f331.png" alt="9768b234-8316-4ac0-abf7-27afb009f331"></p>
+<p>那么接下来，我们需要使用 Frida 框架，编写一个 JavaScript 脚本，Hook在应用程序加载的 liba0x9.so native 库中运行的 check_flag 函数，并将它的返回值更改为1337。</p>
+<p>通过对 APK 静态分析，我们可以知道 check_flag 函数在 liba0x9.so 库中的名称是Java_com_ad2001_a0x9_MainActivity_check_1flag，同时可以在 liba0x9.so 中的导出表中找到该符号的地址。</p>
+<p>以下是脚本：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> check_flag = <span class="title class_">Module</span>.<span class="title function_">findExportByName</span>(<span class="string">&quot;liba0x9.so&quot;</span>, <span class="string">&quot;Java_com_ad2001_a0x9_MainActivity_check_1flag&quot;</span>)</span><br><span class="line"><span class="comment">// 获取liba0x9.so库中Java_com_ad2001_a0x9_MainActivity_check_1flag函数地址，并将它储存在check_flag中。</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(check_flag, &#123;</span><br><span class="line">  <span class="comment">// Hook check_flag地址对应的函数，将onEnter和onLeave回调函数附加check_flag地址中</span></span><br><span class="line">  <span class="attr">onEnter</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 在check_flag函数被调用之前执行的回调函数，根据需要修改或记录参数。</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">onLeave</span>: <span class="keyword">function</span> (<span class="params">retval</span>) &#123;</span><br><span class="line">    <span class="comment">// 在check_flag函数被调用之后执行的回调函数，它提供对返回值retval的访问。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Original return value :&quot;</span> + retval);</span><br><span class="line">    <span class="comment">// 打印函数原本返回值</span></span><br><span class="line"></span><br><span class="line">    retval.<span class="title function_">replace</span>(<span class="number">1337</span>)  </span><br><span class="line">     <span class="comment">// 将check_flag函数返回值修改为1337。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>然后先让程序运行起来，再输入frida -U ‘Frida 0x9’ -l F:\桌面\9.js</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/5125b7ab-1804-4952-a662-7e8f0851a167.png" alt="5125b7ab-1804-4952-a662-7e8f0851a167"></p>
+<p>就得flag了。</p>
+<p><strong>总结</strong>：Frida 更改native函数返回值的脚本模板</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Interceptor</span>.<span class="title function_">attach</span>(targetAddress, &#123;</span><br><span class="line">  <span class="comment">// 将回调附加到指定的函数地址，targetAddress为我们想要挂钩的native函数的地址。</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">onEnter</span>: <span class="keyword">function</span> (<span class="params">args</span>) &#123;</span><br><span class="line">    <span class="comment">// 在目标函数被调用之前执行的回调函数，提供对函数参数args的访问。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Entering &#x27;</span> + functionName);</span><br><span class="line">    <span class="comment">// 根据需要修改或记录参数</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">onLeave</span>: <span class="keyword">function</span> (<span class="params">retval</span>) &#123;</span><br><span class="line">    <span class="comment">// 在目标函数被调用之后执行的回调函数，它提供对返回值retval的访问。</span></span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Leaving &#x27;</span> + functionName);</span><br><span class="line">    <span class="comment">// 根据需要修改或记录参数</span></span><br><span class="line"></span><br><span class="line">    retval.<span class="title function_">replace</span>(value)  </span><br><span class="line">    <span class="comment">// 将目标函数返回值修改为value。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="十二-Frida用法（10）-js脚本调用native函数"><a href="#十二-Frida用法（10）-js脚本调用native函数" class="headerlink" title="十二.Frida用法（10） .js脚本调用native函数"></a>十二.Frida用法（10） .js脚本调用native函数</h5><p>1.还是一样，拿到apk文件，安装到模拟器上，结果发现在雷电模拟器上安装不了，然后换成夜神模拟器，可以安装但是不可以运行，就很奇怪了。但是可以看到教程上打开应用有且仅有一个提示词，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/86be60ff-22b7-45ff-8bfe-60167c7e3bbe.png" alt="86be60ff-22b7-45ff-8bfe-60167c7e3bbe"></p>
+<p>2.那就用jadx打开分析一下函数逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0xa;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> androidx.constraintlayout.widget.ConstraintLayout;</span><br><span class="line"><span class="keyword">import</span> com.ad2001.frida0xa.databinding.ActivityMainBinding;</span><br><span class="line"><span class="keyword">import</span> kotlin.Metadata;</span><br><span class="line"><span class="keyword">import</span> kotlin.jvm.internal.DefaultConstructorMarker;</span><br><span class="line"><span class="keyword">import</span> kotlin.jvm.internal.Intrinsics;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* compiled from: MainActivity.kt */</span></span><br><span class="line"><span class="meta">@Metadata(d1 = &#123;&quot;\u0000&amp;\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\u0018\u0000 \u000b2\u00020\u0001:\u0001\u000bB\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0005\u001a\u00020\u00062\b\u0010\u0007\u001a\u0004\u0018\u00010\bH\u0014J\t\u0010\t\u001a\u00020\nH\u0086 R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082.¢\u0006\u0002\n\u0000¨\u0006\f&quot;&#125;, d2 = &#123;&quot;Lcom/ad2001/frida0xa/MainActivity;&quot;, &quot;Landroidx/appcompat/app/AppCompatActivity;&quot;, &quot;()V&quot;, &quot;binding&quot;, &quot;Lcom/ad2001/frida0xa/databinding/ActivityMainBinding;&quot;, &quot;onCreate&quot;, &quot;&quot;, &quot;savedInstanceState&quot;, &quot;Landroid/os/Bundle;&quot;, &quot;stringFromJNI&quot;, &quot;&quot;, &quot;Companion&quot;, &quot;app_debug&quot;&#125;, k = 1, mv = &#123;1, 8, 0&#125;, xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)</span></span><br><span class="line"><span class="comment">/* loaded from: classes4.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Companion</span> <span class="variable">Companion</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Companion</span>(<span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">private</span> ActivityMainBinding binding;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">native</span> String <span class="title function_">stringFromJNI</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        <span class="type">ActivityMainBinding</span> <span class="variable">inflate</span> <span class="operator">=</span> ActivityMainBinding.inflate(getLayoutInflater());</span><br><span class="line">        Intrinsics.checkNotNullExpressionValue(inflate, <span class="string">&quot;inflate(layoutInflater)&quot;</span>);</span><br><span class="line">        <span class="built_in">this</span>.binding = inflate;</span><br><span class="line">        <span class="type">ActivityMainBinding</span> <span class="variable">activityMainBinding</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (inflate == <span class="literal">null</span>) &#123;</span><br><span class="line">            Intrinsics.throwUninitializedPropertyAccessException(<span class="string">&quot;binding&quot;</span>);</span><br><span class="line">            inflate = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        setContentView(inflate.getRoot());</span><br><span class="line">        <span class="type">ActivityMainBinding</span> <span class="variable">activityMainBinding2</span> <span class="operator">=</span> <span class="built_in">this</span>.binding;</span><br><span class="line">        <span class="keyword">if</span> (activityMainBinding2 == <span class="literal">null</span>) &#123;</span><br><span class="line">            Intrinsics.throwUninitializedPropertyAccessException(<span class="string">&quot;binding&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            activityMainBinding = activityMainBinding2;</span><br><span class="line">        &#125;</span><br><span class="line">        activityMainBinding.sampleText.setText(stringFromJNI());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* compiled from: MainActivity.kt */</span></span><br><span class="line">    <span class="meta">@Metadata(d1 = &#123;&quot;\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002¨\u0006\u0003&quot;&#125;, d2 = &#123;&quot;Lcom/ad2001/frida0xa/MainActivity$Companion;&quot;, &quot;&quot;, &quot;()V&quot;, &quot;app_debug&quot;&#125;, k = 1, mv = &#123;1, 8, 0&#125;, xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)</span></span><br><span class="line">    <span class="comment">/* loaded from: classes4.dex */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Companion</span> &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="comment">/* synthetic */</span> Companion(DefaultConstructorMarker defaultConstructorMarker) &#123;</span><br><span class="line">            <span class="built_in">this</span>();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="title function_">Companion</span><span class="params">()</span> &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">&quot;frida0xa&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到应用程序的 MainActivity类中，同样声明了一段native功能：在程序开始时定义了返回值为字符串类型的 native 函数 stringFromJNI，它不接受任何参数；在程序结尾处加载 frida0xa 动态链接库，用于实现 native 函数。MainActivity 类中还定义了onCreate方法，在程序加载时调用 stringFromJNI 函数，将函数返回的 “Hello Hackers”文本设置给 TextView 控件。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/73d70a10-c104-4c25-9830-2c19cf698775.png" alt="73d70a10-c104-4c25-9830-2c19cf698775"></p>
+<p>3.接下来，我们使用 IDA 对 frida0xa 动态链接库进行分析。</p>
+<p>还是一样，先改后缀名，然后找到libfrida0xa.so，用ida64打开，发现函数窗口处一堆函数，并且是用c++写的，直接利用搜索功能找到stringFromJNI函数，可以看到</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">__int64 __fastcall <span class="title">Java_com_ad2001_frida0xa_MainActivity_stringFromJNI</span><span class="params">(_JNIEnv *a1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">const</span> <span class="type">char</span> *v1; <span class="comment">// rsi</span></span><br><span class="line">  __int64 v3; <span class="comment">// [rsp+18h] [rbp-48h]</span></span><br><span class="line">  <span class="type">char</span> v4[<span class="number">24</span>]; <span class="comment">// [rsp+40h] [rbp-20h] BYREF</span></span><br><span class="line">  <span class="type">unsigned</span> __int64 v5; <span class="comment">// [rsp+58h] [rbp-8h]</span></span><br><span class="line"></span><br><span class="line">  v5 = __readfsqword(<span class="number">0x28u</span>);</span><br><span class="line">  std::string::<span class="built_in">basic_string</span>&lt;<span class="keyword">decltype</span>(<span class="literal">nullptr</span>)&gt;(v4, <span class="string">&quot;Hello Hackers&quot;</span>);</span><br><span class="line">  v1 = (<span class="type">const</span> <span class="type">char</span> *)<span class="built_in">sub_20690</span>(v4);</span><br><span class="line">  v3 = _JNIEnv::<span class="built_in">NewStringUTF</span>(a1, v1);</span><br><span class="line">  std::string::~<span class="built_in">string</span>(v4);</span><br><span class="line">  <span class="keyword">return</span> v3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同时，我们还发现了一个函数，get_flag函数，这个函数我们在Java层并没有看到有引用，<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/a8f42294-b874-4ff2-b4a3-f6fac741ac4b.png" alt="a8f42294-b874-4ff2-b4a3-f6fac741ac4b"></p>
+<p>逻辑很简单，可以直接逆，也可以用Frida框架进行调用，然后程序自解密flag并输出</p>
+<p>要使用 Frida 脚本调用 native 函数，我们需要创建一个 NativePointer 对象，将要调用的 native 函数地址传递给 NativePointer 构造函数。然后，我们需要创建一个 NativeFunction 对象，来表示我们要调用的实际 native 函数。NativeFunction 对象的第一个参数应是 NativePointer 对象，第二个参数是 native 函数的返回类型，第三个参数是要传递给 native 函数参数的数据类型列表。</p>
+<blockquote>
+<p>NativePointer：是 Frida 中一个表示 native 内存地址的 JavaScript 对象，它用于在 Frida 脚本中操作和访问 native 内存地址，比如读取或写入内存中的数据，调用内存中的函数等。</p>
+<p>NativeFunction：是 Frida 中用于在 JavaScript 中调用 native 函数的对象。通过 NativeFunction 对象，可以在 Frida 脚本中调用 native 共享库（如动态链接库）中的函数，实现对 native 函数的调用和控制。</p>
+</blockquote>
+<p>下面就是脚本，具体get_flag函数的地址怎么获取之前有记录</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> adr = <span class="title class_">Module</span>.<span class="title function_">findBaseAddress</span>(<span class="string">&quot;libfrida0xa.so&quot;</span>).<span class="title function_">add</span>(<span class="number">0x1DD60</span>);</span><br><span class="line"><span class="comment">// 获取 get_flag() 函数地址。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> get_flag_ptr = <span class="keyword">new</span> <span class="title class_">NativePointer</span>(adr);</span><br><span class="line"><span class="comment">// 创建一个 NativePointer 对象，用于操作和访问 get_flag() 函数内存地址。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> get_flag = <span class="keyword">new</span> <span class="title class_">NativeFunction</span>(get_flag_ptr, <span class="string">&#x27;void&#x27;</span>, [<span class="string">&#x27;int&#x27;</span>, <span class="string">&#x27;int&#x27;</span>]);</span><br><span class="line"><span class="comment">// 创建一个名为 get_flag 的 NativeFunction 对象，实现对 native 函数的调用和控制。</span></span><br><span class="line"><span class="comment">// get_flag_ptr：表示 使用 get_flag_ptr NativePointer对象；</span></span><br><span class="line"><span class="comment">// &#x27;void&#x27;：表示函数的返回值类型为viod；</span></span><br><span class="line"><span class="comment">// [&#x27;int&#x27;, &#x27;int&#x27;]：表示传递给函数的参数类型为两个int类型的参数。</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">get_flag</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">// 调用 get_flag 函数，传入两个参数1，2。</span></span><br></pre></td></tr></table></figure>
+
+<p>但是由于测试所用的模拟器无法运行该程序，没办法，用frida无法进行调用，就无法直接让程序运行抛出flag，也可以根据硬编码直接解密。</p>
+<p><strong>总结</strong>：Frida 调用 native 函数脚本模板</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> native_adr = <span class="keyword">new</span> <span class="title class_">NativePointer</span>(&lt;address_of_the_native_function&gt;);</span><br><span class="line"><span class="comment">// 创建一个 NativePointer 对象，用于操作和访问 &lt;address_of_the_native_function&gt;内存地址。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> native_function = <span class="keyword">new</span> <span class="title class_">NativeFunction</span>(native_adr, <span class="string">&#x27;&lt;return type&gt;&#x27;</span>, [<span class="string">&#x27;argument_data_type&#x27;</span>]);</span><br><span class="line"><span class="comment">// 创建一个 NativeFunction 对象，实现对 native 函数的调用和控制。</span></span><br><span class="line"><span class="comment">// native_adr：使用native_adr NativePointer对象；</span></span><br><span class="line"><span class="comment">// &#x27;&lt;return type&gt;&#x27;：函数的返回值类型；</span></span><br><span class="line"><span class="comment">// [&#x27;argument_data_type&#x27;]：传递给函数的参数类型列表。</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">native_function</span>(&lt;<span class="variable language_">arguments</span>&gt;);</span><br><span class="line"><span class="comment">// 调用 native_function 函数，如果需要，可以传递&lt;arguments&gt;参数。</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h5 id="十三-Frida用法（11）-js脚本-使用ARM64Writer修改指令"><a href="#十三-Frida用法（11）-js脚本-使用ARM64Writer修改指令" class="headerlink" title="十三.Frida用法（11） .js脚本 使用ARM64Writer修改指令"></a>十三.Frida用法（11） .js脚本 使用ARM64Writer修改指令</h5><p>1.这个题和上一个题一样，还是在雷电模拟器上安装不了，然后在夜神模拟器上运行不了，很苦恼，那就只能学思维和操作方法了。</p>
+<p>2.用jadx反编译看看函数逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ad2001.frida0xb;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> androidx.constraintlayout.widget.ConstraintLayout;</span><br><span class="line"><span class="keyword">import</span> com.ad2001.frida0xb.databinding.ActivityMainBinding;</span><br><span class="line"><span class="keyword">import</span> kotlin.Metadata;</span><br><span class="line"><span class="keyword">import</span> kotlin.jvm.internal.DefaultConstructorMarker;</span><br><span class="line"><span class="keyword">import</span> kotlin.jvm.internal.Intrinsics;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* compiled from: MainActivity.kt */</span></span><br><span class="line"><span class="meta">@Metadata(d1 = &#123;&quot;\u0000\&quot;\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \n2\u00020\u0001:\u0001\nB\u0005¢\u0006\u0002\u0010\u0002J\t\u0010\u0005\u001a\u00020\u0006H\u0086 J\u0012\u0010\u0007\u001a\u00020\u00062\b\u0010\b\u001a\u0004\u0018\u00010\tH\u0014R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082.¢\u0006\u0002\n\u0000¨\u0006\u000b&quot;&#125;, d2 = &#123;&quot;Lcom/ad2001/frida0xb/MainActivity;&quot;, &quot;Landroidx/appcompat/app/AppCompatActivity;&quot;, &quot;()V&quot;, &quot;binding&quot;, &quot;Lcom/ad2001/frida0xb/databinding/ActivityMainBinding;&quot;, &quot;getFlag&quot;, &quot;&quot;, &quot;onCreate&quot;, &quot;savedInstanceState&quot;, &quot;Landroid/os/Bundle;&quot;, &quot;Companion&quot;, &quot;app_debug&quot;&#125;, k = 1, mv = &#123;1, 8, 0&#125;, xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)</span></span><br><span class="line"><span class="comment">/* loaded from: classes3.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Companion</span> <span class="variable">Companion</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Companion</span>(<span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">private</span> ActivityMainBinding binding;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title function_">getFlag</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: protected */</span></span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        <span class="type">ActivityMainBinding</span> <span class="variable">inflate</span> <span class="operator">=</span> ActivityMainBinding.inflate(getLayoutInflater());</span><br><span class="line">        Intrinsics.checkNotNullExpressionValue(inflate, <span class="string">&quot;inflate(layoutInflater)&quot;</span>);</span><br><span class="line">        <span class="built_in">this</span>.binding = inflate;</span><br><span class="line">        <span class="keyword">if</span> (inflate == <span class="literal">null</span>) &#123;</span><br><span class="line">            Intrinsics.throwUninitializedPropertyAccessException(<span class="string">&quot;binding&quot;</span>);</span><br><span class="line">            inflate = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        setContentView(inflate.getRoot());</span><br><span class="line">        <span class="type">View</span> <span class="variable">findViewById</span> <span class="operator">=</span> findViewById(R.id.button);</span><br><span class="line">        Intrinsics.checkNotNullExpressionValue(findViewById, <span class="string">&quot;findViewById(R.id.button)&quot;</span>);</span><br><span class="line">        <span class="type">Button</span> <span class="variable">btn</span> <span class="operator">=</span> (Button) findViewById;</span><br><span class="line">        btn.setOnClickListener(<span class="keyword">new</span> <span class="title class_">View</span>.OnClickListener() &#123; <span class="comment">// from class: com.ad2001.frida0xb.MainActivity$$ExternalSyntheticLambda0</span></span><br><span class="line">            <span class="meta">@Override</span> <span class="comment">// android.view.View.OnClickListener</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title function_">onClick</span><span class="params">(View view)</span> &#123;</span><br><span class="line">                MainActivity.onCreate$lambda$<span class="number">0</span>(MainActivity.<span class="built_in">this</span>, view);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* JADX INFO: Access modifiers changed from: private */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">void</span> onCreate$lambda$<span class="number">0</span>(MainActivity <span class="built_in">this</span>$<span class="number">0</span>, View it) &#123;</span><br><span class="line">        Intrinsics.checkNotNullParameter(<span class="built_in">this</span>$<span class="number">0</span>, <span class="string">&quot;this$0&quot;</span>);</span><br><span class="line">        <span class="built_in">this</span>$<span class="number">0.</span>getFlag();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* compiled from: MainActivity.kt */</span></span><br><span class="line">    <span class="meta">@Metadata(d1 = &#123;&quot;\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002¨\u0006\u0003&quot;&#125;, d2 = &#123;&quot;Lcom/ad2001/frida0xb/MainActivity$Companion;&quot;, &quot;&quot;, &quot;()V&quot;, &quot;app_debug&quot;&#125;, k = 1, mv = &#123;1, 8, 0&#125;, xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)</span></span><br><span class="line">    <span class="comment">/* loaded from: classes3.dex */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Companion</span> &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="comment">/* synthetic */</span> Companion(DefaultConstructorMarker defaultConstructorMarker) &#123;</span><br><span class="line">            <span class="built_in">this</span>();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="title function_">Companion</span><span class="params">()</span> &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">&quot;frida0xb&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到在应用程序的 MainActivity 类中，定义了一个 native 函数 getFlag，该函数不接受任何参数也没有返回值，并在程序结尾处使用 System.loadLibrary 函数加载 frida0xb 动态链接库。MainActivity 类中定义的 onCreate 方法监听按钮的点击，点击按钮时会通过 lambda 表达式调用 onCreate$lambda$0 方法，然后在onCreate$lambda$0 方法中调用 getFlag 函数。接下来，我们使用 IDA 对 frida0xb 动态链接库进行分析，查看 getFlag 函数是如何实现的。</p>
+<p>获取.so文件的方法还是一样，改一下后缀名，然后找到对应的.so文件，用ida64打开，找到函数，发现ida反编译出来的伪代码严重不完整</p>
+<p>这是反编译的<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/c1c99ce8-dd3c-45e7-972d-420bc723bb6b.png" alt="c1c99ce8-dd3c-45e7-972d-420bc723bb6b"></p>
+<p>这是汇编</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/b7f9b83b-82c3-4020-8214-7e21221cd822.png" alt="b7f9b83b-82c3-4020-8214-7e21221cd822"></p>
+<p>我们回到流程控制窗口中查看。可以看到程序中出现永远为假的条件跳转，导致 IDA 识别不到解密 flag 并输出的代码指令<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/c8c51492-2225-42d3-a08c-fb511b6314c6.png" alt="c8c51492-2225-42d3-a08c-fb511b6314c6"></p>
+<p>然后一跳转就没了。</p>
+<p>分析完代码我们可以发现，程序在点击按钮时调用了 getFlag 函数，该函数在 native 代码实现过程中，有一个永久为假的条件跳转，导致解密 flag 并输出的代码块未被执行。为了获取这个 flag ，我们需要使用 Frida 脚本，修改jnz（跳转到程序结尾）这条指令，让它不执行，以绕过条件跳转来执行解码和输出 flag 的程序。</p>
+<p>我们需要使用Frida 框架，编写一个 JavaScript 脚本，将 native 函数 getFlag 中的 B.NE （条件分支跳转指令）修改为 Nop（空操作指令），在Frida中修改汇编指令需要使用ARM64Writer 类。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/fbfa387f-184f-4213-8b0b-f0095d0bf4c3.png" alt="fbfa387f-184f-4213-8b0b-f0095d0bf4c3"></p>
+<p>首先，我们需要知道 B.NE 指令的地址，该地址同样可以通过Module.getBaseAddress API 得到 frida0xb 库的基地址，再加上 B.NE 指令的偏移量来获取。我们可以在IDA中查看 B.NE 指令地址的偏移量为”0x170CE″。然后创建一个 ARM64Writer 类的实例，将获取到的 B.NE 指令的地址作为传入参数，再调用 ARM64Writer 实例的 putNop 方法在 B.NE 指令的地址上写入一条 Nop 指令，覆盖掉原来的指令。接着调用 ARM64Writer 实例的 flush 方法将修改后的指令写入内存中。<img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/14ee1b95-145b-4648-b0b9-c6ed99e9f2ec.png" alt="14ee1b95-145b-4648-b0b9-c6ed99e9f2ec"></p>
+<p>为了绕过应用程序中的内存分页保护机制，成功修改并运行 native 代码中的指令，我们还需要使用 Frida 中的 Memory.protect 函数，将指定内存区域的保护属性修改为”rwx”（可读可写可执行）。</p>
+<blockquote>
+<p>在Frida中，Memory.protect 函数用于修改内存页的保护属性，以控制对内存的访问权限。这个函数可以用来修改目标进程中的内存页，例如将内存页设置为可读、可写、可执行等。Memory.protect 函数的语法如下：  </p>
+<p>   Memory.protect(ptr, size, protection)</p>
+<ul>
+<li><p>ptr: 表示要修改保护属性的内存地址，通常是一个指向目标内存区域的指针。</p>
+</li>
+<li><p>size: 表示要修改保护属性的内存区域的大小，以字节为单位。</p>
+</li>
+<li><p>protection: 表示要设置的内存保护属性。</p>
+</li>
+</ul>
+</blockquote>
+<p>脚本如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jnz_adr =  <span class="title class_">Module</span>.<span class="title function_">getBaseAddress</span>(<span class="string">&quot;libfrida0xb.so&quot;</span>).<span class="title function_">add</span>(<span class="number">0x170CE</span>);</span><br><span class="line"><span class="comment">//获取 jnz 指令地址。</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Memory</span>.<span class="title function_">protect</span>(jnz_adr,<span class="number">0x1000</span>,<span class="string">&quot;rwx&quot;</span>);</span><br><span class="line"><span class="comment">// 将对应内存区域的保护属性修改为可读可写可执行。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> writer = <span class="keyword">new</span> <span class="title class_">Arm64Writer</span>(jnz_adr);</span><br><span class="line"><span class="comment">// 创建 ARM64Writer 类的实例 writer，将 jnz_adr 作为写入的内存地址。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  writer.<span class="title function_">putNop</span>();</span><br><span class="line">  <span class="comment">// 在原本 jnz 指令的地址上写入一条 Nop 指令，替换原本的 jnz 指令</span></span><br><span class="line"></span><br><span class="line">  writer.<span class="title function_">flush</span>();</span><br><span class="line">  <span class="comment">// 将修改后的指令写入内存中</span></span><br><span class="line"></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Command modification successful.&quot;</span>);</span><br><span class="line">  <span class="comment">// 指令修改完成后打印一条提示语。</span></span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">  writer.<span class="title function_">dispose</span>();</span><br><span class="line">  <span class="comment">// 释放与 writer 实例关联的资源。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还是因为无法运行程序，只能到这里了。</p>
+<p><strong>总结</strong>：Frida使用ARM64Writer修改指令的脚本模板</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> writer = <span class="keyword">new</span> <span class="title class_">ARM64Writer</span>(&lt;address_of_the_instruction&gt;);</span><br><span class="line"><span class="comment">// 创建一个Arm64Writer类实例，用于编写ARM64指令，codeAddress是要写入的内存地址。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">  我们自己的指令实现</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"></span><br><span class="line">  writer.<span class="title function_">flush</span>();</span><br><span class="line">  <span class="comment">// 将修改后的指令写入内存中</span></span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">  writer.<span class="title function_">dispose</span>();</span><br><span class="line">  <span class="comment">// 释放与 ARM64Writer 实例关联的资源。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="十四-Android-JAVA层root检测绕过"><a href="#十四-Android-JAVA层root检测绕过" class="headerlink" title="十四.Android JAVA层root检测绕过"></a>十四.Android JAVA层root检测绕过</h5><p>当看到类似代码检测</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle bundle)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (c.a() || c.b() || c.c()) &#123;</span><br><span class="line">        a(<span class="string">&quot;Root detected!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (b.a(getApplicationContext())) &#123;</span><br><span class="line">        a(<span class="string">&quot;App is debuggable!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">super</span>.onCreate(bundle);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> sg.vantagepoint.a;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Build;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* loaded from: classes.dex */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">c</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">a</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (String str : System.getenv(<span class="string">&quot;PATH&quot;</span>).split(<span class="string">&quot;:&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">new</span> <span class="title class_">File</span>(str, <span class="string">&quot;su&quot;</span>).exists()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">b</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> Build.TAGS;</span><br><span class="line">        <span class="keyword">return</span> str != <span class="literal">null</span> &amp;&amp; str.contains(<span class="string">&quot;test-keys&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">c</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (String str : <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;/system/app/Superuser.apk&quot;</span>, <span class="string">&quot;/system/xbin/daemonsu&quot;</span>, <span class="string">&quot;/system/etc/init.d/99SuperSUDaemon&quot;</span>, <span class="string">&quot;/system/bin/.ext/.su&quot;</span>, <span class="string">&quot;/system/etc/.has_su_daemon&quot;</span>, <span class="string">&quot;/system/etc/.installed_su_daemon&quot;</span>, <span class="string">&quot;/dev/com.koushikdutta.superuser.daemon/&quot;</span>&#125;) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">new</span> <span class="title class_">File</span>(str).exists()) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么我们可以写frida-hook脚本，使得其检测函数返回false，就可以正常在模拟器上运行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">setImmediate(function () &#123;</span><br><span class="line">    console.log(<span class="string">&quot;[*] Starting script&quot;</span>);</span><br><span class="line"></span><br><span class="line">    Java.perform(function () &#123;</span><br><span class="line">        <span class="type">let</span> <span class="variable">c</span> <span class="operator">=</span> Java.use(<span class="string">&quot;sg.vantagepoint.a.c&quot;</span>);</span><br><span class="line">        c[<span class="string">&quot;a&quot;</span>].implementation = function () &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        c[<span class="string">&quot;b&quot;</span>].implementation = function () &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        c[<span class="string">&quot;c&quot;</span>].implementation = function () &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Unidbg 中处理文件访问(一) | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Unidbg ">
+  <meta name="description" content="Unidbg 中处理文件访问(一) | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:1621925986@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(22)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(13)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(6)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="22">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Unidbg 中处理文件访问（一）" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Unidbg 中处理文件访问(一)</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Unidbg学习">Unidbg学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Unidbg</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-07-17 14:55:51'>2025-07-15 16:52</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Unidbg-%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-text">Unidbg 中处理文件访问（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-text">一、引言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-text">二、概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-text">三、文件访问基本处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%8E%AF%E5%A2%83%E6%A3%80%E6%B5%8B"><span class="toc-text">四、环境检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-text">五、总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%8F%82%E8%80%83"><span class="toc-text">六、参考</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Unidbg-中处理文件访问（一）"><a href="#Unidbg-中处理文件访问（一）" class="headerlink" title="Unidbg 中处理文件访问（一）"></a>Unidbg 中处理文件访问（一）</h1><h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>补文件访问在 Unidbg 补环境这项工作里的重要性仅次于补 JNI 环境，它有两个主要特征：</p>
+<p><strong>一是出现频率高</strong>：<br>它的出现频率远高于补系统调用、补库函数、补虚拟模块这些情况，仅次于 JNI 调用。信息获取和环境检测都会大量使用文件访问。</p>
+<p><strong>二是容易被补漏</strong>：<br>Unidbg 对文件访问提供了很好的监控和打印，所谓容易补漏，主要是使用者的问题。因为安卓碎片化严重、版本多、权限管理混乱等等原因，因为即使在真实 Android 环境里，访问某个文件没成功也是很常见的事，因此开发上会做大量的兼容处理。换句话说，大部分文件补了最好，不补也不一定有事。因此许多 Unidbg 的使用者走向了极端——完全不关注文件访问，这确实省时省力，而且 80% 样本来说没有影响。但是，在 20% 的样本和场景里会出问题，而且往往越难的样本越会出问题。</p>
+<p>因此学号怎么补文件访问还是挺重要的，本篇就是系统地讲这个问题。</p>
+<h3 id="二、概述"><a href="#二、概述" class="headerlink" title="二、概述"></a>二、概述</h3><p>文件访问最主要服务于环境检测和信息收集，举例如下。</p>
+<ul>
+<li>访问 &#x2F;proc&#x2F;self&#x2F;maps 检测 frida&#x2F;xposed 等模块。</li>
+<li>访问 &#x2F;proc&#x2F;net&#x2F;tcp 检测 frida&#x2F;ida server 默认端口。</li>
+<li>访问 &#x2F;proc&#x2F;self&#x2F;cmdline 确认在自身进程内。</li>
+<li>访问 apkfile 做签名校验，解析资源文件等。</li>
+<li>访问 &#x2F;xbin&#x2F;su 检测 root。</li>
+<li>访问 data&#x2F;data&#x2F;package&#x2F;xxx 读取自身有关文件</li>
+</ul>
+<p>Unidbg 通过文件处理器处理文件。默认的文件处理器是 AndroidResolver，我们可以在它的 resolve 方法里处理样本发起的文件访问。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//source:src/main/java/com/github/unidbg/linux/android/AndroidResolver.java</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String path, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">    <span class="comment">// 相关逻辑，此处省略</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里写代码可不是一个好方案，出于两方面原因：</p>
+<ul>
+<li>可移植性差：AndroidResolver 属于 Unidbg 源码的一部分，修改 AndroidResolver 使其失去了灵活性。如果想迁移项目，需要对整个Unidbg 环境打包。</li>
+<li>环境混乱：我们一般会在 Unidbg 环境里处理多个样本，它们都有文件访问的需求，对于同一个文件，不同样本的预期返回不一定相同，比如 &#x2F;proc&#x2F;self&#x2F;cmdline 查看包名，在 AndroidResolver 中难以做区分。</li>
+</ul>
+<p>Unidbg 并不会让我们陷入泥潭，在文件处理上它采用了责任链模式的设计。用户可以自定义一个或多个文件处理器，当文件访问发生时，多个文件处理器都有机会处理该文件访问，直到其中某个对它处理成功，或最终失败返回为止。责任链模式将多个文件处理器串成链，然后让文件访问在链上传递。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1663979960314-954f455b-b2bc-4d52-8b40-1111cc987bef.png" alt="img"></p>
+<p>先依次进入用户自定义的 IOResolver A 和 B ，然后就是 AndroidResolver，最后是虚拟文件系统。如果文件访问在较早的某处得到了处理，那就会直接返回。图例所对应的代码如下。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">final</span> FileResult&lt;T&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;T&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">    FileResult&lt;T&gt; failResult = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 依次进入每个文件解析器，以期得到处理</span></span><br><span class="line">    <span class="keyword">for</span> (IOResolver&lt;T&gt; resolver : resolvers) &#123;</span><br><span class="line">        FileResult&lt;T&gt; result = resolver.resolve(emulator, pathname, oflags);</span><br><span class="line">        <span class="keyword">if</span> (result != <span class="literal">null</span> &amp;&amp; result.isSuccess()) &#123;</span><br><span class="line">            emulator.getMemory().setErrno(<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (result != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (failResult == <span class="literal">null</span> || !failResult.isFallback()) &#123;</span><br><span class="line">                failResult = result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (failResult != <span class="literal">null</span> &amp;&amp; !failResult.isFallback()) &#123;</span><br><span class="line">        <span class="keyword">return</span> failResult;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">// 虚拟文件系统</span></span><br><span class="line">    FileResult&lt;T&gt; result = emulator.getFileSystem().open(pathname, oflags);</span><br><span class="line">    <span class="keyword">if</span> (result != <span class="literal">null</span> &amp;&amp; result.isSuccess()) &#123;</span><br><span class="line">        emulator.getMemory().setErrno(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 一些杂项路径判断和处理，此处省略</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> failResult;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Unidbg 在这里的设计也并非完美，一些特殊以及杂项文件的处理没有设计对应的文件处理器，而是较为零散的放在各处。事实上，将它们重构为一个 procFileIOResolver 会更合理，感兴趣的读者可以去做尝试。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ((<span class="string">&quot;/proc/&quot;</span> + emulator.getPid() + <span class="string">&quot;/fd&quot;</span>).equals(pathname) || <span class="string">&quot;/proc/self/fd&quot;</span>.equals(pathname)) &#123;</span><br><span class="line">    <span class="keyword">return</span> createFdDir(oflags, pathname);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ((<span class="string">&quot;/proc/&quot;</span> + emulator.getPid() + <span class="string">&quot;/task/&quot;</span>).equals(pathname) || <span class="string">&quot;/proc/self/task/&quot;</span>.equals(pathname)) &#123;</span><br><span class="line">    <span class="keyword">return</span> createTaskDir(emulator, oflags, pathname);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面我们从一个比较高的视角观察了 Unidbg 中文件访问的处理流程，接下里进入细节，可不能眼高手低。首先是定义和添加文件处理器的具体写法，<strong>addIOResolver</strong> 用于添加一个文件处理器对象，将如下代码放在早于 <strong>loadLibrary</strong> 的时机即可生效。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">emulator.getSyscallHandler().addIOResolver(<span class="keyword">new</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;file open:&quot;</span>+pathname);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>有时候我们会让目标类实现 IOResolver 接口，那么就是 addIOResolver(this)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.AndroidEmulator;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.Emulator;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.arm.backend.Unicorn2Factory;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.FileResult;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.IOResolver;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.AndroidEmulatorBuilder;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.AndroidResolver;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.AbstractJni;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.DalvikModule;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.DvmClass;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.VM;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.memory.Memory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TEST3</span> <span class="keyword">extends</span> <span class="title class_">AbstractJni</span> <span class="keyword">implements</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AndroidEmulator emulator;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> DvmClass LibBili;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> VM vm;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">TEST3</span><span class="params">()</span> &#123;</span><br><span class="line">        emulator = AndroidEmulatorBuilder</span><br><span class="line">                .for32Bit()</span><br><span class="line">                .addBackendFactory(<span class="keyword">new</span> <span class="title class_">Unicorn2Factory</span>(<span class="literal">true</span>))</span><br><span class="line">                .setProcessName(<span class="string">&quot;tv.danmaku.bili&quot;</span>)</span><br><span class="line">                .build();</span><br><span class="line">        <span class="type">Memory</span> <span class="variable">memory</span> <span class="operator">=</span> emulator.getMemory();</span><br><span class="line">        memory.setLibraryResolver(<span class="keyword">new</span> <span class="title class_">AndroidResolver</span>(<span class="number">23</span>));</span><br><span class="line">        vm = emulator.createDalvikVM(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;D:\\Compilation_Enviroment\\unidbg-master\\unidbg-android\\src\\test\\java\\com\\test3\\bilibili.apk&quot;</span>));</span><br><span class="line">        vm.setJni(<span class="built_in">this</span>);</span><br><span class="line">        vm.setVerbose(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// add</span></span><br><span class="line">        emulator.getBackend().registerEmuCountHook(<span class="number">10000</span>); <span class="comment">// 设置执行多少条指令切换一次线程</span></span><br><span class="line">        emulator.getSyscallHandler().setVerbose(<span class="literal">true</span>);</span><br><span class="line">        emulator.getSyscallHandler().setEnableThreadDispatcher(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        emulator.getSyscallHandler().addIOResolver(<span class="built_in">this</span>);</span><br><span class="line">        <span class="comment">//加载Dalvik的模块</span></span><br><span class="line">        <span class="type">DalvikModule</span> <span class="variable">dm</span> <span class="operator">=</span> vm.loadLibrary(<span class="string">&quot;bili&quot;</span>, <span class="literal">true</span>);</span><br><span class="line">        <span class="comment">//加载目标类</span></span><br><span class="line">        LibBili = vm.resolveClass(<span class="string">&quot;com.bilibili.nativelibrary.LibBili&quot;</span>);</span><br><span class="line">        dm.callJNI_OnLoad(emulator);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TEST3</span> <span class="variable">test3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TEST3</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult <span class="title function_">resolve</span><span class="params">(Emulator emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;lilac open: &quot;</span> + pathname);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在处理很复杂的样本时，我们希望逻辑分离，那么可以把 IOSresolver 从主类中摘出去。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.Emulator;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.FileResult;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.IOResolver;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.linux.AndroidFileIO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BiliIOResolver</span> <span class="keyword">implements</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;file open:&quot;</span>+pathname);        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主类代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test3;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.AndroidEmulator;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.Emulator;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.arm.backend.Unicorn2Factory;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.FileResult;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.IOResolver;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.file.linux.AndroidFileIO;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.AndroidEmulatorBuilder;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.AndroidResolver;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.AbstractJni;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.DalvikModule;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.DvmClass;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.linux.android.dvm.VM;</span><br><span class="line"><span class="keyword">import</span> com.github.unidbg.memory.Memory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TEST3</span> <span class="keyword">extends</span> <span class="title class_">AbstractJni</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AndroidEmulator emulator;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> DvmClass LibBili;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> VM vm;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Bili</span><span class="params">()</span> &#123;</span><br><span class="line">        emulator = AndroidEmulatorBuilder.for32Bit()</span><br><span class="line">                .addBackendFactory(<span class="keyword">new</span> <span class="title class_">Unicorn2Factory</span>(<span class="literal">false</span>))</span><br><span class="line">                .build();</span><br><span class="line">        emulator.getBackend().registerEmuCountHook(<span class="number">10000</span>); <span class="comment">// 设置执行多少条指令切换一次线程</span></span><br><span class="line">        emulator.getSyscallHandler().setVerbose(<span class="literal">true</span>);</span><br><span class="line">        emulator.getSyscallHandler().setEnableThreadDispatcher(<span class="literal">true</span>);</span><br><span class="line">        <span class="type">Memory</span> <span class="variable">memory</span> <span class="operator">=</span> emulator.getMemory();</span><br><span class="line">        memory.setLibraryResolver(<span class="keyword">new</span> <span class="title class_">AndroidResolver</span>(<span class="number">23</span>));</span><br><span class="line">        vm = emulator.createDalvikVM(<span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;unidbg-android/src/test/resources/bili/bili.apk&quot;</span>));</span><br><span class="line">        vm.setVerbose(<span class="literal">true</span>);</span><br><span class="line">        vm.setJni(<span class="built_in">this</span>);</span><br><span class="line"></span><br><span class="line">        emulator.getSyscallHandler().addIOResolver(<span class="keyword">new</span> <span class="title class_">BiliIOResolver</span>());</span><br><span class="line"></span><br><span class="line">        <span class="type">DalvikModule</span> <span class="variable">dm</span> <span class="operator">=</span> vm.loadLibrary(<span class="string">&quot;bili&quot;</span>, <span class="literal">true</span>);</span><br><span class="line">        LibBili = vm.resolveClass(<span class="string">&quot;com.bilibili.nativelibrary.LibBili&quot;</span>);</span><br><span class="line">        dm.callJNI_OnLoad(emulator);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">calla</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">appkey</span> <span class="operator">=</span> LibBili.callStaticJniMethodObject(emulator, <span class="string">&quot;a(Ljava/lang/String;)Ljava/lang/String;&quot;</span>, <span class="string">&quot;android&quot;</span>).getValue().toString();</span><br><span class="line">        System.out.println(<span class="string">&quot;result:&quot;</span>+appkey);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TEST3</span> <span class="variable">test3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TEST3</span>();</span><br><span class="line">        test3.calla();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加多个自定义文件处理器的场景里(比如处理某公司旗下的多个样本，它们在多数文件访问上类似，但少部分需要各自处理)，需要注意后添加的优先级更高。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 后面添加的优先级高</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addIOResolver</span><span class="params">(IOResolver&lt;T&gt; resolver)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>比如下面的逻辑里，文件访问会首先经过B，其次才是A</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">emulator.getSyscallHandler().addIOResolver(<span class="keyword">new</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Resolver A&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">emulator.getSyscallHandler().addIOResolver(<span class="keyword">new</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Resolver B&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>自定义以及添加文件处理器需要关注的内容就这么多，接下来是具体的文件处理。</p>
+<h3 id="三、文件访问基本处理"><a href="#三、文件访问基本处理" class="headerlink" title="三、文件访问基本处理"></a>三、文件访问基本处理</h3><p>这是本篇的主要内容，也是补环境的实际指导。如果想学好它，需要意识到它的知识由三部分构成。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1663983989813-a3022bde-395c-4da8-b671-e1e60033846e.png" alt="image.png"></p>
+<p>举个例子，我们设置了自定义文件处理器，打印样本所访问的文件，假如日志里出现了下面这么一行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file open:/proc/sys/kernel/random/boot_id</span><br></pre></td></tr></table></figure>
+
+<p>Linux&#x2F;Android 文件系统的知识：boot_id 文件在开机时生成，在设备关机前不会改变内容。我们将这个文件从真机上 push 出来</p>
+<p>对业务的经验：boot_id 常用于构建设备指纹或单纯的信息采集，需要补它。</p>
+<p>Unidbg 对应的实现和映射：像下面这样补它</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">emulator.getSyscallHandler().addIOResolver(<span class="keyword">new</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        <span class="comment">//参数二: 文件路径</span></span><br><span class="line">        <span class="comment">//参数三: 操作文件标志</span></span><br><span class="line">        <span class="keyword">switch</span> (pathname)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;/proc/sys/kernel/random/boot_id&quot;</span>:&#123;</span><br><span class="line">                <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">SimpleFileIO</span>(oflags, <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;unidbg-android/src/test/resources/dewu/cpu/boot_id&quot;</span>), pathname));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>我们主要讲解第一部分，也会适时补充第二、三部分的内容。先看代码，我们用switch case 对 pathname 做判断，也对 boot_id 做处理，return 语句看起来有些复杂，我们拆解一下。</p>
+<p>最外层是 <strong>FileResult.<AndroidFileIO>success</strong>，我们可以返回任意 AndroidFileIO 类型的文件，这么说有点怪，这是因为 Unidbg 是一个 Android&#x2F;IOS 双端的 Native 模拟器，除了 AndroidFileIO 还有对应于 IOS 的DarwinFileIO，所以由此限制。</p>
+<p>对文件访问有 success、failed、fallback 三种处理</p>
+<ul>
+<li>success 表示文件顺利访问，参数是 NewFileIO。</li>
+<li>failed 表示文件访问失败，参数是 error 错误码。</li>
+<li>fallback 表示回退、降级，只有在其他处理器无法处理对该文件的访问时，才由 fallback 指定的文件 IO 来处理。</li>
+</ul>
+<p>第一种使用最多，只有文件访问的意图正常——信息收集，我们都很乐意正常予以返回。因为我们希望程序收集到足够多且内容合理的设备信息，以顺利执行完函数以及规避简单风控。</p>
+<p>SimpleFileIO 时最常用的 IO 类型，它代表普通文件，上面补 boot_id 就用的它。resolve 所提供的 oflags 和 path 原封不动的传给它，file是从真机 pull 出来的 boot_id 文件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">SimpleFileIO</span><span class="params">(<span class="type">int</span> oflags, File file, String path)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>(oflags);</span><br><span class="line">    <span class="built_in">this</span>.file = file;</span><br><span class="line">    <span class="built_in">this</span>.path = path;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (file.isDirectory()) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;file is directory: &quot;</span> + file);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!file.exists()) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;file not exists: &quot;</span> + file);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>读者可能会像一个问题，boot_id 在一定程度上用于标识设备，那么在生产环境中，我们需要对它做随机化以躲避风控。使用 SimpleFileIO 就不太好处理这个问题，这时候就可以用 ByteArrayFileIO。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">emulator.getSyscallHandler().addIOResolver(<span class="keyword">new</span> <span class="title class_">IOResolver</span>&lt;AndroidFileIO&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> FileResult&lt;AndroidFileIO&gt; <span class="title function_">resolve</span><span class="params">(Emulator&lt;AndroidFileIO&gt; emulator, String pathname, <span class="type">int</span> oflags)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Resolver A&quot;</span>);</span><br><span class="line">        <span class="keyword">switch</span> (pathname)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;/proc/sys/kernel/random/boot_id&quot;</span>:&#123;</span><br><span class="line">                <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">ByteArrayFileIO</span>(oflags,  pathname, UUID.randomUUID().toString().getBytes(StandardCharsets.UTF_8)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>ByteArrayFileIO 在 oflags、pathname 上和 SimpleFileIO 无差别，但它接收一个字节数组而非 File 文件，对于灵活补文件内容有很大的帮助。读者也需要知道它的副作用——没办法对文件做写入操作，ByteArrayFileIO 像浮萍漂泊，无根无依。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">write</span><span class="params">(<span class="type">byte</span>[] data)</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">UnsupportedOperationException</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果样本访问的是一个目录呢？这时候就要用 DirectoryFileIO，File 传入文件夹即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&quot;/data/data/com.sankuai.meituan&quot;</span>:&#123;</span><br><span class="line">    <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">DirectoryFileIO</span>(oflags, pathname, <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;unidbg-android/src/test/resources/meituan/data&quot;</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但对于文件夹访问而言，使用虚拟文件系统是更好的选择。</p>
+<p>使用虚拟文件系统，我们对文件的掌控程度会下降，在补常规文件时不算好办法，但补文件夹算是一个特殊情况。举个例子，如果样本访问本机的 &#x2F;sysytem&#x2F;fonts 目录，对所有字体文件做 md5 然后上传。如果用 DirectoryFileIO 补，那么在补了 fonts 文件夹后，还需要用 SimpleFileIO 处理每个字体文件的访问，工作量很大，而使用虚拟文件系统，只要把文件夹对对应位置放好，就可以顺利处理整个逻辑。</p>
+<p>需要注意，补文件访问时不要犯低级错误，比如样本访问 proc&#x2F;version，尽管和 &#x2F;proc&#x2F;version 是一回事，但你可不要多了一个斜杠，pathname 字符串匹配找不到了。</p>
+<p>80%的情况里，你就会遇到这么点文件访问的需求——从真机中把对应的文件拖出来，用SimpleFileIO、ByteArrayFileIO、DirectoryFileIO 以及虚拟文件系统去处理它。</p>
+<p>比如补 apk，在任何情况下，都不应该对访问 apk 忽略不管，因为它往往用于资源读取或签名校验，不补风险很大。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&quot;/data/app/com.jingdong.app.mall-jJGgNO9r6uKMLj1ytVwSRw==/base.apk&quot;</span>:&#123;</span><br><span class="line">    <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">SimpleFileIO</span>(oflags, <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;unidbg-android/src/test/resources/jd/jd.apk&quot;</span>), pathname));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>补 CPU 信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// https://bbs.pediy.com/thread-229579-1.htm</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq&quot;</span>:&#123;</span><br><span class="line">    <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">ByteArrayFileIO</span>(oflags, pathname, <span class="string">&quot;1766400&quot;</span>.getBytes()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>补电池信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&quot;/sys/class/power_supply/battery/temp&quot;</span>:&#123;</span><br><span class="line">    <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">SimpleFileIO</span>(oflags, <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;unidbg-android/src/test/resources/meituan/files/battery/temp&quot;</span>), pathname));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;/sys/class/power_supply/battery/voltage_now&quot;</span>:&#123;</span><br><span class="line">    <span class="keyword">return</span> FileResult.&lt;AndroidFileIO&gt;success(<span class="keyword">new</span> <span class="title class_">SimpleFileIO</span>(oflags, <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;unidbg-android/src/test/resources/meituan/files/battery/voltage_now&quot;</span>), pathname));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来说说 failed，它表示文件访问失败，使用场景其实也不多。因为只要我们什么都不补，AndroidResolver 里没有处理这个文件，虚拟文件系统中也不包含它，那就自动访问失败 + 设置错误码。</p>
+<p>但有个情况比较例外——如果文件访问 &#x2F;data，判断是都有写权限，进而确认设备环境是否 Root 的话，我们需要手动处理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">&quot;/data&quot;</span>:&#123;</span><br><span class="line">    <span class="keyword">return</span> FileResult.failed(UnixEmulator.EACCES);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为虚拟文件系统会自动生成 data 目录，进而访问成功。错误码列表如下，也可以直接使用看 Linux 的错误码文档进行设置，Unidbg 本就是它的简单映射。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.github.unidbg.unix;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UnixEmulator</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">EPERM</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">/* Operation not permitted */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ENOENT</span> <span class="operator">=</span> <span class="number">2</span>; <span class="comment">/* No such file or directory */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ESRCH</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">/* No such process */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EINTR</span> <span class="operator">=</span> <span class="number">4</span>; <span class="comment">/* Interrupted system call */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EBADF</span> <span class="operator">=</span> <span class="number">9</span>; <span class="comment">/* Bad file descriptor */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EAGAIN</span> <span class="operator">=</span> <span class="number">11</span>; <span class="comment">/* Resource temporarily unavailable */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ENOMEM</span> <span class="operator">=</span> <span class="number">12</span>; <span class="comment">/* Cannot allocate memory */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EACCES</span> <span class="operator">=</span> <span class="number">13</span>; <span class="comment">/* Permission denied */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EFAULT</span> <span class="operator">=</span> <span class="number">14</span>; <span class="comment">/* Bad address */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EEXIST</span> <span class="operator">=</span> <span class="number">17</span>; <span class="comment">/* File exists */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ENOTDIR</span> <span class="operator">=</span> <span class="number">20</span>; <span class="comment">/* Not a directory */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EINVAL</span> <span class="operator">=</span> <span class="number">22</span>; <span class="comment">/* Invalid argument */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ENOTTY</span> <span class="operator">=</span> <span class="number">25</span>; <span class="comment">/* Inappropriate ioctl for device */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ENOSYS</span> <span class="operator">=</span> <span class="number">38</span>; <span class="comment">/* Function not implemented */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ENOATTR</span> <span class="operator">=</span> <span class="number">93</span>; <span class="comment">/* Attribute not found */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EOPNOTSUPP</span> <span class="operator">=</span> <span class="number">95</span>; <span class="comment">/* Operation not supported on transport endpoint */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EAFNOSUPPORT</span> <span class="operator">=</span> <span class="number">97</span>; <span class="comment">/* Address family not supported by protocol family */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">EADDRINUSE</span> <span class="operator">=</span> <span class="number">98</span>; <span class="comment">/* Address already in use */</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">ECONNREFUSED</span> <span class="operator">=</span> <span class="number">111</span>; <span class="comment">/* Connection refused */</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="四、环境检测"><a href="#四、环境检测" class="headerlink" title="四、环境检测"></a>四、环境检测</h3><p>当样本做环境检测相关的文件访问时，主要检测这些文件是否存在，以及是否有权限</p>
+<ul>
+<li>Root检测（检测su、magisk、riru、检测市面上的 Root 工具）</li>
+<li>模拟器检测（检测Qemu、检测各家模拟器，比如夜神、雷电、MuMu 等模拟器的文件特征、驱动特征等）</li>
+<li>危险应用检测（各类多开助手、按键精灵、接码平台）</li>
+<li>云手机检测（以各种云手机产品为主）</li>
+<li>Hook框架（以Xposed、Substrate、Frida 为主）</li>
+<li>脱壳机（以 Fart、DexHunter、Youpk三者为主）</li>
+</ul>
+<p>我们选择什么都不补就行，因为不管时自定义还是默认的文件处理器，以及虚拟文件系统里，都不会有这样的内容，这正和我们的意。就像下面这样，什么都不补就行了。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1663992483880-6b2a029e-b619-48e1-9f8c-0b9a690b299d.png" alt="img"></p>
+<p>读者需要自行分辨某个文件访问是否属于此类，如果琢磨不定建议 Google 搜索这个文件的主要用途。</p>
+<h3 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h3><p>本篇介绍了 Unidbg 中文件处理的基本逻辑和基本使用，80%的场景中它们已经够用。但如果你想探索剩下的20%，以及更多的原理层的内容，就需要看接下来的数篇。</p>
+<h3 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h3><p>[Unidbg 中处理文件访问（一）](<a target="_blank" rel="noopener" href="https://www.yuque.com/lilac-2hqvv/lfssh8/euffrv#">https://www.yuque.com/lilac-2hqvv/lfssh8/euffrv?#</a> 《Unidbg 中处理文件访问（一）》)</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
