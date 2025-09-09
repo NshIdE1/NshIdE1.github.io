@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Android 开发--NDK 开发 | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Android ">
+  <meta name="description" content="Android 开发--NDK 开发 | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="https://nshide1.github.io/tags/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:20:04.979Z">
+<meta property="article:modified_time" content="2025-03-04T12:20:04.979Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(37)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(7)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(14)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="37">
+<input type="hidden" id="yelog_site_word_count" value="206.7k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Android 开发——NDK 开发" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Android 开发--NDK 开发</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Android学习">Android学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Android</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-08-18 14:19:56'>2025-08-14 17:56</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:10k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK-%E5%BC%80%E5%8F%91"><span class="toc-text">Android 开发——NDK 开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81NDK-%E4%BB%8B%E7%BB%8D"><span class="toc-text">一、NDK 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-App-%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E9%9C%80%E8%A6%81%E6%94%BE%E5%88%B0-so-%E4%B8%AD"><span class="toc-text">1.1 App 中为什么部分代码需要放到 so 中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E4%BB%80%E4%B9%88%E6%98%AF-JNI"><span class="toc-text">1.2 什么是 JNI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E4%BB%80%E4%B9%88%E6%98%AF-NDK"><span class="toc-text">1.3 什么是 NDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-ABI-%E4%B8%8E%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="toc-text">1.4 ABI 与指令集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81NDK-%E5%92%8C-%E6%99%AE%E9%80%9A-Java-%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">二、NDK 和 普通 Java 工程的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81so-%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84-Log-%E8%BE%93%E5%87%BA"><span class="toc-text">三、so 中常用的 Log 输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81NDK-%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">四、NDK 多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81JNI-Onload"><span class="toc-text">五、JNI_Onload</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81JavaVM"><span class="toc-text">六、JavaVM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-JavaVM-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">6.1 JavaVM 是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-JavaVM-%E7%9A%84%E8%8E%B7%E5%8F%96%E6%96%B9%E5%BC%8F"><span class="toc-text">6.2 JavaVM 的获取方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81JNIEnv"><span class="toc-text">七、JNIEnv</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-JNIEnv-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">7.1 JNIEnv 是什么</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-JNIEnv-%E7%9A%84%E8%8E%B7%E5%8F%96%E6%96%B9%E5%BC%8F"><span class="toc-text">8.2 JNIEnv 的获取方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81JNI-%E5%87%BD%E6%95%B0%E7%9A%84%E6%B3%A8%E5%86%8C"><span class="toc-text">八、JNI 函数的注册</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-%E9%9D%99%E6%80%81%E6%B3%A8%E5%86%8C"><span class="toc-text">8.1 静态注册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C"><span class="toc-text">8.2 动态注册</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%A4%9A%E4%B8%AA-cpp-%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E6%88%90%E4%B8%80%E4%B8%AA-so"><span class="toc-text">九、多个 cpp 文件编译成一个 so</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E7%BC%96%E8%AF%91%E5%A4%9A%E4%B8%AA-so"><span class="toc-text">十、编译多个 so</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81so-%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9A%84%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96"><span class="toc-text">十一、so 文件路径的动态获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81so-%E4%B9%8B%E9%97%B4%E7%9B%B8%E4%BA%92%E8%B0%83%E7%94%A8"><span class="toc-text">十二、so 之间相互调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E9%80%9A%E8%BF%87-JNI-%E5%88%9B%E5%BB%BA-Java-%E5%AF%B9%E8%B1%A1"><span class="toc-text">十三、通过 JNI 创建 Java 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E9%80%9A%E8%BF%87-JNI-%E8%AE%BF%E9%97%AE-Java-%E5%B1%9E%E6%80%A7"><span class="toc-text">十四、通过 JNI 访问 Java 属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#14-1-%E8%8E%B7%E5%8F%96%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5"><span class="toc-text">14.1 获取静态字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-2-%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E5%AD%97%E6%AE%B5"><span class="toc-text">14.2 获取对象字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-3-%E8%AE%BE%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%AD%97%E6%AE%B5"><span class="toc-text">14.3 设置对象字段</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E9%80%9A%E8%BF%87JNI%E8%AE%BF%E9%97%AE%E5%92%8C%E4%BF%AE%E6%94%B9Java%E6%95%B0%E7%BB%84"><span class="toc-text">十五、通过JNI访问和修改Java数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E9%80%9A%E8%BF%87-JNI-%E8%AE%BF%E9%97%AE-Java-%E6%96%B9%E6%B3%95"><span class="toc-text">十六、通过 JNI 访问 Java 方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E8%B0%83%E7%94%A8%E9%9D%99%E6%80%81%E5%87%BD%E6%95%B0"><span class="toc-text">1、调用静态函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E8%B0%83%E7%94%A8%E5%AF%B9%E8%B1%A1%E5%87%BD%E6%95%B0"><span class="toc-text">2、调用对象函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%83%E3%80%81CallVoidMethod%E3%80%81A%E3%80%81V-%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">十七、CallVoidMethod、A、V 版本的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%85%AB%E3%80%81%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-text">十八、内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%B1%80%E9%83%A8%E5%BC%95%E7%94%A8"><span class="toc-text">1、局部引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%B1%80%E9%83%A8%E5%BC%95%E7%94%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B0"><span class="toc-text">2、局部引用相关的其他函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%85%A8%E5%B1%80%E5%BC%95%E7%94%A8"><span class="toc-text">3、全局引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E5%BC%B1%E5%85%A8%E5%B1%80%E5%BC%95%E7%94%A8"><span class="toc-text">4、弱全局引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B9%9D%E3%80%81%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%8E%B7%E5%8F%96-Java-%E7%B1%BB"><span class="toc-text">十九、子线程中获取 Java 类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E3%80%81init-%E4%B8%8E-initarray"><span class="toc-text">二十、init 与 initarray</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8D%E7%BC%96%E8%AF%91-so"><span class="toc-text">反编译 so</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%80%E3%80%81%E5%B0%BE%E5%A3%B0"><span class="toc-text">二十一、尾声</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Android-开发——NDK-开发"><a href="#Android-开发——NDK-开发" class="headerlink" title="Android 开发——NDK 开发"></a>Android 开发——NDK 开发</h1><h3 id="一、NDK-介绍"><a href="#一、NDK-介绍" class="headerlink" title="一、NDK 介绍"></a>一、NDK 介绍</h3><h4 id="1-1-App-中为什么部分代码需要放到-so-中"><a href="#1-1-App-中为什么部分代码需要放到-so-中" class="headerlink" title="1.1 App 中为什么部分代码需要放到 so 中"></a>1.1 App 中为什么部分代码需要放到 so 中</h4><ul>
+<li>虽然 Java 是平台无关性语言，但是运行 Java 语言的虚拟机是运行在具体平台上的，也就是说 Java 虚拟机是平台相关的。因此，在调用平台 API 的功能时，虽然在 Java 语言层是平台无关的，但背后只能通过 JNI 技术在 Native 层分别调用不同平台 API（例如打开文件功能，在 Window 平台是 openFile 函数，而在 Linux 平台是 open 函数）。类似的，对于有操作硬件需求的程序，也只能通过 C&#x2F;C++ 实现对硬件的操作，再通过 JNI 调用。而 NDK 提供了 JNI 的工具和环境；</li>
+<li>C&#x2F;C++ 代码的执行效率比 Java 高；</li>
+<li>Native 层代码安全性更高，反编译 so 文件的难度比反编译 Class 文件高，一些跟密码相关的功能会选择用 C&#x2F;C++ 实现；</li>
+<li>复用现有代码，当 C&#x2F;C++ 存在程序需要的功能时，则可以直接复用。</li>
+</ul>
+<hr>
+<h4 id="1-2-什么是-JNI"><a href="#1-2-什么是-JNI" class="headerlink" title="1.2 什么是 JNI"></a>1.2 什么是 JNI</h4><p><strong>JNI</strong> 是 Java Native Interface 的缩写。从 Java1.1 开始，JNI 标准成为 Java 平台的一部分，允许 Java 代码和其他语言写的代码进行交互。也就是说 <strong>JNI</strong> 是 Java 平台层面制定的“标准”，任何语言只要遵守这个规则都能跟 Java 交互。</p>
+<hr>
+<h4 id="1-3-什么是-NDK"><a href="#1-3-什么是-NDK" class="headerlink" title="1.3 什么是 NDK"></a>1.3 什么是 NDK</h4><p><strong>NDK</strong> 是Google 提供的工具，让我们可以在 <strong>Android</strong> 上用 <strong>C&#x2F;C++</strong> 写代码，方便实现 JNI 交互和性能优化。</p>
+<p>官方的介绍：<a target="_blank" rel="noopener" href="https://developer.android.com/ndk/guides?hl=zh-cn">NDK 使用入门  | Android NDK  | Android Developers</a></p>
+<hr>
+<h4 id="1-4-ABI-与指令集"><a href="#1-4-ABI-与指令集" class="headerlink" title="1.4 ABI 与指令集"></a>1.4 ABI 与指令集</h4><p>不同的 Android 设备使用不同的 CPU，而不同的 CPU 支持不同的指令集。CPU 与指令集的每种组合都有专属的应用二进制接口 (ABI)。详见：<a target="_blank" rel="noopener" href="https://developer.android.com/ndk/guides/abis?hl=zh-cn">Android ABI  | Android NDK  | Android Developers</a></p>
+<h3 id="二、NDK-和-普通-Java-工程的区别"><a href="#二、NDK-和-普通-Java-工程的区别" class="headerlink" title="二、NDK 和 普通 Java 工程的区别"></a>二、NDK 和 普通 Java 工程的区别</h3><ol>
+<li><p>Java 代码中多了加载 so 和 声明所需要加载的 so 中函数的代码<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250814162811188.png" alt="image-20250814162811188"></p>
+</li>
+<li><p><strong>main</strong> 目录中多了一个 <strong>cpp</strong> 目录，其中包含有 CMakeLists.txt 和 cpp 文件</p>
+</li>
+</ol>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250814163000493.png" alt="image-20250814163000493"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250814163043199.png" alt="image-20250814163043199"></p>
+<ol start="3">
+<li>build.gradle 中也多了一些代码<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250814163915526.png" alt="image-20250814163915526"></li>
+</ol>
+<p>默认是支持四种 ABI，如果需要限制安装包大小可以选择只支持一部分 ABI</p>
+<pre><code class="language-kotlin">defaultConfig &#123;
+    // ...
+    ndk &#123;
+        abiFilters += listOf(&quot;armeabi-v7a&quot;, &quot;arm64-v8a&quot;, &quot;x86&quot;, &quot;x86_64&quot;)
+    &#125;
+&#125;
+</code></pre>
+<p>三、第一个 NDK 工程</p>
+<ol>
+<li>CMakeLists.txt 介绍</li>
+</ol>
+<pre><code class="language-ASN.1"># For more information about using CMake with Android Studio, read the
+# documentation: https://d.android.com/studio/projects/add-native-code.html.
+# For more examples on how to use CMake, see https://github.com/android/ndk-samples.
+# 说明：这几行是官方提供的参考链接，方便你学习 CMake 和 NDK 的使用。
+
+# Sets the minimum CMake version required for this project.
+cmake_minimum_required(VERSION 3.22.1)
+# 设置本项目要求的 CMake 最低版本，这里是 3.22.1。
+# 如果你的系统 CMake 版本低于这个，会直接报错。
+
+# Declares the project name. The project name can be accessed via $&#123; PROJECT_NAME&#125;,
+# Since this is the top level CMakeLists.txt, the project name is also accessible
+# with $&#123;CMAKE_PROJECT_NAME&#125; (both CMake variables are in-sync within the top level
+# build script scope).
+project(&quot;javaandnative&quot;)
+# 定义项目名称为 &quot;javaandnative&quot;。
+# 在这个顶层 CMakeLists.txt 中，$&#123;PROJECT_NAME&#125; 和 $&#123;CMAKE_PROJECT_NAME&#125; 都可以访问这个名字。
+
+# Creates and names a library, sets it as either STATIC
+# or SHARED, and provides the relative paths to its source code.
+# You can define multiple libraries, and CMake builds them for you.
+# Gradle automatically packages shared libraries with your APK.
+#
+# In this top level CMakeLists.txt, $&#123;CMAKE_PROJECT_NAME&#125; is used to define
+# the target library name; in the sub-module&#39;s CMakeLists.txt, $&#123;PROJECT_NAME&#125;
+# is preferred for the same purpose.
+#
+# In order to load a library into your app from Java/Kotlin, you must call
+# System.loadLibrary() and pass the name of the library defined here;
+# for GameActivity/NativeActivity derived applications, the same library name must be
+# used in the AndroidManifest.xml file.
+add_library($&#123;CMAKE_PROJECT_NAME&#125; SHARED
+        # List C/C++ source files with relative paths to this CMakeLists.txt.
+        native-lib.cpp)
+# 创建一个库（library）。
+# $&#123;CMAKE_PROJECT_NAME&#125; → 这里会替换成 &quot;javaandnative&quot;，也就是库的名字。
+# SHARED 表示生成的是动态库（.so 文件），不是静态库（.a）。
+# 后面是库包含的源文件列表，这里只有 native-lib.cpp。
+# 注意：如果要在 Java/Kotlin 中加载这个库，需要调用 System.loadLibrary(&quot;javaandnative&quot;)。
+
+# Specifies libraries CMake should link to your target library. You
+# can link libraries from various origins, such as libraries defined in this
+# build script, prebuilt third-party libraries, or Android system libraries.
+target_link_libraries($&#123;CMAKE_PROJECT_NAME&#125;
+        # List libraries link to the target library
+        android
+        log)
+# 指定要和你的库一起链接的其他库。
+# $&#123;CMAKE_PROJECT_NAME&#125; 是你的库名字（javaandnative）。
+# 这里链接了两个 Android NDK 自带的库：
+#   android → 提供 Android NDK 相关 API（如 NativeActivity）。
+#   log → 提供 __android_log_print 等日志函数，用于在 logcat 输出调试信息。
+</code></pre>
+<ol start="2">
+<li><p>so 的加载</p>
+<pre><code class="language-Java">    // Used to load the &#39;javaandnative&#39; library on application startup.
+    static &#123;
+        System.loadLibrary(&quot;javaandnative&quot;);
+    &#125;
+</code></pre>
+</li>
+<li><p>native 层函数的声明</p>
+<pre><code class="language-Java">    /**
+     * A native method that is implemented by the &#39;javaandnative&#39; native library,
+     * which is packaged with this application.
+     */
+    public native String stringFromJNI();
+</code></pre>
+</li>
+<li><p>JNI 函数的静态注册规则</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+    std::string hello = &quot;Hello from C++&quot;;
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+</code></pre>
+</li>
+</ol>
+<p>Java_包名_类_方法名</p>
+<ol start="5">
+<li><p>JNIEnv、jobject&#x2F;jclass<br>jobject 在 native 函数的声明改为 static 时，使用 jclass，因为静态方法可以通过类直接调用。</p>
+</li>
+<li><p>NewstringUTF<br>Java 的数据和 so 的数据不互通，如果 so 的数据最后要转到 java 层处理就需要 NewstringUTF，因此 <strong>NewstringUTF</strong> 可以成为一个 <strong>hook</strong> 点。</p>
+</li>
+<li><p>在 NDK 开发中，一定要注意哪些是 Java 的数据类型，哪些是 C&#x2F;C++ 的数据类型，在适当的时候需要转换，<strong>hello.c_str()</strong> 获取 C&#x2F;C++ 字符串的类型，jstring 是 Java 字符串类型。</p>
+</li>
+<li><p>extern “C” JNIEXPORT jstring JNICALL</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250814165550808.png" alt="image-20250814165550808"></p>
+</li>
+</ol>
+<p>JNICALL 是空的，JNIEXPORT 代表把函数导出，给函数添加了默认的可见属性</p>
+<ol start="9">
+<li>自定义 ABI 或者 自定义命名 so<br>在 <strong>CMakeLists.txt</strong> 中修改 <strong>project</strong> 中的文件名即可自定义命名 so；自定义 ABI 也在上文中提到即在 gradle.build 中添加条件即可。</li>
+</ol>
+<h3 id="三、so-中常用的-Log-输出"><a href="#三、so-中常用的-Log-输出" class="headerlink" title="三、so 中常用的 Log 输出"></a>三、so 中常用的 Log 输出</h3><pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+    std::string hello = &quot;Hello from C++&quot;;
+    LOGD(&quot;LOGD test%d&quot;, 1);
+    LOGI(&quot;LOGI test%d,%d&quot;, 1, 2);
+    LOGE(&quot;LOGE test%d,%d,%d&quot;, 1, 2, 3);
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+</code></pre>
+<p>这是自定义的，当然也可以使用官方的，即不用 LOGD、LOGI 等进行包装，直接使用 <strong>__android_log_print</strong>。</p>
+<h3 id="四、NDK-多线程"><a href="#四、NDK-多线程" class="headerlink" title="四、NDK 多线程"></a>四、NDK 多线程</h3><pre><code class="language-Java">int pthread_create(pthread_t* __pthread_ptr, pthread_attr_t const* __attr, void* (*__start_routine)(void*), void*);
+</code></pre>
+<p>第一个是指向 phread 的指针，也是线程 id，第二个是线程属性，第三个是线程执行的函数，第四个是函数参数。</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+void* myThread(void* arg) &#123;
+    std::string test = &quot;this is a thread function&quot;;
+    LOGD(&quot;%s&quot;, test.c_str());
+    return nullptr;
+&#125;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+    std::string hello = &quot;Hello from C++&quot;;
+
+    pthread_t pthread;
+    pthread_create(&amp;pthread, nullptr, myThread, nullptr);
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+</code></pre>
+<p>日志</p>
+<pre><code class="language-shell">2025-08-14 17:14:44.334  3993-4264  NshIdE                  com.example.javaandnative            D  this is a thread function
+</code></pre>
+<p>默认的线程属性是 <strong>joinable</strong> 随着主线程结束而结束的。</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+void* myThread(void* arg) &#123;
+    std::string test = &quot;this is a thread function&quot;;
+    LOGD(&quot;%s&quot;, test.c_str());
+    pthread_exit(nullptr);
+    return nullptr;
+&#125;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+    std::string hello = &quot;Hello from C++&quot;;
+
+    pthread_t pthread;
+    pthread_create(&amp;pthread, nullptr, myThread, nullptr);
+
+    pthread_join(pthread, nullptr);
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+</code></pre>
+<p>上面代码中加了一个 <strong>pthread_join</strong>，这么做可以 确保线程执行完成、日志输出、资源回收，然后再返回到 Java 层。但这么做会导致<strong>主线程</strong>阻塞，可能会造成界面卡顿。如果使用 <strong>detach 分离线程</strong>，让它异步执行，就不会阻塞主线程。</p>
+<h3 id="五、JNI-Onload"><a href="#五、JNI-Onload" class="headerlink" title="五、JNI_Onload"></a>五、JNI_Onload</h3><p>在使用 native 层方法之前都会先加载 native 层的so文件，通常在一个类的静态代码块中进行加载，当然也可以在构造函数，或者调用前加载。<strong>jvm</strong> 在加载 so 时都会先调用 so 中的 <strong>JNI_Onload</strong> 函数，如果你没有重写该方法，那么系统会给你自动生成一个。我们先来测试一下 JNI_Onload 的调用时机。</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+void* myThread(void* arg) &#123;
+    std::string test = &quot;this is a mythread now&quot;;
+    LOGD(&quot;%s&quot;, test.c_str());
+    pthread_exit(nullptr);
+    return nullptr;
+&#125;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+
+    LOGD(&quot;this is Java_com_example_javaandnative_MainActivity_stringFromJNI now&quot;);
+
+    std::string hello = &quot;Hello from C++&quot;;
+
+    pthread_t pthread;
+    pthread_create(&amp;pthread, nullptr, myThread, nullptr);
+
+    pthread_join(pthread, nullptr);
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserver) &#123;
+    LOGI(&quot;this is JNI_OnLoad now&quot;);
+    JNIEnv *env = nullptr;
+    if (vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6) != JNI_OK) &#123;
+        LOGI(&quot;GetEnv failed&quot;);
+        return -1;
+    &#125;
+    return JNI_VERSION_1_6;
+&#125;
+</code></pre>
+<p>日志</p>
+<pre><code class="language-shell">2025-08-14 17:56:11.092 19068-19068 NshIdE                  com.example.javaandnative            I  this is JNI_OnLoad now
+2025-08-14 17:56:11.311 19068-19068 NshIdE                  com.example.javaandnative            D  this is Java_com_example_javaandnative_MainActivity_stringFromJNI now
+2025-08-14 17:56:11.312 19068-19094 NshIdE                  com.example.javaandnative            D  this is a mythread now
+</code></pre>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><p>一个 so 中可以不人为的主动定义 JNI_OnLoad，但是一旦定义了 JNI_OnLoad，在 so 被加载的时候会立刻自动执行，并且必须返回一个 JNI 版本表示加载成功，JVM 会按这个版本返回 JNIEnv 和相关功能。目前一般都是返回 <strong>JNI_VERSION_1_6</strong>。1_2、1_4 版本太老，几乎没人用，最新版本的在目前很多 Android 机型上没适配。</p>
+</li>
+<li><p>在 so 被成功卸载时，会回调另一个 JNI 方法：JNI_UnOnLoad。这两个方法声明如下：</p>
+<pre><code class="language-Java">JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved);
+JNIEXPORT void JNICALL JNI_OnUnload(JavaVM* vm, void* reserved);
+</code></pre>
+<p>其中第一个参数 vm 表示 DVM 虚拟机，该 vm 在应用进程中有且仅有一个，可以保存在 native 的静态变量中，供其他函数活线程使用。其返回值表示当前 native library 所需要的版本。</p>
+</li>
+</ul>
+<h3 id="六、JavaVM"><a href="#六、JavaVM" class="headerlink" title="六、JavaVM"></a>六、JavaVM</h3><h4 id="6-1-JavaVM-是什么"><a href="#6-1-JavaVM-是什么" class="headerlink" title="6.1 JavaVM 是什么"></a>6.1 JavaVM 是什么</h4><p><strong>JavaVM</strong> 是虚拟机在 JNI 中的表示，一个 JVM 中只有一个 JavaVM 实例，这个实例是线程共享的，通过 <strong>JNIEnv</strong>* 可以获取一个 Java 虚拟机实例，其函数如下：</p>
+<pre><code class="language-c++">jint GetJavaVM(JNIEnv *env, JavaVM **vm);
+</code></pre>
+<p><strong>vm</strong> 用来存放获得的虚拟机指针的指针，成功时返回0，失败时返回其他值。</p>
+<p>这里解释一下为什么可以通过 JNIEnv* 获取一个 Java 虚拟机实例。首先需要明白在 JNI 里，JNIEnv* 是 <strong>线程局部</strong> 的，每个线程都有一个自己的 JNIEnv*，不能跨线程使用，而 JavaVM 是全局唯一的 JVM 实例指针，可以在任意线程使用它去附加&#x2F;分离线程（<code>AttachCurrentThread</code> &#x2F; <code>DetachCurrentThread</code>）来获取新的 <code>JNIEnv</code>所以如果在 JNI_OnLoad 里没保存 JavaVM，后面又想在新的线程中使用 JNI，就需要从已有的 JNIEnv 反查它。</p>
+<p>如果是 C++，则用 _JavaVM 定义，如果是 C，就用 JNIInvokeInterface 定义。详见如下：</p>
+<pre><code class="language-c++">#if defined(__cplusplus)
+typedef _JNIEnv JNIEnv;
+typedef _JavaVM JavaVM;
+#else
+typedef const struct JNINativeInterface* JNIEnv;
+typedef const struct JNIInvokeInterface* JavaVM;
+#endif
+</code></pre>
+<p>_JavaVM 和 JNIInvokeInterface 分别如下：</p>
+<pre><code class="language-c++">/*
+ * JNI invocation interface.
+ */
+struct JNIInvokeInterface &#123;
+    void*       reserved0;
+    void*       reserved1;
+    void*       reserved2;
+
+    jint        (*DestroyJavaVM)(JavaVM*);
+    jint        (*AttachCurrentThread)(JavaVM*, JNIEnv**, void*);
+    jint        (*DetachCurrentThread)(JavaVM*);
+    jint        (*GetEnv)(JavaVM*, void**, jint);
+    jint        (*AttachCurrentThreadAsDaemon)(JavaVM*, JNIEnv**, void*);
+&#125;;
+
+/*
+ * C++ version.
+ */
+struct _JavaVM &#123;
+    const struct JNIInvokeInterface* functions;
+
+#if defined(__cplusplus)
+    jint DestroyJavaVM()
+    &#123; return functions-&gt;DestroyJavaVM(this); &#125;
+    jint AttachCurrentThread(JNIEnv** p_env, void* thr_args)
+    &#123; return functions-&gt;AttachCurrentThread(this, p_env, thr_args); &#125;
+    jint DetachCurrentThread()
+    &#123; return functions-&gt;DetachCurrentThread(this); &#125;
+    jint GetEnv(void** env, jint version)
+    &#123; return functions-&gt;GetEnv(this, env, version); &#125;
+    jint AttachCurrentThreadAsDaemon(JNIEnv** p_env, void* thr_args)
+    &#123; return functions-&gt;AttachCurrentThreadAsDaemon(this, p_env, thr_args); &#125;
+#endif /*__cplusplus*/
+&#125;;
+</code></pre>
+<ul>
+<li><p>这个底层逻辑很清晰了。_JavaVM 就是对 JNIInvokeInterface 的封装，底层逻辑还是调用 JNIInvokeInterface 的函数。这么带来的效果如下：</p>
+<pre><code class="language-c++">// C++ 版本
+vm-&gt;AttachCurrentThread(&amp;env, NULL);
+</code></pre>
+<pre><code class="language-c">//C 版本
+(*vm)-&gt;AttachCurrentThread(vm, &amp;env, NULL);
+</code></pre>
+</li>
+<li><p>JavaVM 中的常用方法：<strong>GetEnv</strong> 和 <strong>AttachCurrentThread</strong>(在子线程中获取JNIEnv)</p>
+</li>
+</ul>
+<hr>
+<h4 id="6-2-JavaVM-的获取方式"><a href="#6-2-JavaVM-的获取方式" class="headerlink" title="6.2 JavaVM 的获取方式"></a>6.2 JavaVM 的获取方式</h4><ul>
+<li>JNI_OnLoad 的第一个参数</li>
+<li>JNI_UnOnLoad 的第一个参数</li>
+<li>env-&gt;GetJavaVM</li>
+</ul>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+void* myThread(void* arg) &#123;
+    std::string test = &quot;this is a mythread now&quot;;
+    LOGD(&quot;%s&quot;, test.c_str());
+    pthread_exit(nullptr);
+    return nullptr;
+&#125;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+
+    LOGD(&quot;this is Java_com_example_javaandnative_MainActivity_stringFromJNI now&quot;);
+
+    std::string hello = &quot;Hello from C++&quot;;
+
+    pthread_t pthread;
+    pthread_create(&amp;pthread, nullptr, myThread, nullptr);
+
+    pthread_join(pthread, nullptr);
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserver) &#123;
+    JNIEnv *env = nullptr;
+    if (vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6) != JNI_OK) &#123;
+        LOGI(&quot;GetEnv failed&quot;);
+        return -1;
+    &#125;
+    LOGD(&quot;JavaVM %p&quot;, vm);
+    JavaVM* vm1 = nullptr;
+    env-&gt;GetJavaVM(&amp;vm1);
+    LOGD(&quot;env-&gt;GetJavaVM %p&quot;, vm1);
+
+    return JNI_VERSION_1_6;
+&#125;
+</code></pre>
+<p>查看日志</p>
+<pre><code class="language-shell">2025-08-15 10:35:54.068 27209-27209 NshIdE                  com.example.javaandnative            D  JavaVM 0xb400006fd5b8f540
+2025-08-15 10:35:54.068 27209-27209 NshIdE                  com.example.javaandnative            D  env-&gt;GetJavaVM 0xb400006fd5b8f540
+2025-08-15 10:35:54.219 27209-27209 NshIdE                  com.example.javaandnative            D  this is Java_com_example_javaandnative_MainActivity_stringFromJNI now
+2025-08-15 10:35:54.219 27209-27384 NshIdE                  com.example.javaandnative            D  this is a mythread now
+</code></pre>
+<h3 id="七、JNIEnv"><a href="#七、JNIEnv" class="headerlink" title="七、JNIEnv"></a>七、JNIEnv</h3><h4 id="7-1-JNIEnv-是什么"><a href="#7-1-JNIEnv-是什么" class="headerlink" title="7.1 JNIEnv 是什么"></a>7.1 JNIEnv 是什么</h4><p><strong>JNIEnv</strong> 一般是由虚拟机传入的，而且是与线程相关的变量，即<strong>线程 A</strong> 不能使用<strong>线程 B</strong> 的 JNIEnv。而作为一个结构体，它里面定义了 JNI 系统的操作函数。JNI 定义如下</p>
+<pre><code class="language-c++">#if defined(__cplusplus)
+typedef _JNIEnv JNIEnv;
+#else
+typedef const struct JNINativeInterface* JNIEnv;
+#endif
+</code></pre>
+<p>JNIEnv 在 <strong>C 语言</strong>环境和 <strong>C++ 语言</strong>环境中的实现是不一样的。在 C 中定义为 JNINativeInterface，在 C++ 中定义为 _JNIEnv。</p>
+<p>_JNIEnv 结构体的定义如下</p>
+<pre><code class="language-c++">struct _JNIEnv &#123;
+/* do not rename this; it does not seem to be entirely opaque */
+const struct JNINativeInterface* functions;
+
+#if defined(__cplusplus)
+
+jint GetVersion()
+&#123; return functions-&gt;GetVersion(this); &#125;
+
+jclass DefineClass(const char *name, jobject loader, const jbyte* buf,
+jsize bufLen)
+&#123; return functions-&gt;DefineClass(this, name, loader, buf, bufLen); &#125;
+
+jclass FindClass(const char* name)
+&#123; return functions-&gt;FindClass(this, name); &#125;
+
+
+...
+...
+
+#endif
+&#125;
+</code></pre>
+<p>在  _JNIEnv 中定义了一个 functions 变量，这个变量是指向 JNINativeInterface 的指针。所以如果我们在写 native 函数时，当接收到类型为 JNIEnv* 的变量 env 时，可以使用如下方式调用 JNIEnv 中的函数（准确说时通过函数指针来调用函数，因为 JNIEnv 的数据结果聚合了所有 JNI 函数的函数指针），我们可以在 C++ 中通过如下方式调用：</p>
+<pre><code class="language-c++">env-&gt;FindClass(&quot;java/lang/String&quot;)
+</code></pre>
+<p>而在 C 中可以通过如下方式调用：</p>
+<pre><code class="language-c">(*env)-&gt;FindClass(env, &quot;java/lang/String&quot;)
+</code></pre>
+<p>由于变量 functions 是定义在结构体 _JNIEnv 的第一个变量，所以我们通过 *env 就能获取到 functions 变量的值，然后通过 JNINativeInterface 中的函数指针来调用对应的函数。</p>
+<p>JNINativeInterface 结构体的定义如下：</p>
+<pre><code class="language-c++">struct JNINativeInterface &#123;
+void* reserved0;
+void* reserved1;
+void* reserved2;
+void* reserved3;
+
+jint (*GetVersion)(JNIEnv *);
+
+jclass (*DefineClass)(JNIEnv*, const char*, jobject, const jbyte*,
+jsize);
+jclass (*FindClass)(JNIEnv*, const char*);
+
+
+...
+&#125;
+</code></pre>
+<hr>
+<h4 id="8-2-JNIEnv-的获取方式"><a href="#8-2-JNIEnv-的获取方式" class="headerlink" title="8.2 JNIEnv 的获取方式"></a>8.2 JNIEnv 的获取方式</h4><ol>
+<li><p>函数静态 &#x2F; 动态注册，传的第一个参数</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815105735120.png" alt="image-20250815105735120"></p>
+</li>
+<li><p>vm-&gt;GetEnv<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815105803354.png" alt="image-20250815105803354"></p>
+</li>
+<li><p>globalVM-&gt;AttachCurrentThread<br>用于子线程中获取 JNIEnv*</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+JavaVM* global_vm;
+void* myThread(void* arg) &#123;
+    JNIEnv* env = nullptr;
+    if (global_vm-&gt;AttachCurrentThread(&amp;env, nullptr) != JNI_OK) &#123;
+        LOGE(&quot;AttachCurrentThread failed&quot;);
+        return nullptr;
+    &#125;
+    LOGD(&quot;myThread env: %p&quot;, env);
+
+    std::string test = &quot;this is a mythread now&quot;;
+    LOGD(&quot;%s&quot;, test.c_str());
+
+    // 用完一定要分离线程
+    global_vm-&gt;DetachCurrentThread();
+
+    pthread_exit(nullptr);
+    return nullptr;
+&#125;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+
+    LOGD(&quot;this is Java_com_example_javaandnative_MainActivity_stringFromJNI now&quot;);
+    LOGD(&quot;Java_com_example_javaandnative_MainActivity_stringFromJNI env: %p&quot;, env);
+
+    std::string hello = &quot;Hello from C++&quot;;
+
+    pthread_t pthread;
+    pthread_create(&amp;pthread, nullptr, myThread, nullptr);
+
+    pthread_join(pthread, nullptr);
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserver) &#123;
+    global_vm = vm;
+    JNIEnv *env = nullptr;
+    if (vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6) != JNI_OK) &#123;
+        LOGI(&quot;GetEnv failed&quot;);
+        return -1;
+    &#125;
+    LOGD(&quot;JavaVM %p&quot;, env);
+
+    return JNI_VERSION_1_6;
+&#125;
+</code></pre>
+<p>查看日志</p>
+<pre><code class="language-shell">2025-08-15 11:09:08.977 30300-30300 NshIdE                  com.example.javaandnative            D  JavaVM 0xb400006fd5bff3c0
+2025-08-15 11:09:09.455 30300-30300 NshIdE                  com.example.javaandnative            D  this is Java_com_example_javaandnative_MainActivity_stringFromJNI now
+2025-08-15 11:09:09.455 30300-30300 NshIdE                  com.example.javaandnative            D  Java_com_example_javaandnative_MainActivity_stringFromJNI env: 0xb400006fd5bff3c0
+2025-08-15 11:09:09.455 30300-30347 NshIdE                  com.example.javaandnative            D  myThread env: 0xb400006f20762580
+2025-08-15 11:09:09.455 30300-30347 NshIdE                  com.example.javaandnative            D  this is a mythread now
+</code></pre>
+<p>JNIEnv 是每个线程单独拥有的一个，对于 JNI_OnLoad 和 Java_com_example_javaandnative_MainActivity_stringFromJNI 都在主线程中，所以他们的值是相等的，而 myThread 是一个新开的线程，所以打印出来的 JNIEnv 值不一样。</p>
+</li>
+</ol>
+<h3 id="八、JNI-函数的注册"><a href="#八、JNI-函数的注册" class="headerlink" title="八、JNI 函数的注册"></a>八、JNI 函数的注册</h3><h4 id="8-1-静态注册"><a href="#8-1-静态注册" class="headerlink" title="8.1 静态注册"></a>8.1 静态注册</h4><p>必须遵循一定的命名规则，一般都是 Java_ 包名_ 类名_ 方法名。</p>
+<p>系统会通过 <strong>dlopen</strong> 加载对应的 so，通过 <strong>dlsym</strong> 来获取指定名字的函数地址，然后调用静态注册的 jni 函数，必然在 <strong>导出表</strong> 中。</p>
+<hr>
+<h4 id="8-2-动态注册"><a href="#8-2-动态注册" class="headerlink" title="8.2 动态注册"></a>8.2 动态注册</h4><p>通过 <strong>env-&gt;RegisterNatives</strong> 注册函数，通常在 JNI_OnLoad 中注册</p>
+<pre><code class="language-c++">typedef struct &#123;
+    const char* name;
+    const char* signature;
+    void*       fnPtr;
+&#125; JNINativeMethod;
+</code></pre>
+<p><strong>JNINativeMethod</strong> 是一个结构体，第一个成员是 Java 层的函数名；第二个是签名，通常格式为(参数类型)返回值类型【其实就是在 smali 代码中看到的那种格式的函数签名】；第三个参数是 Native 层的函数指针（可以直接根据这个指针找到动态注册的函数的函数体）。</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+JavaVM* global_vm;
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+
+    LOGD(&quot;this is Java_com_example_javaandnative_MainActivity_stringFromJNI now&quot;);
+    LOGD(&quot;Java_com_example_javaandnative_MainActivity_stringFromJNI env: %p&quot;, env);
+
+    std::string hello = &quot;Hello from C++&quot;;
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+
+
+jstring FunctionTest(JNIEnv* env, jobject thiz, int a, jstring b, jbyteArray c) &#123;
+    return env-&gt;NewStringUTF(&quot;This is FunctionTest&quot;);
+&#125;
+
+
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserver) &#123;
+    global_vm = vm;
+    JNIEnv *env = nullptr;
+    if (vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6) != JNI_OK) &#123;
+        LOGI(&quot;GetEnv failed&quot;);
+        return -1;
+    &#125;
+    jclass MainActivityClazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    JNINativeMethod methods[] = &#123;
+            &#123;&quot;stringFromJNI1&quot;, &quot;(ILjava/lang/String;[B)Ljava/lang/String;&quot;, (void *)FunctionTest&#125;
+    &#125;;
+    env-&gt;RegisterNatives(MainActivityClazz, methods, sizeof(methods) / sizeof(JNINativeMethod));
+
+    return JNI_VERSION_1_6;
+&#125;
+</code></pre>
+<p>然后在 Java 层记得调用注册的这个方法即可，运行就可以看到<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815114205531.png" alt="image-20250815114205531"></p>
+<p>可以给同一个 Java 函数注册多个 native 函数，以最后一次为准</p>
+<h3 id="九、多个-cpp-文件编译成一个-so"><a href="#九、多个-cpp-文件编译成一个-so" class="headerlink" title="九、多个 cpp 文件编译成一个 so"></a>九、多个 cpp 文件编译成一个 so</h3><p>新建一个 cpp 文件</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815144948630.png" alt="image-20250815144948630"></p>
+<p>然后修改 CMakeLists.txt 文件<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815145019477.png" alt="image-20250815145019477"></p>
+<p>然后在 JNI_OnLoad 中调用这个函数</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+JavaVM* global_vm;
+
+// 声明另一个文件里的函数
+extern &quot;C&quot; void TestMain(JNIEnv* env);
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+    std::string hello = &quot;Hello from C++&quot;;
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+
+
+jstring FunctionTest(JNIEnv* env, jobject thiz, int a, jstring b, jbyteArray c) &#123;
+    return env-&gt;NewStringUTF(&quot;This is FunctionTest&quot;);
+&#125;
+
+
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserver) &#123;
+    global_vm = vm;
+    JNIEnv *env = nullptr;
+    if (vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6) != JNI_OK) &#123;
+        LOGI(&quot;GetEnv failed&quot;);
+        return -1;
+    &#125;
+    jclass MainActivityClazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    JNINativeMethod methods[] = &#123;
+            &#123;&quot;stringFromJNI&quot;, &quot;(ILjava/lang/String;[B)Ljava/lang/String;&quot;, (void *)FunctionTest&#125;
+    &#125;;
+    env-&gt;RegisterNatives(MainActivityClazz, methods, sizeof(methods) / sizeof(JNINativeMethod));
+
+    // 直接调用
+    TestMain(env);
+
+    return JNI_VERSION_1_6;
+&#125;
+</code></pre>
+<p>查看日志，就可以看到我们成功调用了另一个 so 里的函数</p>
+<pre><code class="language-shell">2025-08-15 14:58:03.377   843-843   NshIdE                  com.example.javaandnative            D  This is TestMain for many cpp
+</code></pre>
+<h3 id="十、编译多个-so"><a href="#十、编译多个-so" class="headerlink" title="十、编译多个 so"></a>十、编译多个 so</h3><ol>
+<li>编写多个 cpp 文件</li>
+<li>修改 CMakeLists.txt</li>
+<li>Java 静态代码块加载多个 so</li>
+</ol>
+<p>首先先修改 CMakeLists.txt 文件</p>
+<pre><code class="language-ASN.1"># For more information about using CMake with Android Studio, read the
+# documentation: https://d.android.com/studio/projects/add-native-code.html.
+# For more examples on how to use CMake, see https://github.com/android/ndk-samples.
+# 说明：这几行是官方提供的参考链接，方便你学习 CMake 和 NDK 的使用。
+
+# Sets the minimum CMake version required for this project.
+cmake_minimum_required(VERSION 3.22.1)
+# 设置本项目要求的 CMake 最低版本，这里是 3.22.1。
+# 如果你的系统 CMake 版本低于这个，会直接报错。
+
+# Declares the project name. The project name can be accessed via $&#123; PROJECT_NAME&#125;,
+# Since this is the top level CMakeLists.txt, the project name is also accessible
+# with $&#123;CMAKE_PROJECT_NAME&#125; (both CMake variables are in-sync within the top level
+# build script scope).
+project(&quot;javaandnative&quot;)
+# 定义项目名称为 &quot;javaandnative&quot;。
+# 在这个顶层 CMakeLists.txt 中，$&#123;PROJECT_NAME&#125; 和 $&#123;CMAKE_PROJECT_NAME&#125; 都可以访问这个名字。
+
+# Creates and names a library, sets it as either STATIC
+# or SHARED, and provides the relative paths to its source code.
+# You can define multiple libraries, and CMake builds them for you.
+# Gradle automatically packages shared libraries with your APK.
+#
+# In this top level CMakeLists.txt, $&#123;CMAKE_PROJECT_NAME&#125; is used to define
+# the target library name; in the sub-module&#39;s CMakeLists.txt, $&#123;PROJECT_NAME&#125;
+# is preferred for the same purpose.
+#
+# In order to load a library into your app from Java/Kotlin, you must call
+# System.loadLibrary() and pass the name of the library defined here;
+# for GameActivity/NativeActivity derived applications, the same library name must be
+# used in the AndroidManifest.xml file.
+add_library($&#123;CMAKE_PROJECT_NAME&#125; SHARED
+        # List C/C++ source files with relative paths to this CMakeLists.txt.
+        native-lib.cpp)
+# 创建一个库（library）。
+# $&#123;CMAKE_PROJECT_NAME&#125; → 这里会替换成 &quot;javaandnative&quot;，也就是库的名字。
+# SHARED 表示生成的是动态库（.so 文件），不是静态库（.a）。
+# 后面是库包含的源文件列表，这里只有 native-lib.cpp。
+# 注意：如果要在 Java/Kotlin 中加载这个库，需要调用 System.loadLibrary(&quot;javaandnative&quot;)。
+
+# Specifies libraries CMake should link to your target library. You
+# can link libraries from various origins, such as libraries defined in this
+# build script, prebuilt third-party libraries, or Android system libraries.
+target_link_libraries($&#123;CMAKE_PROJECT_NAME&#125;
+        # List libraries link to the target library
+        android
+        log)
+# 指定要和你的库一起链接的其他库。
+# $&#123;CMAKE_PROJECT_NAME&#125; 是你的库名字（javaandnative）。
+# 这里链接了两个 Android NDK 自带的库：
+#   android → 提供 Android NDK 相关 API（如 NativeActivity）。
+#   log → 提供 __android_log_print 等日志函数，用于在 logcat 输出调试信息。
+
+# 新增的库
+add_library(nshide SHARED
+        NshIdE.cpp)
+
+target_link_libraries(nshide
+        android
+        log)
+</code></pre>
+<p>接下来修改 Java 代码。这里需要注意加载顺序，如果库之间有依赖关系，需要<strong>先加载被依赖的库</strong>。</p>
+<pre><code class="language-Java">    static &#123;
+        System.loadLibrary(&quot;javaandnative&quot;);
+        System.loadLibrary(&quot;nshide&quot;);
+    &#125;
+</code></pre>
+<p>并且还需要再 CMake 中显式链接，例如</p>
+<pre><code class="language-ASN.1">target_link_libraries(javaandnative
+        mylib
+        android
+        log)
+</code></pre>
+<p>最后新建一个 cpp 文件，也不需要写什么，空着就可以，然后 build 一下，就可以看到生成了两个 so<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815144459070.png" alt="image-20250815144459070"></p>
+<h3 id="十一、so-文件路径的动态获取"><a href="#十一、so-文件路径的动态获取" class="headerlink" title="十一、so 文件路径的动态获取"></a>十一、so 文件路径的动态获取</h3><p>首先需要知道 apk 中的 so 文件将来要放在设备环境的哪一个目录下，&#x2F;data&#x2F;app&#x2F;包名&#x2F;lib。</p>
+<p>然后在 Java 层添加如下代码</p>
+<pre><code class="language-Java">public String getSoPath(Context cxt) &#123;
+        // 获取包管理
+        PackageManager pm = cxt.getPackageManager();
+        // 获取已安装的 APP 的信息
+        List&lt;PackageInfo&gt; pkgList = pm.getInstalledPackages(0);
+        if (pkgList == null || pkgList.size() == 0) &#123;
+            return null;
+        &#125;
+        for (PackageInfo pi : pkgList) &#123;
+            // 判断是否为 /data/app 开头
+            if (pi.applicationInfo.nativeLibraryDir.startsWith(&quot;/data/app/&quot;)
+                    &amp;&amp; pi.packageName.startsWith(&quot;com.example.javaandnative&quot;)) &#123;
+                return pi.applicationInfo.nativeLibraryDir;
+            &#125;
+        &#125;
+        return null;
+    &#125;
+</code></pre>
+<p>然后在 onCreate() 函数中调用一下即可。查看日志</p>
+<pre><code class="language-shell">2025-08-15 15:07:41.119  3830-3830  soPath                  com.example.javaandnative            D  /data/app/~~WmEKdieXJYNMsr4K93mc6A==/com.example.javaandnative-mXf7pi0TKTKavIqppE7IOw==/lib/arm64
+</code></pre>
+<h3 id="十二、so-之间相互调用"><a href="#十二、so-之间相互调用" class="headerlink" title="十二、so 之间相互调用"></a>十二、so 之间相互调用</h3><p>这里就需要用到 <strong>dlopen</strong> 函数，需要导入 <strong>dlfcn.h</strong>。如果去看这个库的源码，会发现在后半段有一些常量，这些是传给 dlopen() 的标志位，控制加载策略</p>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>RTLD_LOCAL</code></td>
+<td>0</td>
+<td>默认值：该库的符号不会导出给之后加载的库用。</td>
+</tr>
+<tr>
+<td><code>RTLD_LAZY</code></td>
+<td>0x00001</td>
+<td><strong>延迟解析符号</strong>（Android 不支持，实际等同 RTLD_NOW）。</td>
+</tr>
+<tr>
+<td><code>RTLD_NOW</code></td>
+<td>0x00002（LP64） &#x2F; 0x00000（LP32）</td>
+<td><strong>立即解析符号</strong>（Android 始终是这个行为）。</td>
+</tr>
+<tr>
+<td><code>RTLD_NOLOAD</code></td>
+<td>0x00004</td>
+<td>只检查库是否已加载，不真正加载（用于探测）。</td>
+</tr>
+<tr>
+<td><code>RTLD_GLOBAL</code></td>
+<td>0x00100（LP64） &#x2F; 0x00002（LP32）</td>
+<td>导出该库的符号，后续加载的库可以用。</td>
+</tr>
+<tr>
+<td><code>RTLD_NODELETE</code></td>
+<td>0x01000</td>
+<td>即使 <code>dlclose()</code> 也不卸载库。</td>
+</tr>
+</tbody></table>
+<p>在使用 dlopen() 函数时，需要传入两个参数，第一个就是 so 的路径，第二个就是刚刚提到的 常量，常用的就是 <strong>RTLD_NOW</strong>。在 JNI_OnLoad 中调用。</p>
+<pre><code class="language-c++">void* handle = dlopen(&quot;libnshide.so&quot;, RTLD_NOW);
+    if (!handle) &#123;
+        LOGE(&quot;dlopen failed: %s&quot;, dlerror());
+    &#125; else &#123;
+        typedef void (*TestMainFunc)(JNIEnv*);
+        TestMainFunc func = (TestMainFunc)dlsym(handle, &quot;TestMain&quot;);
+        if (func) &#123;
+            func(env);
+        &#125; else &#123;
+            LOGE(&quot;dlsym failed: %s&quot;, dlerror());
+        &#125;
+        dlclose(handle);
+    &#125;
+</code></pre>
+<ul>
+<li><code>dlopen</code> 是 Linux&#x2F;Android 提供的 <strong>运行时加载共享库</strong> 的函数；</li>
+<li>它会把指定的 <code>.so</code> 加载到当前进程中，返回一个 <strong>库的句柄</strong>；</li>
+<li>如果加载失败，会返回 <code>nullptr</code>，这时候可以用 <code>dlerror()</code> 查看错误原因。</li>
+</ul>
+<p>注：<code>dlopen</code> <strong>只加载库</strong>，并不会自动让你能直接调用库里的函数。</p>
+<ul>
+<li><code>dlsym</code> 是在 <strong>运行时</strong> 查找库里某个函数或变量的地址；</li>
+<li><code>handle</code> 是 <code>dlopen</code> 返回的句柄；</li>
+<li><code>&quot;TestMain&quot;</code> 是你要调用的函数名（必须是 <code>extern &quot;C&quot;</code> 的，否则 C++ 会有 name mangling）；</li>
+<li>返回的是一个 <code>void*</code>，所以你必须把它 <strong>强制转换为函数指针</strong>，这里是 <code>TestMainFunc</code>。</li>
+</ul>
+<p>查看日志</p>
+<pre><code class="language-shell">2025-08-15 15:35:20.852  8466-8466  NshIdE                  com.example.javaandnative            D  This is TestMain for many cpp
+</code></pre>
+<hr>
+<p>另一种方法就是通过 link so 实现</p>
+<p>首先修改 CMakeLists.txt </p>
+<pre><code># 先编译 nshide
+add_library(nshide SHARED
+        NshIdE.cpp)
+
+target_link_libraries(nshide
+        android
+        log)
+
+# 再编译 javaandnative，链接 nshide
+add_library($&#123;CMAKE_PROJECT_NAME&#125; SHARED
+        # List C/C++ source files with relative paths to this CMakeLists.txt.
+        native-lib.cpp)
+
+target_link_libraries($&#123;CMAKE_PROJECT_NAME&#125;
+        # List libraries link to the target library
+        nshide
+        android
+        log)
+</code></pre>
+<p>因为<code>javaandnative</code> 要依赖 <code>nshide</code>，所以必须在 <code>target_link_libraries</code> 里先声明；函数名必须是 extern “C”，否则链接器找不到函数。</p>
+<p>然后在另一个 so 中直接调用即可</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#include &quot;dlfcn.h&quot;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+JavaVM* global_vm;
+
+// 声明另一个文件里的函数
+extern &quot;C&quot; void TestMain(JNIEnv* env);
+
+extern &quot;C&quot; JNIEXPORT jstring JNICALL
+Java_com_example_javaandnative_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) &#123;
+    std::string hello = &quot;Hello from C++&quot;;
+
+    return env-&gt;NewStringUTF(hello.c_str());
+&#125;
+
+
+jstring FunctionTest(JNIEnv* env, jobject thiz, int a, jstring b, jbyteArray c) &#123;
+    return env-&gt;NewStringUTF(&quot;This is FunctionTest&quot;);
+&#125;
+
+
+void callTestMain(JNIEnv* env) &#123;
+    TestMain(env);
+&#125;
+
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserver) &#123;
+    global_vm = vm;
+    JNIEnv *env = nullptr;
+    if (vm-&gt;GetEnv((void **) &amp;env, JNI_VERSION_1_6) != JNI_OK) &#123;
+        LOGI(&quot;GetEnv failed&quot;);
+        return -1;
+    &#125;
+    jclass MainActivityClazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    JNINativeMethod methods[] = &#123;
+            &#123;&quot;stringFromJNI1&quot;, &quot;(ILjava/lang/String;[B)Ljava/lang/String;&quot;, (void *)FunctionTest&#125;
+    &#125;;
+    env-&gt;RegisterNatives(MainActivityClazz, methods, sizeof(methods) / sizeof(JNINativeMethod));
+
+    callTestMain(env);
+
+    return JNI_VERSION_1_6;
+&#125;
+</code></pre>
+<p>下面是另一个 cpp 文件的内容</p>
+<pre><code class="language-c++">#include &lt;jni.h&gt;
+#include &lt;string&gt;
+#include &lt;android/log.h&gt;
+#define TAG &quot;NshIdE&quot;
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__);
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO , TAG, __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__);
+
+extern &quot;C&quot; void TestMain(JNIEnv* env) &#123;
+    LOGD(&quot;This is TestMain for many cpp&quot;);
+&#125;
+</code></pre>
+<p>然后 build 该 demo，可以看到<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250815160527944.png" alt="image-20250815160527944"></p>
+<p>日志中也同样输出了</p>
+<pre><code class="language-shell">2025-08-15 15:56:13.246 16210-16210 NshIdE                  com.example.javaandnative            D  This is TestMain for many cpp
+</code></pre>
+<h3 id="十三、通过-JNI-创建-Java-对象"><a href="#十三、通过-JNI-创建-Java-对象" class="headerlink" title="十三、通过 JNI 创建 Java 对象"></a>十三、通过 JNI 创建 Java 对象</h3><p>有以下几种方法可以实现</p>
+<ul>
+<li><strong>NewObject 创建对象</strong></li>
+</ul>
+<pre><code class="language-c++">jclass clazz = env-&gt;FindClass(&quot;com/example/javaandnative/MyClass&quot;);
+jmethodID ctor = env-&gt;GetMethodID(clazz, &quot;&lt;init&gt;&quot;, &quot;()V&quot;); // 无参构造
+jobject obj = env-&gt;NewObject(clazz, ctor);
+//可选：调用对象方法
+jmethodID method = env-&gt;GetMethodID(clazz, &quot;someMethod&quot;, &quot;(I)V&quot;);
+env-&gt;CallVoidMethod(obj, method, 123);
+</code></pre>
+<p>这种方法最直接，推荐在知道构造函数的情况下使用。</p>
+<hr>
+<pre><code class="language-c++">jclass classClass = env-&gt;FindClass(&quot;java/lang/Class&quot;);
+jmethodID forName = env-&gt;GetStaticMethodID(classClass, &quot;forName&quot;, &quot;(Ljava/lang/String;)Ljava/lang/Class;&quot;);
+jstring className = env-&gt;NewStringUTF(&quot;com.example.javaandnative.MyClass&quot;);
+jclass clazz = (jclass) env-&gt;CallStaticObjectMethod(classClass, forName, className);
+jmethodID ctor = env-&gt;GetMethodID(clazz, &quot;&lt;init&gt;&quot;, &quot;()V&quot;);
+jobject obj = env-&gt;NewObject(clazz, ctor);
+</code></pre>
+<p>这种方法适合 <strong>动态类名</strong> 或不确定类时使用，但比直接 <strong>FindClass</strong> 慢一些。</p>
+<ul>
+<li><strong>AllocObject 创建对象</strong></li>
+</ul>
+<pre><code class="language-c++">jclass clazz = env-&gt;FindClass(&quot;com.example.javaandnative.MyClass&quot;);
+jmethodID methodID = env-&gt;GetMethodID(clazz, &quot;&lt;init&gt;&quot;, &quot;(Ljava/lang/String;I)V&quot;);
+jobject ReflectDemoObj = env-&gt;AllocObject(clazz);
+jstring jstr = env-&gt;NewStringUTF(&quot;from jni str&quot;);
+env-&gt;CallNonvirtualVoidMethod(ReflectDemoObj, clazz, methodID, jstr, 100);
+</code></pre>
+<p><strong>AllocObject</strong>：只分配对象，不调用构造函数；<br><strong>CallNonvirtualVoidMethod</strong>：在空对象上调用 <code>&lt;init&gt;</code>，手动执行构造函数；<br>两步组合 &#x3D; “手动版 NewObject”。</p>
+<h3 id="十四、通过-JNI-访问-Java-属性"><a href="#十四、通过-JNI-访问-Java-属性" class="headerlink" title="十四、通过 JNI 访问 Java 属性"></a>十四、通过 JNI 访问 Java 属性</h3><h4 id="14-1-获取静态字段"><a href="#14-1-获取静态字段" class="headerlink" title="14.1 获取静态字段"></a>14.1 获取静态字段</h4><p>1、先调用获取静态字段 ID 的方法：GetStaticFieldID</p>
+<pre><code class="language-c++">jclass clazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    jfieldID privateStaticStringField =
+            env-&gt;GetStaticFieldID(clazz, &quot;privateStaticStringField&quot;, &quot;Ljava/lang/String;&quot;);
+</code></pre>
+<p>2、根据字段属性选择对应的 Get 方法</p>
+<pre><code class="language-c++">// env-&gt;GetStaticBooleanField();
+// env-&gt;GetStaticIntField();
+// env-&gt;GetStaticShortField();
+// env-&gt;GetStaticByteField();
+// env-&gt;GetStaticCharField();
+// env-&gt;GetStaticFloatField();
+// env-&gt;GetStaticDoubleField();
+// env-&gt;GetStaticLongField();
+// env-&gt;GetStaticObjectField();
+</code></pre>
+<p>上面代码中的 <strong>privateStaticStringField</strong> 是 String 类型，其实也就是 Object，所以选择 env-&gt;GetStaticObjectField()</p>
+<p>3、获取 jstring 的静态字段 privateStaticString</p>
+<pre><code class="language-c++">jclass clazz = env-&gt;FindClass(&quot;com/example/NshIdE/NDKDemo&quot;);
+jstring privateStaticString =
+static_cast&lt;jstring&gt;(env-&gt;GetStaticObjectField(clazz, privateStaticStringField));
+</code></pre>
+<p>这里把 object 强制转换为 jstring 类型。</p>
+<p>4、由于所处位置为 so 层，所以要转化成 C&#x2F;C++ 语言类型</p>
+<pre><code class="language-c++">const char* privateStr =
+            env-&gt;GetStringUTFChars(privateStaticString, nullptr);
+</code></pre>
+<p>5、以日志的形式打印</p>
+<pre><code class="language-c++">LOGD(&quot;privateStaticString(Old): %s&quot;, privateStr);
+</code></pre>
+<p>6、释放</p>
+<pre><code class="language-c++">env-&gt;ReleaseStringUTFChars(privateStaticString, privateStr);
+</code></pre>
+<p>日志输出</p>
+<pre><code class="language-shell">2025-08-15 17:34:03.544 28911-28911 NshIdE                  com.example.javaandnative            D  privateStaticString(Old): this is privateStaticStringField
+</code></pre>
+<hr>
+<h4 id="14-2-获取对象字段"><a href="#14-2-获取对象字段" class="headerlink" title="14.2 获取对象字段"></a>14.2 获取对象字段</h4><p>1、先获取 FieldId</p>
+<pre><code class="language-c++">jclass clazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    jfieldID publicStringField =
+            env-&gt;GetFieldID(clazz, &quot;publicStringField&quot;, &quot;Ljava/lang/String;&quot;);
+</code></pre>
+<p>2、获取 jstring</p>
+<pre><code>jmethodID methodID = env-&gt;GetMethodID(clazz, &quot;&lt;init&gt;&quot;, &quot;()V&quot;);
+jobject ReflectDemoObj = env-&gt;NewObject(clazz, methodID);
+
+jstring publicString =
+static_cast&lt;jstring&gt;(env-&gt;GetObjectField(ReflectDemoObj, publicStringField));
+</code></pre>
+<p>由于我们获取的是对象字段，所以一定要有一个对象，因此 GetObjectField 的第一个参数是对象。</p>
+<p>3、转化为 C&#x2F;C++ 字符串</p>
+<pre><code class="language-c++">const char* publicStr =
+            env-&gt;GetStringUTFChars(publicString, nullptr);
+</code></pre>
+<p>4、以日志的形式打印输出</p>
+<pre><code class="language-c++">LOGD(&quot;publicStringField: %s&quot;, publicStr);
+</code></pre>
+<p>5、对字符串进行释放</p>
+<pre><code class="language-c++">env-&gt;ReleaseStringUTFChars(publicString, publicStr);
+</code></pre>
+<p>日志输出</p>
+<pre><code class="language-shell">2025-08-15 17:43:37.710 31635-31635 NshIdE                  com.example.javaandnative            D  publicStringField: this is publicStringField
+</code></pre>
+<hr>
+<h4 id="14-3-设置对象字段"><a href="#14-3-设置对象字段" class="headerlink" title="14.3 设置对象字段"></a>14.3 设置对象字段</h4><p>通过 <strong>SetObjectField</strong> 就行了，第一个参数是对象，第二个参数是字段 ID，第三个参数是要修改的值</p>
+<pre><code class="language-c++">env-&gt;SetObjectField(ReflectDemoObj, privateStringFieldID, env-&gt;NewStringUTF(&quot;NshIdE&quot;));
+</code></pre>
+<p>进行修改前后的对比</p>
+<pre><code class="language-c++">void setOobjectField(JNIEnv* env) &#123;
+    jclass clazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    jmethodID methodId = env-&gt;GetMethodID(clazz, &quot;&lt;init&gt;&quot;, &quot;()V&quot;);
+    jfieldID privateStringField =
+            env-&gt;GetFieldID(clazz, &quot;privateStringField&quot;, &quot;Ljava/lang/String;&quot;);
+    jobject obj = env-&gt;NewObject(clazz, methodId);
+    jstring privateString = static_cast&lt;jstring&gt;(env-&gt;GetObjectField(obj, privateStringField));
+    const char* privateStr =
+            env-&gt;GetStringUTFChars(privateString, nullptr);
+    LOGD(&quot;privateStringField(Old): %s&quot;, privateStr);
+    env-&gt;ReleaseStringUTFChars(privateString, privateStr);
+
+    env-&gt;SetObjectField(obj, privateStringField, env-&gt;NewStringUTF(&quot;NshIdE&quot;));
+
+    privateString = static_cast&lt;jstring&gt;(env-&gt;GetObjectField(obj, privateStringField));
+    privateStr = env-&gt;GetStringUTFChars(privateString, nullptr);
+    LOGD(&quot;privateStringField(New): %s&quot;, privateStr);
+    env-&gt;ReleaseStringUTFChars(privateString, privateStr);
+&#125;
+</code></pre>
+<p>日志输出</p>
+<pre><code class="language-shell">2025-08-15 17:55:37.896  3564-3564  NshIdE                  com.example.javaandnative            D  privateStringField(Old): this is privateStaticStringField
+2025-08-15 17:55:37.896  3564-3564  NshIdE                  com.example.javaandnative            D  privateStringField(New): NshIdE
+</code></pre>
+<p>同时我们也确定了不管是 public 还是 private 我们都能<strong>获取</strong>或<strong>修改</strong>。</p>
+<h3 id="十五、通过JNI访问和修改Java数组"><a href="#十五、通过JNI访问和修改Java数组" class="headerlink" title="十五、通过JNI访问和修改Java数组"></a>十五、通过JNI访问和修改Java数组</h3><p>具体操作详见下面代码，整体的思路和字符对象是一样的。</p>
+<pre><code class="language-c++">void visitByteArray(JNIEnv* env) &#123;
+    jclass clazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+    jmethodID methodId = env-&gt;GetMethodID(clazz, &quot;&lt;init&gt;&quot;, &quot;()V&quot;);
+    jobject obj = env-&gt;NewObject(clazz, methodId);
+
+    // 获取 byte 数组的字段 ID
+    jfieldID byteArrayField =
+            env-&gt;GetFieldID(clazz, &quot;byteArrayField&quot;, &quot;[B&quot;);
+    jbyteArray byteArray = static_cast&lt;jbyteArray&gt;(env-&gt;GetObjectField(obj, byteArrayField));
+    int length = env-&gt;GetArrayLength(byteArray);
+    char *CByteArray = reinterpret_cast&lt;char *&gt;(env-&gt;GetByteArrayElements(byteArray, nullptr));
+    for (int i = 0; i &lt; length; i++) &#123;
+        LOGD(&quot;CByteArray(Old): %d&quot;, CByteArray[i]);
+    &#125;
+
+    // 在 C++ 中新建一个 char 类型的数组 cByteArray，并且为其赋值
+    char cByteArray[length];
+    for (int i = 0; i &lt; length; i++) &#123;
+        cByteArray[i] = static_cast&lt;char&gt;(100 - i);
+    &#125;
+    // 将 cByteArray 中的元素转换成 jbyte 类型的数组
+    const jbyte* java_array = reinterpret_cast&lt;const jbyte*&gt;(cByteArray);
+    // 使用 SetByteArrayRegion 函数将 Java 数组元素设置为 cByteArray 中的元素
+    env-&gt;SetByteArrayRegion(byteArray, 0, length, java_array);
+    length = env-&gt;GetArrayLength(byteArray);
+    CByteArray = reinterpret_cast&lt;char *&gt;(env-&gt;GetByteArrayElements(byteArray, nullptr));
+    for (int i = 0; i &lt; length; i++) &#123;
+        LOGD(&quot;CByteArray(New): %d&quot;, CByteArray[i]);
+    &#125;
+    env-&gt;ReleaseByteArrayElements(byteArray, reinterpret_cast&lt;jbyte *&gt;(CByteArray), 0);
+
+&#125;
+</code></pre>
+<p>运行，查看日志输出</p>
+<pre><code class="language-shell">2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(Old): 1
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(Old): 2
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(Old): 3
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(Old): 4
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(Old): 5
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(New): 100
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(New): 99
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(New): 98
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(New): 97
+2025-08-18 10:27:30.356 27817-27817 NshIdE                  com.example.javaandnative            D  CByteArray(New): 96
+</code></pre>
+<h3 id="十六、通过-JNI-访问-Java-方法"><a href="#十六、通过-JNI-访问-Java-方法" class="headerlink" title="十六、通过 JNI 访问 Java 方法"></a>十六、通过 JNI 访问 Java 方法</h3><h4 id="1、调用静态函数"><a href="#1、调用静态函数" class="headerlink" title="1、调用静态函数"></a>1、调用静态函数</h4><pre><code class="language-c++">// env-&gt;CallBooleanMethod();
+// env-&gt;CallVoidMethod();
+// env-&gt;CallByteMethod();
+// env-&gt;CallShortMethod();
+// env-&gt;CallIntMethod();
+// env-&gt;CallCharMethod();
+// env-&gt;CallDoubleMethod();
+// env-&gt;CallLongMethod();
+// env-&gt;CallFloatMethod();
+// env-&gt;CallObjectMethod();
+jmethodID publicStaticFuncID =
+env-&gt;GetStaticMethodID(clazz, &quot;publicStaticFunc&quot;, &quot;()V&quot;);
+env-&gt;CallStaticVoidMethod(clazz, publicStaticFuncID);
+</code></pre>
+<p>静态方法很简单，只要调用 CallStaticVoidMethod 就行了。</p>
+<hr>
+<h4 id="2、调用对象函数"><a href="#2、调用对象函数" class="headerlink" title="2、调用对象函数"></a>2、调用对象函数</h4><pre><code class="language-c++">jmethodID privateFuncID =
+			env-&gt;GetMethodID(clazz,&quot;privateFunc&quot;,&quot;(Ljava/lang/String;I)Ljava/lang/String;&quot;);
+jstring str1 = env-&gt;NewStringUTF(&quot;this is from JNI&quot;);
+jstring retval_jstring = static_cast&lt;jstring&gt;(env-&gt;CallObjectMethod(Obj, privateFuncID, str1, 1000));
+const char* retval_cstr = env-&gt;GetStringUTFChars(retval_jstring, nullptr);
+LOGD(&quot;privateStaticString: %s&quot;, retval_cstr);
+env-&gt;ReleaseStringUTFChars(retval_jstring, retval_cstr);
+</code></pre>
+<p>既然是对象函数，那再调用前自然要先 new 一个对象，然后再调用，再将返回的字符串进行类型转换，即可在日志中输出。</p>
+<h3 id="十七、CallVoidMethod、A、V-版本的区别"><a href="#十七、CallVoidMethod、A、V-版本的区别" class="headerlink" title="十七、CallVoidMethod、A、V 版本的区别"></a>十七、CallVoidMethod、A、V 版本的区别</h3><p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818103947271.png" alt="image-20250818103947271"></p>
+<p>可以看到 <strong>CallVoidMethod</strong> 底层调用的是 <strong>CallVoidMethodV</strong>，他们两个的区别在于 CallVoidMethod 会帮我们封装参数，而 CallVoidMethodV 需要我们自己封装参数，可以看成它只能有一个参数。而对于 <strong>CallVoidMethodA</strong>，它的参数是 jvalue*。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818104808092.png" alt="image-20250818104808092"></p>
+<p>jvalue* 是一个嵌合体</p>
+<pre><code class="language-c++">jmethodID privateFuncID =
+env-&gt;GetMethodID(clazz,&quot;privateFunc&quot;,&quot;(Ljava/lang/String;I)Ljava/lang/String;&quot;);
+jstring str2 = env-&gt;NewStringUTF(&quot;this is from JNI2&quot;);
+jvalue args[2];
+args[0].l = str2;
+args[1].i = 1000;
+jstring retval = static_cast&lt;jstring&gt;(env-&gt;CallObjectMethodA(Obj, privateFuncID, args));
+const char* cpp_retval = env-&gt;GetStringUTFChars(retval, nullptr);
+LOGD(&quot;cpp_retval: %s&quot;, cpp_retval);
+env-&gt;ReleaseStringUTFChars(retval, cpp_retval);
+</code></pre>
+<p>通过往 jvalue 里放参数，然后进行调用。</p>
+<p>总结一下：</p>
+<ul>
+<li><strong>CallVoidMethod（可变参数）</strong>：虽然写法上是 <code>...</code>，但 <strong>编译期必须知道参数个数和类型</strong>，不能动态改变。</li>
+<li><strong>CallVoidMethodA（jvalue 数组）</strong>：可以在运行时决定数组长度和每个参数的类型，因此 <strong>参数个数和类型可以动态变化</strong>。</li>
+</ul>
+<h3 id="十八、内存管理"><a href="#十八、内存管理" class="headerlink" title="十八、内存管理"></a>十八、内存管理</h3><h4 id="1、局部引用"><a href="#1、局部引用" class="headerlink" title="1、局部引用"></a>1、局部引用</h4><ul>
+<li>大多数的 JNI 函数，调用以后返回的结果都是局部引用，因此，<strong>env-&gt;NewLocalRef</strong> 基本不用；</li>
+<li>一个函数内的局部引用数量是有限的，在早期的安卓系统中，体现的更为明显；</li>
+<li>当函数体内需要大量使用局部引用时，比如大循环中，最好及时删除不用的局部引用，可以使用 <strong>env-&gt;DeleteLocalRef</strong> 来删除局部引用；</li>
+<li>局部引用和局部变量不同</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方面</th>
+<th>局部变量</th>
+<th>局部引用（JNI）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>所在位置</td>
+<td>C&#x2F;C++ 栈</td>
+<td>JVM 管理的引用（在栈上存放引用）</td>
+</tr>
+<tr>
+<td>生命周期</td>
+<td>函数作用域</td>
+<td>默认 native 方法结束自动释放，可手动删除</td>
+</tr>
+<tr>
+<td>管理方式</td>
+<td>自动释放</td>
+<td>由 JVM 管理，可能需要手动释放</td>
+</tr>
+<tr>
+<td>指向对象</td>
+<td>本地值或对象</td>
+<td>JVM 中的 Java 对象</td>
+</tr>
+<tr>
+<td>可能问题</td>
+<td>内存安全由语言管理</td>
+<td>如果超过作用域或循环不释放，可能导致局部引用表溢出</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="2、局部引用相关的其他函数"><a href="#2、局部引用相关的其他函数" class="headerlink" title="2、局部引用相关的其他函数"></a>2、局部引用相关的其他函数</h4><p><strong>env-&gt;EnsureLocalCapacity(num)</strong> 用于判断是否有足够的局部引用可以使用，足够则返回 0，需要大量使用局部引用时，手动删除太过麻烦，可以使用以下两个函数来批量管理局部引用</p>
+<blockquote>
+<p>env-&gt;PushLocalFrame(num)</p>
+<p>env-&gt;PopLocalFrame(nullptr)</p>
+</blockquote>
+<p>示例代码</p>
+<pre><code class="language-c++">env-&gt;PushLocalFrame(100);
+if(env-&gt;EnsureLocalCapacity(100) == 0) &#123;
+	for(int i = 0; i &lt; 3; i++)&#123;
+		jstring tempString = env-&gt;NewStringUTF(&quot;NshIdE&quot;);
+		env-&gt;SetObjectArrayElement(_jstringArray, i, tempString);
+		//env-&gt;DeleteLocalRef(tempString);
+		sleep(1);
+		LOGD(&quot;env-&gt;EnsureLocalCapacity&quot;);
+	&#125;
+&#125;
+env-&gt;PopLocalFrame(nullptr);
+</code></pre>
+<hr>
+<h4 id="3、全局引用"><a href="#3、全局引用" class="headerlink" title="3、全局引用"></a>3、全局引用</h4><p>在 JNI 开发中，需要跨函数使用变量时，直接定义全局变量时没有用的，需要使用以下两个方法，来创建和删除全局引用。</p>
+<blockquote>
+<p>env-&gt;NewGlobalRef()</p>
+<p>env-&gt;DeleteGlobalRef()</p>
+</blockquote>
+<pre><code class="language-c++">jobject g_obj;
+
+void saveGlobalRef(JNIEnv* env, jobject obj) &#123;
+    g_obj = env-&gt;NewGlobalRef(obj);  // 创建全局引用
+&#125;
+
+void releaseGlobalRef(JNIEnv* env) &#123;
+    env-&gt;DeleteGlobalRef(g_obj);
+&#125;
+</code></pre>
+<p>为什么不能直接定义全局变量，原因也还是和前面说的一个点有关：</p>
+<ul>
+<li>JNIEnv* 是 <strong>线程私有的指针</strong>，每个线程都有自己的 JNIEnv*；</li>
+<li>不能在一个线程里拿到的 <strong>JNIEnv</strong>* 放到全局变量里，然后在另一个线程使用</li>
+</ul>
+<hr>
+<h4 id="4、弱全局引用"><a href="#4、弱全局引用" class="headerlink" title="4、弱全局引用"></a>4、弱全局引用</h4><p>与全局引用基本相同，区别是弱全局引用有可能会被回收</p>
+<blockquote>
+<p>env-&gt;NewWeakGlobalRef()</p>
+<p>env-&gt;DeleteWeakGlobalRef()</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>全局引用 (GlobalRef)</th>
+<th>弱全局引用 (WeakGlobalRef)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>跨函数&#x2F;线程</td>
+<td>可以</td>
+<td>可以</td>
+</tr>
+<tr>
+<td>阻止垃圾回收</td>
+<td>会</td>
+<td>不会</td>
+</tr>
+<tr>
+<td>必须手动释放</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>使用前需检查是否有效</td>
+<td>不需要</td>
+<td>需要 <code>NewLocalRef</code> 检查</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>跨线程回调、长期保存对象</td>
+<td>缓存、观察者、弱引用容器</td>
+</tr>
+</tbody></table>
+<h3 id="十九、子线程中获取-Java-类"><a href="#十九、子线程中获取-Java-类" class="headerlink" title="十九、子线程中获取 Java 类"></a>十九、子线程中获取 Java 类</h3><p>1、在子线程中，<strong>findClass</strong> 可以直接获取 <strong>系统类</strong>。注意强调是 系统类。</p>
+<pre><code class="language-c++">jclass ClassLoaderClazz = env-&gt;FindClass(&quot;java/lang/ClassLoader&quot;);
+LOGD(&quot;myThread ClassLoaderClazz: %p&quot;, ClassLoaderClazz);
+jclass StringClasszz=env-&gt;FindClass(&quot;java/lang/String&quot;);
+LOGD(&quot;myThread StringClasszz: %p&quot;, StringClasszz);
+</code></pre>
+<hr>
+<p>2、在主线程中获取类，使用全局引用来传递到子线程中</p>
+<pre><code class="language-c++">jclass MainActivityClazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+globalClass= static_cast&lt;jclass&gt;(env-&gt;NewGlobalRef(MainActivityClazz));
+
+子线程中调用
+LOGD(&quot;myThread globalClass: %p&quot;, globalClass);
+</code></pre>
+<hr>
+<p>3、在主线程中获取正确的 <strong>ClassLoader</strong>，在子线程中去加载类</p>
+<p>在 Java 中，可以先获取<strong>类字节码</strong>，然后使用 getClassLoader() 来获取 ClassLoader</p>
+<pre><code class="language-Java">Demo.class.getClassLoader()
+
+new Demo().getClass().getClassLoader()
+
+Class.forName(...).getClassLoader()
+</code></pre>
+<p>在 native 层进行转换，获取 ClassLoader</p>
+<pre><code class="language-c++">//MainActivity.class.getClassLoader
+jclass MainActivityClazz = env-&gt;FindClass(&quot;com/example/javaandnative/MainActivity&quot;);
+jclass classClasszz=env-&gt;FindClass(&quot;java/lang/Class&quot;);
+jmethodID getClassLoaderMethoid=env-&gt;GetMethodID(classClasszz,&quot;getClassLoader&quot;, &quot;()Ljava/lang/ClassLoader;&quot;);
+jobject tempClassLoader = env-&gt;CallObjectMethod(MainActivityClazz,getClassLoaderMethoid);
+globalClassLoader=env-&gt;NewGlobalRef(tempClassLoader);
+</code></pre>
+<p>在 JNI 的子线程中 loadClass</p>
+<pre><code class="language-c++">//jclass MainActivityClasszz=FindClass(&quot;com/example/javaandso/MainActivity&quot;)
+jclass LoadClassClazz=env-&gt;FindClass(&quot;java/lang/ClassLoader&quot;);
+jmethodID LoadClassmMethoid=env-&gt;GetMethodID(LoadClassClazz,&quot;loadClass&quot;, &quot;(Ljava/lang/String;)Ljava/lang/Class;&quot;);
+jclass MainActivityClasszz= static_cast&lt;jclass&gt;(env-&gt;CallObjectMethod(globalClassLoader,
+LoadClassmMethoid,
+env-&gt;NewStringUTF(
+&quot;com.example.javaandso.MainActivity&quot;)));
+</code></pre>
+<p>我们要得到的MainActivityClasszz其实在主线程已经获取过一次了，所以第三种方法其实有点麻烦，不如第二种使用全局引用。</p>
+<h3 id="二十、init-与-initarray"><a href="#二十、init-与-initarray" class="headerlink" title="二十、init 与 initarray"></a>二十、init 与 initarray</h3><p>1、SO 在执行 <strong>JNI_OnLoad</strong> 之前，还会执行两个构造函数 init、initarray</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818140832715.png" alt="image-20250818140832715"></p>
+<p>2、so 加固、so 中字符串加密等等，一般都会把相关代码放到这里，所以 JNI_OnLoad 的时候一般 so 是已经被解密了</p>
+<p>3、init 的使用</p>
+<pre><code class="language-c++">extern &quot;C&quot; void _init()&#123; //函数名必须为_init
+	LOGD(&quot;_init &quot;);
+&#125;
+</code></pre>
+<p>4、initarray 的使用</p>
+<pre><code class="language-c++">__attribute__ ((constructor)) void initArrayTest3()&#123;
+	LOGD(&quot;initArrayTest3&quot;);
+&#125;
+__attribute__ ((constructor)) void initArrayTest1()&#123;
+	LOGD(&quot;initArrayTest1 &quot;);
+&#125;
+__attribute__ ((constructor)) void initArrayTest2()&#123;
+	LOGD(&quot;initArrayTest2 &quot;);
+&#125;
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818115630833.png" alt="image-20250818115630833"></p>
+<p>可以看到如果不加任何修饰，会按照我们代码写的顺序执行。</p>
+<p>而如果加了，constructor 后面的值，较小的先执行，最好从100以后开始用。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818115810380.png" alt="image-20250818115810380"></p>
+<p>然而对于有的有值有的没值的情况，则先执行有值的顺序，再执行没值的顺序</p>
+<pre><code class="language-c++">__attribute__ ((constructor(101))) void initArrayTest3()&#123;
+	LOGD(&quot;initArrayTest3&quot;);
+&#125;
+__attribute__ ((constructor)) void initArrayTest5()&#123;
+	LOGD(&quot;initArrayTest5&quot;);
+&#125;
+__attribute__ ((constructor(303))) void initArrayTest1()&#123;
+	LOGD(&quot;initArrayTest1 &quot;);
+&#125;
+__attribute__ ((constructor)) void initArrayTest2()&#123;
+	LOGD(&quot;initArrayTest2 &quot;);
+&#125;
+__attribute__ ((constructor(202))) void initArrayTest4()&#123;
+	LOGD(&quot;initArrayTest4&quot;);
+&#125;
+</code></pre>
+<p>执行的日志结果</p>
+<pre><code class="language-shell">2025-08-18 12:00:41.019  1072-1072  NshIdE                  com.example.javaandnative            D  initArrayTest3
+2025-08-18 12:00:41.019  1072-1072  NshIdE                  com.example.javaandnative            D  initArrayTest4
+2025-08-18 12:00:41.019  1072-1072  NshIdE                  com.example.javaandnative            D  initArrayTest1 
+2025-08-18 12:00:41.019  1072-1072  NshIdE                  com.example.javaandnative            D  initArrayTest5
+2025-08-18 12:00:41.019  1072-1072  NshIdE                  com.example.javaandnative            D  initArrayTest2 
+</code></pre>
+<p>如果再加上 visibility(“hidden”)，则会在反编译 so 时抹去 initArrayTest6 的符号</p>
+<pre><code class="language-c++">__attribute__ ((constructor, visibility(&quot;hidden&quot;))) void initArrayTest6()&#123;
+	LOGD(&quot;initArrayTest6&quot;);
+&#125;
+</code></pre>
+<p>build一下，看反编译结果</p>
+<h4 id="反编译-so"><a href="#反编译-so" class="headerlink" title="反编译 so"></a>反编译 so</h4><p><strong>_init</strong> 在 ida 反编译后为 <strong>.init_proc</strong></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818140955830.png" alt="image-20250818140955830"></p>
+<p>然后通过段表，可以看到 <strong>init_array</strong> 段<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818141041371.png" alt="image-20250818141041371"></p>
+<p>跟进看看<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818141137473.png" alt="image-20250818141137473"></p>
+<p>可以看到已经排好顺序了，即这里所看到的顺序和真实执行的排序是一样的。并且这里的 <strong>sub_1D60C</strong> 函数就是 <strong>initArrayTest6</strong>，符号确实被去掉了<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250818141328844.png" alt="image-20250818141328844"></p>
+<h3 id="二十一、尾声"><a href="#二十一、尾声" class="headerlink" title="二十一、尾声"></a>二十一、尾声</h3><p>通过这篇文章，较为系统的学习了解了 关于Android NDK 方面的开发知识，不仅仅在开发时有用，在基本的 Android 逆向分析中，我们也能有一个良好的思考线路。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
