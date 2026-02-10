@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>某黑盒 App 登录参数逆向分析 | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Android , 实战 ">
+  <meta name="description" content="某黑盒 App 登录参数逆向分析 | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-某黑盒 App 登录参数逆向分析" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">某黑盒 App 登录参数逆向分析</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Android学习">Android学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Android</a>
+            
+            <a class="color3">实战</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2026-02-10 17:59:50'>2025-11-03 16:15</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:4.3k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%90%E9%BB%91%E7%9B%92-App-%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90"><span class="toc-text">某黑盒 App 登录参数逆向分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-text">一、前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B7%E6%9C%AC%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">样本基本信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Frida-%E6%A3%80%E6%B5%8B%E5%A4%84%E7%90%86"><span class="toc-text">二、Frida 检测处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Java-%E5%B1%82%E5%88%86%E6%9E%90"><span class="toc-text">三、Java 层分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81SO-%E5%B1%82%E5%88%86%E6%9E%90"><span class="toc-text">四、SO 层分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81getVX"><span class="toc-text">1、getVX</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81getVD"><span class="toc-text">2、getVD</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%BB%93%E8%AF%AD"><span class="toc-text">五、结语</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="某黑盒-App-登录参数逆向分析"><a href="#某黑盒-App-登录参数逆向分析" class="headerlink" title="某黑盒 App 登录参数逆向分析"></a>某黑盒 App 登录参数逆向分析</h1><h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><blockquote>
+<p>​	本文章中所有内容仅供学习交流使用，不用于其他任何目的，不提供完整代码，抓包内容、敏感网址、数据接口等均已做脱敏处理，严禁用于商业用途和非法用途，否则由此产生的一切后果均与作者无关.本文章未经许可禁止转载，禁止任何修改后二次传播，擅自使用本文讲解的技术而导致的任何意外，作者均不负责。</p>
+</blockquote>
+<p>​	在吾爱论坛上看到一篇写的很详细的<a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-2065441-1-1.html">实战文章</a>，于是就想复现一下，但没找到对应版本的，于是就用了写这篇文章时所下载的最新版本。</p>
+<h4 id="样本基本信息"><a href="#样本基本信息" class="headerlink" title="样本基本信息"></a>样本基本信息</h4><p>包名：com.max.xiaoheihe</p>
+<p>样本：某黑盒</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251103151608013.png" alt="image-20251103151608013"></p>
+<p>​	目标参数信息：请求头 noce</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251103151813324.png" alt="image-20251103151813324"></p>
+<h3 id="二、Frida-检测处理"><a href="#二、Frida-检测处理" class="headerlink" title="二、Frida 检测处理"></a>二、Frida 检测处理</h3><p>​	先随意写一个脚本进行注入，用来测试 Frida 是否有被检测</p>
+<pre><code class="language-js">Java.perform(function () &#123;
+  if (Java.available) &#123;
+    console.log(&quot;Java 环境已加载&quot;);
+  &#125;
+&#125;);
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251103152228313.png" alt="image-20251103152228313"></p>
+<p>​	可以看到手机上正常进入，但是就是 Frida 进程已经被杀死了，有明显的进程检测的特征，所以接下来看看是哪一个 so 文件加载的线程导致杀死了 Frida 进程。</p>
+<p>​	这里和文章的描述略有不同，因为我也不清楚参考文章中所用到的 frida 是否魔改，我用我电脑中的三种（两魔改，一标准）的都试过了，其中一个<a target="_blank" rel="noopener" href="https://github.com/hackcatml/ajeossida">魔改</a>的在 hook android_dlopen_ext 时不会被杀死，另一个<a target="_blank" rel="noopener" href="https://github.com/Ylarod/Florida">魔改</a>的则和参考文章中的一样，而标准的则会在加载 libglesv3_1.so 时被检测并杀死。</p>
+<pre><code class="language-js">function hook_dlopen() &#123;
+    Interceptor.attach(Module.findExportByName(null, &quot;android_dlopen_ext&quot;),
+        &#123;
+            onEnter: function (args) &#123;
+                var pathptr = args[0];
+                if (pathptr !== undefined &amp;&amp; pathptr != null) &#123;
+                    var path = ptr(pathptr).readCString();
+                    console.log(&quot;load &quot; + path);
+                &#125;
+            &#125;
+        &#125;
+    );
+&#125;
+</code></pre>
+<pre><code class="language-shell">[M2012K10C::com.max.xiaoheihe ]-&gt; load /data/dalvik-cache/arm64/system@framework@org.apache.http.legacy.jar@classes.dex
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/oat/arm64/base.odex
+load libforcedarkimpl.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libglesv3_1.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libmmkv.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libtxsoundtouch.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libtxffmpeg.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libliteavsdk.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libflutter.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libailab.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libnative-lib.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libucrash.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libumeng-spy.so
+load /system/lib64/libz.so
+load /system/lib64/liblog.so
+load /system/lib64/libm.so
+load /system/lib64/libdl.so
+load /system/lib64/libc.so
+load /data/user/0/com.max.xiaoheihe/files/dynamic_so/libscannative.so
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libsmsdk.so
+load /data/dalvik-cache/arm64/system@framework@gson.jar@classes.dex
+load /data/dalvik-cache/arm64/system@app@miui@miui.apk@classes.dex
+load /data/dalvik-cache/arm64/system@app@miuisystem@miuisystem.apk@classes.dex
+load /data/dalvik-cache/arm64/system@priv-app@RtMiCloudSDK@RtMiCloudSDK.apk@classes.dex
+load /data/dalvik-cache/arm64/system@app@MiuiContentCatcher@MiuiContentCatcher.apk@classes.dex
+load /data/dalvik-cache/arm64/system@app@CatcherPatch@CatcherPatch.apk@classes.dex
+load /data/app/~~WYOOOcmc05058KwVYe6E1g==/com.max.xiaoheihe-rJ2oVj7AljCYiLOlNFF--A==/lib/arm64/libmsaoaidsec.so
+Process terminated
+[M2012K10C::com.max.xiaoheihe ]-&gt;
+
+Thank you for using Frida!
+</code></pre>
+<p>​	关于 libmsaoaidsec.so 的概念可以看看这篇<a href="%5BFrida%E8%BF%9B%E9%98%B6%E2%80%94%E2%80%94libmsaoaidsec.so%E5%8F%8D%E8%B0%83%E8%AF%95%E6%9C%BA%E5%88%B6%E7%BB%95%E8%BF%87-CSDN%E5%8D%9A%E5%AE%A2%5D(https://blog.csdn.net/w987333120/article/details/149257224)">文章</a>。</p>
+<p>​	编写 hook 脚本看 libmsaoaidsec.so 是在哪调用了 pthread_create</p>
+<pre><code class="language-js">function hook_dlopen() &#123;
+    Interceptor.attach(Module.findExportByName(null, &quot;android_dlopen_ext&quot;),
+        &#123;
+            onEnter: function (args) &#123;
+                const fn = args[0];
+                this.fileName = (fn &amp;&amp; !fn.isNull()) ? fn.readCString() : &quot;&quot;;
+                console.log(`dlopen onEnter: $&#123;this.fileName&#125;`)
+                if (this.fileName &amp;&amp; this.fileName.indexOf(&quot;libmsaoaidsec.so&quot;) !== -1) &#123;
+                    hook_call_constructors()
+                    hook_dlsym()
+                &#125;
+            &#125;, onLeave: function(retval)&#123;
+                console.log(`dlopen onLeave fileName: $&#123;this.fileName&#125;`)
+                if(this.fileName != null &amp;&amp; this.fileName.indexOf(&quot;libmsaoaidsec.so&quot;) &gt;= 0)&#123;
+                    let JNI_OnLoad = Module.getExportByName(this.fileName, &#39;JNI_OnLoad&#39;)
+                    console.log(`dlopen onLeave JNI_OnLoad: $&#123;JNI_OnLoad&#125;`)
+                &#125;
+            &#125;
+        &#125;
+    );
+&#125;
+ 
+ 
+function hook_call_constructors() &#123;
+    let linker = Process.findModuleByName(&quot;linker64&quot;);
+    let call_constructors_addr, get_soname;
+    let symbols = linker.enumerateSymbols();
+    for (let index = 0; index &lt; symbols.length; index++) &#123;
+        let symbol = symbols[index];
+        if (symbol.name === &quot;__dl__ZN6soinfo17call_constructorsEv&quot;) &#123;
+            call_constructors_addr = symbol.address;
+        &#125; else if (symbol.name === &quot;__dl__ZNK6soinfo10get_sonameEv&quot;) &#123;
+            get_soname = new NativeFunction(symbol.address, &quot;pointer&quot;, [&quot;pointer&quot;]);
+        &#125;
+    &#125;
+ 
+    console.log(&quot;call_constructors_addr: &quot; + call_constructors_addr)
+    var listener = Interceptor.attach(call_constructors_addr, &#123;
+        onEnter: function (args) &#123;
+            var module = Process.findModuleByName(&quot;libmsaoaidsec.so&quot;)
+            if (module != null) &#123;
+                console.log(&quot;libmsaoaidsec.so base address: &quot; + module.base);
+                listener.detach()
+            &#125;
+        &#125;,
+        onLeave: function (retval) &#123;
+            console.log(&quot;onLeave call_constructors&quot;)
+        &#125;
+    &#125;)
+&#125;
+ 
+ 
+function hook_dlsym() &#123;
+    var interceptor = Interceptor.attach(Module.findExportByName(null, &quot;dlsym&quot;),
+        &#123;
+            onEnter: function (args) &#123;
+                const name = ptr(args[1]).readCString()
+                if (name == &quot;pthread_create&quot;) &#123;
+                    console.log(&quot;[dlsym]: &quot;, name, &quot; address: &quot;, this.context.lr)
+                &#125;
+            &#125;
+        &#125;
+    )
+    return interceptor
+&#125;
+
+setImmediate(hook_dlopen)
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104102136817.png" alt="image-20251104102136817"></p>
+<p>​	通过上图打印的日志信息可以计算 pthread_create 函数的调用位置分别为 0x782daa4d1c、0x782dab04c4，相对于 libmsaoaidsec.so 库文件基地址的偏移地址分别为 0x1BD1C、0x274C4。</p>
+<p>​	然后通过这个偏移地址可以去 IDA 中找到这两处的 dlsym。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104103243170.png" alt="image-20251104103243170"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104103431012.png" alt="image-20251104103431012"></p>
+<p>​	那么就可以在 hook_call_constructors 函数中，使用 Interceptor.replace 将 0x1BD1C 和 0x274C4 这两个函数替换为空函数。</p>
+<p>​	完整脚本如下：</p>
+<pre><code class="language-js">function hook_dlopen() &#123;
+    Interceptor.attach(Module.findExportByName(null, &quot;android_dlopen_ext&quot;),
+        &#123;
+            onEnter: function (args) &#123;
+                const fn = args[0];
+                this.fileName = (fn &amp;&amp; !fn.isNull()) ? fn.readCString() : &quot;&quot;;
+                console.log(`dlopen onEnter: $&#123;this.fileName&#125;`)
+                if (this.fileName &amp;&amp; this.fileName.indexOf(&quot;libmsaoaidsec.so&quot;) !== -1) &#123;
+                    hook_call_constructors()
+                    hook_dlsym()
+                &#125;
+            &#125;, onLeave: function(retval)&#123;
+                console.log(`dlopen onLeave fileName: $&#123;this.fileName&#125;`)
+                if(this.fileName != null &amp;&amp; this.fileName.indexOf(&quot;libmsaoaidsec.so&quot;) &gt;= 0)&#123;
+                    let JNI_OnLoad = Module.getExportByName(this.fileName, &#39;JNI_OnLoad&#39;)
+                    console.log(`dlopen onLeave JNI_OnLoad: $&#123;JNI_OnLoad&#125;`)
+                &#125;
+            &#125;
+        &#125;
+    );
+&#125;
+ 
+ 
+function hook_call_constructors() &#123;
+    let linker = null;
+    linker = Process.findModuleByName(&quot;linker64&quot;);
+    let call_constructors_addr, get_soname
+    let symbols = linker.enumerateSymbols();
+    for (let index = 0; index &lt; symbols.length; index++) &#123;
+        let symbol = symbols[index];
+        if (symbol.name === &quot;__dl__ZN6soinfo17call_constructorsEv&quot;) &#123;
+            console.log(symbol.name)
+            call_constructors_addr = symbol.address;
+        &#125; else if (symbol.name === &quot;__dl__ZNK6soinfo10get_sonameEv&quot;) &#123;
+            console.log(symbol.name)
+            get_soname = new NativeFunction(symbol.address, &quot;pointer&quot;, [&quot;pointer&quot;]);
+        &#125;
+    &#125;
+ 
+    console.log(&quot;call_constructors_addr: &quot; + call_constructors_addr)
+    let hookCount = 0;
+    var listener = Interceptor.attach(call_constructors_addr, &#123;
+        onEnter: function (args) &#123;
+            var module = Process.findModuleByName(&quot;libmsaoaidsec.so&quot;)
+            if (module != null) &#123;
+                console.log(&quot;libmsaoaidsec.so base address: &quot; + module.base);
+                Interceptor.replace(module.base.add(0x1BD18), new NativeCallback(function () &#123;
+                    console.log(&quot;0x1BD18: nop成功&quot;, ++hookCount)
+                &#125;, &quot;void&quot;, []))
+                Interceptor.replace(module.base.add(0x274C0), new NativeCallback(function () &#123;
+                    console.log(&quot;0x274C0: nop成功&quot;, ++hookCount)
+                &#125;, &quot;void&quot;, []))
+                listener.detach()
+            &#125;
+        &#125;,
+        onLeave: function (retval) &#123;
+            console.log(&quot;hookCount&quot;, hookCount)
+        &#125;
+    &#125;)
+&#125;
+ 
+ 
+function hook_dlsym() &#123;
+    var interceptor = Interceptor.attach(Module.findExportByName(null, &quot;dlsym&quot;),
+        &#123;
+            onEnter: function (args) &#123;
+                const name = ptr(args[1]).readCString()
+                if (name == &quot;pthread_create&quot;) &#123;
+                    console.log(&quot;[dlsym]: &quot;, name, &quot; address: &quot;, this.context.lr)
+                &#125;
+            &#125;
+        &#125;
+    )
+    return Interceptor
+&#125;
+ 
+setImmediate(hook_dlopen)
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104105611301.png" alt="image-20251104105611301"></p>
+<h3 id="三、Java-层分析"><a href="#三、Java-层分析" class="headerlink" title="三、Java 层分析"></a>三、Java 层分析</h3><p>​	直接搜 nonce 搜不到啥有用的信息，但是在资源文件里看到了 okhttp3 框架。然后参照文章中的方法直接搜接口</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104113110921.png" alt="image-20251104113110921"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104113255742.png" alt="image-20251104113255742">	</p>
+<p>​	这样就可以看到一个接口的信息，这里的话看到接口传入了两个参数，一个是登录的电话号码，一个是密码，但是没有找到请求头和载荷的入参，去看看这个 m122877Z 的调用。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104114009246.png" alt="image-20251104114009246"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104114045021.png" alt="image-20251104114045021"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251104114053953.png" alt="image-20251104114053953"></p>
+<p>​	可以看到就是一个关于电话号码的拼接，然后传入到 m124367a 进行加密，继续跟进。</p>
+<pre><code class="language-Java">public class utils &#123;
+    public static ChangeQuickRedirect changeQuickRedirect;
+
+    /* renamed from: a */
+    public static String m124367a(String str) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException &#123;
+        PatchProxyResult patchProxyResultProxy = PatchProxy.proxy(new Object[]&#123;str&#125;, null, changeQuickRedirect, true, 52396, new Class[]&#123;String.class&#125;, String.class);
+        if (patchProxyResultProxy.isSupported) &#123;
+            return (String) patchProxyResultProxy.result;
+        &#125;
+        try &#123;
+            byte[] bytes = str.getBytes();
+            RSAPublicKey rSAPublicKeyM124368b = m124368b(NDKTools.getrsakey(HeyBoxApplication.m103293M(), C35108a.f172116l, C35108a.f172122m0));
+            Cipher cipher = Cipher.getInstance(&quot;RSA/ECB/PKCS1Padding&quot;);
+            cipher.init(1, rSAPublicKeyM124368b);
+            return Base64.encodeToString(cipher.doFinal(bytes), 0);
+        &#125; catch (Exception unused) &#123;
+            return null;
+        &#125;
+    &#125;
+
+    /* renamed from: b */
+    public static RSAPublicKey m124368b(String str) throws Exception &#123;
+        PatchProxyResult patchProxyResultProxy = PatchProxy.proxy(new Object[]&#123;str&#125;, null, changeQuickRedirect, true, 52395, new Class[]&#123;String.class&#125;, RSAPublicKey.class);
+        if (patchProxyResultProxy.isSupported) &#123;
+            return (RSAPublicKey) patchProxyResultProxy.result;
+        &#125;
+        try &#123;
+            return (RSAPublicKey) KeyFactory.getInstance(C35739d.f174485a).generatePublic(new X509EncodedKeySpec(Base64.decode(str, 0)));
+        &#125; catch (NullPointerException unused) &#123;
+            C15768d.m96188b(&quot;zzzzRSA&quot;, &quot;----------公钥数据为空----------&quot;);
+            throw new Exception(&quot;公钥数据为空&quot;);
+        &#125; catch (NoSuchAlgorithmException unused2) &#123;
+            C15768d.m96188b(&quot;zzzzRSA&quot;, &quot;----------无此算法----------&quot;);
+            throw new Exception(&quot;无此算法&quot;);
+        &#125; catch (InvalidKeySpecException unused3) &#123;
+            C15768d.m96188b(&quot;zzzzRSA&quot;, &quot;----------公钥非法----------&quot;);
+            throw new Exception(&quot;公钥非法&quot;);
+        &#125;
+    &#125;
+
+    /* renamed from: c */
+    public static String m124369c(String str) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException &#123;
+        PatchProxyResult patchProxyResultProxy = PatchProxy.proxy(new Object[]&#123;str&#125;, null, changeQuickRedirect, true, 52397, new Class[]&#123;String.class&#125;, String.class);
+        if (patchProxyResultProxy.isSupported) &#123;
+            return (String) patchProxyResultProxy.result;
+        &#125;
+        try &#123;
+            byte[] bArrDecode = Base64.decode(str, 0);
+            RSAPublicKey rSAPublicKeyM124368b = m124368b(NDKTools.getrsakey(HeyBoxApplication.m103293M(), C35108a.f172116l, C35108a.f172122m0));
+            Cipher cipher = Cipher.getInstance(&quot;RSA/ECB/PKCS1Padding&quot;);
+            cipher.init(2, rSAPublicKeyM124368b);
+            return new String(cipher.doFinal(bArrDecode));
+        &#125; catch (Exception unused) &#123;
+            return null;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>​	很清晰，是一个没有混淆的 RSA，同时请求里面也可以 看到手机号码和密码都是加密了的。</p>
+<p>​	然后看到文章中说该 App 用了 Retrofit 框架，然后也就上网查了一下了解学习一下。</p>
+<ul>
+<li><strong>Retrofit</strong> 是 Android 开发中最常用的 <strong>网络请求框架</strong> 之一，基于 <strong>OkHttp</strong> 实现网络底层，通过 <strong>动态代理</strong> + <strong>注解解析</strong>，把接口调用自动转成网路请求。接口的每个方法调用，其实是通过动态代理被拦截并转成一个 HTTP 请求。</li>
+</ul>
+<p>​	即文章中所说它是通过拦截器去添加请求头和载荷的，可以通过 hook getBytes 来找到生成位置堆栈信息。为什么可以通过 hook getBytes 来找到呢？</p>
+<ul>
+<li><p>在分析加密请求或混淆过的 Retrofit 请求时，很多时候拦截器或加密逻辑都在 native 层或混淆代码里执行。此时想要知道 「到底是谁生成了这段被加密的 body」，可以通过 hook Java 关键函数。</p>
+<ul>
+<li><p><code>String.getBytes()</code> 是加密链中的关键点<br>几乎所有的请求载荷在被加密之前，都会经历：</p>
+<ol>
+<li>原始 JSON 拼接（例如：<code>&quot;&#123;\&quot;uid\&quot;:123,\&quot;token\&quot;:\&quot;abc\&quot;&#125;&quot;</code>）</li>
+<li>调用 <code>.getBytes()</code> → 生成 byte[]</li>
+<li>进入加密函数（AES&#x2F;RSA&#x2F;Base64 等）</li>
+<li>写入请求体 → <code>RequestBody.create(MediaType, byte[])</code></li>
+</ol>
+<p>所以，只要在 Java 层 hook String.getBytes() 就能在请求即将被加密的瞬间捕捉到原始明文内容。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​	然后在注入脚本的时候，注入时机也很重要，这里要先将 libmsaoaidsec.so 中的检测给过掉，然后再注入 hook getBytes 的逻辑，然后再去小黄鸟中找到 <code>*****://***.*********.**/account/login/</code>，通过 nonce 的值去日志中搜，这样一来就可以精准定位到生成位置，位于<strong>com.max.xiaoheihe.router.serviceimpl.i.b</strong>。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251105160709217.png" alt="image-20251105160709217"></p>
+<p>​	然后我们继续跟这个方法，结果发现最新版的 x黑盒 已经把这个方法写到 so 层去了，并且还写了个 vm。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251105170732943.png" alt="image-20251105170732943"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251105170753694.png" alt="image-20251105170753694"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251105170808943.png" alt="image-20251105170808943"></p>
+<p>​	很清晰，一点混淆都没做，到这一步，但还是想继续复现那篇文章，于是又上网找到了 1.3.333 版本的。</p>
+<p>​	重新 hook</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251105171627780.png" alt="image-20251105171627780"></p>
+<p>​	再跟踪定位</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251105171210119.png" alt="image-20251105171210119"></p>
+<p>​	这就清晰很多了（</p>
+<p>​	再往下走就是 getVD 和 getVX，先写一个 hook 脚本和抓包的信息联合一起分析一下，确定一下是不是这里，</p>
+<pre><code class="language-js">function hook_getVD() &#123;
+  Java.perform(function () &#123;
+    var SecurityTool = Java.use(&quot;com.max.security.SecurityTool&quot;);
+    SecurityTool[&quot;getVD&quot;].implementation = function (context, str) &#123;
+      console.log(
+        `SecurityTool.getVD is called: context=$&#123;context&#125;, str=$&#123;str&#125;`
+      );
+      let result = this[&quot;getVD&quot;](context, str);
+      console.log(`SecurityTool.getVD result=$&#123;result&#125;`);
+      return result;
+    &#125;;
+  &#125;);
+&#125;
+</code></pre>
+<p>​	然后也还是先只运行 <strong>hook_dlopen()</strong>，等程序正常启动成了，然后再挂载 <strong>hook_getVD()</strong>，再输入手机号并用密码登录。然后发现 hook 结果和抓包结果是对的上的。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107102055898.png" alt="image-20251107102055898"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107102115123.png" alt="image-20251107102115123"></p>
+<p>​	继续分析。</p>
+<pre><code class="language-Java">String vd2 = SecurityTool.getVD(HeyBoxApplication.m81850C(), SecurityTool.getVX(HeyBoxApplication.m81850C(), &quot;HPPDCEAENEHBFHPASRDCAMNHJLAAPF&quot;));
+</code></pre>
+<p>​	可以看到传入 getVD 方法的有两个参数，再看看打印出来的日志</p>
+<pre><code class="language-shell">SecurityTool.getVD is called: context=com.max.xiaoheihe.app.HeyBoxApplication@2b73c47, str=lgcqE7gwpVAyG8pQoHpfVee4BEjFdAzR
+SecurityTool.getVD result=ERqBEkWbdq1qIA0D7v9HFIJgHtKEYDvl
+</code></pre>
+<p>​	第一个参数是设备的上下文信息，第二个参数是 getVX 发给发生成的 32 位字符串。双击跟进可以看到一堆 so 层的 native 函数，找一个 so 文件的加载，然后去 so 层进行分析。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107102940277.png" alt="image-20251107102940277"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107102949742.png" alt="image-20251107102949742"></p>
+<h3 id="四、SO-层分析"><a href="#四、SO-层分析" class="headerlink" title="四、SO 层分析"></a>四、SO 层分析</h3><h4 id="1、getVX"><a href="#1、getVX" class="headerlink" title="1、getVX"></a>1、getVX</h4><p>​	先看导出函数里有没有该函数（一般大概率不是静态注册，所以应该在这找不到）。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107103758171.png" alt="image-20251107103758171"></p>
+<p>​	那既然是动态注册的，直接去找 <strong>JNI_OnLoad</strong> 函数即可。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107103835982.png" alt="image-20251107103835982"></p>
+<p>​	进到该结构体中，就可以找到了</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107104030802.png" alt="image-20251107104030802"></p>
+<p>​	跟进查看逻辑</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107104726478.png" alt="image-20251107104726478"></p>
+<p>​	整个函数看下来就只有 sub_A2B50 函数对传进来的 str 进行了处理</p>
+<p>，hook 一下看看</p>
+<pre><code class="language-js">function print_arg(addr) &#123;
+  if (addr.isNull &amp;&amp; addr.isNull()) return &quot;NULL\n&quot;;
+  var range = Process.findRangeByAddress(addr);
+  if (range !== null) &#123;
+    return hexdump(addr, &#123;length: 64&#125;) + &quot;\n&quot;;
+  &#125;
+  return ptr(addr).toString() + &quot;\n&quot;;
+&#125;
+
+function hook_native_addr(funcPtr, paramsNum) &#123;
+  var module = Process.findModuleByAddress(funcPtr);
+  Interceptor.attach(funcPtr, &#123;
+    onEnter: function (args) &#123;
+      try &#123;
+        this.logs = [];
+        this.params = [];
+        var prefix = &quot;call &quot;;
+        if (module) &#123;
+          prefix += module.name + &quot;!&quot; + ptr(funcPtr).sub(module.base) + &quot;\n&quot;;
+        &#125; else &#123;
+          prefix += ptr(funcPtr) + &quot;\n&quot;;
+        &#125;
+        this.logs.push(prefix);
+        for (let i = 0; i &lt; paramsNum; i++) &#123;
+          this.params.push(args[i]);
+          this.logs.push(&quot;arg[&quot; + i + &quot;] onEnter: &quot; + print_arg(args[i]));
+        &#125;
+      &#125; catch (e) &#123;
+        console.error(&quot;onEnter error:&quot;, e);
+      &#125;
+    &#125;,
+    onLeave: function (retval) &#123;
+      try &#123;
+        for (let i = 0; i &lt; paramsNum; i++) &#123;
+          this.logs.push(&quot;arg[&quot; + i + &quot;] onLeave: &quot; + print_arg(this.params[i]));
+        &#125;
+        this.logs.push(&quot;retval: &quot; + print_arg(retval));
+        console.log(this.logs.join(&quot;\n&quot;));
+        console.log(&quot;================================&quot;);
+      &#125; catch (e) &#123;
+        console.error(&quot;onLeave error:&quot;, e);
+      &#125;
+    &#125;
+  &#125;);
+&#125;
+
+function hook_so_native_method() &#123;
+  var soAddr = Module.findBaseAddress(&quot;libhbsecurity.so&quot;);
+  if (!soAddr) &#123;
+    console.error(&quot;libhbsecurity.so not found&quot;);
+    return;
+  &#125;
+  var funcAddr = soAddr.add(0xA2B50);
+  hook_native_addr(funcAddr, 3);
+&#125;
+</code></pre>
+<p>​	从日志内容中没找到比较明显的加密字符串返回，故猜测这里不是一个一个加密逻辑的点。然后再往后分析，看到 v6 是对 v5 处理后的结果，同样 hook 一下看看。</p>
+<pre><code class="language-js">function print_arg(addr) &#123;
+  if (addr.isNull &amp;&amp; addr.isNull()) return &quot;NULL\n&quot;;
+  var range = Process.findRangeByAddress(addr);
+  if (range !== null) &#123;
+    return hexdump(addr, &#123;length: 64&#125;) + &quot;\n&quot;;
+  &#125;
+  return ptr(addr).toString() + &quot;\n&quot;;
+&#125;
+
+function hook_native_addr(funcPtr, paramsNum) &#123;
+  var module = Process.findModuleByAddress(funcPtr);
+  Interceptor.attach(funcPtr, &#123;
+    onEnter: function (args) &#123;
+      try &#123;
+        this.logs = [];
+        this.params = [];
+        var prefix = &quot;call &quot;;
+        if (module) &#123;
+          prefix += module.name + &quot;!&quot; + ptr(funcPtr).sub(module.base) + &quot;\n&quot;;
+        &#125; else &#123;
+          prefix += ptr(funcPtr) + &quot;\n&quot;;
+        &#125;
+        this.logs.push(prefix);
+        for (let i = 0; i &lt; paramsNum; i++) &#123;
+          this.params.push(args[i]);
+          this.logs.push(&quot;arg[&quot; + i + &quot;] onEnter: &quot; + print_arg(args[i]));
+        &#125;
+      &#125; catch (e) &#123;
+        console.error(&quot;onEnter error:&quot;, e);
+      &#125;
+    &#125;,
+    onLeave: function (retval) &#123;
+      try &#123;
+        for (let i = 0; i &lt; paramsNum; i++) &#123;
+          this.logs.push(&quot;arg[&quot; + i + &quot;] onLeave: &quot; + print_arg(this.params[i]));
+        &#125;
+        this.logs.push(&quot;retval: &quot; + print_arg(retval));
+        console.log(this.logs.join(&quot;\n&quot;));
+        console.log(&quot;================================&quot;);
+      &#125; catch (e) &#123;
+        console.error(&quot;onLeave error:&quot;, e);
+      &#125;
+    &#125;
+  &#125;);
+&#125;
+
+function hook_so_native_method() &#123;
+  var soAddr = Module.findBaseAddress(&quot;libhbsecurity.so&quot;);
+  if (!soAddr) &#123;
+    console.error(&quot;libhbsecurity.so not found&quot;);
+    return;
+  &#125;
+  var funcAddr = soAddr.add(0x728A4);
+  hook_native_addr(funcAddr, 1);
+&#125;
+</code></pre>
+<p>​	打印出来的日志都是一些空值，都没啥用，可能是指针的一些值，不能直接用 hexdump 打印出来，那就继续看看 v6 又进行了哪些处理。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107113211197.png" alt="image-20251107113211197"></p>
+<p>​	继续 hook 查看。不知道为什么，我在 hook <strong>sub_A6620</strong> 时，返回值依旧是指针的值，hexdump 打印不出来，不知道文章中的作者是咋写的 hook 的脚本…</p>
+<p>​	跟进该函数，明显有问题。</p>
+<pre><code class="language-c">__int64 sub_A6620()
+&#123;
+  __int64 v0; // x19
+  unsigned __int8 v1; // w8
+  __int64 result; // x0
+
+  v0 = sub_72AE4(33LL);
+  *v0 = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 1) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 2) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 3) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 4) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 5) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 6) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 7) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 8) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 9) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 10) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 11) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 12) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 13) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 14) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 15) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 16) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 17) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 18) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 19) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 20) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 21) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 22) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 23) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 24) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 25) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 26) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 27) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 28) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 29) = byte_230F4[sub_4AC1C(62LL)];
+  *(v0 + 30) = byte_230F4[sub_4AC1C(62LL)];
+  v1 = byte_230F4[sub_4AC1C(62LL)];
+  result = v0;
+  *(v0 + 31) = v1;
+  return result;
+&#125;
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107143252403.png" alt="image-20251107143252403"></p>
+<p>​	这里面又有一个函数 <strong>sub_4AC1C</strong>，hook 一下看看。貌似产生的都是一些“随机”数。</p>
+<p>​	根据文章作者对 sub_A6620 函数结果的 hook，以及跟进之后对 sub_4AC1C 函数的 hook，可以确定一个映射关系。同时也可以进行验证。</p>
+<ul>
+<li>大写字母：偏移 0x1D    </li>
+<li>小写字母：偏移 0x57     </li>
+<li>数字：偏移 0x30</li>
+</ul>
+<h4 id="2、getVD"><a href="#2、getVD" class="headerlink" title="2、getVD"></a>2、getVD</h4><p>​	依旧在 <strong>JNI_OnLoad</strong> 函数中的动态注册函数的结构体中找该函数。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111094647993.png" alt="image-20251111094647993"></p>
+<p>​	跟进查看逻辑。发现有控制流混淆，然后就跟着文章中的 trace 项目进行 trace 了一下。</p>
+<ul>
+<li><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/bmax121/sktrace">https://github.com/bmax121/sktrace</a> </p>
+</li>
+<li><p>参考文章：<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-264680.htm">https://bbs.kanxue.com/thread-264680.htm</a> </p>
+</li>
+<li><p>运行指令：python sktrace.py -m attach -l libhbsecurity.so -i 0xA5E44 *黑盒 &gt; xhh1.log</p>
+</li>
+</ul>
+<p>​	完了点击登录调用一下。</p>
+<p>​	可以通过 Frida脚本去 hook 方法返回值，也可以通过抓包看 nonce 的值，我这里测试时抓的值是</p>
+<pre><code>4qhGNlfFEsjKyRmNgYbteBW2K9xEmMEF
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111110847056.png" alt="image-20251111110847056"></p>
+<p>​	然后去日志中找第一次生成的地方，直接在 日志 中搜索 347168 即可。这样就找到了第一组数组，确定是在这个函数内生成的。再搜 0x34 查找它第一个生成位置。有两个，依次留下标记。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111111138181.png" alt="image-20251111111138181"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111111211598.png" alt="image-20251111111211598"></p>
+<p>​	发现一个特征</p>
+<pre><code>ldrb    w8, [x20, w0, uxtw]
+</code></pre>
+<p>​	都是在这个汇编代码里，根据地址计算一下偏移，然后去 IDA 里找</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111111301263.png" alt="image-20251111111301263"></p>
+<p>​	发现又到这了<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111111320921.png" alt="image-20251111111320921"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251111111404843.png" alt="image-20251111111404843"></p>
+<p>​	在 getVD 函数里同样调用了随机生成函数 sub_A6620，既然这样，就只需要再 hook 一下这个函数调用生成的值和最后的是否一样。最终测试结果是一样的。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20251107150900309.png" alt="image-20251107150900309"></p>
+<h3 id="五、结语"><a href="#五、结语" class="headerlink" title="五、结语"></a>五、结语</h3><p>​	第一次较为完整的复现了一次实战文章并记录下来，体验了 trace 跟踪，并分析的这么一个过程。虽说整体过程没有很复杂，但为进一步的学习打下基础。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>从实践中学习unidbg使用(三) | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Unidbg ">
+  <meta name="description" content="从实践中学习unidbg使用(三) | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-从实践中学习unidbg使用(三)" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">从实践中学习unidbg使用(三)</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Unidbg学习">Unidbg学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Unidbg</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-08-11 15:35:18'>2025-07-01 15:29</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:8.7k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8-%E4%B8%89"><span class="toc-text">从实践中学习unidbg使用(三)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-text">一、引言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%BB%E5%8A%A1%E6%8F%8F%E8%BF%B0"><span class="toc-text">二、任务描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">三、初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%91%E8%B5%B7%E8%B0%83%E7%94%A8"><span class="toc-text">四、发起调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%A1%A5JNI%E7%8E%AF%E5%A2%83"><span class="toc-text">五、补JNI环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-%E5%BC%82%E5%B8%B8"><span class="toc-text">5.1 异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-%E8%A1%A5%E7%8E%AF%E5%A2%83%E5%8E%9F%E5%9B%A0"><span class="toc-text">5.2 补环境原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-%E5%9F%BA%E6%9C%AC%E8%A7%84%E8%8C%83"><span class="toc-text">5.3 基本规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-%E5%BC%80%E5%A7%8B%E8%A1%A5%E7%8E%AF%E5%A2%83"><span class="toc-text">5.4 开始补环境</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%B0%BE%E5%A3%B0"><span class="toc-text">六、尾声</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%8F%82%E8%80%83"><span class="toc-text">七、参考</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="从实践中学习unidbg使用-三"><a href="#从实践中学习unidbg使用-三" class="headerlink" title="从实践中学习unidbg使用(三)"></a>从实践中学习unidbg使用(三)</h1><h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>本篇中的APK详见参考文章中</p>
+<p>目标APK：right573.apk</p>
+<p>目标方法实现：libnet_crypto.so</p>
+<p>本篇将开始讨论补环境。</p>
+<h3 id="二、任务描述"><a href="#二、任务描述" class="headerlink" title="二、任务描述"></a>二、任务描述</h3><p>JADX反编译right573.apk，找到com.izuiyou.network，我们关注于NetCrypto类里的sign方法，它是一个静态方法。</p>
+<pre><code class="language-Java">package com.izuiyou.network;
+
+import android.app.ContextProvider;
+import com.meituan.robust.ChangeQuickRedirect;
+import com.meituan.robust.PatchProxy;
+import com.meituan.robust.PatchProxyResult;
+import defpackage.we5;
+
+/* loaded from: classes4.dex */
+public class NetCrypto &#123;
+    public static ChangeQuickRedirect changeQuickRedirect;
+
+    static &#123;
+        we5.a(ContextProvider.get(), &quot;net_crypto&quot;);
+        native_init();
+    &#125;
+
+    public static String a(String str, byte[] bArr) &#123;
+        String str2;
+        PatchProxyResult proxy = PatchProxy.proxy(new Object[]&#123;str, bArr&#125;, null, changeQuickRedirect, true, 47387, new Class[]&#123;String.class, byte[].class&#125;, String.class);
+        if (proxy.isSupported) &#123;
+            return (String) proxy.result;
+        &#125;
+        String sign = sign(str, bArr);
+        if (str.contains(&quot;?&quot;)) &#123;
+            str2 = &quot;&amp;sign=&quot; + sign;
+        &#125; else &#123;
+            str2 = &quot;?sign=&quot; + sign;
+        &#125;
+        return str + str2;
+    &#125;
+
+    public static native byte[] decodeAES(byte[] bArr, boolean z);
+
+    public static native byte[] encodeAES(byte[] bArr);
+
+    public static native String generateSign(byte[] bArr);
+
+    public static native String getProtocolKey();
+
+    public static native void native_init();
+
+    public static native boolean registerDID(byte[] bArr);
+
+    public static native void setProtocolKey(String str);
+
+    public static native String sign(String str, byte[] bArr);
+&#125;
+</code></pre>
+<p>这段代码主要负责处理网路通信中的加解密和签名相关逻辑。它结合了原生方法(通过native关键字)以及美团的热修复框架Robust。主要方法就是a方法。这是一个用于在URL上拼接签名的工具方法，先通过PathProxy检查是否需要被热更新替换。否则执行默认逻辑：①调用原生方法sign(str, bArr)生成签名；②判断URL中是否已有参数 ? ，然后拼接sign参数返回。这个类的主要用途就是加解密网络数据；为URL或请求生成签名；确保数据完整性和防篡改；支持热更新，允许在不重新发布APK的情况下修复方法逻辑；借助原生库提升加密效率或安全性。</p>
+<p>先用Frida附加目标进程做主动调用，可参考如下代码</p>
+<pre><code class="language-js">function callSign()&#123;
+  Java.perform(function() &#123;
+    function stringToBytes(str) &#123;
+      var javaString = Java.use(&#39;java.lang.String&#39;);
+      return javaString.$new(str).getBytes();
+    &#125;
+
+    let NetCrypto = Java.use(&quot;com.izuiyou.network.NetCrypto&quot;);
+    let arg1 = &quot;hello world&quot;;
+    let arg2 = &quot;V I 50&quot;;
+    let ret = NetCrypto.sign(arg1, stringToBytes(arg2));
+    console.log(&quot;ret:&quot;+ret);
+  &#125;)
+&#125;
+callSign();
+</code></pre>
+<p>输出是</p>
+<pre><code class="language-shell">ret:v2-b94195d5f3c2ad3a876f13346fa283a0
+</code></pre>
+<p>本篇的目标就是使用Unidbg复现对sign的调用。</p>
+<h3 id="三、初始化"><a href="#三、初始化" class="headerlink" title="三、初始化"></a>三、初始化</h3><p>在Unidbg的unidbg-android&#x2F;src&#x2F;test&#x2F;java下新建包和类。</p>
+<pre><code class="language-Java">package com.test2;
+
+import com.github.unidbg.AndroidEmulator;
+import com.github.unidbg.arm.backend.Unicorn2Factory;
+import com.github.unidbg.linux.android.AndroidEmulatorBuilder;
+import com.github.unidbg.linux.android.AndroidResolver;
+import com.github.unidbg.linux.android.dvm.AbstractJni;
+import com.github.unidbg.linux.android.dvm.DalvikModule;
+import com.github.unidbg.linux.android.dvm.DvmClass;
+import com.github.unidbg.linux.android.dvm.VM;
+import com.github.unidbg.memory.Memory;
+
+import java.io.File;
+
+public class TEST2 extends AbstractJni &#123;
+    private final AndroidEmulator emulator;
+    private final DvmClass NetCrypto;
+    private final VM vm;
+
+    public TEST2() &#123;
+        emulator = AndroidEmulatorBuilder
+                .for32Bit()
+                .addBackendFactory(new Unicorn2Factory(true))
+                .setProcessName(&quot;cn.xiaochuankeji.tieba&quot;)
+                .build();
+        Memory memory = emulator.getMemory();
+        memory.setLibraryResolver(new AndroidResolver(23));
+        vm = emulator.createDalvikVM(new File(&quot;D:\\Compilation_Enviroment\\unidbg-master\\unidbg-android\\src\\test\\java\\com\\test2\\right573.apk&quot;));
+        vm.setJni(this);
+        vm.setVerbose(true);
+        DalvikModule dm = vm.loadLibrary(&quot;net_crypto&quot;, true);
+        NetCrypto = vm.resolveClass(&quot;com.izuiyou.network.NetCrypto&quot;);
+        dm.callJNI_OnLoad(emulator);
+    &#125;
+
+    public static void main(String[] args) &#123;
+        TEST2 test = new TEST2();
+    &#125;
+
+
+&#125;
+</code></pre>
+<p>由于样本目录下只包含armeabi-v7a的动态文件，因此只能选择32位，运行代码，发现报错。</p>
+<pre><code class="language-shell">[10:34:53 630]  INFO [com.github.unidbg.linux.AndroidElfLoader] (AndroidElfLoader:481) - libnet_crypto.so load dependency libandroid.so failed
+JNIEnv-&gt;FindClass(com/izuiyou/network/NetCrypto) was called from RX@0x12049fc5[libnet_crypto.so]0x49fc5
+JNIEnv-&gt;RegisterNatives(com/izuiyou/network/NetCrypto, RW@0x121c9010[libnet_crypto.so]0x1c9010, 8) was called from RX@0x12049fd7[libnet_crypto.so]0x49fd7
+RegisterNative(com/izuiyou/network/NetCrypto, native_init()V, RX@0x1204a069[libnet_crypto.so]0x4a069)
+RegisterNative(com/izuiyou/network/NetCrypto, encodeAES([B)[B, RX@0x1204a0b9[libnet_crypto.so]0x4a0b9)
+RegisterNative(com/izuiyou/network/NetCrypto, decodeAES([BZ)[B, RX@0x1204a14d[libnet_crypto.so]0x4a14d)
+RegisterNative(com/izuiyou/network/NetCrypto, sign(Ljava/lang/String;[B)Ljava/lang/String;, RX@0x1204a28d[libnet_crypto.so]0x4a28d)
+RegisterNative(com/izuiyou/network/NetCrypto, getProtocolKey()Ljava/lang/String;, RX@0x1204a419[libnet_crypto.so]0x4a419)
+RegisterNative(com/izuiyou/network/NetCrypto, setProtocolKey(Ljava/lang/String;)V, RX@0x1204a479[libnet_crypto.so]0x4a479)
+RegisterNative(com/izuiyou/network/NetCrypto, registerDID([B)Z, RX@0x1204a4f5[libnet_crypto.so]0x4a4f5)
+RegisterNative(com/izuiyou/network/NetCrypto, generateSign([B)Ljava/lang/String;, RX@0x1204a587[libnet_crypto.so]0x4a587)
+</code></pre>
+<p>第一行日志提示，libnet_crypto.so文件试图加载libandroid.so这个依赖库，但是没有找到，接下来探究这个问题的原因和解决方案。</p>
+<p>首先是原因，前文我们说，Unidbg的So Loader提供了类似Android Linker的处理机制，对所依赖的用户库以及系统库进行加载，这里加载失败的libandroid.so就是一个系统库，它提供了大量的Android相关的功能，比如访问APK的资源文件等等。具体可看这篇[文章](<a target="_blank" rel="noopener" href="https://www.cnblogs.com/willhua/p/9692529.html">Android: 在native中访问assets全解析 - willhua - 博客园</a>)。</p>
+<p>那么，Unidbg的lib目录下为什么没有包含这个动态库？<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705111108967.png" alt="image-20250705111108967"></p>
+<p>也可以说，Android FrameWork提供了数十上百个动态库，为什么Unidbg只在lib里放了这么几个？这是因为并非所有的So都可以被Unidbg完备的加载和处理。</p>
+<p>以当前的libandroid.so为例，它依赖于相当多的类库，其中许多的Android系统、软硬件、大量的系统调用紧密相关。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1667897135718-a799b44f-812a-40cf-b31f-067eae755f20.png" alt="img"></p>
+<p>这使得Unidbg很难对它们做妥善、完备的处理，因为Unidbg并不是真正完善健全的模拟器，或者说模拟器就很难像真机一样完善。除了libandroid.so外，libstart.so、libjnigraphics.so等库都因为这个原因没法完成加载。因此Unidbg只默认加载了依赖最少，使用又最多的一批库函数。</p>
+<p>可是比如libandroid.so这样的系统库出现频率很高，总不能遇到它们就歇火。因此Unidbg提供了一种叫虚拟模块的机制，提供对这些so文件一部分函数的模拟实现。</p>
+<p>目前Unidbg提供了libandroid.so、libjnigraphics.so、libmediandk.so三个库的虚拟模块。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705112633520.png" alt="image-20250705112633520"></p>
+<p>使用它们相当简单，比如此处缺少libandroid.so，只需要在<strong>早于</strong>目标so文件加载的时机，添加下面这行代码即可。</p>
+<pre><code class="language-Java">new AndroidModule(emulator, vm).register(memory);
+</code></pre>
+<p>就像下面这样</p>
+<pre><code class="language-Java">    public TEST2() &#123;
+        emulator = AndroidEmulatorBuilder
+                .for32Bit()
+                .addBackendFactory(new Unicorn2Factory(true))
+                .setProcessName(&quot;cn.xiaochuankeji.tieba&quot;)
+                .build();
+        Memory memory = emulator.getMemory();
+        memory.setLibraryResolver(new AndroidResolver(23));
+        vm = emulator.createDalvikVM(new File(&quot;D:\\Compilation_Enviroment\\unidbg-master\\unidbg-android\\src\\test\\java\\com\\test2\\right573.apk&quot;));
+        vm.setJni(this);
+        vm.setVerbose(true);
+
+        // 使用libandroid.so虚拟模块
+        new AndroidModule(emulator, vm).register(memory);
+
+        DalvikModule dm = vm.loadLibrary(&quot;net_crypto&quot;, true);
+        NetCrypto = vm.resolveClass(&quot;com.izuiyou.network.NetCrypto&quot;);
+        dm.callJNI_OnLoad(emulator);
+    &#125;
+</code></pre>
+<p>虚拟模块在本质上就是按模块去Hook和实现一些函数，只不过在形式和处理上更优雅，应该说是一个很好的设计。</p>
+<p>它也并非万全之策，以libandroid.so为例，AndroidModule虚拟模块里一共实现了下面几个函数。</p>
+<ul>
+<li>AAssetManager_fromJava</li>
+<li>AAsset_close</li>
+<li>AAsset_getBuffer</li>
+<li>AAsset_getLength</li>
+<li>AAsset_read</li>
+</ul>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705114440593.png" alt="image-20250705114440593"></p>
+<p>和libandroid.so所具有的数百个导出函数相比，只是极小的一部分。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1667898041325-6e2aa628-67bb-48a2-acc8-bc9d35af4305.png" alt="img"></p>
+<p>即使只考虑已处理的五个函数，它也远称不上完善，只是一种简单的模拟。libjnigraphics.so、libmediandk.so 也都存在同样的问题。</p>
+<p>但在这个场景下，已经是最好的办法。</p>
+<h3 id="四、发起调用"><a href="#四、发起调用" class="headerlink" title="四、发起调用"></a>四、发起调用</h3><p>可参考的代码如下：</p>
+<pre><code class="language-Java">package com.test2;
+
+import com.github.unidbg.AndroidEmulator;
+import com.github.unidbg.arm.backend.Unicorn2Factory;
+import com.github.unidbg.linux.android.AndroidEmulatorBuilder;
+import com.github.unidbg.linux.android.AndroidResolver;
+import com.github.unidbg.linux.android.dvm.AbstractJni;
+import com.github.unidbg.linux.android.dvm.DalvikModule;
+import com.github.unidbg.linux.android.dvm.DvmClass;
+import com.github.unidbg.linux.android.dvm.VM;
+import com.github.unidbg.memory.Memory;
+import com.github.unidbg.virtualmodule.android.AndroidModule;
+
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+
+public class TEST2 extends AbstractJni &#123;
+    private final AndroidEmulator emulator;
+    private final DvmClass NetCrypto;
+    private final VM vm;
+
+    public TEST2() &#123;
+        emulator = AndroidEmulatorBuilder
+                .for32Bit()
+                .addBackendFactory(new Unicorn2Factory(true))
+                .setProcessName(&quot;cn.xiaochuankeji.tieba&quot;)
+                .build();
+        Memory memory = emulator.getMemory();
+        memory.setLibraryResolver(new AndroidResolver(23));
+        vm = emulator.createDalvikVM(new File(&quot;D:\\Compilation_Enviroment\\unidbg-master\\unidbg-android\\src\\test\\java\\com\\test2\\right573.apk&quot;));
+        vm.setJni(this);
+        vm.setVerbose(true);
+
+        // 使用libandroid.so虚拟模块
+        new AndroidModule(emulator, vm).register(memory);
+
+        DalvikModule dm = vm.loadLibrary(&quot;net_crypto&quot;, true);
+        NetCrypto = vm.resolveClass(&quot;com.izuiyou.network.NetCrypto&quot;);
+        dm.callJNI_OnLoad(emulator);
+    &#125;
+
+    public String callSign() &#123;
+        String arg1 = &quot;hello world&quot;;
+        byte[] arg2 = &quot;V I 50&quot;.getBytes(StandardCharsets.UTF_8);
+        String ret = NetCrypto.callStaticJniMethodObject(emulator, &quot;sign(Ljava/lang/String;[B)Ljava/lang/String;&quot;, arg1, arg2).getValue().toString();
+        return ret;
+    &#125;
+
+
+
+    public static void main(String[] args) &#123;
+        TEST2 test = new TEST2();
+        String result = test.callSign();
+        System.out.println(&quot;call s result: &quot; + result);
+    &#125;
+
+
+&#125;
+</code></pre>
+<p>因为是静态函数，而且返回值是字符串，所以采用<strong>callStaticJniMethodObject</strong>发起调用。</p>
+<p>除此之外，参数1 和 2 是字符串和字节数组类型，都属于Unidbg会替我们处理类型转换的类型。</p>
+<h3 id="五、补JNI环境"><a href="#五、补JNI环境" class="headerlink" title="五、补JNI环境"></a>五、补JNI环境</h3><p>本篇开始进入JNI补环境的处理逻辑，这里会留好几个坑，放到后文再讲，请读者稍安勿躁。</p>
+<p>运行代码，报错如下：</p>
+<pre><code class="language-shell">JNIEnv-&gt;GetStringUtfChars(&quot;hello world&quot;) was called from RX@0x12066b07[libnet_crypto.so]0x66b07
+JNIEnv-&gt;ReleaseStringUTFChars(&quot;hello world&quot;) was called from RX@0x12066b23[libnet_crypto.so]0x66b23
+JNIEnv-&gt;FindClass(com/izuiyou/common/base/BaseApplication) was called from RX@0x1204da21[libnet_crypto.so]0x4da21
+JNIEnv-&gt;GetStaticMethodID(com/izuiyou/common/base/BaseApplication.getAppContext()Landroid/content/Context;) =&gt; 0x2157b33c was called from RX@0x1204da57[libnet_crypto.so]0x4da57
+[15:23:19 214]  WARN [com.github.unidbg.linux.ARM32SyscallHandler] (ARM32SyscallHandler:538) - handleInterrupt intno=2, NR=-452987556, svcNumber=0x170, PC=unidbg@0xfffe0794, LR=RX@0x1204db2f[libnet_crypto.so]0x4db2f, syscall=null
+java.lang.UnsupportedOperationException: com/izuiyou/common/base/BaseApplication-&gt;getAppContext()Landroid/content/Context;
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callStaticObjectMethodV(AbstractJni.java:504)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callStaticObjectMethodV(AbstractJni.java:438)
+	at com.github.unidbg.linux.android.dvm.DvmMethod.callStaticObjectMethodV(DvmMethod.java:59)
+	at com.github.unidbg.linux.android.dvm.DalvikVM$113.handle(DalvikVM.java:1815)
+	at com.github.unidbg.linux.ARM32SyscallHandler.hook(ARM32SyscallHandler.java:131)
+	at com.github.unidbg.arm.backend.Unicorn2Backend$11.hook(Unicorn2Backend.java:352)
+	at com.github.unidbg.arm.backend.unicorn.Unicorn$NewHook.onInterrupt(Unicorn.java:109)
+	at com.github.unidbg.arm.backend.unicorn.Unicorn.emu_start(Native Method)
+	at com.github.unidbg.arm.backend.unicorn.Unicorn.emu_start(Unicorn.java:312)
+	at com.github.unidbg.arm.backend.Unicorn2Backend.emu_start(Unicorn2Backend.java:389)
+	at com.github.unidbg.AbstractEmulator.emulate(AbstractEmulator.java:378)
+	at com.github.unidbg.thread.Function32.run(Function32.java:39)
+	at com.github.unidbg.thread.MainTask.dispatch(MainTask.java:19)
+	at com.github.unidbg.thread.UniThreadDispatcher.run(UniThreadDispatcher.java:165)
+	at com.github.unidbg.thread.UniThreadDispatcher.runMainForResult(UniThreadDispatcher.java:97)
+	at com.github.unidbg.AbstractEmulator.runMainForResult(AbstractEmulator.java:341)
+	at com.github.unidbg.arm.AbstractARMEmulator.eFunc(AbstractARMEmulator.java:255)
+	at com.github.unidbg.Module.emulateFunction(Module.java:163)
+	at com.github.unidbg.linux.android.dvm.DvmObject.callJniMethod(DvmObject.java:135)
+	at com.github.unidbg.linux.android.dvm.DvmClass.callStaticJniMethodObject(DvmClass.java:316)
+	at com.test2.TEST2.callSign(TEST2.java:47)
+	at com.test2.TEST2.main(TEST2.java:58)
+</code></pre>
+<p>首先，读者需要意识到，这并不是真正的“报错”，而是Unidbg为了提醒我们补JNI环境，主动抛出的异常。接下来首先讨论异常。</p>
+<h4 id="5-1-异常"><a href="#5-1-异常" class="headerlink" title="5.1 异常"></a>5.1 异常</h4><p>报错可以分为两部分</p>
+<p>第一部分</p>
+<pre><code class="language-shell">[15:23:19 214]  WARN [com.github.unidbg.linux.ARM32SyscallHandler] (ARM32SyscallHandler:538) - handleInterrupt intno=2, NR=-452987556, svcNumber=0x170, PC=unidbg@0xfffe0794, LR=RX@0x1204db2f[libnet_crypto.so]0x4db2f, syscall=null
+</code></pre>
+<p>日志输出的位置是**[com.github.unidbg.linux.ARM32SyscallHandler] (ARM32SyscallHandler:538)**<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705152744055.png" alt="image-20250705152744055"></p>
+<p>可能会感到疑惑，为什么处理JNI的逻辑，其报错在 <strong>Arm32SyscallHandler</strong>，这似乎是系统调用的处理模块吧？</p>
+<p>事实上，Unidbg正是凭此实现了对JNI的代理，首先它构造了<strong>JNIEnv</strong>和<strong>JavaVM</strong>这两个JNI中的关键结构，它们是指向JNI函数表的二级指针。在处理函数表时，Unidbg将函数都导向一个八字节的跳板函数。</p>
+<pre><code class="language-c">svc #imm;
+bx lr;
+</code></pre>
+<p>比如样本中so文件的<strong>ReleaseStringUTFChars</strong>函数<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705153939780.png" alt="image-20250705153939780"></p>
+<p>汇编代码如下：</p>
+<pre><code class="language-c">.text:00066B14                 LDR             R0, [R6]
+.text:00066B16                 LDR.W           R3, [R0,#0x2A8]
+.text:00066B1A                 MOV             R0, R6
+.text:00066B1C                 MOV             R1, R5
+.text:00066B1E                 MOV             R2, R4
+.text:00066B20                 BLX             R3
+</code></pre>
+<p>在真实的Android环境中，这里通过R3跳到了<strong>ReleaseStringUTFChars</strong>位于libart.so的真正实现上。</p>
+<p>在Unidbg里，则是落到我们的跳板函数上。</p>
+<p>对于此处的<strong>ReleaseStringUTFChars</strong>函数，是下面两条</p>
+<pre><code class="language-c">svc #0x1a1;
+bx lr;
+</code></pre>
+<blockquote>
+<p><strong>SVC</strong>是软中断，Unicorn等CPU模拟器会拦截这些中断，进而Unidbg可以接管这些中断，并对JNI调用做模拟。可是Unidbg如何分辨系统调用和JNI调用？毕竟系统调用也是通过<strong>SVC</strong>软中断发起。这就依赖于<strong>SVC</strong>后面跟着的数字，这里我们称之为<strong>imm</strong>。</p>
+</blockquote>
+<p>在系统调用的调用约定里，<strong>imm</strong>无实际意义，而且默认会使用0，即<strong>SVC 0</strong>，就像下面这样</p>
+<pre><code class="language-c">.text:0004147C                 MOV             R12, R7
+.text:00041480                 LDR             R7, =0x142
+.text:00041484                 SVC             0
+</code></pre>
+<p>因此，根据 <strong>imm</strong> 是否为0，Unidbg确认逻辑应该导向模拟的JNI函数还是模拟的系统调用。</p>
+<p>换句话说，在Unidbg中，JNI函数被提升到了和系统调用相同的层级，因此JNI报错也发生在syscallHandler里面。</p>
+<p>对于报错的这第一部分，有意义的是 <strong>LR</strong>，它即JNI跳板函数的返回地址，对应于样本发起JNI调用的位置。</p>
+<pre><code class="language-shell">[15:23:19 214]  WARN [com.github.unidbg.linux.ARM32SyscallHandler] (ARM32SyscallHandler:538) - handleInterrupt intno=2, NR=-452987556, svcNumber=0x170, PC=unidbg@0xfffe0794, LR=RX@0x1204db2f[libnet_crypto.so]0x4db2f, syscall=null
+</code></pre>
+<p>第二部分是其余部分</p>
+<pre><code class="language-shell">java.lang.UnsupportedOperationException: com/izuiyou/common/base/BaseApplication-&gt;getAppContext()Landroid/content/Context;
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callStaticObjectMethodV(AbstractJni.java:504)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callStaticObjectMethodV(AbstractJni.java:438)
+	at com.github.unidbg.linux.android.dvm.DvmMethod.callStaticObjectMethodV(DvmMethod.java:59)
+</code></pre>
+<p>首先是Unidbg无法处理的函数其签名<strong>com&#x2F;izuiyou&#x2F;common&#x2F;base&#x2F;BaseApplication-&gt;getAppContext()Landroid&#x2F;content&#x2F;Context;</strong>，这个格式很清晰，即<strong>com&#x2F;izuiyou&#x2F;common&#x2F;base&#x2F;BaseApplication</strong>类的<strong>getAppContext</strong>方法。</p>
+<p>再看它的调用栈，来自于<strong>callStaticObjectMethodV</strong>这个JNI方法。接下来讨论为什么要补JNI环境。</p>
+<h4 id="5-2-补环境原因"><a href="#5-2-补环境原因" class="headerlink" title="5.2 补环境原因"></a>5.2 补环境原因</h4><p>为什么要补JNI环境？</p>
+<p>上节讲到，Unidbg通过构造<strong>JNIEnv</strong>，<strong>JavaVM</strong>结构，辅之以<strong>SVC</strong>跳板函数，实现了对<strong>JNI</strong>的拦截和接管。</p>
+<p>但到底如何去模拟JNI函数，这是问题的核心。Unidbg实现了一套JNI处理逻辑，当遇到JNI调用时，如果是<strong>FindClass</strong>、<strong>NewGlobalRef</strong>、<strong>GetObjectClass</strong>、<strong>GetMethodID</strong>、<strong>GetStringLength</strong>、<strong>GetStringChars</strong>、<strong>ReleaseStringChars</strong>等等函数，它都可以自洽处理，不需要使用者介入。</p>
+<p>以GetStringLength为例，获取字符串长度，不需要使用者去做什么事。</p>
+<pre><code class="language-Java">Pointer _GetStringLength = svcMemory.registerSvc(new ArmSvc() &#123;
+    @Override
+    public long handle(Emulator&lt;?&gt; emulator) &#123;
+        RegisterContext context = emulator.getContext();
+        UnidbgPointer object = context.getPointerArg(1);
+        DvmObject&lt;?&gt; string = getObject(object.toIntPeer());
+        String value = (String) Objects.requireNonNull(string).getValue();
+        return value.length();
+    &#125;
+&#125;);
+</code></pre>
+<p>那么补JNI环境的需求在哪里？在于如果是<strong>callStaticObjectMethod</strong>、<strong>callObjectMethod</strong>、<strong>getObjectField</strong>、<strong>getStaticIntField</strong>等JNI函数，这些函数对样本的Java层数据做访问，Unidbg既未运行Dex，更没法运行Apk，因为需要借助使用者，去补充这些外部的信息。</p>
+<p>因为担心用户意识不到补JNI的需求，所以通过抛出报错和打印堆栈予以提醒。</p>
+<p>需要注意，并不是所有基于JNI发起的函数调用、字段访问都必须由用户处理，我们发现，其中有部分可以被预处理。举一些例子。</p>
+<ul>
+<li>Android PackageManager 类里的 GET_SIGNATURES 静态字段 ，它的值固定是 64</li>
+<li>String 类的 getBytes 方法</li>
+<li>List 实现类的 size 方法</li>
+</ul>
+<p>为了减少用户的补JNI负担，所以Unidbg预处理了数百个常见的JNI函数调用和字段访问，逻辑位于<strong>src&#x2F;main&#x2F;java&#x2F;com&#x2F;github&#x2F;unidbg&#x2F;linux&#x2F;android&#x2F;dvm&#x2F;AbstractJni.java</strong>类里。</p>
+<p>比如<strong>callBooleanMethodV</strong>，调用和返回布尔值的实例方法，预处理了如下方法。</p>
+<pre><code class="language-Java">@Override
+public boolean callBooleanMethodV(BaseVM vm, DvmObject&lt;?&gt; dvmObject, String signature, VaList vaList) &#123;
+    switch (signature) &#123;
+        case &quot;java/util/Enumeration-&gt;hasMoreElements()Z&quot;:
+            return ((Enumeration) dvmObject).hasMoreElements();
+        case &quot;java/util/ArrayList-&gt;isEmpty()Z&quot;:
+            return ((ArrayListObject) dvmObject).isEmpty();
+        case &quot;java/util/Iterator-&gt;hasNext()Z&quot;:
+            Object iterator = dvmObject.getValue();
+            if (iterator instanceof Iterator) &#123;
+                return ((Iterator&lt;?&gt;) iterator).hasNext();
+            &#125;
+        case &quot;java/lang/String-&gt;startsWith(Ljava/lang/String;)Z&quot;:&#123;
+            String str = (String) dvmObject.getValue();
+            StringObject prefix = vaList.getObjectArg(0);
+            return str.startsWith(prefix.value);
+        &#125;
+    &#125;
+
+    throw new UnsupportedOperationException(signature);
+&#125;
+</code></pre>
+<p>比如<strong>getObjectField</strong>，访问对象类型的实例字段，做了如下处理</p>
+<pre><code class="language-Java">@Override
+public DvmObject&lt;?&gt; getObjectField(BaseVM vm, DvmObject&lt;?&gt; dvmObject, String signature) &#123;
+    if (&quot;android/content/pm/PackageInfo-&gt;signatures:[Landroid/content/pm/Signature;&quot;.equals(signature) &amp;&amp;
+            dvmObject instanceof PackageInfo) &#123;
+        PackageInfo packageInfo = (PackageInfo) dvmObject;
+        if (packageInfo.getPackageName().equals(vm.getPackageName())) &#123;
+            CertificateMeta[] metas = vm.getSignatures();
+            if (metas != null) &#123;
+                Signature[] signatures = new Signature[metas.length];
+                for (int i = 0; i &lt; metas.length; i++) &#123;
+                    signatures[i] = new Signature(vm, metas[i]);
+                &#125;
+                return new ArrayObject(signatures);
+            &#125;
+        &#125;
+    &#125;
+    if (&quot;android/content/pm/PackageInfo-&gt;versionName:Ljava/lang/String;&quot;.equals(signature) &amp;&amp;
+            dvmObject instanceof PackageInfo) &#123;
+        PackageInfo packageInfo = (PackageInfo) dvmObject;
+        if (packageInfo.getPackageName().equals(vm.getPackageName())) &#123;
+            String versionName = vm.getVersionName();
+            if (versionName != null) &#123;
+                return new StringObject(vm, versionName);
+            &#125;
+        &#125;
+    &#125;
+
+    throw new UnsupportedOperationException(signature);
+&#125;
+</code></pre>
+<p>这两个调用是获取Apk签名信息以及版本信息，Unidbg之所以能处理，依赖我们传入的APK，解析出了这些信息。</p>
+<p>在AbstractJNI 中，下面四类处理为主</p>
+<ul>
+<li>App 基本信息与签名</li>
+<li>JDK 加密解密与数字签名</li>
+<li>字符串和容器类型</li>
+<li>Android FrameWork 类库</li>
+</ul>
+<p>第一类就比如上面的两个，但不止于此，加载和解析APK让Unidbg获取了大量的信息。</p>
+<p>比如处理获取包名：</p>
+<pre><code class="language-Java">@Override
+public DvmObject&lt;?&gt; callStaticObjectMethod(BaseVM vm, DvmClass dvmClass, String signature, VarArg varArg) &#123;
+    if (&quot;android/app/ActivityThread-&gt;currentPackageName()Ljava/lang/String;&quot;.equals(signature)) &#123;
+        String packageName = vm.getPackageName();
+        if (packageName != null) &#123;
+            return new StringObject(vm, packageName);
+        &#125;
+    &#125;
+    throw new UnsupportedOperationException(signature);
+&#125;
+</code></pre>
+<p>比如版本号：</p>
+<pre><code class="language-Java">@Override
+public int getIntField(BaseVM vm, DvmObject&lt;?&gt; dvmObject, String signature) &#123;
+    if (&quot;android/content/pm/PackageInfo-&gt;versionCode:I&quot;.equals(signature)) &#123;
+        return (int) vm.getVersionCode();
+    &#125;
+    throw new UnsupportedOperationException(signature);
+&#125;
+</code></pre>
+<p>第二类是Java加解密和数字签名相关的方法，它主要服务于Apk签名校验，出现频率很高。</p>
+<p>比如：</p>
+<pre><code class="language-Java">case &quot;java/security/KeyFactory-&gt;getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;&quot;:&#123;
+    StringObject algorithm = vaList.getObjectArg(0);
+    assert algorithm != null;
+    try &#123;
+        return dvmClass.newObject(KeyFactory.getInstance(algorithm.value));
+    &#125; catch (NoSuchAlgorithmException e) &#123;
+        throw new IllegalStateException(e);
+    &#125;
+&#125;
+case &quot;javax/crypto/Cipher-&gt;getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;&quot;:&#123;
+    StringObject transformation = vaList.getObjectArg(0);
+    assert transformation != null;
+    try &#123;
+        return dvmClass.newObject(Cipher.getInstance(transformation.value));
+    &#125; catch (NoSuchAlgorithmException | NoSuchPaddingException e) &#123;
+        throw new IllegalStateException(e);
+    &#125;
+&#125;
+case &quot;java/security/MessageDigest-&gt;getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;&quot;: &#123;
+    StringObject type = vaList.getObjectArg(0);
+    assert type != null;
+    try &#123;
+        return dvmClass.newObject(MessageDigest.getInstance(type.value));
+    &#125; catch (NoSuchAlgorithmException e) &#123;
+        throw new IllegalStateException(e);
+    &#125;
+&#125;
+</code></pre>
+<p>比如：</p>
+<pre><code class="language-Java">case &quot;javax/crypto/spec/SecretKeySpec-&gt;&lt;init&gt;([BLjava/lang/String;)V&quot;:&#123;
+    byte[] key = (byte[]) vaList.getObjectArg(0).value;
+    StringObject algorithm = vaList.getObjectArg(1);
+    assert algorithm != null;
+    SecretKeySpec secretKeySpec = new SecretKeySpec(key, algorithm.value);
+    return dvmClass.newObject(secretKeySpec);
+&#125;
+</code></pre>
+<p>第三类是对基本类型的包装类、字符串、容器类型的处理。</p>
+<p>比如：</p>
+<pre><code class="language-Java">@Override
+public DvmObject&lt;?&gt; newObject(BaseVM vm, DvmClass dvmClass, String signature, VarArg varArg) &#123;
+    switch (signature) &#123;
+        case &quot;java/lang/String-&gt;&lt;init&gt;([B)V&quot;:
+            ByteArray array = varArg.getObjectArg(0);
+            return new StringObject(vm, new String(array.getValue()));
+        case &quot;java/lang/String-&gt;&lt;init&gt;([BLjava/lang/String;)V&quot;:
+            array = varArg.getObjectArg(0);
+            StringObject string = varArg.getObjectArg(1);
+            try &#123;
+                return new StringObject(vm, new String(array.getValue(), string.getValue()));
+            &#125; catch (UnsupportedEncodingException e) &#123;
+                throw new IllegalStateException(e);
+            &#125;
+    &#125;
+
+    throw new UnsupportedOperationException(signature);
+&#125;
+</code></pre>
+<p>再比如：</p>
+<pre><code class="language-Java">@Override
+public boolean callBooleanMethodV(BaseVM vm, DvmObject&lt;?&gt; dvmObject, String signature, VaList vaList) &#123;
+    switch (signature) &#123;
+        case &quot;java/util/Enumeration-&gt;hasMoreElements()Z&quot;:
+            return ((Enumeration) dvmObject).hasMoreElements();
+        case &quot;java/util/ArrayList-&gt;isEmpty()Z&quot;:
+            return ((ArrayListObject) dvmObject).isEmpty();
+        case &quot;java/util/Iterator-&gt;hasNext()Z&quot;:
+            Object iterator = dvmObject.getValue();
+            if (iterator instanceof Iterator) &#123;
+                return ((Iterator&lt;?&gt;) iterator).hasNext();
+            &#125;
+        case &quot;java/lang/String-&gt;startsWith(Ljava/lang/String;)Z&quot;:&#123;
+            String str = (String) dvmObject.getValue();
+            StringObject prefix = vaList.getObjectArg(0);
+            return str.startsWith(prefix.value);
+        &#125;
+    &#125;
+
+    throw new UnsupportedOperationException(signature);
+&#125;
+</code></pre>
+<p>再比如：</p>
+<pre><code class="language-Java">case &quot;java/lang/Integer-&gt;intValue()I&quot;: &#123;
+    DvmInteger integer = (DvmInteger) dvmObject;
+    return integer.value;
+&#125;
+case &quot;java/util/List-&gt;size()I&quot;:
+    List&lt;?&gt; list = (List&lt;?&gt;) dvmObject.getValue();
+    return list.size();
+case &quot;java/util/Map-&gt;size()I&quot;:
+    Map&lt;?, ?&gt; map = (Map&lt;?, ?&gt;) dvmObject.getValue();
+    return map.size();
+</code></pre>
+<p>比如：</p>
+<pre><code class="language-Java">case &quot;java/util/ArrayList-&gt;remove(I)Ljava/lang/Object;&quot;: &#123;
+    int index = vaList.getIntArg(0);
+    ArrayListObject list = (ArrayListObject) dvmObject;
+    return list.value.remove(index);
+&#125;
+case &quot;java/util/List-&gt;get(I)Ljava/lang/Object;&quot;:
+    List&lt;?&gt; list = (List&lt;?&gt;) dvmObject.getValue();
+    return (DvmObject&lt;?&gt;) list.get(vaList.getIntArg(0));
+case &quot;java/util/Map-&gt;entrySet()Ljava/util/Set;&quot;:
+    Map&lt;?, ?&gt; map = (Map&lt;?, ?&gt;) dvmObject.getValue();
+    return vm.resolveClass(&quot;java/util/Set&quot;).newObject(map.entrySet());
+case &quot;java/util/Set-&gt;iterator()Ljava/util/Iterator;&quot;:
+    Set&lt;?&gt; set = (Set&lt;?&gt;) dvmObject.getValue();
+    return vm.resolveClass(&quot;java/util/Iterator&quot;).newObject(set.iterator());
+</code></pre>
+<p>比如：</p>
+<pre><code class="language-Java">case &quot;java/lang/String-&gt;getBytes()[B&quot;: &#123;
+    String str = (String) dvmObject.getValue();
+    return new ByteArray(vm, str.getBytes());
+&#125;
+case &quot;java/lang/String-&gt;getBytes(Ljava/lang/String;)[B&quot;:
+    String str = (String) dvmObject.getValue();
+    StringObject charsetName = vaList.getObjectArg(0);
+    assert charsetName != null;
+    try &#123;
+        return new ByteArray(vm, str.getBytes(charsetName.value));
+    &#125; catch (UnsupportedEncodingException e) &#123;
+        throw new IllegalStateException(e);
+    &#125;
+</code></pre>
+<p>第四类是依赖于Android FrameWork的类库，它们没法在普通的Java环境里良好的处理，因此需要做一些粗糙的模拟或者占位。</p>
+<p>比如Android系统服务</p>
+<pre><code class="language-Java">case &quot;android/app/Application-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;&quot;: &#123;
+    StringObject serviceName = vaList.getObjectArg(0);
+    assert serviceName != null;
+    return new SystemService(vm, serviceName.getValue());
+</code></pre>
+<p>SystemService 的实现如下，就是大量的简单占位，调用其中的方法实际获取数据时，还是要使用者来补。</p>
+<pre><code class="language-Java">package com.github.unidbg.linux.android.dvm.api;
+
+import com.github.unidbg.arm.backend.BackendException;
+import com.github.unidbg.linux.android.dvm.DvmClass;
+import com.github.unidbg.linux.android.dvm.DvmObject;
+import com.github.unidbg.linux.android.dvm.VM;
+
+public class SystemService extends DvmObject&lt;String&gt; &#123;
+
+    public static final String WIFI_SERVICE = &quot;wifi&quot;;
+    public static final String CONNECTIVITY_SERVICE = &quot;connectivity&quot;;
+    public static final String TELEPHONY_SERVICE = &quot;phone&quot;;
+    public static final String ACCESSIBILITY_SERVICE = &quot;accessibility&quot;;
+    public static final String KEYGUARD_SERVICE = &quot;keyguard&quot;;
+    public static final String ACTIVITY_SERVICE = &quot;activity&quot;;
+    public static final String SENSOR_SERVICE = &quot;sensor&quot;;
+    public static final String INPUT_METHOD_SERVICE = &quot;input_method&quot;;
+    public static final String LOCATION_SERVICE = &quot;location&quot;;
+    public static final String WINDOW_SERVICE = &quot;window&quot;;
+    public static final String UI_MODE_SERVICE = &quot;uimode&quot;;
+    public static final String DISPLAY_SERVICE = &quot;display&quot;;
+    public static final String AUDIO_SERVICE = &quot;audio&quot;;
+    
+    public SystemService(VM vm, String serviceName) &#123;
+        super(getObjectType(vm, serviceName), serviceName);
+    &#125;
+
+    private static DvmClass getObjectType(VM vm, String serviceName) &#123;
+        switch (serviceName) &#123;
+            case TELEPHONY_SERVICE:
+                return vm.resolveClass(&quot;android/telephony/TelephonyManager&quot;);
+            case WIFI_SERVICE:
+                return vm.resolveClass(&quot;android/net/wifi/WifiManager&quot;);
+            case CONNECTIVITY_SERVICE:
+                return vm.resolveClass(&quot;android/net/ConnectivityManager&quot;);
+            case ACCESSIBILITY_SERVICE:
+                return vm.resolveClass(&quot;android/view/accessibility/AccessibilityManager&quot;);
+            case KEYGUARD_SERVICE:
+                return vm.resolveClass(&quot;android/app/KeyguardManager&quot;);
+            case ACTIVITY_SERVICE:
+                return vm.resolveClass(&quot;android/os/BinderProxy&quot;); // android/app/ActivityManager
+            case SENSOR_SERVICE:
+                return vm.resolveClass(&quot;android/hardware/SensorManager&quot;);
+            case INPUT_METHOD_SERVICE:
+                return vm.resolveClass(&quot;android/view/inputmethod/InputMethodManager&quot;);
+            case LOCATION_SERVICE:
+                return vm.resolveClass(&quot;android/location/LocationManager&quot;);
+            case WINDOW_SERVICE:
+                return vm.resolveClass(&quot;android/view/WindowManager&quot;);
+            case UI_MODE_SERVICE:
+                return vm.resolveClass(&quot;android/app/UiModeManager&quot;);
+            case DISPLAY_SERVICE:
+                return vm.resolveClass(&quot;android/hardware/display/DisplayManager&quot;);
+            case AUDIO_SERVICE:
+                return vm.resolveClass(&quot;android/media/AudioManager&quot;);
+            default:
+                throw new BackendException(&quot;service failed: &quot; + serviceName);
+        &#125;
+    &#125;
+
+&#125;
+</code></pre>
+<p>在过去几年的更新里，Unidbg 一直在对 AbstractJNI 做扩充，让它预处理更多的逻辑，减少用户的使用负担。</p>
+<p>关于 AbstractJNI 可以做两点总结。</p>
+<ol>
+<li>确实能让我们免于一些补环境的苦恼</li>
+<li>相较于所有可能的 JNI 访问，它只是杯水车薪，补 JNI 环境这个步骤不可避免。</li>
+</ol>
+<p>我们先看第一点，前两篇样本的处理，都没有遇到 JNI 补环境的需求，这就是 AbstractJNI 替我们代劳了。</p>
+<p>比如第一篇文章的日志如下：</p>
+<pre><code class="language-shell">JNIEnv-&gt;FindClass(android/app/ActivityThread) was called from RX@0x12010e20[liboasiscore.so]0x10e20
+JNIEnv-&gt;GetStaticMethodID(android/app/ActivityThread.currentApplication()Landroid/app/Application;) =&gt; 0xc1600375 was called from RX@0x12010f40[liboasiscore.so]0x10f40
+JNIEnv-&gt;CallStaticObjectMethodV(class android/app/ActivityThread, currentApplication() =&gt; android.app.Application@3d680b5a) was called from RX@0x120126cc[liboasiscore.so]0x126cc
+JNIEnv-&gt;FindClass(android/content/ContextWrapper) was called from RX@0x12011024[liboasiscore.so]0x11024
+JNIEnv-&gt;GetMethodID(android/content/ContextWrapper.getPackageManager()Landroid/content/pm/PackageManager;) =&gt; 0x53f2c391 was called from RX@0x12011050[liboasiscore.so]0x11050
+JNIEnv-&gt;CallObjectMethodV(android.app.Application@3d680b5a, getPackageManager() =&gt; android.content.pm.PackageManager@4b5d6a01) was called from RX@0x12012630[liboasiscore.so]0x12630
+JNIEnv-&gt;GetMethodID(android/content/ContextWrapper.getPackageName()Ljava/lang/String;) =&gt; 0x8bcc2d71 was called from RX@0x120110bc[liboasiscore.so]0x110bc
+JNIEnv-&gt;CallObjectMethodV(android.app.Application@3d680b5a, getPackageName() =&gt; &quot;com.sina.oasis&quot;) was called from RX@0x12012630[liboasiscore.so]0x12630
+JNIEnv-&gt;GetStringUtfChars(&quot;com.sina.oasis&quot;) was called from RX@0x12011108[liboasiscore.so]0x11108
+JNIEnv-&gt;GetMethodID(android/content/pm/PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;) =&gt; 0x3bca8377 was called from RX@0x12011168[liboasiscore.so]0x11168
+JNIEnv-&gt;CallObjectMethodV(android.content.pm.PackageManager@4b5d6a01, getPackageInfo(&quot;com.sina.oasis&quot;, 0x40) =&gt; android.content.pm.PackageInfo@3e2e18f2) was called from RX@0x12012630[liboasiscore.so]0x12630
+JNIEnv-&gt;GetFieldID(android/content/pm/PackageInfo.signatures [Landroid/content/pm/Signature;) =&gt; 0x25f17218 was called from RX@0x120111bc[liboasiscore.so]0x111bc
+JNIEnv-&gt;GetObjectField(android.content.pm.PackageInfo@3e2e18f2, signatures [Landroid/content/pm/Signature; =&gt; [android.content.pm.Signature@8f4ea7c]) was called from RX@0x120111d4[liboasiscore.so]0x111d4
+JNIEnv-&gt;GetObjectArrayElement([android.content.pm.Signature@8f4ea7c], 0) =&gt; android.content.pm.Signature@8f4ea7c was called from RX@0x120111ec[liboasiscore.so]0x111ec
+JNIEnv-&gt;GetMethodID(android/content/pm/Signature.toCharsString()Ljava/lang/String;) =&gt; 0x7a908191 was called from RX@0x1201122c[liboasiscore.so]0x1122c
+JNIEnv-&gt;CallObjectMethodV(android.content.pm.Signature@8f4ea7c, toCharsString() =&gt; &quot;30820295308201fea00302010202044b4ef1bf300d06092a864886f70d010105050030818d310b300906035504061302434e3110300e060355040813074265694a696e673110300e060355040713074265694a696e67312c302a060355040a132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c7464312c302a060355040b132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c74643020170d3130303131343130323831355a180f32303630303130323130323831355a30818d310b300906035504061302434e3110300e060355040813074265694a696e673110300e060355040713074265694a696e67312c302a060355040a132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c7464312c302a060355040b132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c746430819f300d06092a864886f70d010101050003818d00308189028181009d367115bc206c86c237bb56c8e9033111889b5691f051b28d1aa8e42b66b7413657635b44786ea7e85d451a12a82a331fced99c48717922170b7fc9bc1040753c0d38b4cf2b22094b1df7c55705b0989441e75913a1a8bd2bc591aa729a1013c277c01c98cbec7da5ad7778b2fad62b85ac29ca28ced588638c98d6b7df5a130203010001300d06092a864886f70d0101050500038181000ad4b4c4dec800bd8fd2991adfd70676fce8ba9692ae50475f60ec468d1b758a665e961a3aedbece9fd4d7ce9295cd83f5f19dc441a065689d9820faedbb7c4a4c4635f5ba1293f6da4b72ed32fb8795f736a20c95cda776402099054fccefb4a1a558664ab8d637288feceba9508aa907fc1fe2b1ae5a0dec954ed831c0bea4&quot;) was called from RX@0x12012630[liboasiscore.so]0x12630
+JNIEnv-&gt;GetStringUtfChars(&quot;30820295308201fea00302010202044b4ef1bf300d06092a864886f70d010105050030818d310b300906035504061302434e3110300e060355040813074265694a696e673110300e060355040713074265694a696e67312c302a060355040a132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c7464312c302a060355040b132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c74643020170d3130303131343130323831355a180f32303630303130323130323831355a30818d310b300906035504061302434e3110300e060355040813074265694a696e673110300e060355040713074265694a696e67312c302a060355040a132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c7464312c302a060355040b132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c746430819f300d06092a864886f70d010101050003818d00308189028181009d367115bc206c86c237bb56c8e9033111889b5691f051b28d1aa8e42b66b7413657635b44786ea7e85d451a12a82a331fced99c48717922170b7fc9bc1040753c0d38b4cf2b22094b1df7c55705b0989441e75913a1a8bd2bc591aa729a1013c277c01c98cbec7da5ad7778b2fad62b85ac29ca28ced588638c98d6b7df5a130203010001300d06092a864886f70d0101050500038181000ad4b4c4dec800bd8fd2991adfd70676fce8ba9692ae50475f60ec468d1b758a665e961a3aedbece9fd4d7ce9295cd83f5f19dc441a065689d9820faedbb7c4a4c4635f5ba1293f6da4b72ed32fb8795f736a20c95cda776402099054fccefb4a1a558664ab8d637288feceba9508aa907fc1fe2b1ae5a0dec954ed831c0bea4&quot;) was called from RX@0x12011278[liboasiscore.so]0x11278
+JNIEnv-&gt;ReleaseStringUTFChars(&quot;30820295308201fea00302010202044b4ef1bf300d06092a864886f70d010105050030818d310b300906035504061302434e3110300e060355040813074265694a696e673110300e060355040713074265694a696e67312c302a060355040a132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c7464312c302a060355040b132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c74643020170d3130303131343130323831355a180f32303630303130323130323831355a30818d310b300906035504061302434e3110300e060355040813074265694a696e673110300e060355040713074265694a696e67312c302a060355040a132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c7464312c302a060355040b132353696e612e436f6d20546563686e6f6c6f677920284368696e612920436f2e204c746430819f300d06092a864886f70d010101050003818d00308189028181009d367115bc206c86c237bb56c8e9033111889b5691f051b28d1aa8e42b66b7413657635b44786ea7e85d451a12a82a331fced99c48717922170b7fc9bc1040753c0d38b4cf2b22094b1df7c55705b0989441e75913a1a8bd2bc591aa729a1013c277c01c98cbec7da5ad7778b2fad62b85ac29ca28ced588638c98d6b7df5a130203010001300d06092a864886f70d0101050500038181000ad4b4c4dec800bd8fd2991adfd70676fce8ba9692ae50475f60ec468d1b758a665e961a3aedbece9fd4d7ce9295cd83f5f19dc441a065689d9820faedbb7c4a4c4635f5ba1293f6da4b72ed32fb8795f736a20c95cda776402099054fccefb4a1a558664ab8d637288feceba9508aa907fc1fe2b1ae5a0dec954ed831c0bea4&quot;) was called from RX@0x120112b0[liboasiscore.so]0x112b0
+JNIEnv-&gt;FindClass(com/weibo/xvideo/NativeApi) was called from RX@0x12011348[liboasiscore.so]0x11348
+JNIEnv-&gt;RegisterNatives(com/weibo/xvideo/NativeApi, RW@0x1205d100[liboasiscore.so]0x5d100, 4) was called from RX@0x120113e0[liboasiscore.so]0x113e0
+RegisterNative(com/weibo/xvideo/NativeApi, s([BZ)Ljava/lang/String;, RX@0x120116cc[liboasiscore.so]0x116cc)
+RegisterNative(com/weibo/xvideo/NativeApi, e(Ljava/lang/String;)Ljava/lang/String;, RX@0x12011af4[liboasiscore.so]0x11af4)
+RegisterNative(com/weibo/xvideo/NativeApi, d(Ljava/lang/String;)Ljava/lang/String;, RX@0x12011cd8[liboasiscore.so]0x11cd8)
+RegisterNative(com/weibo/xvideo/NativeApi, dg(Ljava/lang/String;Z)Ljava/lang/String;, RX@0x1201220c[liboasiscore.so]0x1220c)
+Find native function Java_com_weibo_xvideo_NativeApi_s =&gt; RX@0x120116cc[liboasiscore.so]0x116cc
+JNIEnv-&gt;GetByteArrayElements(false) =&gt; [B@5b8dfcc1 was called from RX@0x12011734[liboasiscore.so]0x11734
+JNIEnv-&gt;GetArrayLength([B@5b8dfcc1 =&gt; 272) was called from RX@0x1201174c[liboasiscore.so]0x1174c
+JNIEnv-&gt;NewStringUTF(&quot;1e3780f50056a3fea76b35592bfc3efc&quot;) was called from RX@0x1201191c[liboasiscore.so]0x1191c
+Call s result:
+1e3780f50056a3fea76b35592bfc3efc
+</code></pre>
+<p>其中的<code>FindClass</code>、<code>GetStaticMethodID</code>、<code>GetMethodID</code>、<code>GetStringUtfChars</code>、<code>GetFieldID</code>、<code>GetObjectArrayElement</code>、<code>ReleaseStringUTFChars</code>、<code>RegisterNatives</code>、<code>GetArrayLength</code>、<code>NewStringUTF</code>是 Unidbg 直接可以处理的内容。</p>
+<p>其中的<code>CallStaticObjectMethodV</code>、<code>CallObjectMethodV</code>、<code>GetObjectField</code>则由 AbstrctJNI 处理，比如下面这条</p>
+<pre><code class="language-shell">JNIEnv-&gt;CallStaticObjectMethodV(class android/app/ActivityThread, currentApplication() =&gt; android.app.Application@3d680b5a) was called from RX@0x120126cc[liboasiscore.so]0x126cc
+</code></pre>
+<p>而第二篇样本日志输出如下：</p>
+<pre><code class="language-shell">Find native function Java_com_sina_weibo_security_WeiboSecurityUtils_calculateS =&gt; RX@0x12001e7d[libutility.so]0x1e7d
+JNIEnv-&gt;FindClass(android/content/ContextWrapper) was called from RX@0x12002c4f[libutility.so]0x2c4f
+JNIEnv-&gt;GetMethodID(android/content/ContextWrapper.getPackageManager()Landroid/content/pm/PackageManager;) =&gt; 0x53f2c391 was called from RX@0x12002c69[libutility.so]0x2c69
+JNIEnv-&gt;FindClass(android/content/pm/PackageManager) was called from RX@0x12002c79[libutility.so]0x2c79
+JNIEnv-&gt;CallObjectMethod(android.app.Application@60704c, getPackageManager() =&gt; android.content.pm.PackageManager@2805c96b) was called from RX@0x12002c8d[libutility.so]0x2c8d
+JNIEnv-&gt;FindClass(android/content/pm/PackageInfo) was called from RX@0x12002c9d[libutility.so]0x2c9d
+JNIEnv-&gt;GetMethodID(android/content/pm/PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;) =&gt; 0x3bca8377 was called from RX@0x12002cb5[libutility.so]0x2cb5
+JNIEnv-&gt;NewStringUTF(&quot;com.weico.international&quot;) was called from RX@0x12002cd1[libutility.so]0x2cd1
+JNIEnv-&gt;CallObjectMethod(android.content.pm.PackageManager@2805c96b, getPackageInfo(&quot;com.weico.international&quot;, 0x40) =&gt; android.content.pm.PackageInfo@5db250b4) was called from RX@0x12002ce1[libutility.so]0x2ce1
+JNIEnv-&gt;GetFieldID(android/content/pm/PackageInfo.signatures [Landroid/content/pm/Signature;) =&gt; 0x25f17218 was called from RX@0x12002d13[libutility.so]0x2d13
+JNIEnv-&gt;GetObjectField(android.content.pm.PackageInfo@5db250b4, signatures [Landroid/content/pm/Signature; =&gt; [android.content.pm.Signature@50b472aa]) was called from RX@0x12002d25[libutility.so]0x2d25
+JNIEnv-&gt;FindClass(android/content/pm/Signature) was called from RX@0x12002d35[libutility.so]0x2d35
+JNIEnv-&gt;GetMethodID(android/content/pm/Signature.toByteArray()[B) =&gt; 0x6a3e2031 was called from RX@0x12002d4d[libutility.so]0x2d4d
+JNIEnv-&gt;GetObjectArrayElement([android.content.pm.Signature@50b472aa], 0) =&gt; android.content.pm.Signature@50b472aa was called from RX@0x12002d61[libutility.so]0x2d61
+JNIEnv-&gt;CallObjectMethod(android.content.pm.Signature@50b472aa, toByteArray() =&gt; [B@4ac3c60d) was called from RX@0x12002d71[libutility.so]0x2d71
+WInlineHookFunction free = RW@0x12176000
+JNIEnv-&gt;GetStringUtfChars(&quot;CypCHG2kSlRkdvr2RG1QF8b2lCWXl7k7&quot;) was called from RX@0x12001eb3[libutility.so]0x1eb3
+JNIEnv-&gt;GetStringUtfChars(&quot;7926844437&quot;) was called from RX@0x12001ec1[libutility.so]0x1ec1
+JNIEnv-&gt;FindClass(java/lang/String) was called from RX@0x12001f33[libutility.so]0x1f33
+JNIEnv-&gt;GetMethodID(java/lang/String.&lt;init&gt;([BLjava/lang/String;)V) =&gt; 0x782c535e was called from RX@0x12001f4b[libutility.so]0x1f4b
+JNIEnv-&gt;NewByteArray(8) was called from RX@0x12001f61[libutility.so]0x1f61
+JNIEnv-&gt;SetByteArrayRegion([B@0x0000000000000000, 0, 8, RW@0x121d3010) was called from RX@0x12001f7f[libutility.so]0x1f7f
+JNIEnv-&gt;NewStringUTF(&quot;utf-8&quot;) was called from RX@0x12001f8f[libutility.so]0x1f8f
+JNIEnv-&gt;NewObject(class java/lang/String, &lt;init&gt;([B@0x3164356134306466, &quot;utf-8&quot;) =&gt; &quot;1d5a40df&quot;) was called from RX@0x12001f9f[libutility.so]0x1f9f
+WInlineHookFunction free = RW@0x121d3010
+WInlineHookFunction free = RW@0x121d4000
+JNIEnv-&gt;ReleaseStringUTFChars(&quot;7926844437&quot;) was called from RX@0x12001fbd[libutility.so]0x1fbd
+call s result:1d5a40df
+</code></pre>
+<p>样本通过 JNI 调用了获取签名的相关 JAVA 方法，AbstractJNI 替我们做了处理。</p>
+<h4 id="5-3-基本规范"><a href="#5-3-基本规范" class="headerlink" title="5.3 基本规范"></a>5.3 基本规范</h4><p>回到最初的报错上</p>
+<pre><code class="language-shell">JNIEnv-&gt;GetStringUtfChars(&quot;hello world&quot;) was called from RX@0x12066b07[libnet_crypto.so]0x66b07
+JNIEnv-&gt;ReleaseStringUTFChars(&quot;hello world&quot;) was called from RX@0x12066b23[libnet_crypto.so]0x66b23
+JNIEnv-&gt;FindClass(com/izuiyou/common/base/BaseApplication) was called from RX@0x1204da21[libnet_crypto.so]0x4da21
+JNIEnv-&gt;GetStaticMethodID(com/izuiyou/common/base/BaseApplication.getAppContext()Landroid/content/Context;) =&gt; 0x2157b33c was called from RX@0x1204da57[libnet_crypto.so]0x4da57
+[15:23:19 214]  WARN [com.github.unidbg.linux.ARM32SyscallHandler] (ARM32SyscallHandler:538) - handleInterrupt intno=2, NR=-452987556, svcNumber=0x170, PC=unidbg@0xfffe0794, LR=RX@0x1204db2f[libnet_crypto.so]0x4db2f, syscall=null
+java.lang.UnsupportedOperationException: com/izuiyou/common/base/BaseApplication-&gt;getAppContext()Landroid/content/Context;
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callStaticObjectMethodV(AbstractJni.java:504)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callStaticObjectMethodV(AbstractJni.java:438)
+	at com.github.unidbg.linux.android.dvm.DvmMethod.callStaticObjectMethodV(DvmMethod.java:59)
+	at com.github.unidbg.linux.android.dvm.DalvikVM$113.handle(DalvikVM.java:1815)
+	at com.github.unidbg.linux.ARM32SyscallHandler.hook(ARM32SyscallHandler.java:131)
+	at com.github.unidbg.arm.backend.Unicorn2Backend$11.hook(Unicorn2Backend.java:352)
+	at com.github.unidbg.arm.backend.unicorn.Unicorn$NewHook.onInterrupt(Unicorn.java:109)
+	at com.github.unidbg.arm.backend.unicorn.Unicorn.emu_start(Native Method)
+	at com.github.unidbg.arm.backend.unicorn.Unicorn.emu_start(Unicorn.java:312)
+	at com.github.unidbg.arm.backend.Unicorn2Backend.emu_start(Unicorn2Backend.java:389)
+	at com.github.unidbg.AbstractEmulator.emulate(AbstractEmulator.java:378)
+	at com.github.unidbg.thread.Function32.run(Function32.java:39)
+	at com.github.unidbg.thread.MainTask.dispatch(MainTask.java:19)
+	at com.github.unidbg.thread.UniThreadDispatcher.run(UniThreadDispatcher.java:165)
+	at com.github.unidbg.thread.UniThreadDispatcher.runMainForResult(UniThreadDispatcher.java:97)
+	at com.github.unidbg.AbstractEmulator.runMainForResult(AbstractEmulator.java:341)
+	at com.github.unidbg.arm.AbstractARMEmulator.eFunc(AbstractARMEmulator.java:255)
+	at com.github.unidbg.Module.emulateFunction(Module.java:163)
+	at com.github.unidbg.linux.android.dvm.DvmObject.callJniMethod(DvmObject.java:135)
+	at com.github.unidbg.linux.android.dvm.DvmClass.callStaticJniMethodObject(DvmClass.java:316)
+	at com.test2.TEST2.callSign(TEST2.java:47)
+	at com.test2.TEST2.main(TEST2.java:58)
+</code></pre>
+<p>函数签名是<code>com/izuiyou/common/base/BaseApplication-&gt;getAppContext()Landroid/content/Context;</code>根据抛出的异常，它来自<code>callStaticObjectMethodV</code>调用。</p>
+<p>如何构造和补 Context 是一个特殊问题，下面这个构造方式在绝大多数情况下可行。</p>
+<pre><code class="language-Java">DvmObject&lt;?&gt; context = vm.resolveClass(&quot;android/app/Application&quot;, vm.resolveClass(&quot;android/content/ContextWrapper&quot;, vm.resolveClass(&quot;android/content/Context&quot;))).newObject(null);
+</code></pre>
+<p>但这里我们使用另一个方式构造，为什么要这么做，这是一个小坑，放后文讨论，请读者先忍耐一下。</p>
+<pre><code class="language-Java">DvmObject&lt;?&gt; context = vm.resolveClass(&quot;cn/xiaochuankeji/tieba/AppController&quot;).newObject(null);
+</code></pre>
+<p>接下来补环境，我们可以在 AbstractJNI 的 callStaticObjectMethodV 里添加对这个方法的处理，如下所示。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/1667975125845-da7b2d2b-94a4-4cd5-b8de-a900955e2ec4.png" alt="img"></p>
+<p>但这么做不是好办法，如果想将自己写的 Unidbg 代码分享给他人，或迁移到其他设备上，就必须要把 AbstractJNI 一并转移，这有些麻烦。除此之外，我们补的也不一定特别好，放到 AbstractJNI 里会“污染”环境。更惯常的做法是让本类继承 AbstractJNI，在创建虚拟机时<code>vm.setJni</code>设置为当前类。</p>
+<pre><code class="language-Java">public TEST2() &#123;
+        emulator = AndroidEmulatorBuilder
+                .for32Bit()
+                .addBackendFactory(new Unicorn2Factory(true))
+                .setProcessName(&quot;cn.xiaochuankeji.tieba&quot;)
+                .build();
+        Memory memory = emulator.getMemory();
+        memory.setLibraryResolver(new AndroidResolver(23));
+        vm = emulator.createDalvikVM(new File(&quot;unidbg-android\\src\\test\\java\\com\\test2\\right573.apk&quot;));
+
+        //设置 JNI
+        vm.setJni(this);
+        vm.setVerbose(true);
+
+        // 使用libandroid.so虚拟模块
+        new AndroidModule(emulator, vm).register(memory);
+
+        DalvikModule dm = vm.loadLibrary(&quot;net_crypto&quot;, true);
+        NetCrypto = vm.resolveClass(&quot;com.izuiyou.network.NetCrypto&quot;);
+        dm.callJNI_OnLoad(emulator);
+    &#125;
+</code></pre>
+<p>然后本类里重写 callStaticObjectMethodV 方法，处理目标方法。</p>
+<pre><code class="language-Java">@Override
+public DvmObject&lt;?&gt; callStaticObjectMethodV(BaseVM vm, DvmClass dvmClass, String signature, VaList vaList) &#123;
+    switch (signature)&#123;
+        case &quot;com/izuiyou/common/base/BaseApplication-&gt;getAppContext()Landroid/content/Context;&quot;:&#123;
+            DvmObject&lt;?&gt; context = vm.resolveClass(&quot;cn/xiaochuankeji/tieba/AppController&quot;).newObject(null);
+            return context;
+        &#125;
+    &#125;
+    return super.callStaticObjectMethodV(vm, dvmClass, signature, vaList);
+&#125;
+</code></pre>
+<p>这里要警惕张冠李戴，callStaticObjectMethodV 和 callStaticObjectMethod 是两个不同的 JNI 方法，不要混淆，更不要补错地方哭错坟。</p>
+<p>在有些情况下，样本过于复杂，要处理的 JNI 调用太多，也可以创建一个单独的 JNI 处理类。</p>
+<pre><code class="language-Java">package com.izuiyou;
+
+import com.github.unidbg.AndroidEmulator;
+import com.github.unidbg.linux.android.dvm.*;
+
+public class zuiYouJNI extends AbstractJni &#123;
+    private final AndroidEmulator emulator;
+
+    public zuiYouJNI(AndroidEmulator emulator)&#123;
+        this.emulator = emulator;
+    &#125;
+    
+&#125;
+</code></pre>
+<p>在本类 setJNI 也对应改变。</p>
+<pre><code class="language-Java">vm.setJni(new zuiYouJNI(emulator));
+</code></pre>
+<h4 id="5-4-开始补环境"><a href="#5-4-开始补环境" class="headerlink" title="5.4 开始补环境"></a>5.4 开始补环境</h4><p>言归正传，处理完这个JNI调用</p>
+<pre><code class="language-Java">package com.test2;
+
+import com.github.unidbg.AndroidEmulator;
+import com.github.unidbg.arm.backend.Unicorn2Factory;
+import com.github.unidbg.linux.android.AndroidEmulatorBuilder;
+import com.github.unidbg.linux.android.AndroidResolver;
+import com.github.unidbg.linux.android.dvm.*;
+import com.github.unidbg.memory.Memory;
+import com.github.unidbg.virtualmodule.android.AndroidModule;
+
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+
+public class TEST2 extends AbstractJni &#123;
+    private final AndroidEmulator emulator;
+    private final DvmClass NetCrypto;
+    private final VM vm;
+
+    public TEST2() &#123;
+        emulator = AndroidEmulatorBuilder
+                .for32Bit()
+                .addBackendFactory(new Unicorn2Factory(true))
+                .setProcessName(&quot;cn.xiaochuankeji.tieba&quot;)
+                .build();
+        Memory memory = emulator.getMemory();
+        memory.setLibraryResolver(new AndroidResolver(23));
+        vm = emulator.createDalvikVM(new File(&quot;unidbg-android\\src\\test\\java\\com\\test2\\right573.apk&quot;));
+
+        //设置 JNI
+        vm.setJni(this);
+        vm.setVerbose(true);
+
+        // 使用libandroid.so虚拟模块
+        new AndroidModule(emulator, vm).register(memory);
+
+        DalvikModule dm = vm.loadLibrary(&quot;net_crypto&quot;, true);
+        NetCrypto = vm.resolveClass(&quot;com.izuiyou.network.NetCrypto&quot;);
+        dm.callJNI_OnLoad(emulator);
+    &#125;
+
+    public String callSign() &#123;
+        String arg1 = &quot;hello world&quot;;
+        byte[] arg2 = &quot;V I 50&quot;.getBytes(StandardCharsets.UTF_8);
+        String ret = null;
+        try &#123;
+            ret = NetCrypto.callStaticJniMethodObject(emulator, &quot;sign(Ljava/lang/String;[B)Ljava/lang/String;&quot;, arg1, arg2).getValue().toString();
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125;
+
+        return ret;
+    &#125;
+
+    @Override
+    public DvmObject&lt;?&gt; callStaticObjectMethodV(BaseVM vm, DvmClass dvmClass, String signature, VaList vaList) &#123;
+        switch (signature) &#123;
+            case &quot;com/izuiyou/common/base/BaseApplication-&gt;getAppContext()Landroid/content/Context;&quot;: &#123;
+                DvmObject&lt;?&gt; context = vm.resolveClass(&quot;cn/xiaochuankeji/tieba/AppController&quot;).newObject(null);
+                return context;
+            &#125;
+        &#125;
+        return super.callStaticObjectMethodV(vm, dvmClass, signature, vaList);
+    &#125;
+
+
+    public static void main(String[] args) &#123;
+        TEST2 test = new TEST2();
+        String result = test.callSign();
+        System.out.println(&quot;call s result: &quot; + result);
+    &#125;
+&#125;
+</code></pre>
+<p>继续运行，遇到了新的JNI 补环境。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705164702773.png" alt="image-20250705164702773"></p>
+<p>获取包管理器如何返回？AbstractJNI 里有可供参考的代码。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705165040195.png" alt="image-20250705165040195"></p>
+<p>重写，参考AbstractJNI 去补 PackageManager。</p>
+<pre><code class="language-java">@Override
+public DvmObject&lt;?&gt; callObjectMethodV(BaseVM vm, DvmObject&lt;?&gt; dvmObject, String signature, VaList vaList) &#123;
+    switch (signature)&#123;
+        case &quot;cn/xiaochuankeji/tieba/AppController-&gt;getPackageManager()Landroid/content/pm/PackageManager;&quot;:&#123;
+            return vm.resolveClass(&quot;android/content/pm/PackageManager&quot;).newObject(null);
+        &#125;
+    &#125;
+    return super.callObjectMethodV(vm, dvmObject, signature, vaList);
+</code></pre>
+<p>继续运行<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705165424673.png" alt="image-20250705165424673"></p>
+<p>获取包名，AbstractJNI 里同样有这个处理逻辑。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705165455598.png" alt="image-20250705165455598"></p>
+<p>照抄一下</p>
+<pre><code class="language-Java">@Override
+public DvmObject&lt;?&gt; callObjectMethodV(BaseVM vm, DvmObject&lt;?&gt; dvmObject, String signature, VaList vaList) &#123;
+    switch (signature)&#123;
+        case &quot;cn/xiaochuankeji/tieba/AppController-&gt;getPackageManager()Landroid/content/pm/PackageManager;&quot;:&#123;
+            return vm.resolveClass(&quot;android/content/pm/PackageManager&quot;).newObject(null);
+        &#125;
+        case &quot;cn/xiaochuankeji/tieba/AppController-&gt;getPackageName()Ljava/lang/String;&quot;:&#123;
+            String packageName = vm.getPackageName();
+            if (packageName != null) &#123;
+                return new StringObject(vm, packageName);
+            &#125;
+            break;
+        &#125;
+    &#125;
+    return super.callObjectMethodV(vm, dvmObject, signature, vaList);
+&#125;
+</code></pre>
+<p>继续运行</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705165811357.png" alt="image-20250705165811357"></p>
+<p>在 AbstractJNI 里找 getClass 的处理逻辑。<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705165854570.png" alt="image-20250705165854570"></p>
+<p>照抄</p>
+<pre><code class="language-Java">case &quot;cn/xiaochuankeji/tieba/AppController-&gt;getClass()Ljava/lang/Class;&quot;:&#123;
+    return dvmObject.getObjectType();
+&#125;
+</code></pre>
+<p>继续运行<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705170044840.png" alt="image-20250705170044840"></p>
+<p>这在 AbstractJNI 里可没有，像下面这样处理，为什么这么做同样放到后面讨论。</p>
+<pre><code class="language-Java">case &quot;java/lang/Class-&gt;getSimpleName()Ljava/lang/String;&quot;:&#123;
+    String className = ((DvmClass) dvmObject).getClassName();
+    String[] name = className.split(&quot;/&quot;);
+    return new StringObject(vm, name[name.length - 1]);
+&#125;
+</code></pre>
+<p>继续运行<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705170221889.png" alt="image-20250705170221889"></p>
+<p>Context 的 getFilesDir 返回什么？像下面这样处理，为什么这么做放到后面讨论。</p>
+<pre><code class="language-Java">case &quot;cn/xiaochuankeji/tieba/AppController-&gt;getFilesDir()Ljava/io/File;&quot;:&#123;
+    return vm.resolveClass(&quot;java/io/File&quot;).newObject(null);
+&#125;
+</code></pre>
+<p>运行发现新报错<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705170311740.png" alt="image-20250705170311740"></p>
+<p>像下面这样补，为什么这么做放到后面讨论。</p>
+<pre><code class="language-Java">case &quot;cn/xiaochuankeji/tieba/AppController-&gt;getFilesDir()Ljava/io/File;&quot;:&#123;
+    return vm.resolveClass(&quot;java/io/File&quot;).newObject(&quot;/data/data/cn.xiaochuankeji.tieba/files&quot;);
+&#125;
+case &quot;java/io/File-&gt;getAbsolutePath()Ljava/lang/String;&quot;:&#123;
+    return new StringObject(vm, dvmObject.getValue().toString());
+&#125;
+</code></pre>
+<p>继续运行，走到了检测 debug 相关的逻辑<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705170553628.png" alt="image-20250705170553628"></p>
+<p>返回false</p>
+<pre><code class="language-Java">@Override
+public boolean callStaticBooleanMethodV(BaseVM vm, DvmClass dvmClass, String signature, VaList vaList) &#123;
+    switch (signature)&#123;
+        case &quot;android/os/Debug-&gt;isDebuggerConnected()Z&quot;:&#123;
+            return false;
+        &#125;
+    &#125;
+    return super.callStaticBooleanMethodV(vm, dvmClass, signature, vaList);
+&#125;
+</code></pre>
+<p>继续运行，获取进程ID<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705170703469.png" alt="image-20250705170703469"></p>
+<p>返回Unidbg所生成的PID</p>
+<pre><code class="language-Java">@Override
+public int callStaticIntMethodV(BaseVM vm, DvmClass dvmClass, String signature, VaList vaList) &#123;
+    switch (signature)&#123;
+        case &quot;android/os/Process-&gt;myPid()I&quot;:&#123;
+            return emulator.getPid();
+        &#125;
+    &#125;
+    return super.callStaticIntMethodV(vm, dvmClass, signature, vaList);
+&#125;
+</code></pre>
+<p>这里我们讨论一下pid的问题，不同的项目在此有不同的模拟思路。</p>
+<p>比如qiling采用硬编码，返回0x512，即Unidbg环境里，进程的ID总是0x512.</p>
+<pre><code class="language-python">def ql_syscall_getpid(ql: Qiling):
+    return 0x512
+</code></pre>
+<p>ExAndroidNativeEmu 返回项目自身的 pid</p>
+<pre><code class="language-python">def get_pid(self):
+    return os.getpid()
+</code></pre>
+<p>Unidbg 同理，但它处理的更精细</p>
+<pre><code class="language-Java">// 获取当前JVM进程的PID
+String name = ManagementFactory.getRuntimeMXBean().getName();
+String pid = name.split(&quot;@&quot;)[0];
+// 解析为数字，取低 15 位
+this.pid = Integer.parseInt(pid) &amp; 0x7fff;
+</code></pre>
+<p>它将获取到的进程 ID 和 0x7FFF 做与运算，按照与运算的规则，这舍去了高位，只保留较低的 15 比特。</p>
+<p>原因在于，Linux 以及基于它的 Android 系统上，默认 PID 最大就是 0x8000（32768）。</p>
+<pre><code>#define PID_MAX 0x8000
+</code></pre>
+<p>可以在 adb shell 中验证这一点</p>
+<pre><code>blueline:/ $ cat /proc/sys/kernel/pid_max
+32768
+blueline:/ $
+</code></pre>
+<p>MacOS 上进程 ID 可达 100000，Windows 上更是不做限制。</p>
+<p>这意味着，如果 Unidbg 的运行环境并非 Linux，而是 MacOS 或 Windows，那么获取到的 Pid 可能超出 Android 环境所限制的最大进程号。、</p>
+<p>因此出于规范角度，Unidbg 抹去了当前 Pid 的高位，确保其小于<code>PID_MAX</code>。</p>
+<p>在 Unidbg 里 PID 是私有的<code>final</code>变量，如果你想修改 PID，需要修改位于<code>unidbg-api/src/main/java/com/github/unidbg/AbstractEmulator.java</code> 的源码，这其实不是很方便，固定 pid 的需求其实也很多，如果 Unidbg 提供一个<code>setPid</code>的方法会很好.</p>
+<p>运行测试，得到结果，符合我们的预期。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250705171217271.png" alt="image-20250705171217271"></p>
+<pre><code class="language-shell">call s result:v2-b94195d5f3c2ad3a876f13346fa283a0
+</code></pre>
+<h3 id="六、尾声"><a href="#六、尾声" class="headerlink" title="六、尾声"></a>六、尾声</h3><p>读者可能有很多困惑，在补环境的处理中留了不少坑，这应该也让大家意识到，补 JNI 环境是一个硬骨头，需要学习一番才能搞定。从下一篇开始，我们正式讨论如何补 JNI 环境。</p>
+<h3 id="七、参考"><a href="#七、参考" class="headerlink" title="七、参考"></a>七、参考</h3><p><a target="_blank" rel="noopener" href="https://www.yuque.com/lilac-2hqvv/xdwlsg/bmf8lm68ffvhrfu0#uMicr">Unidbg 的基本使用（三）</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

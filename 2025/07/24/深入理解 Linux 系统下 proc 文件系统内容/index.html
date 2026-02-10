@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>浅谈 Linux 系统下 proc 文件系统内容 | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Android , Linux ">
+  <meta name="description" content="浅谈 Linux 系统下 proc 文件系统内容 | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-深入理解 Linux 系统下 proc 文件系统内容" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">浅谈 Linux 系统下 proc 文件系统内容</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="其他">其他</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Android</a>
+            
+            <a class="color1">Linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-08-08 10:58:57'>2025-07-24 17:56</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:4.7k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%85%E8%B0%88-Linux-%E7%B3%BB%E7%BB%9F%E4%B8%8B-proc-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9"><span class="toc-text">浅谈 Linux 系统下 proc 文件系统内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%86%85%E5%AE%B9%E6%91%98%E8%A6%81"><span class="toc-text">一、内容摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%80%E5%A7%8B"><span class="toc-text">二、开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%B8%AD%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-text">一、进程目录中的常见文件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-01-cmdline"><span class="toc-text">1.01 cmdline</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-02-cwd"><span class="toc-text">1.02 cwd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-03-environ"><span class="toc-text">1.03 environ</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-04-exe"><span class="toc-text">1.04 exe</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-05-fd"><span class="toc-text">1.05 fd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-06-limits"><span class="toc-text">1.06 limits</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-07-maps"><span class="toc-text">1.07 maps</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-08-mem"><span class="toc-text">1.08 mem</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-09-root"><span class="toc-text">1.09 root</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-10-stat"><span class="toc-text">1.10 stat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-11-statm"><span class="toc-text">1.11 statm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-20-status"><span class="toc-text">1.20 status</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-21-task"><span class="toc-text">1.21 task</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-proc-%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-text">二、&#x2F;proc 目录下常见的文件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-01-proc-apm"><span class="toc-text">2.01 &#x2F;proc&#x2F;apm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-02-proc-buddyinfo"><span class="toc-text">2.02 &#x2F;proc&#x2F;buddyinfo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-03-proc-cmdline"><span class="toc-text">2.03 &#x2F;proc&#x2F;cmdline</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-04-proc-cpuinfo"><span class="toc-text">2.04 &#x2F;proc&#x2F;cpuinfo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-05-proc-crypto"><span class="toc-text">2.05 &#x2F;proc&#x2F;crypto</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-06-proc-devices"><span class="toc-text">2.06 &#x2F;proc&#x2F;devices</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-07-proc-diskstats"><span class="toc-text">2.07 &#x2F;proc&#x2F;diskstats</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-08-proc-dma"><span class="toc-text">2.08 &#x2F;proc&#x2F;dma</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-09-proc-execdomains"><span class="toc-text">2.09 &#x2F;proc&#x2F;execdomains</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-10-proc-fb"><span class="toc-text">2.10 &#x2F;proc&#x2F;fb</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-11-proc-filesystems"><span class="toc-text">2.11 &#x2F;proc&#x2F;filesystems</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-12-proc-interrupts"><span class="toc-text">2.12 &#x2F;proc&#x2F;interrupts</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-13-proc-iomen"><span class="toc-text">2.13 &#x2F;proc&#x2F;iomen</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-14-proc-ioports"><span class="toc-text">2.14 &#x2F;proc&#x2F;ioports</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-15-proc-kallsyms"><span class="toc-text">2.15 &#x2F;proc&#x2F;kallsyms</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-16-proc-kcore"><span class="toc-text">2.16 &#x2F;proc&#x2F;kcore</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-17-proc-kmsg"><span class="toc-text">2.17 &#x2F;proc&#x2F;kmsg</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-18-proc-loadavg"><span class="toc-text">2.18 &#x2F;proc&#x2F;loadavg</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-19-proc-locks"><span class="toc-text">2.19 &#x2F;proc&#x2F;locks</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-20-proc-mdstat"><span class="toc-text">2.20 &#x2F;proc&#x2F;mdstat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-21-proc-meminfo"><span class="toc-text">2.21 &#x2F;proc&#x2F;meminfo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-22-proc-mounts"><span class="toc-text">2.22 &#x2F;proc&#x2F;mounts</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-23-proc-modules"><span class="toc-text">2.23 &#x2F;proc&#x2F;modules</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-24-proc-partitions"><span class="toc-text">2.24 &#x2F;proc&#x2F;partitions</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-25-proc-pci"><span class="toc-text">2.25 &#x2F;proc&#x2F;pci</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-26-proc-slabinfo"><span class="toc-text">2.26 &#x2F;proc&#x2F;slabinfo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-27-proc-stat"><span class="toc-text">2.27 &#x2F;proc&#x2F;stat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-28-proc-swaps"><span class="toc-text">2.28 &#x2F;proc&#x2F;swaps</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-29-proc-uptime"><span class="toc-text">2.29 &#x2F;proc&#x2F;uptime</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-30-proc-version"><span class="toc-text">2.30 &#x2F;proc&#x2F;version</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-31-proc-vmstat"><span class="toc-text">2.31 &#x2F;proc&#x2F;vmstat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-32-proc-zoneinfo"><span class="toc-text">2.32 &#x2F;proc&#x2F;zoneinfo</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81-proc-sys%E7%9B%AE%E5%BD%95%E8%AF%A6%E8%A7%A3"><span class="toc-text">三、&#x2F;proc&#x2F;sys目录详解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-01-proc-sys-debug%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="toc-text">3.01 &#x2F;proc&#x2F;sys&#x2F;debug子目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-02-proc-sys-dev%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="toc-text">3.02  &#x2F;proc&#x2F;sys&#x2F;dev子目录</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="浅谈-Linux-系统下-proc-文件系统内容"><a href="#浅谈-Linux-系统下-proc-文件系统内容" class="headerlink" title="浅谈 Linux 系统下 proc 文件系统内容"></a>浅谈 Linux 系统下 proc 文件系统内容</h1><h3 id="一、内容摘要"><a href="#一、内容摘要" class="headerlink" title="一、内容摘要"></a>一、内容摘要</h3><p>Linux 系统上的 &#x2F;proc 目录是一种文件系统，即 proc 文件系统</p>
+<h3 id="二、开始"><a href="#二、开始" class="headerlink" title="二、开始"></a>二、开始</h3><p>​        Linux 系统上的 &#x2F;proc 目录是一种文件系统，即 proc 文件系统。与其他常见的文件系统不同的是，&#x2F;proc 是一种伪文件系统（也即虚拟文件系统），存储的是当前内核运行状态的一系列特殊文件，用户可以通过这些文件查看有关系统硬件及当前正在运行进程的信息，甚至可以通过更改其中某些文件来改变内核的运行状态。</p>
+<p>​        基于 &#x2F;proc 文件系统如上所述的特殊性，其内的文件也常被称作虚拟文件，并具有一些独特的特点。例如，其中有些文件虽然使用查看命令查看时会返回大量信息，但文件本身的大小却会显示为 0 字节。此外，这些特殊文件中大多数文件的时间以及日期属性通常为当前系统时间和日期，这跟它们随时会被刷新（存储于 RAM 中）有关。</p>
+<p>​        为了查看以及使用上的方便，这些文件通常会按照相关性进行分类存储于不同的目录甚至子目录中，如 &#x2F;proc&#x2F;scsi 目录中存储的就是当前系统上所有 SCSI 设备的相关信息，&#x2F;proc&#x2F;N 中存储的则是系统当前正在运行的进程和相关信息，其中 N 为正在运行的进程（可以想象得到，在某进程结束后其相关目录则会消失）。</p>
+<p>​        大多数虚拟文件可以使用文件查看命令如 cat、more 或者 less 进行查看，有些文件信息表述的内容可以一目了然，但也有文件的信息却不怎么具有可读性。不过，这些可读性较差的文件在使用一些命令如 apm、free、lspci 或 top 查看时却可以有着不错的表现。</p>
+<h4 id="一、进程目录中的常见文件介绍"><a href="#一、进程目录中的常见文件介绍" class="headerlink" title="一、进程目录中的常见文件介绍"></a>一、进程目录中的常见文件介绍</h4><p>​       &#x2F;proc目录中包含许多<strong>以数字命名</strong>的子目录，这些数字表示系统当前正在运行进程的进程号，里面包含对应进程相关的多个信息文件。</p>
+<pre><code class="language-shell">┌──(root㉿NshIdE)-[/home/nshide-kali]
+└─# ll /proc
+total 0
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 1
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 10
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 13
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 14
+dr-xr-xr-x  9 nshide-kali nshide-kali               0 Jul 24 17:35 15
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 31
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 35
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 36
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 38
+dr-xr-xr-x  9 root        root                      0 Jul 24 17:35 41
+</code></pre>
+<p>上面列出的是 &#x2F;proc 目录中一些进程相关的目录，每个目录是对应进程相关信息的文件。下面是作者系统（Kali）上运行的一个 PID 为 38 的进程 saslauthd 的相关文件，其中有些文件是每个进程都会具有的，后文会对这些常见文件做出说明。</p>
+<pre><code class="language-shell">┌──(root㉿NshIdE)-[/home/nshide-kali]
+└─# ll /proc/38
+total 0
+-r--r--r--  1 root root 0 Jul 24 17:38 arch_status
+dr-xr-xr-x  2 root root 0 Jul 24 17:38 attr
+-r--------  1 root root 0 Jul 24 17:38 auxv
+-r--r--r--  1 root root 0 Jul 24 17:38 cgroup
+--w-------  1 root root 0 Jul 24 17:38 clear_refs
+-r--r--r--  1 root root 0 Jul 24 17:38 cmdline
+-rw-r--r--  1 root root 0 Jul 24 17:38 comm
+-rw-r--r--  1 root root 0 Jul 24 17:38 coredump_filter
+-r--r--r--  1 root root 0 Jul 24 17:38 cpuset
+lrwxrwxrwx  1 root root 0 Jul 24 17:38 cwd -&gt; /home/nshide-kali
+-r--------  1 root root 0 Jul 24 17:38 environ
+lrwxrwxrwx  1 root root 0 Jul 24 17:38 exe -&gt; /usr/bin/bash
+dr-x------  2 root root 0 Jul 24 17:38 fd
+dr-xr-xr-x  2 root root 0 Jul 24 17:38 fdinfo
+-rw-r--r--  1 root root 0 Jul 24 17:38 gid_map
+-r--------  1 root root 0 Jul 24 17:38 io
+-r--r--r--  1 root root 0 Jul 24 17:38 limits
+-rw-r--r--  1 root root 0 Jul 24 17:38 loginuid
+dr-x------  2 root root 0 Jul 24 17:38 map_files
+-r--r--r--  1 root root 0 Jul 24 17:38 maps
+-rw-------  1 root root 0 Jul 24 17:38 mem
+-r--r--r--  1 root root 0 Jul 24 17:38 mountinfo
+-r--r--r--  1 root root 0 Jul 24 17:38 mounts
+-r--------  1 root root 0 Jul 24 17:38 mountstats
+dr-xr-xr-x 65 root root 0 Jul 24 17:38 net
+dr-x--x--x  2 root root 0 Jul 24 17:38 ns
+-rw-r--r--  1 root root 0 Jul 24 17:38 oom_adj
+-r--r--r--  1 root root 0 Jul 24 17:38 oom_score
+-rw-r--r--  1 root root 0 Jul 24 17:38 oom_score_adj
+-r--------  1 root root 0 Jul 24 17:38 pagemap
+-r--------  1 root root 0 Jul 24 17:38 personality
+-rw-r--r--  1 root root 0 Jul 24 17:38 projid_map
+lrwxrwxrwx  1 root root 0 Jul 24 17:38 root -&gt; /
+-rw-r--r--  1 root root 0 Jul 24 17:38 sched
+-r--r--r--  1 root root 0 Jul 24 17:38 schedstat
+-r--r--r--  1 root root 0 Jul 24 17:38 sessionid
+-rw-r--r--  1 root root 0 Jul 24 17:38 setgroups
+-r--r--r--  1 root root 0 Jul 24 17:38 smaps
+-r--r--r--  1 root root 0 Jul 24 17:38 smaps_rollup
+-r--------  1 root root 0 Jul 24 17:38 stack
+-r--r--r--  1 root root 0 Jul 24 17:38 stat
+-r--r--r--  1 root root 0 Jul 24 17:38 statm
+-r--r--r--  1 root root 0 Jul 24 17:38 status
+-r--------  1 root root 0 Jul 24 17:38 syscall
+dr-xr-xr-x  3 root root 0 Jul 24 17:38 task
+-rw-r--r--  1 root root 0 Jul 24 17:38 timens_offsets
+-r--r--r--  1 root root 0 Jul 24 17:38 timers
+-rw-rw-rw-  1 root root 0 Jul 24 17:38 timerslack_ns
+-rw-r--r--  1 root root 0 Jul 24 17:38 uid_map
+-r--r--r--  1 root root 0 Jul 24 17:38 wchan
+</code></pre>
+<h5 id="1-01-cmdline"><a href="#1-01-cmdline" class="headerlink" title="1.01 cmdline"></a>1.01 cmdline</h5><ul>
+<li>启动当前进程的完整命令，但僵尸进程目录中的此文件不包含任何信息</li>
+</ul>
+<pre><code class="language-shell">┌──(root㉿NshIdE)-[/home/nshide-kali]
+└─# more /proc/38/cmdline
+bash
+</code></pre>
+<h5 id="1-02-cwd"><a href="#1-02-cwd" class="headerlink" title="1.02 cwd"></a>1.02 cwd</h5><ul>
+<li>指当前进程运行目录的一个符号链接</li>
+</ul>
+<h5 id="1-03-environ"><a href="#1-03-environ" class="headerlink" title="1.03 environ"></a>1.03 environ</h5><ul>
+<li>当前进程的环境变量列表，彼此间用空字符（NULL）隔开；变量用大写字母表示，其值用小写字母表示</li>
+</ul>
+<h5 id="1-04-exe"><a href="#1-04-exe" class="headerlink" title="1.04 exe"></a>1.04 exe</h5><ul>
+<li>指向启动当前进程的可执行文件（完整路径）的符号链接，通过 &#x2F;proc&#x2F;N&#x2F;exe 可以启动当前进程的一个拷贝</li>
+</ul>
+<h5 id="1-05-fd"><a href="#1-05-fd" class="headerlink" title="1.05 fd"></a>1.05 fd</h5><ul>
+<li>这是个目录，包含当前进程打开的每一个文件的文件描述符（file descriptor），这些文件描述符是指向实际文件的一个符号链接</li>
+</ul>
+<h5 id="1-06-limits"><a href="#1-06-limits" class="headerlink" title="1.06 limits"></a>1.06 limits</h5><ul>
+<li>当前进程所使用的每一个受限资源的软限制、硬限制和管理单元；此文件仅可由实际启动当前进程的UID用户读取</li>
+</ul>
+<h5 id="1-07-maps"><a href="#1-07-maps" class="headerlink" title="1.07 maps"></a>1.07 maps</h5><ul>
+<li>当前进程关联到的每个可执行文件和库文件在内存中的映射区域及其访问权限所组成的列表</li>
+</ul>
+<h5 id="1-08-mem"><a href="#1-08-mem" class="headerlink" title="1.08 mem"></a>1.08 mem</h5><ul>
+<li>当前进程所占用的内存空间，由open、read和lseek等系统调用使用，不能被用户读取</li>
+</ul>
+<h5 id="1-09-root"><a href="#1-09-root" class="headerlink" title="1.09 root"></a>1.09 root</h5><ul>
+<li>指向当前进程运行根目录的符号链接(即当前进程所看到的“根目录”（&#x2F;）是什么)；在Unix和Linux系统上，通常采用chroot命令使每个进程运行于独立的根目录</li>
+</ul>
+<h5 id="1-10-stat"><a href="#1-10-stat" class="headerlink" title="1.10 stat"></a>1.10 stat</h5><ul>
+<li>当前进程的状态信息，包含一系列格式化后的数据列，可读性差，通常由 ps 命令使用</li>
+</ul>
+<h5 id="1-11-statm"><a href="#1-11-statm" class="headerlink" title="1.11 statm"></a>1.11 statm</h5><ul>
+<li>当前进程占用内存的状态信息，通常以“页面”(page)表示</li>
+</ul>
+<h5 id="1-20-status"><a href="#1-20-status" class="headerlink" title="1.20 status"></a>1.20 status</h5><ul>
+<li>与 stat 所提供信息类似，但可读性较好，每行表示一个属性信息；其详细介绍请参见 proc 的 man 手册页</li>
+</ul>
+<h5 id="1-21-task"><a href="#1-21-task" class="headerlink" title="1.21 task"></a>1.21 task</h5><ul>
+<li>目录文件，包含由当前进程所运行的每一个线程的相关信息，每一个线程的相关信息文件均保存在一个由线程号(TID)命名的目录中</li>
+</ul>
+<h4 id="二、-proc-目录下常见的文件介绍"><a href="#二、-proc-目录下常见的文件介绍" class="headerlink" title="二、&#x2F;proc 目录下常见的文件介绍"></a>二、&#x2F;proc 目录下常见的文件介绍</h4><h5 id="2-01-proc-apm"><a href="#2-01-proc-apm" class="headerlink" title="2.01 &#x2F;proc&#x2F;apm"></a>2.01 &#x2F;proc&#x2F;apm</h5><ul>
+<li>高级电源管理(APM)版本信息以及电池相关状态信息，通常由 apm 命令使用</li>
+</ul>
+<h5 id="2-02-proc-buddyinfo"><a href="#2-02-proc-buddyinfo" class="headerlink" title="2.02 &#x2F;proc&#x2F;buddyinfo"></a>2.02 &#x2F;proc&#x2F;buddyinfo</h5><ul>
+<li>用于诊断内存碎片问题的相关信息文件</li>
+</ul>
+<h5 id="2-03-proc-cmdline"><a href="#2-03-proc-cmdline" class="headerlink" title="2.03 &#x2F;proc&#x2F;cmdline"></a>2.03 &#x2F;proc&#x2F;cmdline</h5><ul>
+<li>在启动时传递至内核的相关参数信息，这些信息通常由 lilo 或 grub 等启动管理工具进行传递</li>
+</ul>
+<h5 id="2-04-proc-cpuinfo"><a href="#2-04-proc-cpuinfo" class="headerlink" title="2.04 &#x2F;proc&#x2F;cpuinfo"></a>2.04 &#x2F;proc&#x2F;cpuinfo</h5><ul>
+<li>处理器相关信息文件</li>
+</ul>
+<h5 id="2-05-proc-crypto"><a href="#2-05-proc-crypto" class="headerlink" title="2.05 &#x2F;proc&#x2F;crypto"></a>2.05 &#x2F;proc&#x2F;crypto</h5><ul>
+<li>系统上已安装的内核使用的密码算法以及每个算法的详细信息列表</li>
+</ul>
+<h5 id="2-06-proc-devices"><a href="#2-06-proc-devices" class="headerlink" title="2.06 &#x2F;proc&#x2F;devices"></a>2.06 &#x2F;proc&#x2F;devices</h5><ul>
+<li>系统已经加载的所有设备和字符设备的信息，包含主设备号和设备组(与主设备号对应的设备类型)</li>
+</ul>
+<h5 id="2-07-proc-diskstats"><a href="#2-07-proc-diskstats" class="headerlink" title="2.07 &#x2F;proc&#x2F;diskstats"></a>2.07 &#x2F;proc&#x2F;diskstats</h5><ul>
+<li>每块磁盘设备的磁盘 I&#x2F;O 统计信息列表</li>
+</ul>
+<h5 id="2-08-proc-dma"><a href="#2-08-proc-dma" class="headerlink" title="2.08 &#x2F;proc&#x2F;dma"></a>2.08 &#x2F;proc&#x2F;dma</h5><ul>
+<li>每个正在使用且注册的 ISA DMA 通道的信息列表</li>
+</ul>
+<h5 id="2-09-proc-execdomains"><a href="#2-09-proc-execdomains" class="headerlink" title="2.09 &#x2F;proc&#x2F;execdomains"></a>2.09 &#x2F;proc&#x2F;execdomains</h5><ul>
+<li>内核当前支持的执行域(每种操作系统独特“个性”)信息列表</li>
+</ul>
+<h5 id="2-10-proc-fb"><a href="#2-10-proc-fb" class="headerlink" title="2.10 &#x2F;proc&#x2F;fb"></a>2.10 &#x2F;proc&#x2F;fb</h5><ul>
+<li>帧缓冲设备列表文件，包含帧缓冲设备的设备号和相关驱动信息</li>
+</ul>
+<h5 id="2-11-proc-filesystems"><a href="#2-11-proc-filesystems" class="headerlink" title="2.11 &#x2F;proc&#x2F;filesystems"></a>2.11 &#x2F;proc&#x2F;filesystems</h5><ul>
+<li>当前被内核支持的文件系统类型列表文件，被表示为 nodev 的文件系统表示不需要块设备的支持；通常 mount 一个设备时，如果没有指定文件系统类型将通过此文件来决定其所需文件系统的类型</li>
+</ul>
+<h5 id="2-12-proc-interrupts"><a href="#2-12-proc-interrupts" class="headerlink" title="2.12 &#x2F;proc&#x2F;interrupts"></a>2.12 &#x2F;proc&#x2F;interrupts</h5><ul>
+<li>x86 或者 x86_64 体系架构系统上每个 IRQ 相关的中断号列表；多路处理器平台上每个 CPU  对于每个 I&#x2F;O 设备均有自己的中断号</li>
+</ul>
+<h5 id="2-13-proc-iomen"><a href="#2-13-proc-iomen" class="headerlink" title="2.13 &#x2F;proc&#x2F;iomen"></a>2.13 &#x2F;proc&#x2F;iomen</h5><ul>
+<li>每个物理设备上的记忆体(RAM 或者 ROM)在系统内存中的映射信息</li>
+</ul>
+<h5 id="2-14-proc-ioports"><a href="#2-14-proc-ioports" class="headerlink" title="2.14 &#x2F;proc&#x2F;ioports"></a>2.14 &#x2F;proc&#x2F;ioports</h5><ul>
+<li>当前正在使用且已经注册过的与物理设备进行通讯的输入-输出端口范围信息列表</li>
+</ul>
+<h5 id="2-15-proc-kallsyms"><a href="#2-15-proc-kallsyms" class="headerlink" title="2.15 &#x2F;proc&#x2F;kallsyms"></a>2.15 &#x2F;proc&#x2F;kallsyms</h5><ul>
+<li>模块管理工具，用来动态链接或者绑定可装载模块的符号定义，由内核输出；(内核 2.5.71 以后的版本支持此功能)；通常这个文件中的信息量相当大</li>
+</ul>
+<h5 id="2-16-proc-kcore"><a href="#2-16-proc-kcore" class="headerlink" title="2.16 &#x2F;proc&#x2F;kcore"></a>2.16 &#x2F;proc&#x2F;kcore</h5><ul>
+<li>系统使用的物理内存，以 ELF 核心文件(core file) 格式存储，其文件大小为已使用的物理内存(RAM)加上 4KB；这个文件用来检查内核数据结构当前状态，因此，通常由 GDB 调试工具使用，但不能使用文件查看命令打开此文件</li>
+</ul>
+<h5 id="2-17-proc-kmsg"><a href="#2-17-proc-kmsg" class="headerlink" title="2.17 &#x2F;proc&#x2F;kmsg"></a>2.17 &#x2F;proc&#x2F;kmsg</h5><ul>
+<li>此文件用来保存由内核输出的信息，通常由 &#x2F;sbin&#x2F;klogd 或者 bin&#x2F;dmsg 等程序使用，不要试图使用查看命令打开此文件</li>
+</ul>
+<h5 id="2-18-proc-loadavg"><a href="#2-18-proc-loadavg" class="headerlink" title="2.18 &#x2F;proc&#x2F;loadavg"></a>2.18 &#x2F;proc&#x2F;loadavg</h5><p>保存关于 CPU 和磁盘 I&#x2F;O 的负载平均值，其前三列分别表示每1秒钟、每5秒钟以及每15秒钟的负载平均值，类似于 uptime 命令输出的相关信息；第四列是由斜线隔开的两个数值，前者表示当前正由内核调度的实体(进程和线程)的数目，后者表示系统当前存活的内核调度实体的数目；第五列表示此文件被查看前最近一个内核创建的进程PID</p>
+<h5 id="2-19-proc-locks"><a href="#2-19-proc-locks" class="headerlink" title="2.19 &#x2F;proc&#x2F;locks"></a>2.19 &#x2F;proc&#x2F;locks</h5><ul>
+<li>保存当前由内核锁定的文件的相关信息，包含内核内部的调试数据；每个锁定占据一行，且具有一个唯一的编号；如下输出信息中每行的第二列表示当前锁定使用的锁定类别，POSIX表示目前较新类型的文件锁，由lockf系统调用产生，FLOCK是传统的UNIX文件锁，由flock系统调用产生；第三列也通常由两种类型，ADVISORY表示不允许其他用户锁定此文件，但允许读取，MANDATORY表示此文件锁定期间不允许其他用户任何形式的访问；</li>
+</ul>
+<pre><code class="language-shell">[root@rhel5 ~]# more /proc/locks
+1: POSIX  ADVISORY  WRITE 4904 fd:00:4325393 0 EOF
+2: POSIX  ADVISORY  WRITE 4550 fd:00:2066539 0 EOF
+3: FLOCK  ADVISORY  WRITE 4497 fd:00:2066533 0 EOF
+</code></pre>
+<h5 id="2-20-proc-mdstat"><a href="#2-20-proc-mdstat" class="headerlink" title="2.20 &#x2F;proc&#x2F;mdstat"></a>2.20 &#x2F;proc&#x2F;mdstat</h5><ul>
+<li><p>保存RAID相关的多块磁盘的当前状态信息，在没有使用RAID机器上，其显示为如下状态：</p>
+<pre><code class="language-shell">[root@rhel5 ~]# less /proc/mdstat
+Personalities :
+unused devices: &lt;none&gt;
+</code></pre>
+</li>
+</ul>
+<h5 id="2-21-proc-meminfo"><a href="#2-21-proc-meminfo" class="headerlink" title="2.21 &#x2F;proc&#x2F;meminfo"></a>2.21 &#x2F;proc&#x2F;meminfo</h5><ul>
+<li><p>系统中关于当前内存的利用状况等的信息，常由free命令使用；可以使用文件查看命令直接读取此文件，其内容显示为两列，前者为统计属性，后者为对应的值</p>
+<pre><code class="language-shell">[root@rhel5 ~]# less /proc/meminfo
+MemTotal:       515492 kB
+MemFree:          8452 kB
+Buffers:         19724 kB
+Cached:         376400 kB
+SwapCached:          4 kB
+…………
+</code></pre>
+</li>
+</ul>
+<h5 id="2-22-proc-mounts"><a href="#2-22-proc-mounts" class="headerlink" title="2.22 &#x2F;proc&#x2F;mounts"></a>2.22 &#x2F;proc&#x2F;mounts</h5><ul>
+<li>在内核2.4.29版本以前，此文件的内容为系统当前挂载的所有文件系统，在2.4.19以后的内核中引进了每个进程使用独立挂载名称空间的方式，此文件则随之变成了指向&#x2F;proc&#x2F;self&#x2F;mounts（每个进程自身挂载名称空间中的所有挂载点列表）文件的符号链接；&#x2F;proc&#x2F;self是一个独特的目录，后文中会对此目录进行介绍</li>
+</ul>
+<pre><code class="language-shell">[root@rhel5 ~]# ll /proc |grep mounts
+lrwxrwxrwx  1 root      root             11 Feb  8 06:43 mounts -&gt; self/mounts
+</code></pre>
+<p>如下所示，其中第一列表示挂载的设备，第二列表示在当前目录树中的挂载点，第三点表示当前文件系统的类型，第四列表示挂载属性（ro或者rw），第五列和第六列用来匹配&#x2F;etc&#x2F;mtab文件中的转储（dump）属性</p>
+<pre><code class="language-shell">[root@rhel5 ~]# more /proc/mounts
+rootfs / rootfs rw 0 0
+/dev/root / ext3 rw,data=ordered 0 0
+/dev /dev tmpfs rw 0 0
+/proc /proc proc rw 0 0
+/sys /sys sysfs rw 0 0
+/proc/bus/usb /proc/bus/usb usbfs rw 0 0
+…………
+</code></pre>
+<h5 id="2-23-proc-modules"><a href="#2-23-proc-modules" class="headerlink" title="2.23 &#x2F;proc&#x2F;modules"></a>2.23 &#x2F;proc&#x2F;modules</h5><ul>
+<li>当前装入内核的所有模块名称列表，可以由lsmod命令使用，也可以直接查看；如下所示，其中第一列表示模块名，第二列表示此模块占用内存空间大小，第三列表示此模块有多少实例被装入，第四列表示此模块依赖于其它哪些模块，第五列表示此模块的装载状态（Live：已经装入；Loading：正在装入；Unloading：正在卸载），第六列表示此模块在内核内存（kernel memory）中的偏移量</li>
+</ul>
+<pre><code class="language-shell">[root@rhel5 ~]# more /proc/modules
+autofs4 24517 2 - Live 0xe09f7000
+hidp 23105 2 - Live 0xe0a06000
+rfcomm 42457 0 - Live 0xe0ab3000
+l2cap 29505 10 hidp,rfcomm, Live 0xe0aaa000
+…………
+</code></pre>
+<h5 id="2-24-proc-partitions"><a href="#2-24-proc-partitions" class="headerlink" title="2.24 &#x2F;proc&#x2F;partitions"></a>2.24 &#x2F;proc&#x2F;partitions</h5><ul>
+<li>块设备每个分区的主设备号（major）和次设备号（minor）等信息，同时包括每个分区所包含的块（block）数目（如下面输出中第三列所示）</li>
+</ul>
+<pre><code class="language-shell">[root@rhel5 ~]# more /proc/partitions
+major minor  #blocks  name
+
+   8     0   20971520 sda
+   8     1     104391 sda1
+   8     2    6907950 sda2
+   8     3    5630782 sda3
+   8     4          1 sda4
+   8     5    3582463 sda5
+</code></pre>
+<h5 id="2-25-proc-pci"><a href="#2-25-proc-pci" class="headerlink" title="2.25 &#x2F;proc&#x2F;pci"></a>2.25 &#x2F;proc&#x2F;pci</h5><ul>
+<li>内核初始化时发现的所有PCI设备及其配置信息列表，其配置信息多为某PCI设备相关IRQ信息，可读性不高，可以用“&#x2F;sbin&#x2F;lspci –vb”命令获得较易理解的相关信息；在2.6内核以后，此文件已为&#x2F;proc&#x2F;bus&#x2F;pci目录及其下的文件代替</li>
+</ul>
+<h5 id="2-26-proc-slabinfo"><a href="#2-26-proc-slabinfo" class="headerlink" title="2.26 &#x2F;proc&#x2F;slabinfo"></a>2.26 &#x2F;proc&#x2F;slabinfo</h5><ul>
+<li>在内核中频繁使用的对象（如inode、dentry等）都有自己的cache，即slab pool，而&#x2F;proc&#x2F;slabinfo文件列出了这些对象相关slap的信息；详情可以参见内核文档中slapinfo的手册页</li>
+</ul>
+<h5 id="2-27-proc-stat"><a href="#2-27-proc-stat" class="headerlink" title="2.27 &#x2F;proc&#x2F;stat"></a>2.27 &#x2F;proc&#x2F;stat</h5><ul>
+<li>实时追踪自系统上次启动以来的多种统计信息；如下所示，其中，<br>“<strong>cpu</strong>”行后的八个值分别表示以1&#x2F;100（jiffies）秒为单位的统计值（包括系统运行于用户模式、低优先级用户模式，运系统模式、空闲模式、I&#x2F;O等待模式的时间等）；<br>“<strong>intr</strong>”行给出中断的信息，第一个为自系统启动以来，发生的所有的中断的次数；然后每个数对应一个特定的中断自系统启动以来所发生的次数；<br>“<strong>ctxt</strong>”给出了自系统启动以来CPU发生的上下文交换的次数。<br>“<strong>btime</strong>”给出了从系统启动到现在为止的时间，单位为秒；<br>“<strong>processes</strong>“ (total_forks) 自系统启动以来所创建的任务的个数目；<br>“<strong>procs_running</strong>”：当前运行队列的任务的数目；<br>“<strong>procs_blocked</strong>”：当前被阻塞的任务的数目；</li>
+</ul>
+<h5 id="2-28-proc-swaps"><a href="#2-28-proc-swaps" class="headerlink" title="2.28 &#x2F;proc&#x2F;swaps"></a>2.28 &#x2F;proc&#x2F;swaps</h5><ul>
+<li>当前系统上的交换分区及其空间利用信息，如果有多个交换分区的话，则会每个交换分区的信息分别存储于&#x2F;proc&#x2F;swap目录中的单独文件中，而其优先级数字越低，被使用到的可能性越大；下面是作者系统中只有一个交换分区时的输出信息</li>
+</ul>
+<h5 id="2-29-proc-uptime"><a href="#2-29-proc-uptime" class="headerlink" title="2.29 &#x2F;proc&#x2F;uptime"></a>2.29 &#x2F;proc&#x2F;uptime</h5><ul>
+<li>系统上次启动以来的运行时间，如下所示，其第一个数字表示系统运行时间，第二个数字表示系统空闲时间，单位是秒</li>
+</ul>
+<pre><code class="language-shell">[root@rhel5 ~]# more /proc/uptime
+3809.86 3714.13
+</code></pre>
+<h5 id="2-30-proc-version"><a href="#2-30-proc-version" class="headerlink" title="2.30 &#x2F;proc&#x2F;version"></a>2.30 &#x2F;proc&#x2F;version</h5><ul>
+<li>当前系统运行的内核版本号</li>
+</ul>
+<h5 id="2-31-proc-vmstat"><a href="#2-31-proc-vmstat" class="headerlink" title="2.31 &#x2F;proc&#x2F;vmstat"></a>2.31 &#x2F;proc&#x2F;vmstat</h5><ul>
+<li>当前系统虚拟内存的多种统计数据，信息量可能会比较大，这因系统而有所不同，可读性较好</li>
+</ul>
+<h5 id="2-32-proc-zoneinfo"><a href="#2-32-proc-zoneinfo" class="headerlink" title="2.32 &#x2F;proc&#x2F;zoneinfo"></a>2.32 &#x2F;proc&#x2F;zoneinfo</h5><ul>
+<li>内存区域（zone）的详细信息列表，信息量较大</li>
+</ul>
+<h4 id="三、-proc-sys目录详解"><a href="#三、-proc-sys目录详解" class="headerlink" title="三、&#x2F;proc&#x2F;sys目录详解"></a>三、&#x2F;proc&#x2F;sys目录详解</h4><p>​        与 &#x2F;proc下其它文件的“只读”属性不同的是，管理员可对&#x2F;proc&#x2F;sys子目录中的许多文件内容进行修改以更改内核的运行特性，事先可以使用“ls -l”命令查看某文件是否“可写入”。写入操作通常使用类似于“echo DATA &gt; &#x2F;path&#x2F;to&#x2F;your&#x2F;filename”的格式进行。需要注意的是，即使文件可写，其一般也不可以使用编辑器进行编辑。</p>
+<h5 id="3-01-proc-sys-debug子目录"><a href="#3-01-proc-sys-debug子目录" class="headerlink" title="3.01 &#x2F;proc&#x2F;sys&#x2F;debug子目录"></a>3.01 &#x2F;proc&#x2F;sys&#x2F;debug子目录</h5><ul>
+<li>此目录通常是一空目录</li>
+</ul>
+<h5 id="3-02-proc-sys-dev子目录"><a href="#3-02-proc-sys-dev子目录" class="headerlink" title="3.02  &#x2F;proc&#x2F;sys&#x2F;dev子目录"></a>3.02  &#x2F;proc&#x2F;sys&#x2F;dev子目录</h5><ul>
+<li>为系统上特殊设备提供参数信息文件的目录，其不同设备的信息文件分别存储于不同的子目录中，如大多数系统上都会具有的&#x2F;proc&#x2F;sys&#x2F;dev &#x2F;cdrom和&#x2F;proc&#x2F;sys&#x2F;dev&#x2F;raid（如果内核编译时开启了支持raid的功能） 目录，其内存储的通常是系统上cdrom和raid的相关参数信息文件。</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

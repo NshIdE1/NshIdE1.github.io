@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Android APP 常见漏洞 | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Android ">
+  <meta name="description" content="Android APP 常见漏洞 | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-Android APP 常见漏洞" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Android APP 常见漏洞</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Android学习">Android学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">Android</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-10-22 17:06:41'>2025-10-22 17:06</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:7.1k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-APP-%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E"><span class="toc-text">Android APP 常见漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-text">一、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-text">二、概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Android-APP-%E5%B8%B8%E8%A7%81%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E"><span class="toc-text">三、Android APP 常见安全漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6"><span class="toc-text">四大组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity"><span class="toc-text">Activity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Service"><span class="toc-text">Service</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Broadcast-receiver"><span class="toc-text">Broadcast receiver</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Content-Provider"><span class="toc-text">Content Provider</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4"><span class="toc-text">四大组件的安全防护</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Activity-1"><span class="toc-text">Activity</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Service-1"><span class="toc-text">Service</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Content-Provider-1"><span class="toc-text">Content Provider</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Broadcast-Receiver"><span class="toc-text">Broadcast Receiver</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E8%AE%BE%E7%BD%AE%E6%BC%8F%E6%B4%9E"><span class="toc-text">默认设置漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#AndroidManifest-xml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E9%BB%98%E8%AE%A4%E8%AE%BE%E7%BD%AE%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-text">AndroidManifest.xml配置文件中默认设置相关问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebView%E7%9A%84%E9%BB%98%E8%AE%A4%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98"><span class="toc-text">WebView的默认设置问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3"><span class="toc-text">网络相关</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#https%E9%80%9A%E4%BF%A1%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E"><span class="toc-text">https通信安全漏洞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BF%BD%E7%95%A5SSL%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C"><span class="toc-text">忽略SSL证书校验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BF%BD%E7%95%A5%E5%9F%9F%E5%90%8D%E6%A0%A1%E9%AA%8C"><span class="toc-text">忽略域名校验</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebView%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E"><span class="toc-text">WebView安全漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#WebView%E8%AE%BE%E7%BD%AE%E6%96%B9%E9%9D%A2%E7%9A%84%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9"><span class="toc-text">WebView设置方面的安全风险</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Webview-File%E5%9F%9F%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E"><span class="toc-text">Webview File域同源策略绕过漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%98%B2%E6%8A%A4"><span class="toc-text">防护</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#WebView%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4"><span class="toc-text">WebView安全防护</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%99%BD%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E"><span class="toc-text">白名单绕过漏洞</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AD%BE%E5%90%8D%E7%99%BD%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87"><span class="toc-text">签名白名单绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%85%B3%E4%BA%8EAndroid%E7%AD%BE%E5%90%8D"><span class="toc-text">关于Android签名</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#URL%E7%99%BD%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E"><span class="toc-text">URL白名单绕过漏洞</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Socket%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%BC%8F%E6%B4%9E"><span class="toc-text">Socket远程连接漏洞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#APK%E5%8D%87%E7%BA%A7%E6%BC%8F%E6%B4%9E"><span class="toc-text">APK升级漏洞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%AE%89%E5%85%A8%E7%BC%BA%E9%99%B7"><span class="toc-text">加密算法是否存在安全缺陷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%93%88%E5%B8%8C-%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95"><span class="toc-text">不安全的哈希&#x2F;加密算法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%B1%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95"><span class="toc-text">弱加密算法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%87%8D%E6%94%BE%E6%94%BB%E5%87%BB%E9%A3%8E%E9%99%A9"><span class="toc-text">重放攻击风险</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E6%8E%A5%E5%8F%A3%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%9D%83%E9%99%90%E8%B0%83%E7%94%A8"><span class="toc-text">业务接口是否存在任意权限调用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2"><span class="toc-text">敏感数据泄露</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ZIP%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%BC%8F%E6%B4%9E"><span class="toc-text">ZIP解压缩漏洞</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%BB%93%E8%AF%AD"><span class="toc-text">四、结语</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Android-APP-常见漏洞"><a href="#Android-APP-常见漏洞" class="headerlink" title="Android APP 常见漏洞"></a>Android APP 常见漏洞</h1><h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>​		之前在学习 Android 逆向时更多地关注的是如何 Hook &amp; 动、静态分析，忽略了关于 <strong>四大组件</strong> 这方面的常见漏洞，故写下此篇文章。</p>
+<h3 id="二、概述"><a href="#二、概述" class="headerlink" title="二、概述"></a>二、概述</h3><p><strong>Android 漏洞可能存在的点：</strong></p>
+<ol>
+<li>协议——通信协议（本地、网络），协议大部分是由C&#x2F;C++实现，存在以下安全问题：通信数据引发的逻辑漏洞；通信数据引发的 <code>缓冲区溢出</code> 等可能导致远程代码执行&#x2F;拒绝服务的代码漏洞。</li>
+<li>组件安全——Activity，Service 服务，Content Provider 内容提供者，BroadcastReceiver 广播接收器中可能存在的安全问题，其中最主要的就是 intent 组件通信导致的拒绝服务&#x2F;越权漏洞。</li>
+<li>开放端口——可通过命令查看各APP运行时存在的开放端口，然后去逆向分析APP查看其在此开放端口上进行的操作，从而找寻可能的漏洞。</li>
+<li>IPC（进程间通信）安全——同1。</li>
+<li>文件读写安全&#x2F;数据加密安全——Android平台上的隐私泄露也是一个值得关注的攻击面。</li>
+</ol>
+<h3 id="三、Android-APP-常见安全漏洞"><a href="#三、Android-APP-常见安全漏洞" class="headerlink" title="三、Android APP 常见安全漏洞"></a>三、Android APP 常见安全漏洞</h3><p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/12.png" alt="img"></p>
+<h4 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h4><p>​		<strong>四大组件的安全问题很大一部分是由于组件设置成导出状态（android:exported&#x3D;true）引起的。</strong></p>
+<p>​		Android 四大组件中，Activity，Service，BroadcastReceiver 广播接收器之间都可以通过 <code>Intent</code> 行通信，所以他们都存在由 Intent 传输数据引发的本地拒绝服务漏洞。</p>
+<ol>
+<li><strong>背景知识</strong>：Android系统中的Intent机制负责对应用中一次操作的动作、动作涉及数据、附加数据进行描述，系统则根据此Intent的描述，负责找到对应的组件，将Intent传递给调用的组件，并完成组件的调用。</li>
+<li><strong>产生原理</strong>：Android应用本地拒绝服务漏洞源于程序处理<code>Intent.getXXXExtra()</code> 获取的数据时没有进行异常捕获，从而导致攻击者可通过向受害者应用发送此类空数据、异常或者畸形数据来达到使该应用崩溃的目的。</li>
+<li><strong>危害</strong>：<ul>
+<li>导致安全防护等应用的防护功能被绕过或失效（如杀毒应用、安全卫士、防盗锁屏等）。</li>
+<li>被竞争方应用利用并攻击，使得己方应用崩溃，造成不同程度的经济利益损失。</li>
+</ul>
+</li>
+<li><strong>防护</strong>：<ul>
+<li>将不必要的组件设置为不导出，在 <code>AndroidMenifest.xml</code> 文件中，将相应组件的 <code>android:exported</code> 属性设置为 <code>false</code>，防止引起拒绝服务，尤其是杀毒、安全防护、锁屏防盗等安全应用。</li>
+<li>处理通过 <code>Intent.getXXXExtra()</code> 获取的数据时进行以下判断，同时用try-catch方式捕获所有异常，以防止应用出现拒绝服务漏洞：空指针异常、类型转换异常、数组越界访问异常、类未定义异常、其他异常。</li>
+</ul>
+</li>
+<li><strong>攻击代码示例</strong>：包括NullPointerException异常、ClassCastException异常、IndexOutOfBoundsException异常、ClassNotFoundException异常。</li>
+</ol>
+<h4 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h4><p> 组件导出导致钓鱼欺诈</p>
+<p><strong>原理</strong>：</p>
+<p>​		Android 为了提高用户的用户体验，对于不同的应用程序之间的切换，基本上是无缝。他们切换的只是一个 Activity，让切换的到前台显示，另一个应用则被覆盖到后台，不可见。Activity 的概念相当于一个与用户交互的界面。而 Activity 的调度是交由 Android 系统中的 <strong>AMS</strong> 管理的。AMS 即 <strong>ActivityManagerService(Activity管理服务)</strong>，各个应用想启动或停止一个进程，都是先报告给 AMS。当 AMS 收到要启动或停止Activity 的消息时，它先更新内部记录，在通知相应的进程运行或停止指定的 Activity。当新的 Activity 启动，前一个 Activity 就会停止，这些Activity 都保留在系统中年的 Activity 历史栈中。每有一个 Activity 启动，它就压入历史栈顶，并在手机上显示。当用户按下 back 键时，顶部Activity 弹出，恢复前一个 Activity，栈顶指向当前的 Activity。由于Activity 的这种特性，如果在启动一个 Activity 时，给它加入一个标志位<strong>FLAGACTIVITYNEW_TASK</strong>，就能使它置于栈顶并立马呈现给用户。如果这个 Activity 是用于盗号的伪装 Activity，那么就会产生钓鱼安全事件或者是一个 Activity 中有 webview 加载，如果允许加载任意网页也有可能会产生钓鱼事件。</p>
+<p><strong>防护：</strong></p>
+<p>​		如果当前的程序进入后台，则需要提示用户当前进程状态。</p>
+<p><strong>隐式启动 intent 包含敏感数据</strong>：</p>
+<p>Intent 类型：</p>
+<ul>
+<li><strong>显式 Intent</strong>：按名称（完全限定类名）指定要启动的组件。 通常，您会在自己的应用中使用显式 Intent 来启动组件，这是因为您知道要启动的 Activity 或服务的类名。例如，启动新 Activity 以响应用户操作，或者启动服务以在后台下载文件。</li>
+</ul>
+<blockquote>
+<p>创建显式 Intent 启动 Activity 或服务时，系统将立即启动 Intent 对象中指定的应用组件。</p>
+</blockquote>
+<ul>
+<li><strong>隐式 Intent</strong> ：不会指定特定的组件，而是声明要执行的常规操作，从而允许其他应用中的组件来处理它。 例如，如需在地图上向用户显示位置，则可以使用隐式 Intent，请求另一具有此功能的应用在地图上显示指定的位置。</li>
+</ul>
+<blockquote>
+<p>创建隐式 Intent 时，Android 系统通过将 Intent 的内容与在设备上其他应用的清单文件中声明的 Intent 过滤器进行比较，从而找到要启动的相应组件。 如果 Intent 与 Intent 过滤器匹配，则系统将启动该组件，并向其传递 Intent 对象。 如果多个 Intent 过滤器兼容，则系统会显示一个对话框，支持用户选取要使用的应用。</p>
+</blockquote>
+<p>​		对于显式 Intent，Android 不需要去做解析，因为目标组件已经很明确，Android 需要解析的是那些隐式 Intent，通过解析，将 Intent 映射给可以处理此 Intent 的 Activity、IntentReceiver 或 Service。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/5.png" alt="img"></p>
+<h4 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h4><p><strong>概述</strong></p>
+<p>​		Service (服务)是一个一种可以在后台执行长时间运行操作而没有用户界面的应用组件。服务可由其他应用组件启动（如Activity），服务一旦被启动将在后台一直运行，即使启动服务的组件（Activity）已销毁也不受影响。 此外，组件可以绑定到服务，以与之进行交互，甚至是执行进程间通信 (IPC)。 例如，服务可以处理网络事务、播放音乐，执行文件 I&#x2F;O 或与内容提供程序交互，而所有这一切均可在后台进行，Service基本上分为两种形式：</p>
+<pre><code>	1. **启动状态**
+</code></pre>
+<p>​		当应用组件（如 Activity）通过调用 startService() 启动服务时，服务即处于“启动”状态。一旦启动，服务即可在后台无限期运行，即使启动服务的组件已被销毁也不受影响，除非手动调用才能停止服务， 已启动的服务通常是执行单一操作，而且不会将结果返回给调用方。</p>
+<pre><code>2. **绑定状态**
+</code></pre>
+<p>​		当应用组件通过调用 bindService() 绑定到服务时，服务即处于“绑定”状态。绑定服务提供了一个客户端-服务器接口，允许组件与服务进行交互、发送请求、获取结果，甚至是利用进程间通信 (IPC) 跨进程执行这些操作。 仅当与另一个应用组件绑定时，绑定服务才会运行。 多个组件可以同时绑定到该服务，但全部取消绑定后，该服务即会被销毁。</p>
+<p><strong>危害</strong></p>
+<p>​		如果一个导出的 Service没有做严格的限制，任何应用可以去启动并且绑定到这个 Service上，取决于被暴露的功能，这有可能使得一个应用去<strong>执行未授权的行为</strong>，获取敏感信息或者是污染修改内部应用的状态造成威胁。</p>
+<h4 id="Broadcast-receiver"><a href="#Broadcast-receiver" class="headerlink" title="Broadcast receiver"></a>Broadcast receiver</h4><p><strong>概述</strong></p>
+<p>​		BroadcastReceiver是 Android 的四大组件之一，这个组件涉及两个概念：广播发送者和广播接收者。这里的广播实际上指的就是 intent。当发送一个广播时，系统会将发送的广播 (intent)与系统中所有注册的符合条件的接收者的 IntentFilter 进行匹配，若匹配成功，则执行相应接收者的 onReceive 函数。可以通过两种方式注册广播接收器，一种是在Manifest.xml 文件中通过标签静态注册，另一种是通过Context.registerReceiver() 动态注册，指定相应的intentfilter参数。而动态注册的广播是默认导出的。</p>
+<p><strong>危害</strong></p>
+<p>​		发送广播时如果处理不当，恶意应用便可以 <strong>嗅探</strong>、<strong>拦截广播</strong>，致使<strong>敏感数据泄露</strong> 等：</p>
+<ul>
+<li><strong>原理</strong>：发送的intent没有明确指定接收者，而是简单的通过action匹配。恶意应用可注册一个广播接收者嗅探拦截这个广播。</li>
+<li><strong>防护</strong>：使用 <code>LocalBroadcastManager.sendBroadcast()</code>发出的广播只能被 app 自身广播器接收。</li>
+</ul>
+<p>​		如果接收广播时处理不当，便可导致 <strong>拒绝服务攻击</strong>、<strong>伪造消息</strong>、<strong>越权操作</strong> 等。</p>
+<h4 id="Content-Provider"><a href="#Content-Provider" class="headerlink" title="Content Provider"></a>Content Provider</h4><p><strong>概述</strong></p>
+<p>​		Content Provider负责进行 <strong>数据交互&amp;共享</strong>，即跨进程通信。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/944365-3c4339c5f1d4a0fd.png" alt="img"></p>
+<p><strong>危害</strong></p>
+<p><strong>信息泄露漏洞</strong></p>
+<p>​		如果对 Content Provider 的权限没有做好控制，就有可能导致恶意程序通过构造 Content URI 读取 App 的敏感数据。</p>
+<p><strong>SQL注入漏洞</strong></p>
+<p>​		对 Content Provider 进行增删改查操作时，程序没有对用户的输入进行过滤，未采用参数化查询的方式，可能导致 sql 注入攻击。</p>
+<p><strong>目录遍历漏洞</strong></p>
+<p>​			对外暴露的 Content Provider 组件实现了openFile() 接口，并且没有对 Content Provider 组件的访问进行权限控制，也没有对访问的目标文件的 Uri 进行有效判断，第三方应用程序可以利用该接口进行文件目录遍历，访问任意可读文件。</p>
+<h4 id="四大组件的安全防护"><a href="#四大组件的安全防护" class="headerlink" title="四大组件的安全防护"></a>四大组件的安全防护</h4><h5 id="Activity-1"><a href="#Activity-1" class="headerlink" title="Activity"></a>Activity</h5><ol>
+<li><p>谨慎处理接收的 Intent 以及其携带的信息；</p>
+</li>
+<li><p>私有 Activity 不应被其他应用启动且应该确保相对是安全的；</p>
+</li>
+<li><p>当 Activity 返回数据时候需注意目标 Activity 是否有泄露信息的风险，同时谨慎处理 Activity 返回的数据，目的 Activity 返回的数据有可能是恶意应用伪造的；</p>
+</li>
+<li><p>目标 Activity 十分明确时尽量使用显式 Intent；</p>
+</li>
+<li><p>验证目标 Activity 是否属于恶意 App，以免受到 Intent 欺骗，可用hash 签名验证；</p>
+</li>
+<li><p>尽可能的不发送敏感信息，应考虑到启动 public Activity 中 Intent 的信息均有可能被恶意应用窃取的风险；</p>
+</li>
+<li><p>不需要被外部程序调用的组件应该添加 <code>android:exported=&quot;false&quot;</code> 属性，这个属性说明它是私有的，只有同一个应用程序的组件或带有相同用户 ID 的应用程序才能启动或绑定该组件；</p>
+</li>
+<li><p>对于希望 Activity 能够被特定的外部程序访问，可以为其设置访问权限，具体做法有以下两种：</p>
+<p>①组件添加android：permission属性；</p>
+<p><code>android:permission:&quot;android.perrmission.SEND SMS&quot;</code><br>②protectionLevel权限声明；<br><code>android:protectionLevel=&quot;dangerous&quot;</code></p>
+</li>
+</ol>
+<h5 id="Service-1"><a href="#Service-1" class="headerlink" title="Service"></a>Service</h5><ol>
+<li>私有的 service 尽量不定义 intent-filter 并且设置 exported 属性为 false；</li>
+<li>尽量用显式的方式启动 service；</li>
+<li>合作 service 需对合作方的 App 签名做校验；</li>
+<li>Service 接收到的数据需要谨慎处理；</li>
+<li>内部 service 需使用签名级别的 protectionLevel 来判断是否为内部应用调用；</li>
+<li>Service 不应在 onCreate 时决定是否提供服务，应在onStartCommand&#x2F;onBind&#x2F;onHandleIntent等方法被调用时做判断；</li>
+<li>当 service 有返回数据时，应判断接收数据的组件是否有信息泄露的风险；</li>
+<li>尽量不发送敏感信息；</li>
+</ol>
+<h5 id="Content-Provider-1"><a href="#Content-Provider-1" class="headerlink" title="Content Provider"></a>Content Provider</h5><ol>
+<li>如果不需要与其他应用程序进行数据共享，就应该在 manifest 文件中设置 <code>android:exported=&quot;false&quot;</code>；</li>
+<li>注意,在 API Level 低于8时，即使显式地声明了<code>android:exported=&quot;false&quot;</code>，其它应用程序仍然可以访问对应的Content Provider，所以尽量避免使用 Level 低于 8 的 API；</li>
+<li>需要向外部提供数据的 Content Provider 需设置访问权限；</li>
+<li>传递给 ContentProvider 的参数应该被视为不可信的输入，不应该在没有经过任何处理的情况下直接用于 SQL 查询；</li>
+<li>避免使用 SQLiteDatabase 对象的 execSQL() 方法；</li>
+</ol>
+<h5 id="Broadcast-Receiver"><a href="#Broadcast-Receiver" class="headerlink" title="Broadcast Receiver"></a>Broadcast Receiver</h5><ol>
+<li>私有广播接收器设置 <code>android:exported=&quot;false&quot;</code>，尽量不配置 intent-filter ；</li>
+<li>私有广播尽量使用 LocalBroadcastManager <strong>动态注册</strong>和使用；</li>
+<li>暴露的广播接收器需要对数据来源进行权限控制和身份验证；</li>
+<li>广播接收器对于接收的数据要谨慎地使用多种异常来控制数据处理；</li>
+<li>发送广播时如果包含敏感数据则需要显示意图，并通过 setPackage() 指定接收者包名；</li>
+</ol>
+<h4 id="默认设置漏洞"><a href="#默认设置漏洞" class="headerlink" title="默认设置漏洞"></a>默认设置漏洞</h4><h5 id="AndroidManifest-xml配置文件中默认设置相关问题"><a href="#AndroidManifest-xml配置文件中默认设置相关问题" class="headerlink" title="AndroidManifest.xml配置文件中默认设置相关问题"></a>AndroidManifest.xml配置文件中默认设置相关问题</h5><ol>
+<li>allowBackup 默认设置风险（Android 2.1 以上的系统可为 App 提供应用程序数据的备份和恢复功能，AndroidManifest.xml 文件中的 allowBackup 属性值控制，其默认值为 true。当该属性没有显式设置为 false 时，攻击者可通过 adb backup 和 adb restore 对 App 的应用数据进行备份和恢复。）</li>
+<li>Debuggable 默认设置风险；</li>
+<li>组件默认导出风险。</li>
+</ol>
+<h4 id="WebView的默认设置问题"><a href="#WebView的默认设置问题" class="headerlink" title="WebView的默认设置问题"></a>WebView的默认设置问题</h4><p>​		在 Android 开发中，经常会使用 Webview 来实现 WEB 页面的展示，在 Activity 中启动自己的浏览器或者简单的展示一些在线内容等。</p>
+<ul>
+<li>setAllowFileAccess()</li>
+<li>setAllowContentAccess()</li>
+<li>setAllowFileAccessFromFileURLs()</li>
+<li>setAllowUniversalAccessFromFileURLs()</li>
+<li>setSavePassword()</li>
+</ul>
+<ol>
+<li>Webview默认开启密码保存功能 mWebview.setSavePassword(true)，如果该功能未关闭，在用户输入密码时，会弹出提示框，询问用户是否保存密码，如果选择“是”，密码会被明文保存到 <code>/data/data/com.package.name/databases/webview.db</code>，如果手机被 root 之后，获取 root 权限的 APP 就可以任意读取私有目录下的文件去获取用户的密码，因此建议用户密码需要加密存储。</li>
+<li>Android 中默认 mWebView.setAllowFileAccess(true)，在 File 域下，能够执行任意的 JavaScript 代码，同源策略跨域访问能够对私有目录文件进行访问等。APP 对嵌入的 Webview 未对 file:&#x2F;&#x2F; 形式的 URL 做限制，会导致隐私信息泄露，针对 IM 类软件会导致聊天信息、联系人等等重要信息泄露，针对浏览器类软件，则更多的是 cookie 信息泄露。</li>
+</ol>
+<h4 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h4><h5 id="https通信安全漏洞"><a href="#https通信安全漏洞" class="headerlink" title="https通信安全漏洞"></a>https通信安全漏洞</h5><p>​		在 Android 中使用 SSL&#x2F;TLS 协议，通过校验服务器端证书来实现安全通信。（这里指单向 SSL 校验，与之对应的是双向 SSL 校验，双向 SSL 指的是同时校验客户端和服务器端证书。）<br><strong>https证书不校验漏洞</strong>：忽略SSL证书校验、忽略域名校验、证书颁发机构被攻击导致私钥泄露，导致中间人攻击，攻击者可通过中间人攻击，盗取账户密码明文、聊天内容、通讯地址、电话号码以及信用卡支付信息等敏感信息，甚至通过中间人劫持将原有信息替换成恶意链接或恶意代码程序，以达到远程控制、恶意扣费等攻击意图。</p>
+<h5 id="忽略SSL证书校验"><a href="#忽略SSL证书校验" class="headerlink" title="忽略SSL证书校验"></a>忽略SSL证书校验</h5><p><strong>原理</strong></p>
+<ul>
+<li>在自定义实现 X509TrustManager 时，checkServerTrusted 中没有检查证书是否可信，导致通信过程中可能存在中间人攻击，造成敏感数据劫持危害。</li>
+<li>在重写 WebviewClient 的 onReceivedSslError 方法时，调用 proceed 忽略证书验证错误信息继续加载页面，导致通信过程中可能存在中间人攻击，造成敏感数据劫持危害。</li>
+</ul>
+<p><strong>防护</strong></p>
+<ol>
+<li>建议自定义实现 X509TrustManager 时，在 checkServerTrusted 中对服务器信息进行严格校验。针对自定义 TrustManager，检查 checkServerTrusted() 函数是否为空实现。</li>
+<li>建议不要重写 TrustManager 和 HostnameVerifier，使用系统默认的。</li>
+<li>在重写 WebViewClient 的。 onReceivedSslError 方法时，避兔调用 proceed 忽略证书验证错误信息继续加载页面。</li>
+<li>禁止使用 proceed() 函数忽略证书错误，应该抛给系统进行安全警告。</li>
+</ol>
+<h5 id="忽略域名校验"><a href="#忽略域名校验" class="headerlink" title="忽略域名校验"></a>忽略域名校验</h5><p><strong>原理</strong></p>
+<ul>
+<li>在自定义实现 HostnameVerifier 时，没有在 verify 中进行严格证书校验，导致通信过程中可能存在中间人攻击，造成敏感数据劫持危害。</li>
+<li>在 HostnameVerifier 方法中使用 <code>ALLOW_ALL_HOSTNAME_VERIFIER</code>，信任所有 Hostname，导致通信过程中可能存在中间人攻击，造成敏感数据劫持危害。</li>
+</ul>
+<p><strong>防护</strong></p>
+<ul>
+<li>在自定义实现 HostnameVerifier 时，在 verify 中对 Hostname 进行严格校验。</li>
+<li>建议在 HostnameVerifier 方法中使用 <code>STRICT_HOSTNAME_VERIFIER</code> 进行严格证书校验，避免使用 <code>ALLOW_ALL_HOSTNAME_VERIFIER</code>。</li>
+</ul>
+<h4 id="WebView安全漏洞"><a href="#WebView安全漏洞" class="headerlink" title="WebView安全漏洞"></a>WebView安全漏洞</h4><ol>
+<li>远程代码执行漏洞</li>
+<li>UXSS</li>
+<li>Webview设置方面的安全风险</li>
+<li>Webview忽略证书错误漏洞</li>
+<li>Webview File域同源策略绕过漏洞</li>
+</ol>
+<h5 id="WebView设置方面的安全风险"><a href="#WebView设置方面的安全风险" class="headerlink" title="WebView设置方面的安全风险"></a>WebView设置方面的安全风险</h5><ol>
+<li><code>setJavaScriptEnabled()</code>，默认为 false，即不允许执行JS代码。<code>webview.getWebSettings().setavaScriptEnabled(true);</code></li>
+<li><code>setPluginState()</code>，它有三个状态值ON、ON DEMAND、OFF，默认为OFF。</li>
+<li><code>setAllowFileAccess()</code> 默认为true，即允许从 WebView 访问本地文件。</li>
+<li><code>setAllowContentAccess() </code>默认为 true，即允许从 WebView 加载Content URL，读取 content provider 相关内容。</li>
+<li><code>setAllowFileAccessFromFileURLs()</code>，这个函数的作用是在 JS 没有禁用的情况下，设置是否允许 file 协议的 URL 访问其他 file 协议的URL 的文件内容。API15 及以下默认值为true，API16 及以上默认为false。</li>
+<li><code>setAllowUniversalAccessFromFileURLs()</code>，这个函数的作用是在 JS 没有禁用的情况下，设置是否允许 file 协议的 URL 访问其他任意来源的内容。</li>
+<li><code>setSavePassword() </code>默认值为true，这个函数的作用是设置是否允许 WebView 自动保存密码。</li>
+</ol>
+<h5 id="Webview-File域同源策略绕过漏洞"><a href="#Webview-File域同源策略绕过漏洞" class="headerlink" title="Webview File域同源策略绕过漏洞"></a>Webview File域同源策略绕过漏洞</h5><p><strong>原理</strong></p>
+<p>​		浏览器有一个很重要的概念——同源策略(Same-Origin Policy)。所谓同源是指，域名，协议，端口相同。不同源的客户端脚本(JavaScript、 ActionScript)在没明确授权的情况下，不能读写对方的资源。简单的来说，浏览器允许包含在页面 A 的脚本访问第二个页面 B 的数据资源，这一切是建立在 A 和 B 页面是同源的基础上。同源策略是由 Netscape 提出的一个著名的安全策略，现在所有支持 JavaScript 的浏览器都会使用这个策略。<br>​		在 Android 系统中，APP 访问网页一般是使用浏览器或者是使用了  Android 系统内置的 webview 组件。如果 Webview 没有禁止使用 file 域并且 Webview 打开了对 JavaScript 的支持。通过 Webview对 javascript<br> 的延时执行和将当前 Html 文件删除掉并软连接指向其他文件就可以读取到被符号链接所指的文件，然后通过 JavaScript 再次读取 HTML 文件，即可获取到被符号链接所指的文件。</p>
+<h6 id="防护"><a href="#防护" class="headerlink" title="防护"></a>防护</h6><ol>
+<li><p>将不必要导出的组件设置为不导出。</p>
+</li>
+<li><p>如果应用的需要导出包含 Webview 的组件，禁止使用 File 域协议。</p>
+<p><code>myWebView.getSettings.setAllowFileAccess(false);</code></p>
+</li>
+<li><p>如果需要使用 File 协议，禁止 File 协议调用 JavaScript。</p>
+<p><code>myWebView.getSettings.setavaScriptEnabled(false)</code></p>
+</li>
+</ol>
+<h5 id="WebView安全防护"><a href="#WebView安全防护" class="headerlink" title="WebView安全防护"></a>WebView安全防护</h5><ol>
+<li>手机厂商把手机内置的 WebView 与 Google 保持更新一致。</li>
+<li>手机厂商把手机内置的浏览器漏洞修补程度要与 Google 官方保持一致，并且检测个性化自定义的暴露的 API 接口。</li>
+<li>手机浏览器厂商浏览器漏洞修补程度要与 Google 官方保持一致，并且检测个性化自定义的暴露的 API 接口。</li>
+<li>APP 开发人员注意 webview 的各项默认设置。</li>
+<li>用户随时把手机的内置 webview 以及使用的浏览器更新到最新版本。</li>
+</ol>
+<h4 id="白名单绕过漏洞"><a href="#白名单绕过漏洞" class="headerlink" title="白名单绕过漏洞"></a>白名单绕过漏洞</h4><h5 id="签名白名单绕过"><a href="#签名白名单绕过" class="headerlink" title="签名白名单绕过"></a>签名白名单绕过</h5><h6 id="关于Android签名"><a href="#关于Android签名" class="headerlink" title="关于Android签名"></a>关于Android签名</h6><p>Android签名apk之后，会有一个META-INF文件夹，这里有三个文件:</p>
+<ol>
+<li><p>MANIFEST.MF</p>
+<p>存储的是每一个文件对应的 SHA1 (或者 SHA256 )消息摘要算法提取出该文件的摘要然后进行 BASE64 编码。</p>
+</li>
+<li><p>CERT.SF</p>
+<p>计算这个 MANIFEST.MF 文件的整体 SHA1 值，再经过BASE64编码后，记录在CERT.SF主属性块(在文件头上)的 <code>SHA1-Digest-Manifest</code> 属性值值下。<br>逐条计算MANIFEST.MF文件中每一个块的SHA1，并经过BASE64编码后，记录在CERT.SF中的同名 块中，属性的名字是<code>SHA1-Digest</code>。</p>
+</li>
+<li><p>CERT.RSA</p>
+<p>会把之前生成的 CERT.SF 文件，用私钥计算出签名，然后将签名以及包含公钥信息的数字证书一同写入 CERT.RSA 中保存。CERT.RSA 是一个满足 PKCS7 格式的文件。</p>
+</li>
+</ol>
+<p>​		除了 RSA 格式的文件还有 CERT.DSA&#x2F;EC两种格式，Android 支持DSA、RSA、EC 三种加密算法进行签名，都是用来保存用私钥计算出 CERT.SF 文件的数字签名、证书发布机构、有效期、公钥、所有者、签名算法等信息。<br>​		正常情况下，一个 APK 中只会生成一个 CERT.RSA&#x2F;DSA&#x2F;EC 签名文件。但若在 APK 压缩包中加入其他的签名文件，即可同时存在两个或两个以上的签名文件。</p>
+<h6 id="URL白名单绕过漏洞"><a href="#URL白名单绕过漏洞" class="headerlink" title="URL白名单绕过漏洞"></a>URL白名单绕过漏洞</h6><p>​		手机应用在特定环境下需要打开外部传入的URL，或者使用外部传入的 URL 去下载。为了对打开或下载的 URL 做控制，就需要对域名进行校验。<br>​		对 URL 的域名进行校验，一般习惯使用系统 API，<code>getHost</code> 来获取域名进行字符串比较，但是由于 <code>getHost</code> 这个系统API的设计缺陷，使其可以被绕过。</p>
+<p>​		<code>[http://192.168.0.1\.163.com/2.html]</code>  这个 URL 使用<strong>getHost</strong> 得到的域名是 <code>192.168.0.1\.163.com</code>，这样在判断时很容易判断为正常域名可以进行访问，但是在实际打开这个 URL 时，Android的 webview 会将 URL 解析为 <code>[http://192.168.0.1/.163.com/2.html] </code>来访问，这样 <strong>.163.com</strong> 就变为了 <strong>192.168.0.1</strong> 这个IP地址下的一个path。这样 webview 就可能被打开一些不受控制的网页。但是在使用HttpClient 等API进行访问时会解析为<code>[http://192.168.0.1.163.com/2.html]</code>  所以此时并不能正常访问。		但是由于开发习惯，一般这个对域名进行校验的方法会作为一个公共方法使用，所以建议使用其他方法来判断。<br>对于使用 getHost 方式获取 url 进行白名单判断的方式，还有另外一种绕过方式就是 url 跳转，类似如下的URL跳转都是基于主站的跳转，即便是对于上面提到的这种白名单绕过方式进行了有效限制，但是还是可以进行绕过，由于很多公司对 url 跳转漏洞都不是很重视，所以结合 url 跳转漏洞进行的攻击在有的时候也可以达到令人惊奇的程度，危害还是非常严重的，比如说静默下载安装<code>[http://mbs.hao.163.cn/?c=redirect&amp;ur=http://tu.623.cn/7vNo]</code></p>
+<h4 id="Socket远程连接漏洞"><a href="#Socket远程连接漏洞" class="headerlink" title="Socket远程连接漏洞"></a>Socket远程连接漏洞</h4><p>​		如果手机开放端口，但是缺少对发送者的身份验证或者是存在权限控制缺陷，导致黑客拿下这个端口的权限，便可以获得手机此端口开放的所有功能。此漏洞只与 App 有关，不受系统版本影响。</p>
+<h4 id="APK升级漏洞"><a href="#APK升级漏洞" class="headerlink" title="APK升级漏洞"></a>APK升级漏洞</h4><table>
+<thead>
+<tr>
+<th align="center">APP 升级流程</th>
+<th align="center">隐患</th>
+<th align="center">漏洞危害</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">升级API</td>
+<td align="center">升级API未加密</td>
+<td align="center">返回恶意下载地址，可下载恶意APK</td>
+</tr>
+<tr>
+<td align="center">下载API</td>
+<td align="center">下载API未加密</td>
+<td align="center">下载路径被篡改，可下载恶意APK</td>
+</tr>
+<tr>
+<td align="center">程序安装API</td>
+<td align="center">APK本地路径篡改</td>
+<td align="center">安装错误的APK</td>
+</tr>
+</tbody></table>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><h5 id="加密算法是否存在安全缺陷"><a href="#加密算法是否存在安全缺陷" class="headerlink" title="加密算法是否存在安全缺陷"></a>加密算法是否存在安全缺陷</h5><p>​		客户端与服务器通信或数据存储往往采用一些加密算法来保障数据的安全，但是这些算法本身可能存在缺陷。</p>
+<h5 id="不安全的哈希-加密算法"><a href="#不安全的哈希-加密算法" class="headerlink" title="不安全的哈希&#x2F;加密算法"></a>不安全的哈希&#x2F;加密算法</h5><ol>
+<li>MD5 哈希算法易遭到已知的哈希冲突攻击。 哈希算法用于确保数据完整性（例如，文件签名或数字证书）时尤其易被攻击。 在这种情况下，攻击者可能会生成两个独立的数据块，以便在不更改哈希值或使相关数字签名无效的情况下，将良性数据替换为恶意数据。</li>
+<li>DES 加密使用的密钥强度较低，可能在一天内被暴力破解。</li>
+<li>RC2 加密容易遭受与密钥相关的攻击，攻击者可以通过这些攻击找出所有密钥值之间的数学关系。</li>
+</ol>
+<h5 id="弱加密算法"><a href="#弱加密算法" class="headerlink" title="弱加密算法"></a>弱加密算法</h5><ol>
+<li>TripleDES 等加密算法和 SHA1 及 RIPEMD160 等哈希算法被视为弱加密算法。</li>
+<li>这些加密算法不能与更现代的对应算法提供同样多的安全保证。</li>
+<li>与更现代的哈希算法相比，加密哈希算法 SHA1 和 RIPEMD160 提供的冲突抗性较低。与更现代的加密算法相比，加密算法 TripleDES 提供的安全位数更少。</li>
+</ol>
+<h5 id="重放攻击风险"><a href="#重放攻击风险" class="headerlink" title="重放攻击风险"></a>重放攻击风险</h5><p><strong>原理</strong></p>
+<p>​		重放攻击，是指攻击者发送一个目的主机已接收过的包，来达到欺骗系统的目的，主要用于身份认证过程，破坏认证的正确性。攻击者利用网络监听或者其他方式盗取认证凭据，之后再把它重新发给认证服务器。</p>
+<p><strong>防护</strong></p>
+<p>​		建议在客户端与服务端通信时加上时间戳或判断是否已登录过等条件，防止重放攻击。</p>
+<h5 id="业务接口是否存在任意权限调用"><a href="#业务接口是否存在任意权限调用" class="headerlink" title="业务接口是否存在任意权限调用"></a>业务接口是否存在任意权限调用</h5><p><strong>原理</strong></p>
+<p>​		在正常的业务中，敏感功能的接口需要对访问者的身份进行验证，验证通过后才允许调用接口进行操作。接口未做身份验证或身份校验不严，可能导致非授权访问或越权调用。</p>
+<p><strong>防护</strong></p>
+<ul>
+<li>建议每个用户登陆后使用随机id进行标识，随时更换新id或在通信过程中使用更多参数如时间戳、数字签名等防止用户越权获取到其他用户的订单等信息。采用加密通信如https安全传输也能在一定程度上解决该问题。</li>
+<li>建议在本地做好输入数据的校验，在通信过程中应采用多个参数对某次通信进行标识和记录。保证参数的随机性和机密性，防止攻击者构造出针对系统健壮性进行攻击的请求数据。</li>
+</ul>
+<h4 id="敏感数据泄露"><a href="#敏感数据泄露" class="headerlink" title="敏感数据泄露"></a>敏感数据泄露</h4><ul>
+<li>LogCat 输出敏感信息</li>
+<li>敏感数据明文存储于 sdcard</li>
+<li>数据库敏感数据明文存储</li>
+<li>Shared preference 全局可读写</li>
+<li>敏感信息硬编码</li>
+<li>HTTP 敏感信息明文传输</li>
+</ul>
+<h4 id="ZIP解压缩漏洞"><a href="#ZIP解压缩漏洞" class="headerlink" title="ZIP解压缩漏洞"></a>ZIP解压缩漏洞</h4><p>​		ZIP压缩包文件中允许存在 <code>../</code> 的字符串，攻击者可通过精心构造ZIP文件，利用多个 <code>../</code> 从而改变 ZIP 包中某个文件的存放位置，覆盖替换掉应用原有的文件。如果被覆盖掉的文件是 so 文件、dex 文件或者 odex 文件，轻则产生本地拒绝服务漏洞，影响应用的可用性，重则可能造成任意代码执行漏洞，危害应用用户的设备安全和信息安全。比如“寄生兽”漏洞，海豚浏览器远程命令执行漏洞，三星默认输入法远程代码执行等。</p>
+<h3 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h3><p>​		这块内容很多很杂，本人也只是做了一些浅显的学习总结，更多更深的内容还是得需要在真是开发生产中遇到并学习。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HitCTF2025-Reverse·VM | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" CTF , RE , WritesUp , vm ">
+  <meta name="description" content="HitCTF2025-Reverse·VM | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-HitCTF2025-Reverse·VM" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">HitCTF2025-Reverse·VM</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="CTF">CTF</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">CTF</a>
+            
+            <a class="color3">RE</a>
+            
+            <a class="color4">WritesUp</a>
+            
+            <a class="color3">vm</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2026-01-04 16:18:39'>2026-01-04 16:19</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:5.6k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HitCTF2025-Reverse%C2%B7VM"><span class="toc-text">HitCTF2025-Reverse·VM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-text">一、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%80%E5%A7%8B"><span class="toc-text">二、开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#easyVM"><span class="toc-text">easyVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ComplexVM"><span class="toc-text">ComplexVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BB%93%E8%AF%AD"><span class="toc-text">三、结语</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HitCTF2025-Reverse·VM"><a href="#HitCTF2025-Reverse·VM" class="headerlink" title="HitCTF2025-Reverse·VM"></a>HitCTF2025-Reverse·VM</h1><h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>​	说来也是搞笑，从接触 REVERSE 以来，并没有好好去学习或者复现过 vm 逆向，每次打比赛遇到了都选择直接 rm…</p>
+<p>​	昨天刚好看到 HitCTF2025 有两道 vm 逆向，遂学习记录一下。</p>
+<h3 id="二、开始"><a href="#二、开始" class="headerlink" title="二、开始"></a>二、开始</h3><h3 id="easyVM"><a href="#easyVM" class="headerlink" title="easyVM"></a>easyVM</h3><p>​	附件中是一个 .exe 文件，ida 打开之后，main 函数第一行就是输出，然后可以看到 <strong>sub_7FF779ED1270</strong> 函数被调用两次，且分别传入不同的上下文结构体，那么基本可以确定 sub_7FF779ED1270 函数就是核心函数，即 VM Engine，跟进 sub_7FF779ED1270 函数进行分析。</p>
+<p>​	其中就是一个 switch-case 结构，根据分析可得到如下：</p>
+<ul>
+<li><p>首先看到<code>*(a1 + 1060)</code> 被频繁读&#x2F;写，而且每次取 opcode 后都 <code>+1</code>，那么就可以确定这是 指令指针（IP）；</p>
+</li>
+<li><p>然后是<code>*(a1 + 1072)</code>，参与<code>*(ip + base)</code>，可确定是字节码基址；</p>
+</li>
+<li><p><code>*(a1 + 1080)</code>：拿来跟 IP 比较，说明其是 code_end&#x2F;code_len；</p>
+</li>
+<li><p><code>*(a1 + 4*i)</code>：i 的范围检查是 <code>&lt;8</code>，可确定有八个寄存器，且每个为四字节；</p>
+</li>
+<li><p>在 case16 中可以看到 a1 + 1084 被 fgets 写入，可确定其是 输入缓冲；</p>
+</li>
+<li><p>在 case17 中可以看到 a1 + 1134 被 printf 输出，可确定其是 输出缓冲；</p>
+</li>
+<li><p>在 case14 中看到 根据<code>*(a1 + 1064)</code>的值进行判断然后跳转，逻辑即 jnz；</p>
+</li>
+<li><p><strong>sub_7FF779ED11E0</strong> 函数就是在更新标志位</p>
+</li>
+</ul>
+<pre><code class="language-c">char __fastcall sub_7FF779ED11E0(__int64 a1, int a2, int a3, int a4)
+&#123;
+  char v4; // al
+  char v6; // al
+  char v7; // cl
+  char v8; // al
+  bool v9; // sf
+  char result; // al
+
+  v4 = *(a1 + 1064);
+  if ( a2 )                                     // ZF
+    v6 = v4 &amp; 0xFE;
+  else
+    v6 = v4 | 1;
+  *(a1 + 1064) = v6;
+  if ( a2 &gt;= 0 )                                // SF
+    v7 = v6 &amp; 0xFD;
+  else
+    v7 = v6 | 2;
+  *(a1 + 1064) = v7;
+  if ( a2 &gt;= a3 || a4 &lt;= 0 )                    // CF
+    v8 = v7 &amp; 0xFB;
+  else
+    v8 = v7 | 4;
+  *(a1 + 1064) = v8;
+  v9 = a3 &lt; 0;
+  if ( a3 &gt; 0 )                                 // OF
+  &#123;
+    if ( a4 &gt; 0 &amp;&amp; a2 &lt; 0 )
+      goto LABEL_18;
+    v9 = a3 &lt; 0;
+  &#125;
+  if ( v9 &amp;&amp; a4 &lt; 0 &amp;&amp; a2 &gt; 0 )
+  &#123;
+LABEL_18:
+    result = v8 | 8;
+    *(a1 + 1064) = result;
+    return result;
+  &#125;
+  result = v8 &amp; 0xF7;
+  *(a1 + 1064) = result;
+  return result;
+&#125;
+</code></pre>
+<p>​	然后根据上面的分析结构，对 a1 进行重定义，定义为 结构体。在 IDA 上方的菜单栏，依次点击 View -&gt; Open Subviews -&gt; Local types，然后右键点击 insert，贴入如下结构体的申明</p>
+<pre><code class="language-c">struct VMState
+&#123;
+  int regs[8];
+  char _pad0[1028];
+  int ip;
+  int flags;
+  char _pad1[4];
+  unsigned __int8 *code;
+  int code_end;
+  char inbuf[50];
+  char outbuf[128];
+&#125;;
+</code></pre>
+<p>​	接着结合分析，可清楚各操作数所对应的操作</p>
+<pre><code class="language-c">__int64 __fastcall sub_7FF779ED1270(struct VMState *vm)
+&#123;
+  __int64 ip; // rdx
+  unsigned __int8 *code; // r8
+  int opcode; // ecx
+  int v5; // edx
+  int v6; // ecx
+  unsigned __int8 n0x80; // r9
+  char v8; // dl
+  int v9; // ecx
+  unsigned __int8 n8; // r9
+  unsigned __int8 n0x32; // dl
+  int v12; // ecx
+  unsigned __int8 n8_1; // r9
+  unsigned __int8 n8_2; // dl
+  int v15; // ecx
+  __int64 n8_3; // r9
+  int v17; // edx
+  int v18; // ecx
+  unsigned __int8 n8_4; // r9
+  unsigned __int8 n8_5; // dl
+  int v21; // r8d
+  int *v22; // rcx
+  int v23; // r9d
+  __int64 n8_6; // r10
+  int v25; // r9d
+  int v26; // r8d
+  int v27; // ecx
+  unsigned __int8 n8_7; // r9
+  unsigned __int8 n8_8; // dl
+  int v30; // r8d
+  int *v31; // rcx
+  int v32; // r9d
+  __int64 n8_9; // r10
+  int v34; // r9d
+  int v35; // r8d
+  unsigned __int8 n8_10; // r10
+  unsigned __int8 n8_11; // r9
+  int *v38; // rdx
+  int v39; // ecx
+  __int64 n8_12; // r9
+  int v41; // edx
+  int v42; // ecx
+  unsigned __int8 n8_13; // r9
+  unsigned __int8 n8_14; // dl
+  __int64 n8_15; // r9
+  int v46; // r10d
+  bool v47; // zf
+  int v48; // ecx
+  FILE *v49; // rax
+  __int64 v50; // rax
+
+  if ( vm-&gt;ip &lt; vm-&gt;code_end )
+  &#123;
+    while ( 2 )
+    &#123;
+      ip = vm-&gt;ip;
+      code = vm-&gt;code;
+      opcode = code[ip];
+      v5 = ip + 1;
+      vm-&gt;ip = v5;
+      switch ( opcode )
+      &#123;
+        case 0:
+          return 0i64;
+        case 1:                                 // MOVImm2outBuf
+          v6 = v5 + 1;
+          n0x80 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          v8 = code[v5 + 1];
+          vm-&gt;ip = v6 + 1;
+          if ( n0x80 &gt;= 0x80u )
+            return 0xFFFFFFFFi64;
+          vm-&gt;outbuf[n0x80] = v8;
+          goto LABEL_42;
+        case 2:                                 // MOVinBuf2Reg
+          v9 = v5 + 1;
+          n8 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          n0x32 = code[v5 + 1];
+          vm-&gt;ip = v9 + 1;
+          if ( n0x32 &gt;= 0x32u || n8 &gt;= 8u )
+            return 0xFFFFFFFFi64;
+          vm-&gt;regs[n8] = vm-&gt;inbuf[n0x32];
+          goto LABEL_42;
+        case 3:                                 // MOVReg2Reg
+          v12 = v5 + 1;
+          n8_1 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          n8_2 = code[v5 + 1];
+          vm-&gt;ip = v12 + 1;
+          if ( n8_1 &gt;= 8u || n8_2 &gt;= 8u )
+            return 0xFFFFFFFFi64;
+          vm-&gt;regs[n8_1] = vm-&gt;regs[n8_2];
+          goto LABEL_42;
+        case 4:                                 // MOVImm2Reg
+          v15 = v5 + 1;
+          n8_3 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          v17 = code[v5 + 1];
+          vm-&gt;ip = v15 + 1;
+          if ( n8_3 &gt;= 8 )
+            return 0xFFFFFFFFi64;
+          vm-&gt;regs[n8_3] = v17;
+          goto LABEL_42;
+        case 5:                                 // ADDReg&amp;Reg
+          v18 = v5 + 1;
+          n8_4 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          n8_5 = code[v5 + 1];
+          vm-&gt;ip = v18 + 1;
+          if ( n8_4 &gt;= 8u || n8_5 &gt;= 8u )
+            return 0xFFFFFFFFi64;
+          v21 = vm-&gt;regs[n8_4];
+          v22 = &amp;vm-&gt;regs[n8_4];
+          v23 = vm-&gt;regs[n8_5];
+          *v22 = v23 + v21;
+          sub_7FF779ED11E0(vm, v23 + v21, v21, v23);
+          goto LABEL_42;
+        case 6:                                 // ADDReg&amp;Imm
+          n8_6 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          v25 = code[v5 + 1];
+          vm-&gt;ip = v5 + 2;
+          if ( n8_6 &gt;= 8 )
+            return 0xFFFFFFFFi64;
+          v26 = vm-&gt;regs[n8_6];
+          vm-&gt;regs[n8_6] = v26 + v25;
+          sub_7FF779ED11E0(vm, v26 + v25, v26, v25);
+          goto LABEL_42;
+        case 7:                                 // SUBReg&amp;Reg
+          v27 = v5 + 1;
+          n8_7 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          n8_8 = code[v5 + 1];
+          vm-&gt;ip = v27 + 1;
+          if ( n8_7 &gt;= 8u || n8_8 &gt;= 8u )
+            return 0xFFFFFFFFi64;
+          v30 = vm-&gt;regs[n8_7];
+          v31 = &amp;vm-&gt;regs[n8_7];
+          v32 = vm-&gt;regs[n8_8];
+          *v31 = v30 - v32;
+          sub_7FF779ED11E0(vm, v30 - v32, v30, -v32);
+          goto LABEL_42;
+        case 8:                                 // SUBReg&amp;Imm
+          n8_9 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          v34 = code[v5 + 1];
+          vm-&gt;ip = v5 + 2;
+          if ( n8_9 &gt;= 8 )
+            return 0xFFFFFFFFi64;
+          v35 = vm-&gt;regs[n8_9];
+          vm-&gt;regs[n8_9] = v35 - v34;
+          sub_7FF779ED11E0(vm, v35 - v34, v35, -v34);
+          goto LABEL_42;
+        case 9:                                 // XORReg&amp;Reg
+          n8_10 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          n8_11 = code[v5 + 1];
+          vm-&gt;ip = v5 + 2;
+          if ( n8_10 &gt;= 8u || n8_11 &gt;= 8u )
+            return 0xFFFFFFFFi64;
+          v38 = &amp;vm-&gt;regs[n8_10];
+          *v38 ^= vm-&gt;regs[n8_11];
+          sub_7FF779ED11E0(vm, *v38, 0, 0);
+          goto LABEL_42;
+        case 10:                                // XORReg&amp;Imm
+          v39 = v5 + 1;
+          n8_12 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          v41 = code[v5 + 1];
+          vm-&gt;ip = v39 + 1;
+          if ( n8_12 &gt;= 8 )
+            return 0xFFFFFFFFi64;
+          vm-&gt;regs[n8_12] ^= v41;
+          sub_7FF779ED11E0(vm, vm-&gt;regs[n8_12], 0, 0);
+          goto LABEL_42;
+        case 11:                                // CMPReg&amp;Reg
+          v42 = v5 + 1;
+          n8_13 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          n8_14 = code[v5 + 1];
+          vm-&gt;ip = v42 + 1;
+          if ( n8_13 &gt;= 8u || n8_14 &gt;= 8u )
+            return 0xFFFFFFFFi64;
+          sub_7FF779ED11E0(vm, vm-&gt;regs[n8_13] - vm-&gt;regs[n8_14], vm-&gt;regs[n8_13], -vm-&gt;regs[n8_14]);
+          goto LABEL_42;
+        case 12:                                // CMPReg&amp;Imm
+          n8_15 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          v46 = code[v5 + 1];
+          vm-&gt;ip = v5 + 2;
+          if ( n8_15 &gt;= 8 )
+            return 0xFFFFFFFFi64;
+          sub_7FF779ED11E0(vm, vm-&gt;regs[n8_15] - v46, vm-&gt;regs[n8_15], -v46);
+LABEL_42:
+          if ( vm-&gt;ip &gt;= vm-&gt;code_end )
+            return 0i64;
+          continue;
+        case 13:                                // JMP
+          vm-&gt;ip = code[v5];
+          goto LABEL_42;
+        case 14:                                // JNZ
+          v47 = (vm-&gt;flags &amp; 1) == 0;
+          v48 = code[v5];
+          vm-&gt;ip = v5 + 1;
+          if ( v47 )
+            vm-&gt;ip = v48;
+          goto LABEL_42;
+        case 16:                                // READ
+          v49 = _acrt_iob_func(0);
+          common_fgets&lt;char&gt;(vm-&gt;inbuf, 50i64, v49);
+          v50 = -1i64;
+          do
+            ++v50;
+          while ( vm-&gt;inbuf[v50] );
+          if ( v50 &amp;&amp; *(&amp;vm-&gt;code_end + v50 + 3) == 10 )
+            *(&amp;vm-&gt;code_end + v50 + 3) = 0;
+          goto LABEL_42;
+        case 17:                                // PRINT
+          printf(&quot;%s&quot;, vm-&gt;outbuf);
+          goto LABEL_42;
+        default:
+          return 0xFFFFFFFFi64;
+      &#125;
+    &#125;
+  &#125;
+  return 0i64;
+&#125;
+</code></pre>
+<p>​	然后编写脚本把汇编进行输出</p>
+<pre><code class="language-python">OPLEN = &#123;
+    0x00: 1, 0x01: 3, 0x02: 3, 0x03: 3, 0x04: 3,
+    0x05: 3, 0x06: 3, 0x07: 3, 0x08: 3, 0x09: 3,
+    0x0A: 3, 0x0B: 3, 0x0C: 3, 0x0D: 2, 0x0E: 2,
+    0x10: 1, 0x11: 1,
+&#125;
+
+def parse_hex(s: str) -&gt; bytes:
+    s = s.replace(&quot;\n&quot;, &quot; &quot;).replace(&quot;\t&quot;, &quot; &quot;).strip()
+    return bytes(int(x, 16) for x in s.split() if x)
+
+def disasm(code: bytes) -&gt; None:
+    ip = 0
+    while ip &lt; len(code):
+        op = code[ip]
+        ln = OPLEN.get(op, 1)
+        ins = code[ip:ip+ln]
+
+        if op not in OPLEN:
+            print(f&quot;&#123;ip:04x&#125;: db &#123;op:02x&#125;&quot;)
+            ip += 1
+            continue
+
+        def b(i): return ins[i]
+
+        if op == 0x00: print(f&quot;&#123;ip:04x&#125;: HALT&quot;)
+        elif op == 0x01: print(f&quot;&#123;ip:04x&#125;: PUTC out[&#123;b(1)&#125;] = &#123;b(2):02x&#125; (&#39;&#123;chr(b(2))&#125;&#39;)&quot;)
+        elif op == 0x02: print(f&quot;&#123;ip:04x&#125;: LOAD R&#123;b(1)&#125;, in[&#123;b(2)&#125;]&quot;)
+        elif op == 0x03: print(f&quot;&#123;ip:04x&#125;: MOV  R&#123;b(1)&#125;, R&#123;b(2)&#125;&quot;)
+        elif op == 0x04: print(f&quot;&#123;ip:04x&#125;: MOVI R&#123;b(1)&#125;, &#123;b(2)&#125;&quot;)
+        elif op == 0x05: print(f&quot;&#123;ip:04x&#125;: ADD  R&#123;b(1)&#125;, R&#123;b(2)&#125;&quot;)
+        elif op == 0x06: print(f&quot;&#123;ip:04x&#125;: ADDI R&#123;b(1)&#125;, &#123;b(2)&#125;&quot;)
+        elif op == 0x07: print(f&quot;&#123;ip:04x&#125;: SUB  R&#123;b(1)&#125;, R&#123;b(2)&#125;&quot;)
+        elif op == 0x08: print(f&quot;&#123;ip:04x&#125;: SUBI R&#123;b(1)&#125;, &#123;b(2)&#125;&quot;)
+        elif op == 0x09: print(f&quot;&#123;ip:04x&#125;: XOR  R&#123;b(1)&#125;, R&#123;b(2)&#125;&quot;)
+        elif op == 0x0A: print(f&quot;&#123;ip:04x&#125;: XORI R&#123;b(1)&#125;, &#123;b(2)&#125;&quot;)
+        elif op == 0x0B: print(f&quot;&#123;ip:04x&#125;: CMP  R&#123;b(1)&#125;, R&#123;b(2)&#125;&quot;)
+        elif op == 0x0C: print(f&quot;&#123;ip:04x&#125;: CMPI R&#123;b(1)&#125;, &#123;b(2)&#125;&quot;)
+        elif op == 0x0D: print(f&quot;&#123;ip:04x&#125;: JMP  &#123;b(1):02x&#125;&quot;)
+        elif op == 0x0E: print(f&quot;&#123;ip:04x&#125;: JNZ  &#123;b(1):02x&#125;&quot;)
+        elif op == 0x10: print(f&quot;&#123;ip:04x&#125;: READ&quot;)
+        elif op == 0x11: print(f&quot;&#123;ip:04x&#125;: PRINT&quot;)
+        ip += ln
+
+if __name__ == &quot;__main__&quot;:
+    HEX = &quot;&quot;&quot;
+    0D 3C 01 06 0A 01 02 6F 01 00 
+    57 01 05 21 01 03 6E 01 01 72 
+    01 04 67 01 07 00 11 00 01 04 
+    65 01 05 63 01 09 00 01 01 6F 
+    01 03 72 01 07 21 01 02 72 01 
+    08 0A 01 00 43 01 06 74 11 00 
+    10 02 00 00 0C 00 66 0E 02 02 
+    00 01 03 01 00 06 01 01 0C 01 
+    6D 0E 02 02 01 02 02 02 03 02 
+    03 04 03 00 01 09 00 02 0C 00 
+    06 0E 02 03 00 02 09 00 03 0C 
+    00 1C 0E 02 03 00 01 09 00 03 
+    0C 00 1A 0E 02 02 01 05 02 02 
+    06 02 03 07 0C 02 69 0E 02 03 
+    00 01 09 00 02 0C 00 21 0E 02 
+    03 00 03 09 00 02 0C 00 3D 0E 
+    02 02 04 08 02 05 09 02 06 0A 
+    0B 05 03 0E 02 03 00 04 09 00 
+    05 0C 00 17 0E 02 03 00 06 09 
+    00 05 0C 00 12 0E 02 02 01 0B 
+    02 02 0C 02 03 0D 02 04 0E 02 
+    05 0F 02 06 10 02 07 11 0B 02 
+    04 0E 02 03 00 01 05 00 00 0C 
+    00 BE 0E 02 09 00 00 0B 00 07 
+    0E 02 05 00 02 0C 00 32 0E 02 
+    08 00 02 0C 00 30 0E 02 06 00 
+    05 0B 00 05 0E 02 02 00 04 07 
+    06 00 0C 06 02 0E 02 0D 1C 00
+    &quot;&quot;&quot;
+    code = parse_hex(HEX)
+    disasm(code)
+</code></pre>
+<p>​	得到输出</p>
+<pre><code class="language-shell">0000: JMP  3c
+0002: PUTC out[6] = 0a (&#39;
+&#39;)
+0005: PUTC out[2] = 6f (&#39;o&#39;)
+0008: PUTC out[0] = 57 (&#39;W&#39;)
+000b: PUTC out[5] = 21 (&#39;!&#39;)
+000e: PUTC out[3] = 6e (&#39;n&#39;)
+0011: PUTC out[1] = 72 (&#39;r&#39;)
+0014: PUTC out[4] = 67 (&#39;g&#39;)
+0017: PUTC out[7] = 00 (&#39; &#39;)
+001a: PRINT
+001b: HALT
+001c: PUTC out[4] = 65 (&#39;e&#39;)
+001f: PUTC out[5] = 63 (&#39;c&#39;)
+0022: PUTC out[9] = 00 (&#39; &#39;)
+0025: PUTC out[1] = 6f (&#39;o&#39;)
+0028: PUTC out[3] = 72 (&#39;r&#39;)
+002b: PUTC out[7] = 21 (&#39;!&#39;)
+002e: PUTC out[2] = 72 (&#39;r&#39;)
+0031: PUTC out[8] = 0a (&#39;
+&#39;)
+0034: PUTC out[0] = 43 (&#39;C&#39;)
+0037: PUTC out[6] = 74 (&#39;t&#39;)
+003a: PRINT
+003b: HALT
+003c: READ
+003d: LOAD R0, in[0]
+0040: CMPI R0, 102
+0043: JNZ  02
+0045: LOAD R0, in[1]
+0048: MOV  R1, R0
+004b: ADDI R1, 1
+004e: CMPI R1, 109
+0051: JNZ  02
+0053: LOAD R1, in[2]
+0056: LOAD R2, in[3]
+0059: LOAD R3, in[4]
+005c: MOV  R0, R1
+005f: XOR  R0, R2
+0062: CMPI R0, 6
+0065: JNZ  02
+0067: MOV  R0, R2
+006a: XOR  R0, R3
+006d: CMPI R0, 28
+0070: JNZ  02
+0072: MOV  R0, R1
+0075: XOR  R0, R3
+0078: CMPI R0, 26
+007b: JNZ  02
+007d: LOAD R1, in[5]
+0080: LOAD R2, in[6]
+0083: LOAD R3, in[7]
+0086: CMPI R2, 105
+0089: JNZ  02
+008b: MOV  R0, R1
+008e: XOR  R0, R2
+0091: CMPI R0, 33
+0094: JNZ  02
+0096: MOV  R0, R3
+0099: XOR  R0, R2
+009c: CMPI R0, 61
+009f: JNZ  02
+00a1: LOAD R4, in[8]
+00a4: LOAD R5, in[9]
+00a7: LOAD R6, in[10]
+00aa: CMP  R5, R3
+00ad: JNZ  02
+00af: MOV  R0, R4
+00b2: XOR  R0, R5
+00b5: CMPI R0, 23
+00b8: JNZ  02
+00ba: MOV  R0, R6
+00bd: XOR  R0, R5
+00c0: CMPI R0, 18
+00c3: JNZ  02
+00c5: LOAD R1, in[11]
+00c8: LOAD R2, in[12]
+00cb: LOAD R3, in[13]
+00ce: LOAD R4, in[14]
+00d1: LOAD R5, in[15]
+00d4: LOAD R6, in[16]
+00d7: LOAD R7, in[17]
+00da: CMP  R2, R4
+00dd: JNZ  02
+00df: MOV  R0, R1
+00e2: ADD  R0, R0
+00e5: CMPI R0, 190
+00e8: JNZ  02
+00ea: XOR  R0, R0
+00ed: CMP  R0, R7
+00f0: JNZ  02
+00f2: ADD  R0, R2
+00f5: CMPI R0, 50
+00f8: JNZ  02
+00fa: SUBI R0, 2
+00fd: CMPI R0, 48
+0100: JNZ  02
+0102: ADDI R0, 5
+0105: CMP  R0, R5
+0108: JNZ  02
+010a: LOAD R0, in[4]
+010d: SUB  R6, R0
+0110: CMPI R6, 2
+0113: JNZ  02
+0115: JMP  1c
+0117: HALT
+</code></pre>
+<p>​	就是一些简单的约束，这里就不赘述怎么求解了，最终 flag 就是 flag{HiTCTF_2025}</p>
+<hr>
+<h3 id="ComplexVM"><a href="#ComplexVM" class="headerlink" title="ComplexVM"></a>ComplexVM</h3><p>​	这道 vm 比上一道要复杂一些。main 函数的开头部分申明了一个很大的 buffer（v33），明显被当成 VM COntext &#x2F; 寄存器块 + 字节码区 使用。接着初始化一些变量。然后 <strong>sub_140001210</strong> 函数就是解释器。</p>
+<p>​	while 循环 1024 个 opcode，其中 <strong>sub_140004090</strong> 函数一直跟下去是反调试的逻辑。第一个 while 循环就是输出 <code>Input your flag:</code> 的。</p>
+<p>​	第二段就很重要了。构造了另一个 VM 上下文 <code>v36 + v40</code>。跟进 <strong>sub_1400048C0</strong> 函数可以看到有一个 fake flag。</p>
+<pre><code class="language-c">__int64 __fastcall sub_1400048C0(_BYTE *a1)
+&#123;
+  int n0x11; // r9d
+  unsigned __int8 *i; // r8
+  int v3; // edx
+  int v4; // edx
+  __int64 n0x11_1; // rax
+  char flag_HITCTF_fake__[24]; // [rsp+0h] [rbp-28h] BYREF
+
+  n0x11 = 0;
+  strcpy(flag_HITCTF_fake__, &quot;flag&#123;HITCTF_fake&#125;&quot;);
+  for ( i = a1 + 1052; ; ++i )
+  &#123;
+    v3 = i[flag_HITCTF_fake__ - a1 - 1052];
+    a1[8] = v3;
+    v4 = v3 - 1;
+    n0x11_1 = *i;
+    a1[9] = n0x11_1;
+    if ( v4 )
+      a1[16] &amp;= ~1u;
+    else
+      a1[16] |= 1u;
+    if ( (v4 &amp; 0x80u) == 0 )
+      a1[16] &amp;= ~4u;
+    else
+      a1[16] |= 4u;
+    if ( v4 &gt;= 0 )
+      a1[16] &amp;= ~2u;
+    else
+      a1[16] |= 2u;
+    if ( (a1[16] &amp; 1) == 0 )
+      break;
+    ++n0x11;
+    a1[15] = -86;
+    n0x11_1 = n0x11;
+    if ( n0x11 &gt;= 0x11 )
+      return n0x11_1;
+  &#125;
+  a1[15] = -1;
+  return n0x11_1;
+&#125;
+</code></pre>
+<p>​	并且根据伪代码可知该函数是从 a1 + 1052 开始循环的，同时再看 v36 和 v40 之间的相对偏移</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20260104144037928.png" alt="image-20260104144037928"></p>
+<p>​	差了 0x1C（28）字节，即 a1 + 1052 正好落在 v40 + 1024 这个位置。故可知 sub_1400048C0 函数就是一个假验证逻辑：拿 flag{HITCTF_fake} 去对比 数据区开头（v40 + 1024），而此时 <strong>memset(v40,0,sizeof(v40))</strong> 刚清零，所以比较肯定失败。接下来进入解释器分析。</p>
+<p>​	该 vm 的布局如下：</p>
+<ul>
+<li>a1 + 20：指令指针 IP；</li>
+<li>a1 + 16：标志寄存器 Flags（Z&#x2F;N&#x2F;C）；</li>
+<li>a1 + 8：寄存器文件 regs[]；</li>
+<li>a1 + 28：字节码&#x2F;内存池men[]。它即被 IP 当作“取指&#x2F;取操作数”的来源，也被当做栈或者中间存储写入；</li>
+<li>a1 + 24：栈指针&#x2F;栈深 SP。反复出现 <code>if (*(a1+24) &gt;= 0x3FF</code>；</li>
+<li>a1 + 1052 &#x2F; a1 + 1180：输入缓冲区 &amp; 输出缓冲区。</li>
+</ul>
+<p>​	然后根据分析的布局，申明一个结构体</p>
+<pre><code class="language-c">typedef struct VMCTX
+&#123;
+  void **dispatch;        // 0x00: off_14001DCF8 这类 handler 表指针
+
+  // 0x08..0x0F: 8个“虚拟寄存器/槽位”
+  // 你看到的 a1[8], a1[9], a1[15] 都落在这里：reg[0]=a1[8], reg[1]=a1[9], ..., reg[7]=a1[15]
+  unsigned __int8 reg[8]; // 0x08
+
+  unsigned int flags;     // 0x10: a1[16] 实际就是 flags 的低字节 (ZF/CF/SF 等)
+  unsigned int ip;        // 0x14: *(a1+20) 作为 operand 读取/跳转用的 IP
+  unsigned int sp;        // 0x18: *(a1+24) 栈指针/深度（上限 0x3FF）
+
+  unsigned __int8 mem[0x400];  // 0x1C: v40[0..1023] 字节码/内存区（你外层循环就是从这里取 opcode）
+  char input[0x80];            // 0x41C: a1+1052，fgets 读入，case 31 从这里取字符
+  char output[0x80];           // 0x49C: a1+1180，case 32 写入，case 29/30 printf 输出
+&#125; VMCTX;
+</code></pre>
+<p>​	可以看到在 switch-case 的后半部分全是特殊的赋值情况，其中一个例子如下。即取一个立即数，然后进行加&#x2F;减一个数，再进行赋值。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20260104153727876.png" alt="image-20260104153727876"></p>
+<p>​	然后前半部分就是一些常见的运算赋值等操作。然后就可以使用脚本进行输出汇编操作了</p>
+<pre><code class="language-python">import sys
+import argparse
+import re
+
+# operand kinds
+R   = &quot;R&quot;     # 1 byte register index
+I8  = &quot;I8&quot;    # 1 byte immediate
+A16 = &quot;A16&quot;   # 2 byte address (big-endian)
+
+# Base opcode table (你已经验证的一批)
+OPS = &#123;
+    0x00: (&quot;NOP&quot;,  []),
+
+    0x01: (&quot;MOV&quot;,  [R, R]),
+    0x02: (&quot;ADD&quot;,  [R, R]),
+    0x03: (&quot;SUB&quot;,  [R, R]),
+    0x04: (&quot;AND&quot;,  [R, R]),
+    0x05: (&quot;OR&quot;,   [R, R]),
+    0x06: (&quot;XOR&quot;,  [R, R]),
+
+    0x07: (&quot;MOVI&quot;, [R, I8]),
+    0x08: (&quot;ADDI&quot;, [R, I8]),
+    0x09: (&quot;SUBI&quot;, [R, I8]),
+    0x0A: (&quot;ANDI&quot;, [R, I8]),
+    0x0B: (&quot;ORI&quot;,  [R, I8]),
+    0x0C: (&quot;XORI&quot;, [R, I8]),
+
+    0x0D: (&quot;NOT&quot;,  [R]),
+    0x0E: (&quot;SHL1&quot;, [R]),
+    0x0F: (&quot;SHR1&quot;, [R]),
+
+    0x10: (&quot;JMP&quot;,  [A16]),
+    0x11: (&quot;JZ&quot;,   [A16]),
+    0x12: (&quot;JNZ&quot;,  [A16]),
+    0x13: (&quot;CALL&quot;, [A16]),
+    0x14: (&quot;RET&quot;,  []),
+
+    0x15: (&quot;PUSH&quot;, [R]),
+    0x16: (&quot;POP&quot;,  [R]),
+
+    0x17: (&quot;CMP&quot;,  [R, R]),
+    0x18: (&quot;CMPI&quot;, [R, I8]),
+
+    0x19: (&quot;INC&quot;,  [R]),
+    0x1A: (&quot;DEC&quot;,  [R]),
+
+    0x1B: (&quot;DAA&quot;,  []),
+
+    0x1C: (&quot;READ&quot;, []),
+    0x1D: (&quot;PRINT&quot;, []),
+    0x1E: (&quot;PRINT2&quot;, []),
+
+    0x1F: (&quot;LDI_IN&quot;,  [R, I8]),   # r = input[idx]
+    0x20: (&quot;STO_OUT&quot;, [I8, R]),   # output[idx] = r
+&#125;
+
+# 你贴出来的 0x21~0x25：格式都是 [opcode][dst][imm]，语义 reg[dst] = imm + adj
+# case 0x21: imm - 54
+# case 0x22: imm - 112
+# case 0x23: imm + 68
+# case 0x24: imm + 57
+# case 0x25: imm + 78
+LDC_ADJ = &#123;
+    0x21: -54,
+    0x22: -112,
+    0x23: +68,
+    0x24: +57,
+    0x25: +78,
+&#125;
+
+def u16be(b0, b1):
+    return ((b0 &amp; 0xFF) &lt;&lt; 8) | (b1 &amp; 0xFF)
+
+def is_printable(x):
+    return 0x20 &lt;= x &lt;= 0x7E
+
+def decode_one(code, pc, guess_ldc=False):
+    &quot;&quot;&quot;
+    返回 (next_pc, asm_line, jump_target_or_None)
+    &quot;&quot;&quot;
+    n = len(code)
+    if pc &gt;= n:
+        return pc + 1, &quot;%04X: &lt;eof&gt;&quot; % pc, None
+
+    op = code[pc]
+
+    # LDC 变体：固定 3 字节
+    if op in LDC_ADJ:
+        if pc + 3 &gt; n:
+            raw = &quot; &quot;.join(&quot;%02X&quot; % b for b in code[pc:])
+            return n, &quot;%04X: %s  ; truncated&quot; % (pc, raw), None
+        dst = code[pc+1]
+        imm = code[pc+2]
+        adj = LDC_ADJ[op]
+        val = (imm + adj) &amp; 0xFF
+        ch = &quot; &#39;%s&#39;&quot; % chr(val) if is_printable(val) else &quot;&quot;
+        raw = &quot;%02X %02X %02X&quot; % (op, dst, imm)
+        sign = &quot;+&quot; if adj &gt;= 0 else &quot;-&quot;
+        line = &quot;%04X: %-11s LDC     r%d, 0x%02X%s   ; imm=0x%02X %s %d&quot; % (
+            pc, raw, dst, val, ch, imm, sign, abs(adj)
+        )
+        return pc + 3, line, None
+
+    # 如果启用 guess_ldc：未知但在 0x21..0xFE 也按 3 字节吃掉，避免失步（可选）
+    if guess_ldc and (0x21 &lt;= op &lt;= 0xFE) and (op not in OPS):
+        if pc + 3 &gt; n:
+            raw = &quot; &quot;.join(&quot;%02X&quot; % b for b in code[pc:])
+            return n, &quot;%04X: %s  ; truncated&quot; % (pc, raw), None
+        dst = code[pc+1]
+        imm = code[pc+2]
+        raw = &quot;%02X %02X %02X&quot; % (op, dst, imm)
+        line = &quot;%04X: %-11s OP%02X   r%d, 0x%02X&quot; % (pc, raw, op, dst, imm)
+        return pc + 3, line, None
+
+    # 普通表驱动
+    if op not in OPS:
+        raw = &quot;%02X&quot; % op
+        return pc + 1, &quot;%04X: %-11s DB      0x%02X   ; unknown&quot; % (pc, raw, op), None
+
+    mnem, kinds = OPS[op]
+
+    # 计算指令长度
+    need = 1
+    for k in kinds:
+        need += 2 if k == A16 else 1
+    if pc + need &gt; n:
+        raw = &quot; &quot;.join(&quot;%02X&quot; % b for b in code[pc:])
+        return n, &quot;%04X: %s  ; truncated&quot; % (pc, raw), None
+
+    raw_bytes = code[pc:pc+need]
+    raw = &quot; &quot;.join(&quot;%02X&quot; % b for b in raw_bytes)
+
+    # 读操作数
+    i = pc + 1
+    ops_txt = []
+    jmp_tgt = None
+    for k in kinds:
+        if k == A16:
+            tgt = u16be(code[i], code[i+1])
+            ops_txt.append(&quot;loc_%04X&quot; % tgt)
+            jmp_tgt = tgt
+            i += 2
+        elif k == R:
+            r = code[i]
+            ops_txt.append(&quot;r%d&quot; % r)
+            i += 1
+        else:  # I8
+            imm = code[i]
+            ops_txt.append(&quot;0x%02X&quot; % imm)
+            i += 1
+
+    if ops_txt:
+        line = &quot;%04X: %-11s %-7s %s&quot; % (pc, raw, mnem, &quot;, &quot;.join(ops_txt))
+    else:
+        line = &quot;%04X: %-11s %s&quot; % (pc, raw, mnem)
+
+    return pc + need, line, jmp_tgt
+
+def disasm(code, labels=False, guess_ldc=False):
+    # pass1: 收集跳转目标（可选）
+    targets = set()
+    if labels:
+        pc = 0
+        while pc &lt; len(code):
+            npc, line, tgt = decode_one(code, pc, guess_ldc=guess_ldc)
+            if tgt is not None:
+                targets.add(tgt)
+            if npc &lt;= pc:
+                break
+            pc = npc
+
+    # pass2: 输出
+    pc = 0
+    while pc &lt; len(code):
+        if labels and pc in targets:
+            print(&quot;loc_%04X:&quot; % pc)
+        npc, line, tgt = decode_one(code, pc, guess_ldc=guess_ldc)
+        print(line)
+        if npc &lt;= pc:
+            break
+        pc = npc
+
+def read_hex_stream(text):
+    # 允许空格/换行
+    parts = text.strip().split()
+    if not parts:
+        return b&quot;&quot;
+    return bytes(int(x, 16) for x in parts)
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument(&quot;--hexfile&quot;, help=&quot;hex bytes file (e.g. code.hex). If omitted, read from stdin.&quot;)
+    ap.add_argument(&quot;--labels&quot;, action=&quot;store_true&quot;, help=&quot;print labels for jump targets&quot;)
+    ap.add_argument(&quot;--guess-ldc&quot;, action=&quot;store_true&quot;,
+                    help=&quot;treat unknown opcodes in 0x21..0xFE as 3-byte (opcode,dst,imm) to avoid desync&quot;)
+    args = ap.parse_args()
+
+    if args.hexfile:
+        text = open(args.hexfile, &quot;r&quot;, encoding=&quot;utf-8&quot;, errors=&quot;ignore&quot;).read()
+    else:
+        text = sys.stdin.read()
+
+    code = read_hex_stream(text)
+    if not code:
+        print(&quot;No input bytes. Usage: python vm_disasm.py --hexfile code.hex&quot;)
+        return
+
+    disasm(code, labels=args.labels, guess_ldc=args.guess_ldc)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>​	拿到输出</p>
+<pre><code class="language-shell">0000: 13 00 75    CALL    loc_0075
+0003: 06 05 05    XOR     r5, r5
+0006: 07 01 72    MOVI    r1, 0x72
+0009: 07 03 6E    MOVI    r3, 0x6E
+000C: 07 02 6F    MOVI    r2, 0x6F
+000F: 07 04 67    MOVI    r4, 0x67
+0012: 07 00 57    MOVI    r0, 0x57
+0015: 20 00 00    STO_OUT 0x00, r0
+0018: 20 04 04    STO_OUT 0x04, r4
+001B: 20 02 02    STO_OUT 0x02, r2
+001E: 20 03 03    STO_OUT 0x03, r3
+0021: 20 01 01    STO_OUT 0x01, r1
+0024: 20 05 05    STO_OUT 0x05, r5
+0027: 1E          PRINT2
+0028: 00          NOP
+0029: FF          DB      0xFF   ; unknown
+002A: 07 01 6F    MOVI    r1, 0x6F
+002D: 07 04 65    MOVI    r4, 0x65
+0030: 07 02 72    MOVI    r2, 0x72
+0033: 07 06 74    MOVI    r6, 0x74
+0036: 07 00 43    MOVI    r0, 0x43
+0039: 07 05 63    MOVI    r5, 0x63
+003C: 07 03 72    MOVI    r3, 0x72
+003F: 06 07 07    XOR     r7, r7
+0042: 20 03 03    STO_OUT 0x03, r3
+0045: 20 01 01    STO_OUT 0x01, r1
+0048: 20 02 02    STO_OUT 0x02, r2
+004B: 20 00 00    STO_OUT 0x00, r0
+004E: 20 04 04    STO_OUT 0x04, r4
+0051: 20 06 06    STO_OUT 0x06, r6
+0054: 20 05 05    STO_OUT 0x05, r5
+0057: 20 07 07    STO_OUT 0x07, r7
+005A: 1E          PRINT2
+005B: 00          NOP
+005C: FF          DB      0xFF   ; unknown
+005D: 07 00 FF    MOVI    r0, 0xFF
+0060: 09 00 01    SUBI    r0, 0x01
+0063: 12 00 60    JNZ     loc_0060
+0066: 14          RET
+0067: 00          NOP
+0068: 00          NOP
+0069: 07 00 AA    MOVI    r0, 0xAA
+006C: 07 01 55    MOVI    r1, 0x55
+006F: 06 00 01    XOR     r0, r1
+0072: 14          RET
+0073: 00          NOP
+0074: 00          NOP
+0075: 07 00 00    MOVI    r0, 0x00
+0078: 13 00 69    CALL    loc_0069
+007B: 07 01 FF    MOVI    r1, 0xFF
+007E: 17 00 01    CMP     r0, r1
+0081: 12 00 03    JNZ     loc_0003
+0084: 1C          READ
+0085: 00          NOP
+0086: 00          NOP
+0087: 1F 00 02    LDI_IN  r0, 0x02
+008A: 18 00 61    CMPI    r0, 0x61
+008D: 12 00 03    JNZ     loc_0003
+0090: 1F 00 01    LDI_IN  r0, 0x01
+0093: 18 00 6C    CMPI    r0, 0x6C
+0096: 12 00 03    JNZ     loc_0003
+0099: 1F 00 00    LDI_IN  r0, 0x00
+009C: 18 00 66    CMPI    r0, 0x66
+009F: 12 00 03    JNZ     loc_0003
+00A2: 1F 00 03    LDI_IN  r0, 0x03
+00A5: 18 00 67    CMPI    r0, 0x67
+00A8: 12 00 03    JNZ     loc_0003
+00AB: 1F 00 04    LDI_IN  r0, 0x04
+00AE: 18 00 7B    CMPI    r0, 0x7B
+00B1: 12 00 03    JNZ     loc_0003
+00B4: 1F 00 07    LDI_IN  r0, 0x07
+00B7: 18 00 54    CMPI    r0, 0x54
+00BA: 12 00 03    JNZ     loc_0003
+00BD: 1F 00 06    LDI_IN  r0, 0x06
+00C0: 18 00 49    CMPI    r0, 0x49
+00C3: 12 00 03    JNZ     loc_0003
+00C6: 1F 00 05    LDI_IN  r0, 0x05
+00C9: 18 00 48    CMPI    r0, 0x48
+00CC: 12 00 03    JNZ     loc_0003
+00CF: 1F 00 08    LDI_IN  r0, 0x08
+00D2: 18 00 43    CMPI    r0, 0x43
+00D5: 12 00 03    JNZ     loc_0003
+00D8: 1F 00 0C    LDI_IN  r0, 0x0C
+00DB: 18 00 30    CMPI    r0, 0x30
+00DE: 12 00 03    JNZ     loc_0003
+00E1: 1F 00 0A    LDI_IN  r0, 0x0A
+00E4: 18 00 46    CMPI    r0, 0x46
+00E7: 12 00 03    JNZ     loc_0003
+00EA: 1F 00 0B    LDI_IN  r0, 0x0B
+00ED: 18 00 32    CMPI    r0, 0x32
+00F0: 12 00 03    JNZ     loc_0003
+00F3: 1F 00 09    LDI_IN  r0, 0x09
+00F6: 18 00 54    CMPI    r0, 0x54
+00F9: 12 00 03    JNZ     loc_0003
+00FC: 1F 00 0D    LDI_IN  r0, 0x0D
+00FF: 18 00 32    CMPI    r0, 0x32
+0102: 12 00 03    JNZ     loc_0003
+0105: 1F 00 0E    LDI_IN  r0, 0x0E
+0108: 18 00 35    CMPI    r0, 0x35
+010B: 12 00 03    JNZ     loc_0003
+010E: 1F 00 0F    LDI_IN  r0, 0x0F
+0111: 18 00 5F    CMPI    r0, 0x5F
+0114: 12 00 03    JNZ     loc_0003
+0117: 1F 00 10    LDI_IN  r0, 0x10
+011A: 1F 01 0B    LDI_IN  r1, 0x0B
+011D: 17 00 01    CMP     r0, r1
+0120: 12 00 03    JNZ     loc_0003
+0123: 1F 00 11    LDI_IN  r0, 0x11
+0126: 22 01 A8    LDC     r1, 0x38 &#39;8&#39;   ; imm=0xA8 - 112
+0129: 17 01 00    CMP     r1, r0
+012C: 12 00 03    JNZ     loc_0003
+012F: 1F 00 12    LDI_IN  r0, 0x12
+0132: 09 01 01    SUBI    r1, 0x01
+0135: 17 01 00    CMP     r1, r0
+0138: 12 00 03    JNZ     loc_0003
+013B: 07 00 80    MOVI    r0, 0x80
+013E: 15 00       PUSH    r0
+0140: 00          NOP
+0141: 13 00 5D    CALL    loc_005D
+0144: 16 00       POP     r0
+0146: 00          NOP
+0147: 09 00 01    SUBI    r0, 0x01
+014A: 12 01 3E    JNZ     loc_013E
+014D: 1F 00 13    LDI_IN  r0, 0x13
+0150: 06 01 00    XOR     r1, r0
+0153: 18 01 52    CMPI    r1, 0x52
+0156: 12 00 03    JNZ     loc_0003
+0159: 1F 00 14    LDI_IN  r0, 0x14
+015C: 1F 01 17    LDI_IN  r1, 0x17
+015F: 06 00 01    XOR     r0, r1
+0162: 12 00 03    JNZ     loc_0003
+0165: 18 01 63    CMPI    r1, 0x63
+0168: 12 00 03    JNZ     loc_0003
+016B: 1F 00 15    LDI_IN  r0, 0x15
+016E: 1F 01 16    LDI_IN  r1, 0x16
+0171: 03 01 00    SUB     r1, r0
+0174: 18 01 03    CMPI    r1, 0x03
+0177: 12 00 03    JNZ     loc_0003
+017A: 1F 01 10    LDI_IN  r1, 0x10
+017D: 08 01 02    ADDI    r1, 0x02
+0180: 17 01 00    CMP     r1, r0
+0183: 12 00 03    JNZ     loc_0003
+0186: 1F 00 18    LDI_IN  r0, 0x18
+0189: 18 00 7D    CMPI    r0, 0x7D
+018C: 12 00 03    JNZ     loc_0003
+018F: 1F 00 19    LDI_IN  r0, 0x19
+0192: 18 00 00    CMPI    r0, 0x00
+0195: 12 00 03    JNZ     loc_0003
+0198: 07 00 80    MOVI    r0, 0x80
+019B: 15 00       PUSH    r0
+019D: 00          NOP
+019E: 13 00 5D    CALL    loc_005D
+01A1: 16 00       POP     r0
+01A3: 00          NOP
+01A4: 09 00 01    SUBI    r0, 0x01
+01A7: 12 01 9B    JNZ     loc_019B
+01AA: 10 00 2A    JMP     loc_002A
+01AD: FF          DB      0xFF   ; unknown
+01AE: 00          NOP
+01AF: 00          NOP
+</code></pre>
+<p>​	具体如何解密出 flag 这里就不赘述了，并不复杂。flag：flag{HITCTF2025_287ec47c}</p>
+<h3 id="三、结语"><a href="#三、结语" class="headerlink" title="三、结语"></a>三、结语</h3><p>​	结合 AI 写下来感觉也还好，这两题蛮适合 vm 入门。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

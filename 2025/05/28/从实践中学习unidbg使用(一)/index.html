@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>从实践中学习unidbg使用(一) | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" Unidbg ">
+  <meta name="description" content="从实践中学习unidbg使用(一) | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-从实践中学习unidbg使用(一)" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">从实践中学习unidbg使用(一)</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Unidbg学习">Unidbg学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">Unidbg</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-06-04 19:10:16'>2025-05-28 16:39</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:3.2k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8-%E4%B8%80"><span class="toc-text">从实践中学习unidbg使用(一)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="toc-text">一、引言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%BB%E5%8A%A1%E6%8F%8F%E8%BF%B0"><span class="toc-text">二、任务描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">三、初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%A7%A3%E9%87%8A"><span class="toc-text">四、解释</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="从实践中学习unidbg使用-一"><a href="#从实践中学习unidbg使用-一" class="headerlink" title="从实践中学习unidbg使用(一)"></a>从实践中学习unidbg使用(一)</h1><h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>目标APK：lvzhou.apk</p>
+<p>目标方法声明处的Dex：target.dex。样本APK在Java层做了加壳(360加固)，所以建议直接使用附件中的target.dex，或使用其他工具进行脱壳(frida-dump即可)</p>
+<p>目标方法实现：liboasiscore.so</p>
+<h3 id="二、任务描述"><a href="#二、任务描述" class="headerlink" title="二、任务描述"></a>二、任务描述</h3><p>首先先反编译target.dex，但使用jadx反编译时报错，于是就使用了GDA进行反编译，找到NativeApi类，其中s方法就是本篇的目标。</p>
+<pre><code class="language-Java">package com.weibo.xvideo.NativeApi;
+import java.lang.Object;
+import java.lang.String;
+import java.lang.System;
+
+public final class NativeApi	// class@0011ea from target.dex
+&#123;
+
+    public void NativeApi()&#123;
+       super();
+       System.loadLibrary(&quot;oasiscore&quot;);
+    &#125;
+    public native final String d(String p0);
+    public native final String dg(String p0,boolean p1);
+    public native final String e(String p0);
+    public native final String s(byte[] p0,boolean p1);
+&#125;
+</code></pre>
+<p>然后写个Frida脚本hook一下，就先针对样本APK在运行时该方法传入的值和返回值进行分析。</p>
+<pre><code class="language-js">setTimeout(function() &#123;
+    Java.perform(function() &#123;
+        let NativeApi = Java.use(&quot;com.weibo.xvideo.NativeApi&quot;);
+        NativeApi[&quot;s&quot;].implementation = function (bArr, z) &#123;
+            console.log(&#39;s is called&#39; + &#39;, &#39; + &#39;bArr: &#39; + bArr + &quot;, &quot; + &quot;z: &quot; + z);
+            let ret = this.s(bArr, z);
+            console.log(&#39;s ret value is &#39; + ret);
+            return ret;
+        &#125;;
+    &#125;);
+&#125;, 5000);
+</code></pre>
+<p>这里需要注意的一个点就是因为这个APK加壳了，所以导致如果在指令中直接写</p>
+<pre><code class="language-bash">frida -U -f &quot;com.weibo.xvideo&quot; -l hook.js
+</code></pre>
+<p>会报错显示找不到进程，用以下指令</p>
+<pre><code class="language-bash">frida -U -f &quot;com.sina.oasis&quot; -l hook.js
+</code></pre>
+<p>就会接收到以下信息<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250528173853560.png"></p>
+<p>把bArr转成ASCII码就是</p>
+<blockquote>
+<p>aid&#x3D;01A1H7Fp6UDqucgEerCNxpT41YVcU_j_LzwYFOs_L2l3_OoL8.&amp;cfrom&#x3D;28B5295010&amp;cuid&#x3D;0&amp;noncestr&#x3D;d101Ed45892MF20mM2LJ54i62EhwO3&amp;phone&#x3D;17816087093&amp;platform&#x3D;ANDROID&amp;timestamp&#x3D;1748421079454&amp;ua&#x3D;Google-Pixel3_oasis_3.5.8_Android__Android12&amp;version&#x3D;3.5.8&amp;vid&#x3D;2020786998479&amp;wm&#x3D;20004_90024</p>
+<p>s ret value is 08e2a22b03840858f5e78858e4575db2</p>
+</blockquote>
+<p>就是程序发出的一个URL请求参数字符串，通常用于身份验证、用户追踪、设备标识、版本控制等。然后我们拿到传入的参数，接下来主动调用<strong>s</strong>方法</p>
+<pre><code class="language-Java">setTimeout(function () &#123;
+  Java.perform(function () &#123;
+    function stringToBytes(str) &#123;
+      var javaString = Java.use(&quot;java.lang.String&quot;);
+      return javaString.$new(str).getBytes();
+    &#125;
+
+    let NativeApi = Java.use(&quot;com.weibo.xvideo.NativeApi&quot;);
+    let arg1 =     &quot;aid=01A1H7Fp6UDqucgEerCNxpT41YVcU_j_LzwYFOs_L2l3_OoL8.&amp;cfrom=28B5295010&amp;cuid=0&amp;noncestr=d101Ed45892MF20mM2LJ54i62EhwO3&amp;phone=17816087093&amp;platform=ANDROID&amp;timestamp=1748421079454&amp;ua=Google-Pixel3_oasis_3.5.8_Android__Android12&amp;version=3.5.8&amp;vid=2020786998479&amp;wm=20004_90024&quot;;
+    let arg2 = false;
+    let ret = NativeApi.$new().s(stringToBytes(arg1), arg2);
+    console.log(&quot;ret:&quot; + ret);
+  &#125;);
+&#125;, 5000);
+</code></pre>
+<p>得到返回值是</p>
+<blockquote>
+<p>ret:1e3780f50056a3fea76b35592bfc3efc</p>
+</blockquote>
+<p>接下来我们开始使用unidbg，本篇的目的就是使用unidbg复现对s方法的调用，并得到Frida主动调用一致的结果。</p>
+<h3 id="三、初始化"><a href="#三、初始化" class="headerlink" title="三、初始化"></a>三、初始化</h3><p>在test&#x2F;java路径下新建包和对应的类，包名，类名根据自己喜欢来就好</p>
+<pre><code class="language-Java">package com.test0;
+
+import com.github.unidbg.AndroidEmulator;
+import com.github.unidbg.LibraryResolver;
+import com.github.unidbg.arm.backend.DynarmicFactory;
+import com.github.unidbg.arm.backend.Unicorn2Factory;
+import com.github.unidbg.linux.android.AndroidEmulatorBuilder;
+import com.github.unidbg.linux.android.AndroidResolver;
+import com.github.unidbg.linux.android.dvm.*;
+import com.github.unidbg.linux.android.dvm.jni.ProxyDvmObject;
+import com.github.unidbg.memory.Memory;
+
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+
+//继承AbstractJni类之后，TEST0类就可以接收和响应Dalvik VM里本地方法调用，同时可以自定义JNI行为
+public class TEST0 extends AbstractJni &#123;
+    private final AndroidEmulator emulator;
+    private final DvmClass NativeApi;
+    private final VM vm;
+
+    public TEST0() &#123;
+        //模拟器初始化
+        emulator = AndroidEmulatorBuilder
+                //设置架构，执行速度ARM64相比ARM32会快一些，10%上下；而Unidbg对ARM32的支持和完善程度高于ARM64
+                .for64Bit()
+                //告诉unidbg使用Unicorn模拟器来执行指令
+                .addBackendFactory(new Unicorn2Factory(true))
+                //这个参数是用来设置进程名的，这个很重要，并且填写的是样本APK真实进程名，否则会带来隐患。若为空，一般Unidbg
+                //会将&quot;unidbg&quot;作为进程名返回。
+                .setProcessName(&quot;com.sina.oasis&quot;)
+                .build();
+
+//        //是否开启多线程
+//        //设置执行多少条指令切换一次线程
+//        emulator.getBackend().registerEmuCountHook(10000);
+//        //开启线程调度器
+//        emulator.getSyscallHandler().setEnableThreadDispatcher(true);
+
+        //获取模拟器的内存实例，也就是模拟器的内存操作接口
+        Memory memory = emulator.getMemory();
+        //创建一个库解析器，并设置Android版本为23(Android 6.0)
+        memory.setLibraryResolver(new AndroidResolver(23));
+        //创建虚拟机并指定apk文件
+        vm = emulator.createDalvikVM(new File(&quot;D:\\Compilation_Enviroment\\unidbg-master\\unidbg-android\\src\\test\\java\\com\\test0\\lvzhou.apk&quot;));
+        //设置当前类为虚拟机的JNI接口实现，即告诉虚拟机，如果 native 层调用 Java 方法、访问 Java 字段，使用我（这个类）来处理。
+        vm.setJni(this);
+        //打开 unidbg 的详细日志输出（verbose mode）
+        vm.setVerbose(true);
+        //加载so模块
+        DalvikModule dm = vm.loadLibrary(&quot;oasiscore&quot;, true);
+        //加载目标类
+        NativeApi = vm.resolveClass(&quot;com/weibo/xvideo/NativeApi&quot;);
+        dm.callJNI_OnLoad(emulator);
+    &#125;
+
+    public String calls() &#123;
+        String arg1 = &quot;aid=01A1H7Fp6UDqucgEerCNxpT41YVcU_j_LzwYFOs_L2l3_OoL8.&amp;cfrom=28B5295010&amp;cuid=0&amp;&quot; +
+                &quot;noncestr=d101Ed45892MF20mM2LJ54i62EhwO3&amp;phone=17816087093&amp;platform=ANDROID&amp;&quot; +
+                &quot;timestamp=1748421079454&amp;ua=Google-Pixel3_oasis_3.5.8_Android__Android12&amp;version=3.5.8&amp;&quot; +
+                &quot;vid=2020786998479&amp;wm=20004_90024&quot;;
+        Boolean arg2 = false;
+        String ret = NativeApi.newObject(null).callJniMethodObject(emulator, &quot;s([BZ)Ljava/lang/String;&quot;, arg1.getBytes(StandardCharsets.UTF_8), arg2).getValue().toString();
+        return ret;
+    &#125;
+
+    public static void main(String[] args) &#123;
+        TEST0 test0 = new TEST0();
+        String result = test0.calls();
+        System.out.println(&quot;Call s result:\n&quot; + result);
+    &#125;
+
+&#125;
+</code></pre>
+<p>每行代码的含义都已注释好。<br>总的来说，就是进行了初始化模拟器、初始化内存、设置依赖库路径、创建虚拟机处理器、加载目标so、执行其JNI_Onload函数这一系列操作。</p>
+<p>运行后得到我们的预期结果</p>
+<blockquote>
+<p>Call s result:<br>1e3780f50056a3fea76b35592bfc3efc</p>
+</blockquote>
+<h3 id="四、解释"><a href="#四、解释" class="headerlink" title="四、解释"></a>四、解释</h3><p>回顾DEX的反编译结果</p>
+<pre><code class="language-Java">package com.weibo.xvideo.NativeApi;
+import java.lang.Object;
+import java.lang.String;
+import java.lang.System;
+
+public final class NativeApi	// class@0011ea from target.dex
+&#123;
+
+    public void NativeApi()&#123;
+       super();
+       System.loadLibrary(&quot;oasiscore&quot;);
+    &#125;
+    public native final String d(String p0);
+    public native final String dg(String p0,boolean p1);
+    public native final String e(String p0);
+    public native final String s(byte[] p0,boolean p1);
+&#125;
+</code></pre>
+<p>s方法是NativeApi类里的实例方法，因此在调用它时，需要先获取NativeApi类，再创建它的实例，最后才是发起调用，比如 Frida Call 代码就遵循这样的原则。Java.use获取类对象，$new()实例化，然后调用s方法。</p>
+<p>Unidbg 作为 SO 模拟器，它没有加载 DEX，更没有运行 DEX，自然没法获取其中对应的类信息，那么它如何处理NativeApi以及更多的用户自定义的类库访问需求？这是 Unidbg 的核心问题之一。</p>
+<p>首先，它构建了一套描述类库，或者说映射类库的机制。在 JAVA 层，一个类是Class，在 JNI 层，一个类是Jclass，而在 Unidbg 的 JNI 层，一个类是DvmClass。</p>
+<p>在 Unidbg 中，通过vm.resolveClass(className)可以声明一个类名是className的DvmClass。</p>
+<pre><code class="language-Java">DvmClass NativeApi = vm.resolveClass(&quot;com/weibo/xvideo/NativeApi&quot;);
+</code></pre>
+<p>在类名的表述上，必须是全类名，旧版 Unidbg 上必须用斜杠&#x2F;作为分隔符，而 Unidbg 0.9.6 及以上的当前版本中，用斜杠&#x2F;或点号.分割都可行，因为resolveClass会替我们做这种替换。</p>
+<p>resolveClass是一个可变参数方法，它的第二个参数是可变参数，用于进一步描述我们所构造的这个DvmClass的父类和接口。</p>
+<p>举个例子，Android 的 Application 类</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250528184922392.png" alt="image-20250528184922392"></p>
+<p>它继承自 ContextWrapper，ContextWrapper 继承自 Context，下面的图看起来更清晰。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250528184938746.png" alt="image-20250528184938746"></p>
+<p>如果想用DvmClass表明 Application 的父类情况，可以像下面这样嵌套表示。</p>
+<pre><code class="language-Java">DvmClass Context = vm.resolveClass(&quot;android/content/Context&quot;);
+DvmClass ContextWrapper = vm.resolveClass(&quot;android/content/ContextWrapper&quot;, Context);
+DvmClass Application = vm.resolveClass(&quot;android/app/Application&quot;, ContextWrapper);
+</code></pre>
+<p>需要注意，这并不意味着我们必须非要这样才能表示 Application 类，类是数据和方法的集合，DvmClass并不是要完美模拟对应的类，更多时候只是简单的“占位”，使之符合形式上的要求。</p>
+<p>接下来讨论类的实例化，对类调用newObject(Object value)即可完成实例化，得到一个形式上的对象。</p>
+<pre><code class="language-Java">DvmClass NativeApi = vm.resolveClass(&quot;com/weibo/xvideo/NativeApi&quot;);
+DvmObject&lt;?&gt; nativeApi = NativeApi.newObject(null); 
+</code></pre>
+<p>在 Java 中它是 Object，JNI 中叫做 Jobject，Unidbg 里叫 DvmObject。</p>
+<p>newObject 方法的参数和真实对象的构造函数的参数不是一回事，它只是一种“形式上”的对象，不需要和真实的对象保持一致。</p>
+<p>resolveClass以及newObject只是对真实类和对象的描述、占位、投影，然后根据程序逻辑上对这些类、对象的使用情况，再逐步完善这样的一种描述、占位、投影，使之能完成基本需求。</p>
+<p>这么做是有好处的，我们常说“吃多少，拿多少”，Unidbg 所设计的这种逻辑，就是程序用多少，就补多少。一个对象可能有一百个方法，两百个成员属性，但程序中如果只使用到了其中的一个方法，两个属性，那么只需要处理它们，而不用管其他的部分。</p>
+<p>通过NativeApi.newObject(null)创建实例后，接下来就是发起函数调用。</p>
+<p>接下里是关于<strong>发起调用</strong>的一些解释</p>
+<p>我们想对<code>s</code>发起调用，因为它的返回值是字符串，是对象，所以用callJniMethodObject，如果返回值是 int 就用callJniMethodInt，其他可选方法如下。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250528185245790.png" alt="image-20250528185245790"></p>
+<p>如果s是静态方法，那么自然不需要 newObject，调用则通过 callStaticJNIMethodXXX 系列函数。</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250528185359630.png" alt="image-20250528185359630"></p>
+<p>接下来看看方法的具体参数，参数 1 是模拟器实例，参数 2 是方法签名，接着是可变参数，用于传入调用方法的参数。</p>
+<pre><code class="language-JAVA">String arg1 = &quot;aid=aid=01A1H7Fp6UDqucgEerCNxpT41YVcU_j_LzwYFOs_L2l3_OoL8.&amp;cfrom=28B5295010&amp;cuid=0&amp;noncestr=d101Ed45892MF20mM2LJ54i62EhwO3&amp;phone=17816087093&amp;platform=ANDROID&amp;timestamp=1748421079454&amp;ua=Google-Pixel3__oasis__3.5.8__Android__Android12&amp;version=3.5.8&amp;vid=2020786998479&amp;wm=20004_90024&quot;;
+Boolean arg2 = false;
+String ret = NativeApi.newObject(null).callJniMethodObject(emulator, &quot;s([BZ)Ljava/lang/String;&quot;, arg1.getBytes(StandardCharsets.UTF_8), arg2).getValue().toString();
+</code></pre>
+<p>这里方法签名填入了s([BZ)Ljava&#x2F;lang&#x2F;String;，直接填入s会报错，提示无法找到方法。</p>
+<p>函数名 + 参数类型 + 返回值类型</p>
+<pre><code class="language-Java">public final native String s(@NotNull byte[] bArr, boolean z);
+</code></pre>
+<p>我们可以手动转写，大家在学习 Smali 以及 JNI 时应该都和这种表示方法打过交道。</p>
+<table>
+<thead>
+<tr>
+<th>Java类型</th>
+<th>签名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>B</td>
+</tr>
+<tr>
+<td>char</td>
+<td>C</td>
+</tr>
+<tr>
+<td>short</td>
+<td>S</td>
+</tr>
+<tr>
+<td>int</td>
+<td>I</td>
+</tr>
+<tr>
+<td>long</td>
+<td>J</td>
+</tr>
+<tr>
+<td>float</td>
+<td>F</td>
+</tr>
+<tr>
+<td>double</td>
+<td>D</td>
+</tr>
+<tr>
+<td>void</td>
+<td>V</td>
+</tr>
+<tr>
+<td>class</td>
+<td>Lclass;</td>
+</tr>
+<tr>
+<td>[ type</td>
+<td>type[]</td>
+</tr>
+</tbody></table>
+<p>对于基础类型，除了 boolean 都通用首字母大写表示，boolean 和 byte 的首字母重复，所以由 byte 用 B 首字母，boolean 用 Z 形成区分。</p>
+<p>对于对象类型，则是 L 开头，分号结尾，中间跟着方法全类名，以斜杠&#x2F;分割。</p>
+<p>参数签名就是将参数和返回值转换成这个格式，然后直接拼接起来。</p>
+<ul>
+<li>byte[] bArr即 [B</li>
+<li>boolean z即 Z</li>
+<li>返回值String，即Ljava&#x2F;lang&#x2F;String;。</li>
+</ul>
+<p>拼接在一起就是s([BZ)Ljava&#x2F;lang&#x2F;String;，手写多少有点麻烦，而且容易出错，在更多时候我们会通过其他方式处理。</p>
+<p>如果目标函数采用动态绑定，那么在 Undibg 的 JNI_OnLoad 执行流中找到RegisterNative日志即可看到对应的方法签名。</p>
+<pre><code class="language-shell">RegisterNative(com/weibo/xvideo/NativeApi, s([BZ)Ljava/lang/String;, RX@0x400116cc[liboasiscore.so]0x116cc)
+RegisterNative(com/weibo/xvideo/NativeApi, e(Ljava/lang/String;)Ljava/lang/String;, RX@0x40011af4[liboasiscore.so]0x11af4)
+RegisterNative(com/weibo/xvideo/NativeApi, d(Ljava/lang/String;)Ljava/lang/String;, RX@0x40011cd8[liboasiscore.so]0x11cd8)
+RegisterNative(com/weibo/xvideo/NativeApi, dg(Ljava/lang/String;Z)Ljava/lang/String;, RX@0x4001220c[liboasiscore.so]0x1220c)
+</code></pre>
+<p>如果目标函数采用静态绑定，那么直接用传入<code>s</code>即可，不需要写s([BZ)Ljava&#x2F;lang&#x2F;String;。</p>
+<p>除了这个办法外，也可以将 JADX 中切换到 Smali 展示模式，找到对应方法即可看到方法签名。</p>
+<p>然后是<strong>参数的传递</strong></p>
+<p>回到调用代码，在 Unidbg 中如何传递函数的入参？</p>
+<pre><code class="language-Java">public String calls()&#123;
+    String arg1 = &quot;aid=01A-khBWIm48A079Pz_DMW6PyZR8uyTumcCNm4e8awxyC2ANU.&amp;cfrom=28B5295010&amp;cuid=5999578300&amp;noncestr=46274W9279Hr1X49A5X058z7ZVz024&amp;platform=ANDROID&amp;timestamp=1621437643609&amp;ua=Xiaomi-MIX2S__oasis__3.5.8__Android__Android10&amp;version=3.5.8&amp;vid=1019013594003&amp;wm=20004_90024&quot;;
+    Boolean arg2 = false;
+    String ret = NativeApi.newObject(null).callJniMethodObject(emulator, &quot;s([BZ)Ljava/lang/String;&quot;, arg1.getBytes(StandardCharsets.UTF_8), arg2).getValue().toString();
+    return ret;
+&#125;
+</code></pre>
+<p>参数 1 是字符串，参数 2 是布尔值，直接传递即可，不需要做其他处理，两大类参数都可以直接传递。</p>
+<ul>
+<li><p>基本类型直接传递，int、long、boolean、double 等。</p>
+</li>
+<li><p>下面几种对象类型也可以直接传递</p>
+</li>
+<li><p>String</p>
+</li>
+<li><p>byte 数组</p>
+</li>
+<li><p>short 数组</p>
+</li>
+<li><p>int 数组</p>
+</li>
+<li><p>float 数组</p>
+</li>
+<li><p>double 数组</p>
+</li>
+<li><p>Enum 枚举类型</p>
+</li>
+</ul>
+<p>除此之外还有许多种可能的参数，比如字符串数组、二维数组、Android Context&#x2F;Application、HashMap 等等，在大体上遵循两类处理办法。</p>
+<ol>
+<li>如果是 JDK 中包含的类库和方法，比如二维数组、字符串数组、HashMap 等等，直接构造后使用ProxyDvmObject.createObject(vm, obj);构造出对象。除此之外比如 Okhttp3 之类的第三方类库，导入到本地环境里，也可以使用这个办法。</li>
+<li>如果是 JDK 中无法包含的类库，比如 Android FrameWork 以及样本自定义的类库，通过resolveClass(className).newObject处理，就像本节的NativeApi那样处理。</li>
+</ol>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.yuque.com/lilac-2hqvv/xdwlsg/gmbn45b5n6g59kks#I0Nu4">Unidbg 的基本使用（一）</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

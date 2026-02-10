@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>京麒CTF2025热身赛 | NshIdE&#39;s Home</title>
+  <meta name="keywords" content=" CTF , RE , WritesUp , iOS , SIMD ">
+  <meta name="description" content="京麒CTF2025热身赛 | NshIdE&#39;s Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://nshide1.github.io/categories/">
+<meta property="og:site_name" content="NshIdE&#39;s Home">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:modified_time" content="2025-03-04T12:19:41.475Z">
+<meta property="article:author" content="NshIdE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/logo.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/logo.jpg"/>
+</a>
+<div class="author">
+    <span>NshIdE</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/NshIdE1/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="csdn"
+               href="https://www.csdn.net/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1621925986&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(42)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android-RE">
+            
+            Android-RE
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Android学习">
+            
+            Android学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Angr入门">
+            
+            Angr入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="CTF">
+            
+            CTF
+            <small>(16)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Frida入门">
+            
+            Frida入门
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Java学习">
+            
+            Java学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="Unidbg学习">
+            
+            Unidbg学习
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="42">
+<input type="hidden" id="yelog_site_word_count" value="231.8k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://bananashipsbbq.github.io/">bananaships</a></li>
+            
+            <li><a target="_blank" href="https://astralprisma.github.io/">AstralPrisma</a></li>
+            
+            <li><a target="_blank" href="https://monoceros406.github.io/">Monoceros406</a></li>
+            
+            <li><a target="_blank" href="https://github.com/Thir0th">Thir0th</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>抽象</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>符号执行</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>取证</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>实战</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>应急响应</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CTF</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Frida</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>go</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Harmony</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>il2Cpps</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iOS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ISW</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RE</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SIMD</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unidbg</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Unity</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vm</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WritesUp</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All CTF "
+           href="/2026/01/04/HitCTF2025-Reverse%C2%B7VM/"
+           data-tag="CTF,RE,WritesUp,vm"
+           data-author="" >
+            <span class="post-title" title="HitCTF2025-Reverse·VM">HitCTF2025-Reverse·VM</span>
+            <span class="post-date" title="2026-01-04 16:19:02">2026/01/04</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/11/03/%E6%9F%90%E9%BB%91%E7%9B%92%20App%20%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/"
+           data-tag="Android,实战"
+           data-author="" >
+            <span class="post-title" title="某黑盒 App 登录参数逆向分析">某黑盒 App 登录参数逆向分析</span>
+            <span class="post-date" title="2025-11-03 16:15:21">2025/11/03</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/10/25/%E7%AC%AC%E5%85%AB%E5%B1%8A%E5%BC%BA%E7%BD%91%C2%B7%E6%8B%9F%E6%80%81%E9%98%B2%E5%BE%A1%E5%9B%BD%E9%99%85%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android,il2Cpps"
+           data-author="" >
+            <span class="post-title" title="第八届强网·拟态防御国际精英挑战赛">第八届强网·拟态防御国际精英挑战赛</span>
+            <span class="post-date" title="2025-10-25 17:31:37">2025/10/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/22/Android%20APP%20%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android APP 常见漏洞">Android APP 常见漏洞</span>
+            <span class="post-date" title="2025-10-22 17:06:07">2025/10/22</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/10/10/%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%20PackageInfo%20%E5%92%8C%20LoadedApk/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="从源码分析 PackageInfo 和 LoadedApk">从源码分析 PackageInfo 和 LoadedApk</span>
+            <span class="post-date" title="2025-10-10 18:15:17">2025/10/10</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/09/09/2025%E5%B9%B4%E6%B9%BE%E5%8C%BA%E6%9D%AF%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025年湾区杯网络安全大赛初赛">2025年湾区杯网络安全大赛初赛</span>
+            <span class="post-date" title="2025-09-09 09:34:17">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/09/08/Android%20SO%20%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android SO 文件加载过程">Android SO 文件加载过程</span>
+            <span class="post-date" title="2025-09-08 17:18:50">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/25/Dex%20%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Dex 文件结构学习">Dex 文件结构学习</span>
+            <span class="post-date" title="2025-08-25 17:33:29">2025/08/25</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/ClassLoader%20%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="ClassLoader 机制">ClassLoader 机制</span>
+            <span class="post-date" title="2025-08-19 17:42:51">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Java学习 "
+           href="/2025/08/19/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/"
+           data-tag="Android,Java"
+           data-author="" >
+            <span class="post-title" title="Java学习----反射机制">Java学习----反射机制</span>
+            <span class="post-date" title="2025-08-19 17:00:02">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/Android%20%E5%BA%94%E7%94%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 应用启动流程">Android 应用启动流程</span>
+            <span class="post-date" title="2025-08-19 11:14:13">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/19/%E5%AE%89%E5%8D%93%E5%8A%A0%E5%9B%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="安卓加固学习记录">安卓加固学习记录</span>
+            <span class="post-date" title="2025-08-19 10:50:46">2025/08/19</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/14/Android%20%E5%BC%80%E5%8F%91%E2%80%94%E2%80%94NDK%20%E5%BC%80%E5%8F%91/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="Android 开发--NDK 开发">Android 开发--NDK 开发</span>
+            <span class="post-date" title="2025-08-14 17:56:58">2025/08/14</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/10/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%85%AD)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(六)">从实践中学习unidbg使用(六)</span>
+            <span class="post-date" title="2025-08-10 10:25:02">2025/08/10</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/08/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%94)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(五)">从实践中学习unidbg使用(五)</span>
+            <span class="post-date" title="2025-08-08 17:45:59">2025/08/08</span>
+        </a>
+        
+        
+        <a  class="All Android学习 "
+           href="/2025/08/05/%E6%BC%AB%E8%B0%88%E5%94%AF%E4%B8%80%E8%AE%BE%E5%A4%87ID/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="漫谈唯一设备 ID">漫谈唯一设备 ID</span>
+            <span class="post-date" title="2025-08-05 18:00:44">2025/08/05</span>
+        </a>
+        
+        
+        <a  class="All 其他 "
+           href="/2025/07/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%20Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%20proc%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%86%85%E5%AE%B9/"
+           data-tag="Android,Linux"
+           data-author="" >
+            <span class="post-title" title="浅谈 Linux 系统下 proc 文件系统内容">浅谈 Linux 系统下 proc 文件系统内容</span>
+            <span class="post-date" title="2025-07-24 17:56:57">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/24/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%BA%8C%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(二)">Unidbg 中处理文件访问(二)</span>
+            <span class="post-date" title="2025-07-24 17:00:12">2025/07/24</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/07/23/2025%E7%AC%AC%E5%8D%81%E5%B1%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B-%E5%88%9D%E8%B5%9B-%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E5%85%A8/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="2025第十届游戏安全竞赛-初赛-安卓客户端安全">2025第十届游戏安全竞赛-初赛-安卓客户端安全</span>
+            <span class="post-date" title="2025-07-23 15:32:11">2025/07/23</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/19/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9D%97/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="创建模拟器和加载模块">创建模拟器和加载模块</span>
+            <span class="post-date" title="2025-07-19 15:14:29">2025/07/19</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/15/Unidbg%20%E4%B8%AD%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%EF%BC%88%E4%B8%80%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="Unidbg 中处理文件访问(一)">Unidbg 中处理文件访问(一)</span>
+            <span class="post-date" title="2025-07-15 16:52:06">2025/07/15</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/08/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E5%9B%9B)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(四)">从实践中学习unidbg使用(四)</span>
+            <span class="post-date" title="2025-07-08 11:44:49">2025/07/08</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/07/01/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%89)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(三)">从实践中学习unidbg使用(三)</span>
+            <span class="post-date" title="2025-07-01 15:29:42">2025/07/01</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/06/07/%E7%AC%AC%E4%B8%80%E5%B1%8AOpenHarmonyCTF/"
+           data-tag="CTF,RE,WritesUp,Harmony"
+           data-author="" >
+            <span class="post-title" title="第一届OpenHarmonyCTF">第一届OpenHarmonyCTF</span>
+            <span class="post-date" title="2025-06-07 13:32:45">2025/06/07</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/04/%E8%A1%A5%E5%BA%93%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%94%EF%BC%89/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="补库函数(五)">补库函数(五)</span>
+            <span class="post-date" title="2025-06-04 19:07:56">2025/06/04</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/06/02/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%BA%8C)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(二)">从实践中学习unidbg使用(二)</span>
+            <span class="post-date" title="2025-06-02 15:33:15">2025/06/02</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/31/D%5E3CTF2025/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="D^3CTF2025">D^3CTF2025</span>
+            <span class="post-date" title="2025-05-31 16:21:11">2025/05/31</span>
+        </a>
+        
+        
+        <a  class="All Unidbg学习 "
+           href="/2025/05/28/%E4%BB%8E%E5%AE%9E%E8%B7%B5%E4%B8%AD%E5%AD%A6%E4%B9%A0unidbg%E4%BD%BF%E7%94%A8(%E4%B8%80)/"
+           data-tag="Unidbg"
+           data-author="" >
+            <span class="post-title" title="从实践中学习unidbg使用(一)">从实践中学习unidbg使用(一)</span>
+            <span class="post-date" title="2025-05-28 16:39:23">2025/05/28</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/05/17/Parloo2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="Parloo RE">Parloo RE</span>
+            <span class="post-date" title="2025-05-17 09:34:20">2025/05/17</span>
+        </a>
+        
+        
+        <a  class="All Android-RE "
+           href="/2025/05/07/%E8%AE%B0%E4%B8%80%E6%AC%A1APK%E5%88%86%E6%9E%90/"
+           data-tag="RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="记一次APK分析">记一次APK分析</span>
+            <span class="post-date" title="2025-05-07 21:12:00">2025/05/07</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/26/%E4%B8%80%E9%81%93%E5%BE%88%E9%80%86%E5%A4%A9%E7%9A%84RC4/"
+           data-tag="CTF,RE,WritesUp,抽象"
+           data-author="" >
+            <span class="post-title" title="抽象RC4">抽象RC4</span>
+            <span class="post-date" title="2025-04-26 22:21:19">2025/04/26</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/24/%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B8%80%E9%81%93%E9%A2%98/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="很有意思的一道题">很有意思的一道题</span>
+            <span class="post-date" title="2025-04-24 21:56:18">2025/04/24</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/23/%E4%BA%AC%E9%BA%92CTF2025%20%E7%83%AD%E8%BA%AB%E8%B5%9B/"
+           data-tag="CTF,RE,WritesUp,iOS,SIMD"
+           data-author="" >
+            <span class="post-title" title="京麒CTF2025热身赛">京麒CTF2025热身赛</span>
+            <span class="post-date" title="2025-04-23 13:33:59">2025/04/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/14/TGCTF2025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TGCTF2025 RE">TGCTF2025 RE</span>
+            <span class="post-date" title="2025-04-14 18:51:29">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Angr入门 "
+           href="/2025/04/14/Angr%E5%85%A5%E9%97%A8/"
+           data-tag="符号执行"
+           data-author="" >
+            <span class="post-title" title="Angr入门">Angr入门</span>
+            <span class="post-date" title="2025-04-14 18:50:44">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All Frida入门 "
+           href="/2025/04/14/Frida%E5%85%A5%E9%97%A8/"
+           data-tag="Android,Frida"
+           data-author="" >
+            <span class="post-title" title="Frida入门">Frida入门</span>
+            <span class="post-date" title="2025-04-14 18:47:37">2025/04/14</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/04/12/TEXSAWCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TEXSAWCTF 2025">TEXSAWCTF 2025</span>
+            <span class="post-date" title="2025-04-12 15:32:31">2025/04/12</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/23/NCTF2024/"
+           data-tag="CTF,RE,WritesUp,vm,go"
+           data-author="" >
+            <span class="post-title" title="NCTF2024">NCTF2024</span>
+            <span class="post-date" title="2025-03-23 11:58:53">2025/03/23</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/18/CISCN%20x%20CCB%20%E5%8D%8A%E5%86%B3%E8%B5%9B%202025%20ISW(%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94)/"
+           data-tag="ISW,应急响应,取证"
+           data-author="" >
+            <span class="post-title" title="CISCN x CCB 半决赛 2025 ISW(应急响应)">CISCN x CCB 半决赛 2025 ISW(应急响应)</span>
+            <span class="post-date" title="2025-03-18 10:24:23">2025/03/18</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/11/TPCTF%202025/"
+           data-tag="CTF,RE,WritesUp"
+           data-author="" >
+            <span class="post-title" title="TPCTF 2025">TPCTF 2025</span>
+            <span class="post-date" title="2025-03-11 21:41:19">2025/03/11</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/06/VishwaCTF2025/"
+           data-tag="CTF,RE,WritesUp,Android,Unity"
+           data-author="" >
+            <span class="post-title" title="VishwaCTF2025">VishwaCTF2025</span>
+            <span class="post-date" title="2025-03-06 21:52:51">2025/03/06</span>
+        </a>
+        
+        
+        <a  class="All CTF "
+           href="/2025/03/03/HGAME%20RE/"
+           data-tag="CTF,RE,WritesUp,Android"
+           data-author="" >
+            <span class="post-title" title="HGAME-RE-WEEK1">HGAME-RE-WEEK1</span>
+            <span class="post-date" title="2025-03-03 22:20:33">2025/03/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-京麒CTF2025 热身赛" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">京麒CTF2025热身赛</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="CTF">CTF</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">CTF</a>
+            
+            <a class="color3">RE</a>
+            
+            <a class="color4">WritesUp</a>
+            
+            <a class="color4">iOS</a>
+            
+            <a class="color5">SIMD</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2025-06-20 13:28:57'>2025-04-23 13:33</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:3.4k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="Jump to comment area">
+            <a href="#comments">
+                Comment:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%AC%E9%BA%92CTF2025%E7%83%AD%E8%BA%AB%E8%B5%9B"><span class="toc-text">京麒CTF2025热身赛</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#re1"><span class="toc-text">re1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re2"><span class="toc-text">re2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#re"><span class="toc-text">re!!!!!</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="京麒CTF2025热身赛"><a href="#京麒CTF2025热身赛" class="headerlink" title="京麒CTF2025热身赛"></a>京麒CTF2025热身赛</h1><h3 id="re1"><a href="#re1" class="headerlink" title="re1"></a>re1</h3><p>rust逆向，符号表也被删了，但是没管那么多，直接动调跟，看看加密逻辑在哪</p>
+<pre><code class="language-c">__int64 sub_7FF7F63A1100()
+&#123;
+  unsigned __int64 flag_len; // rdx
+  size_t n0x41_2; // r15
+  void *Src_1; // r12
+  char *Src_4; // rdx
+  size_t Size; // rbx
+  char *v5; // r9
+  char *Src_2; // r8
+  char v7; // r11
+  char *Src_3; // rsi
+  char *v9; // rax
+  char n0xF0; // r8
+  unsigned int n0x80; // r11d
+  int v12; // r9d
+  int v13; // edi
+  int v14; // r11d
+  unsigned int n48; // esi
+  __int64 flag2; // r14
+  char v17; // bl
+  char *Src_6; // r11
+  unsigned int n32; // esi
+  char v20; // di
+  char v21; // bl
+  int v22; // ebx
+  int v23; // edi
+  unsigned int n22; // edi
+  char *Src_5; // rdx
+  char *Src_8; // rdi
+  __int64 v27; // rsi
+  __int64 Src_10; // rax
+  unsigned __int16 v29; // di
+  __int64 Buf1_1; // rax
+  _BYTE *Buf1; // rsi
+  __int64 i; // rax
+  unsigned int v33; // et0
+  unsigned __int8 v34; // cl
+  unsigned __int8 v35; // cl
+  _OWORD flag[4]; // [rsp+30h] [rbp-50h] BYREF
+  __int64 v38; // [rsp+78h] [rbp-8h] BYREF
+  char **_err_n_; // [rsp+80h] [rbp+0h] BYREF
+  void *Src; // [rsp+88h] [rbp+8h]
+  __int64 n8; // [rsp+90h] [rbp+10h]
+  __int128 v42; // [rsp+98h] [rbp+18h]
+  __int64 Src_7; // [rsp+B0h] [rbp+30h]
+  size_t Size_1; // [rsp+B8h] [rbp+38h]
+  int v45; // [rsp+C4h] [rbp+44h]
+  __int64 v46; // [rsp+C8h] [rbp+48h]
+
+  v46 = -2;
+  memset(flag, 0, sizeof(flag));
+  v38 = sub_7FF7F63A4DF0();
+  if ( (sub_7FF7F63A4E20(&amp;v38, flag, 64) &amp; 1) != 0 )// scanf
+  &#123;
+    _err_n_ = flag_len;
+    sub_7FF7F63BB420(aCalledResultUn, 43, &amp;_err_n_, &amp;off_7FF7F63BC3A0, &amp;off_7FF7F63BC428);// &quot;src/main.rs&quot;
+  &#125;
+  if ( flag_len &gt;= 65 )                         // 长度是64？
+    sub_7FF7F63BB520(flag_len, 64, &amp;off_7FF7F63BC440);// &quot;src/main.rs&quot;
+  sub_7FF7F63B47D0(&amp;_err_n_, flag, flag_len);
+  n0x41_2 = _err_n_;
+  Src_1 = Src;
+  Src_4 = Src + n8;
+  if ( n8 )
+  &#123;
+    Size = 0;
+    v5 = 0;
+    Src_2 = Src;
+    do
+    &#123;
+      Src_3 = Src_2;
+      v9 = v5;
+      n0xF0 = *Src_2;
+      n0x80 = n0xF0;
+      if ( n0xF0 &lt; 0 )
+      &#123;
+        v12 = n0xF0 &amp; 0x1F;
+        v13 = Src_3[1] &amp; 0x3F;
+        if ( n0xF0 &lt;= 0xDFu )
+        &#123;
+          Src_2 = Src_3 + 2;
+          n0x80 = v13 | (v12 &lt;&lt; 6);
+        &#125;
+        else
+        &#123;
+          v14 = (v13 &lt;&lt; 6) | Src_3[2] &amp; 0x3F;
+          if ( n0xF0 &lt; 0xF0u )
+          &#123;
+            Src_2 = Src_3 + 3;
+            n0x80 = (v12 &lt;&lt; 12) | v14;
+          &#125;
+          else
+          &#123;
+            Src_2 = Src_3 + 4;
+            n0x80 = ((v12 &amp; 7) &lt;&lt; 18) | (v14 &lt;&lt; 6) | Src_3[3] &amp; 0x3F;
+          &#125;
+        &#125;
+      &#125;
+      else
+      &#123;
+        Src_2 = Src_3 + 1;
+      &#125;
+      v5 = &amp;v9[Src_2 - Src_3];
+      if ( n0x80 - 9 &gt;= 5 &amp;&amp; n0x80 != 32 )
+      &#123;
+        if ( n0x80 &lt; 0x80 )
+          goto LABEL_28;
+        n48 = n0x80 &gt;&gt; 8;
+        if ( n0x80 &gt;&gt; 8 &gt; 0x1F )
+        &#123;
+          if ( n48 == 32 )
+          &#123;
+            v7 = *(off_7FF7F63C6078 + n0x80) &gt;&gt; 1;
+          &#125;
+          else
+          &#123;
+            if ( n48 != 48 )
+              goto LABEL_28;
+            v7 = n0x80 == 12288;
+          &#125;
+        &#125;
+        else if ( n48 )
+        &#123;
+          if ( n48 != 22 )
+            goto LABEL_28;
+          v7 = n0x80 == 5760;
+        &#125;
+        else
+        &#123;
+          v7 = *(off_7FF7F63C6078 + n0x80);
+        &#125;
+        if ( (v7 &amp; 1) == 0 )
+          goto LABEL_28;
+      &#125;
+    &#125;
+    while ( Src_2 != Src_4 );
+    flag2 = 1;
+    LOBYTE(v9) = 1;
+    v45 = v9;
+LABEL_60:
+    Src_5 = Src;
+    goto LABEL_61;
+  &#125;
+  v9 = 0;
+  v5 = 0;
+  Src_2 = Src;
+LABEL_28:
+  if ( Src_2 == Src_4 )
+  &#123;
+LABEL_53:
+    if ( n8 )
+    &#123;
+      Size = v5 - v9;
+      if ( v5 - v9 &lt; 0 )
+        goto LABEL_74;
+      goto LABEL_55;
+    &#125;
+    flag2 = 1;
+    LOBYTE(v9) = 1;
+    v45 = v9;
+    Size = 0;
+    goto LABEL_60;
+  &#125;
+  while ( 1 )
+  &#123;
+    Src_6 = Src_4;
+    n32 = *(Src_4 - 1);
+    if ( (n32 &amp; 0x80000000) != 0 )
+      break;
+    --Src_4;
+    if ( n32 - 9 &gt;= 5 )
+      goto LABEL_43;
+LABEL_32:
+    if ( Src_2 == Src_4 )
+      goto LABEL_53;
+  &#125;
+  v20 = *(Src_4 - 2);
+  if ( v20 &gt;= -64 )
+  &#123;
+    Src_4 -= 2;
+    v23 = v20 &amp; 0x1F;
+  &#125;
+  else
+  &#123;
+    v21 = *(Src_4 - 3);
+    if ( v21 &gt;= -64 )
+    &#123;
+      Src_4 -= 3;
+      v22 = v21 &amp; 0xF;
+    &#125;
+    else
+    &#123;
+      Src_4 -= 4;
+      v22 = ((*(Src_6 - 4) &amp; 7) &lt;&lt; 6) | v21 &amp; 0x3F;
+    &#125;
+    v23 = (v22 &lt;&lt; 6) | v20 &amp; 0x3F;
+  &#125;
+  n32 = (v23 &lt;&lt; 6) | n32 &amp; 0x3F;
+  if ( n32 - 9 &lt; 5 )
+    goto LABEL_32;
+LABEL_43:
+  if ( n32 == 32 )
+    goto LABEL_32;
+  if ( n32 &lt; 0x80 )
+    goto LABEL_73;
+  n22 = n32 &gt;&gt; 8;
+  if ( n32 &gt;&gt; 8 &lt;= 0x1F )
+  &#123;
+    if ( n22 )
+    &#123;
+      if ( n22 != 22 )
+        goto LABEL_73;
+      v17 = n32 == 5760;
+    &#125;
+    else
+    &#123;
+      v17 = *(off_7FF7F63C6078 + n32);
+    &#125;
+    goto LABEL_31;
+  &#125;
+  if ( n22 == 32 )
+  &#123;
+    v17 = *(off_7FF7F63C6078 + n32) &gt;&gt; 1;
+    goto LABEL_31;
+  &#125;
+  if ( n22 == 48 )
+  &#123;
+    v17 = n32 == 12288;
+LABEL_31:
+    if ( (v17 &amp; 1) == 0 )
+      goto LABEL_73;
+    goto LABEL_32;
+  &#125;
+LABEL_73:
+  v5 = &amp;Src_6[v5 - Src_2];
+  Size = v5 - v9;
+  if ( v5 - v9 &lt; 0 )
+  &#123;
+LABEL_74:
+    v27 = 0;
+LABEL_75:
+    Src_7 = Src_1;
+    Size_1 = n0x41_2;
+    sub_7FF7F63BAFA0(v27, Size);
+  &#125;
+LABEL_55:
+  Src_5 = &amp;v9[Src];
+  if ( v5 == v9 )
+  &#123;
+    flag2 = 1;
+    LOBYTE(v9) = 1;
+    v45 = v9;
+  &#125;
+  else
+  &#123;
+    Src_8 = &amp;v9[Src];
+    v27 = 1;
+    Src_10 = sub_7FF7F63A17D0(Size, 1);
+    if ( !Src_10 )
+      goto LABEL_75;
+    flag2 = Src_10;
+    v45 = 0;
+    Src_5 = Src_8;
+  &#125;
+LABEL_61:
+  memcpy(flag2, Src_5, Size);
+  if ( 2 * n0x41_2 )
+    sub_7FF7F63A17E0(Src_1, n0x41_2, 1);
+  Size_1 = Size;
+  Src_7 = flag2;
+  if ( Size == 1 )
+    sub_7FF7F63BB200(1, 1, &amp;off_7FF7F63BC410);  // &quot;src/main.rs&quot;
+  if ( !Size )
+    sub_7FF7F63BB200(0, 0, &amp;off_7FF7F63BC3F8);  // &quot;src/main.rs&quot;
+  v29 = *flag2;
+  Buf1_1 = sub_7FF7F63A1800(Size, 1);
+  if ( !Buf1_1 )
+    sub_7FF7F63BAFA0(1, Size);
+  Buf1 = Buf1_1;
+  for ( i = 0; i != Size; ++i )
+  &#123;
+    HIWORD(v33) = (v29 &gt;&gt; 2) ^ (v29 &gt;&gt; 3) ^ (v29 &gt;&gt; 1);
+    LOWORD(v33) = v29;
+    v29 = v33 &gt;&gt; 1;
+    v34 = __ROL1__(v33, 4);
+    v35 = (4 * (v34 &amp; 0x33)) | (v34 &gt;&gt; 2) &amp; 0x33;
+    Buf1[i] = *(flag2 + i) ^ (i + ((2 * (v35 &amp; 0x55)) | (v35 &gt;&gt; 1) &amp; 0x55));
+  &#125;
+  if ( Size == 42 &amp;&amp; !memcmp(Buf1, &amp;enc, 42u) )
+  &#123;
+    sub_7FF7F63A17E0(Buf1, 42, 1);
+    _err_n_ = &amp;off_7FF7F63BC4A0;
+    Src = 1;
+    n8 = 8;
+    v42 = 0;
+    sub_7FF7F63A5750(&amp;_err_n_);
+  &#125;
+  else
+  &#123;
+    sub_7FF7F63A17E0(Buf1, Size, 1);
+    _err_n_ = &amp;off_7FF7F63BC488;                // &quot;err\n&quot;
+    Src = 1;
+    n8 = 8;
+    v42 = 0;
+    sub_7FF7F63A5750(&amp;_err_n_);
+  &#125;
+  return sub_7FF7F63A17E0(Src_7, Size_1, 1);
+&#125;
+</code></pre>
+<p>加密逻辑如下</p>
+<pre><code class="language-c">  v29 = *flag2;
+  Buf1_1 = sub_7FF7F63A1800(Size, 1);
+  if ( !Buf1_1 )
+    sub_7FF7F63BAFA0(1, Size);
+  Buf1 = Buf1_1;
+  for ( i = 0; i != Size; ++i )
+  &#123;
+    HIWORD(v33) = (v29 &gt;&gt; 2) ^ (v29 &gt;&gt; 3) ^ (v29 &gt;&gt; 1);
+    LOWORD(v33) = v29;
+    v29 = v33 &gt;&gt; 1;
+    v34 = __ROL1__(v33, 4);
+    v35 = (4 * (v34 &amp; 0x33)) | (v34 &gt;&gt; 2) &amp; 0x33;
+    Buf1[i] = *(flag2 + i) ^ (i + ((2 * (v35 &amp; 0x55)) | (v35 &gt;&gt; 1) &amp; 0x55));
+  &#125;
+</code></pre>
+<p>就对于密文来说就是一个异或而已，但是与之异或的密钥流是和输入的前两个明文有关，也就是上面的v29，然后就可以直接仿写此密钥流的生成逻辑，拿到异或的值，当然也可以动调跟，拿到v35的值，再进行最后一步的生成，最后异或解密也可以</p>
+<p>脚本如下</p>
+<pre><code class="language-python">enc = [ 0x00, 0xA1, 0xFB, 0x53, 0x1C, 0xFA, 0xF0, 0x1B, 0x06, 0x40, 0xD4, 0x8C, 0x16, 0xF4, 0x90, 0x27,
+        0x42, 0xB9, 0x8B, 0x0F, 0x02, 0xD7, 0x31, 0xB7, 0x26, 0x12, 0x06, 0x7E, 0xAE, 0xDF, 0xDA, 0x68,
+        0xAF, 0x35, 0xCC, 0xB7, 0xB0, 0xD0, 0x9A, 0x59, 0x2B, 0x0B]
+v29 = 0x66 + (0x6c &lt;&lt; 8)
+box = [0] * 42
+
+for i in range(42):
+    h = ((v29 &gt;&gt; 2) ^ (v29 &gt;&gt; 3) ^ (v29 &gt;&gt; 1)) &amp; 0xffff
+    l = v29 &amp; 0xffff
+    hl = (h &lt;&lt; 16) | l
+    v29 = (hl &gt;&gt; 1) &amp; 0xffff
+    v34 = (((hl &amp; 0xFF) &lt;&lt; 4) | ((hl &amp; 0xFF) &gt;&gt; 4)) &amp; 0xFF
+    v35 = ((4 * (v34 &amp; 0x33)) | (v34 &gt;&gt; 2) &amp; 0x33) &amp; 0xff
+    box[i] = (i + ((2 * (v35 &amp; 0x55)) | (v35 &gt;&gt; 1) &amp; 0x55)) &amp; 0xff
+
+for i in range(42):
+    print(chr((enc[i] ^ box[i]) &amp; 0xff), end=&quot;&quot;)
+</code></pre>
+<p><strong>flag{1c98572d-7f7b-4fbf-8750-4a2986c695ce}</strong></p>
+<hr>
+<h3 id="re2"><a href="#re2" class="headerlink" title="re2"></a>re2</h3><p>如题，就是SIMD</p>
+<p>主函数如下</p>
+<pre><code class="language-c">int __fastcall main(int argc, const char **argv, const char **envp)
+&#123;
+  Stream *Stream; // rax
+  size_t n0x40; // rax
+  __int64 n32; // rax
+  unsigned __int64 n0x20; // rax
+  __m128i v8; // xmm2
+  __m128i v9; // xmm1
+  char Buffer[16]; // [rsp+20h] [rbp-58h] BYREF
+  __int128 v11; // [rsp+30h] [rbp-48h]
+  __int128 v12; // [rsp+40h] [rbp-38h]
+  __int128 v13; // [rsp+50h] [rbp-28h]
+
+  sub_140001010(&quot;Enter flag: &quot;);
+  Stream = _acrt_iob_func(0);
+  fgets(Buffer, 64, Stream);
+  n0x40 = strcspn(Buffer, &quot;\n&quot;);
+  if ( n0x40 &gt;= 0x40 )
+    _report_rangecheckfailure();
+  Buffer[n0x40] = 0;
+  n32 = -1i64;
+  do
+    ++n32;
+  while ( Buffer[n32] );
+  if ( n32 == 32 )
+  &#123;
+    n0x20 = 0i64;
+    v8 = _mm_loadu_si128((const __m128i *)&amp;xmmword_1400032F8);
+    xmmword_140005630 = v11;
+    xmmword_140005620 = *(_OWORD *)Buffer;
+    xmmword_140005650 = v13;
+    v9 = _mm_loadu_si128((const __m128i *)&amp;xmmword_1400032E8);
+    xmmword_140005640 = v12;
+    do
+    &#123;
+      *(__m128i *)&amp;Buffer[n0x20] = _mm_add_epi8(
+                                     _mm_shuffle_epi8(_mm_loadu_si128((const __m128i *)&amp;Buffer[n0x20]), v8),
+                                     v9);
+      n0x20 += 16i64;
+    &#125;
+    while ( n0x20 &lt; 0x20 );
+    if ( !memcmp(Buffer, &quot;cge87k?9&lt;&gt;?@=pss393=&gt;;8@:Cp@DAuH&quot;, 0x20ui64) )
+      sub_140001010(&quot;Correct! The flag is flag&#123;%s&#125;\n&quot;);
+    else
+      puts(&quot;Wrong!&quot;);
+    return 0;
+  &#125;
+  else
+  &#123;
+    puts(&quot;Wrong!&quot;);
+    return 1;
+  &#125;
+&#125;
+</code></pre>
+<p>就是两个指令**<em>mm_add_epi8**和</em><strong>mm_shuffle_epi8</strong>，不是很熟悉，先去网上查了下，add没什么好说的，就是相加，shuffle，是以第二个参数的值作为索引，去第一个参数中取值，取到的值即为打乱后的密文，但是这里要注意，再传参的时候是小端序，不然就这题来说，打乱前和打乱后就没什么区别了</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250423133156008.png" alt="image-20250423133156008"></p>
+<p>解密脚本如下</p>
+<pre><code class="language-python">encrypted_flag1 = &quot;cge87k?9&lt;&gt;?@=pss&quot;
+encrypte_flag1 = encrypted_flag1[::-1]
+enc1 = list(encrypte_flag1)
+v9 = [0x10, 0x0F, 0x0E, 0x0D, 0x0C, 0x0B, 0x0A, 0x09, 0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01]
+v8 = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F]
+for i in range(len(enc1)):
+    print(chr(ord(enc1[i]) - v9[i % 16]), end=&quot;&quot;)
+
+encrypted_flag2 = &quot;393=&gt;;8@:Cp@DAuH&quot;
+encrypte_flag2 = encrypted_flag2[::-1]
+enc2 = list(encrypte_flag2)
+v9 = [0x10, 0x0F, 0x0E, 0x0D, 0x0C, 0x0B, 0x0A, 0x09, 0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01]
+v8 = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F]
+for i in range(len(enc2)):
+    print(chr(ord(enc2[i]) - v9[i % 16]), end=&quot;&quot;)
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250423133324027.png" alt="image-20250423133324027"></p>
+<p><strong>flag{cdb0444318e24beb8f374e9181599072}</strong></p>
+<hr>
+<h3 id="re"><a href="#re" class="headerlink" title="re!!!!!"></a>re!!!!!</h3><p>iso逆向。</p>
+<p>一开始想跟字符串，倒着跟踪到main函数，但是发现确实跟到了，但是有点抽象。<br>于是乎，只能从头开始分析，也就是从初始化函数开始</p>
+<p>ViewController.init</p>
+<pre><code class="language-c++">id __fastcall ViewController.init(nibName:bundle:)(__int64 a1, __int64 a2, void *obj_1)
+&#123;
+  char *receiver; // x20
+  char *v5; // x8
+  char *v6; // x8
+  NSString obj; // x21
+  id v9; // x20
+  objc_super v11; // [xsp+0h] [xbp-30h] BYREF
+
+  v5 = &amp;receiver[OBJC_IVAR____TtC9challenge14ViewController_secretKey];
+  *(_QWORD *)v5 = &#39;akihuraH&#39;;
+  *((_QWORD *)v5 + 1) = 0xEA00000000006567LL;
+  v6 = &amp;receiver[OBJC_IVAR____TtC9challenge14ViewController_flagHash];
+  *(_QWORD *)v6 = 0xD000000000000126LL;
+  *((_QWORD *)v6 + 1) = 0x8000000100003C20LL;
+  *(_QWORD *)&amp;receiver[OBJC_IVAR____TtC9challenge14ViewController_magicNumber] = 3735928559LL;
+  *(_QWORD *)&amp;receiver[OBJC_IVAR____TtC9challenge14ViewController_inputTextField] = 0;
+  *(_QWORD *)&amp;receiver[OBJC_IVAR____TtC9challenge14ViewController_outputTextField] = 0;
+  *(_QWORD *)&amp;receiver[OBJC_IVAR____TtC9challenge14ViewController_encryptButton] = 0;
+  if ( a2 )
+  &#123;
+    obj = String._bridgeToObjectiveC()();
+    a1 = swift_bridgeObjectRelease(a2);
+  &#125;
+  else
+  &#123;
+    obj = 0;
+  &#125;
+  v11.receiver = receiver;
+  v11.super_class = (Class)type metadata accessor for ViewController(a1);
+  v9 = objc_msgSendSuper2(&amp;v11, &quot;initWithNibName:bundle:&quot;, obj, obj_1);
+  objc_release(obj);
+  objc_release(obj_1);
+  return v9;
+&#125;
+</code></pre>
+<p>这里有看到一个初始化的key：<strong>Haruhikage</strong>。(这里要注意，伪代码中的key不完整，还差两位…)</p>
+<p>然后就开始分析ViewController.encryptButtonClicked()<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250507182159035.png" alt="image-20250507182159035"></p>
+<p>这里就是check输出正确flag的地方</p>
+<p>在String里找这个这个提示的时候还看到了一个可疑的字符串<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250507182259187.png" alt="image-20250507182259187"></p>
+<p>c2..c3..。都是以这样的形式。</p>
+<p>然后分析这个函数下来，主要逻辑就是获取到输入的flag，先检查是否为空，不为空的话就传到**ViewController.complexEncrypt(<em>:)<strong>函数中进行加密，然后在</strong>ViewController.verifyFlag(</em>:)**函数中进行check。</p>
+<p>加密函数</p>
+<pre><code class="language-c++">__int64 __fastcall ViewController.complexEncrypt(_:)(__int64 a1, __int64 a2)
+&#123;
+  __int64 v2; // x20
+  __int64 v5; // x22
+  __int64 v6; // x24
+  char *v7; // x23
+  __int64 v8; // x19
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x19
+  unsigned __int64 v12; // x1
+  unsigned __int64 v13; // x20
+  __int64 _countAndFlagsBits; // x0
+  void *_object; // x21
+  Swift::String v16; // kr00_16
+  __int64 v17; // x19
+  __int64 v18; // x1
+  __int64 v19; // x20
+  __int64 v20; // x19
+  __int64 v22; // [xsp+0h] [xbp-30h] BYREF
+
+  v5 = type metadata accessor for String.Encoding(0);
+  v6 = *(v5 - 8);
+  v7 = &amp;v22 - ((*(v6 + 64) + 15LL) &amp; 0xFFFFFFFFFFFFFFF0LL);
+  v8 = specialized ViewController.rc4Encrypt(_:key:)(// RC4
+         a1,
+         a2,
+         *(v2 + OBJC_IVAR____TtC9challenge14ViewController_secretKey),
+         *(v2 + OBJC_IVAR____TtC9challenge14ViewController_secretKey + 8));
+  v10 = v9;
+  static String.Encoding.utf8.getter();         // UTF8
+  v11 = String.data(using:allowLossyConversion:)(v7, 0, v8, v10);
+  v13 = v12;
+  swift_bridgeObjectRelease(v10);
+  (*(v6 + 8))(v7, v5);
+  if ( v13 &gt;&gt; 60 == 15 )
+  &#123;
+    _countAndFlagsBits = 0;
+    _object = 0xE000000000000000LL;
+  &#125;
+  else
+  &#123;
+    v16 = Data.base64EncodedString(options:)(0);// base64
+    _object = v16._object;
+    outlined consume of Data?(v11, v13);
+    _countAndFlagsBits = v16._countAndFlagsBits;
+  &#125;
+  v17 = specialized ViewController.obfuscateString(_:)(_countAndFlagsBits, _object);// obfuscateString
+  v19 = v18;
+  swift_bridgeObjectRelease(_object);
+  v20 = specialized ViewController.transformString(_:)(v17, v19);// transformString
+  swift_bridgeObjectRelease(v19);
+  return v20;
+&#125;
+</code></pre>
+<p>整体的加密逻辑就是RC4-&gt;base64-&gt;obfuscateString-&gt;transformString</p>
+<p><strong>transformString</strong>函数，有点抽象</p>
+<pre><code class="language-c++">void *__fastcall specialized ViewController.transformString(_:)(__int64 a1, unsigned __int64 a2)
+&#123;
+  unsigned __int64 v2; // x8
+  void *_countAndFlagsBits; // x0
+  Swift::String_optional v4; // kr00_16
+  void *_object; // x19
+  __int64 index; // x21
+  __int64 v7; // x20
+  unsigned int n190; // w8
+  unsigned int v9; // w8
+  Swift::String v10; // x0
+  void *_object_1; // x19
+  Swift::String_optional v12; // kr10_16
+  int v13; // w10
+  int v14; // w9
+  int v15; // w10
+  int v16; // w13
+  int v17; // w10
+  _QWORD v18[2]; // [xsp+8h] [xbp-88h] BYREF
+  unsigned __int64 v19; // [xsp+18h] [xbp-78h]
+  __int64 v20; // [xsp+20h] [xbp-70h]
+  unsigned __int64 v21; // [xsp+28h] [xbp-68h]
+  void *_object_2; // [xsp+30h] [xbp-60h]
+  unsigned __int64 v23; // [xsp+38h] [xbp-58h]
+
+  _object_2 = 0;
+  v23 = 0xE000000000000000LL;
+  v2 = HIBYTE(a2) &amp; 0xF;
+  if ( (a2 &amp; 0x2000000000000000LL) == 0 )
+    v2 = a1 &amp; 0xFFFFFFFFFFFFLL;
+  v18[1] = a1;
+  v19 = a2;
+  v20 = 0;
+  v21 = v2;
+  swift_bridgeObjectRetain(a2);
+  v4 = String.Iterator.next()();                // 获取字符串迭代器
+  _countAndFlagsBits = v4.value._countAndFlagsBits;
+  _object = v4.value._object;
+  if ( v4.value._object )
+  &#123;
+    index = 0;
+    while ( !__OFADD__(index, 1) )              // 遍历每个字符
+    &#123;
+      v7 = specialized Collection.first.getter(_countAndFlagsBits, _object);// 获取当前字符
+      _countAndFlagsBits = swift_bridgeObjectRelease(_object);
+      if ( (index &amp; 1) != 0 )                   // 判断奇偶
+                                                // 奇数异或 0xBE
+                                                // 偶数异或 0xEF
+      &#123;
+        n190 = v7 ^ 0xBE;
+        if ( (v7 &amp; &amp;_mh_execute_header) != 0 )
+          n190 = 190;
+        if ( n190 &gt;&gt; 11 == 27 )
+          goto LABEL_30;
+        if ( n190 &gt; 0x10FFFF )
+          goto LABEL_27;
+      &#125;
+      else
+      &#123;
+        n190 = v7 ^ 0xEF;
+        if ( (v7 &amp; &amp;_mh_execute_header) != 0 )
+          n190 = 239;
+        if ( n190 &gt;&gt; 11 == 27 )
+          goto LABEL_29;
+        if ( n190 &gt; 0x10FFFF )
+          goto LABEL_28;
+      &#125;
+      if ( n190 &gt; 0x7F )
+      &#123;
+        v13 = (n190 &amp; 0x3F) &lt;&lt; 8;
+        v14 = (n190 &gt;&gt; 6) + v13 + 33217;
+        v15 = (v13 | (n190 &gt;&gt; 6) &amp; 0x3F) &lt;&lt; 8;
+        v16 = (n190 &gt;&gt; 18) + ((v15 | (n190 &gt;&gt; 12) &amp; 0x3F) &lt;&lt; 8) - 2122219023;
+        v17 = (n190 &gt;&gt; 12) + v15 + 8487393;
+        if ( HIWORD(n190) )
+          v17 = v16;
+        if ( n190 &gt;= 0x800 )
+          v9 = v17;
+        else
+          v9 = v14;
+      &#125;
+      else
+      &#123;
+        v9 = n190 + 1;
+      &#125;
+      v18[0] = (v9 + 0xFEFEFEFEFEFEFFLL) &amp; ~(-1LL &lt;&lt; (8 * (4 - (__clz(v9) &gt;&gt; 3))));
+      v10._countAndFlagsBits = static String._uncheckedFromUTF8(_:)(v18);
+      _object_1 = v10._object;
+      String.append(_:)(v10);
+      swift_bridgeObjectRelease(_object_1);
+      v12 = String.Iterator.next()();           // 移动到下一个字符
+      _countAndFlagsBits = v12.value._countAndFlagsBits;
+      _object = v12.value._object;              // 检查是否结束
+      ++index;
+      if ( !v12.value._object )
+      &#123;
+        _object = _object_2;
+        goto LABEL_25;
+      &#125;
+    &#125;
+    __break(1u);
+LABEL_27:
+    __break(1u);
+LABEL_28:
+    __break(1u);
+LABEL_29:
+    __break(1u);
+LABEL_30:
+    __break(1u);
+  &#125;
+  else
+  &#123;
+LABEL_25:
+    swift_bridgeObjectRelease(v19);
+    return _object;
+  &#125;
+  return _countAndFlagsBits;
+&#125;
+</code></pre>
+<p>总的来说就是一个异或，但是在异或完，有个奇怪的逻辑<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250507185459524.png" alt="image-20250507185459524"></p>
+<p>可以按照这个逻辑来仿写一个看看输出是什么。这里还要查下__clz()有什么用<br><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/5ac8852d191b7c5cb09a8107df86a369.png" alt="5ac8852d191b7c5cb09a8107df86a369"></p>
+<p>同构的脚本：</p>
+<pre><code class="language-python">def __clz(x):
+    return 64 - x.bit_length() if x != 0 else 64
+
+for n190 in range(0x00, 0x100):  # 0x00到0xFF
+    # 处理非ASCII字符（&gt;0x7F）
+    if n190 &gt; 0x7F:
+        v13 = (n190 &amp; 0x3F) &lt;&lt; 8
+        v14 = (n190 &gt;&gt; 6) + v13 + 33217
+        v15 = (v13 | ((n190 &gt;&gt; 6) &amp; 0x3F)) &lt;&lt; 8
+        v16 = (n190 &gt;&gt; 18) + ((v15 | ((n190 &gt;&gt; 12) &amp; 0x3F)) &lt;&lt; 8) - 2122219023
+        v17 = (n190 &gt;&gt; 12) + v15 + 8487393
+
+        if n190 &gt; 0xFFFF:
+            v17 = v16
+        v9 = v17 if n190 &gt;= 0x800 else v14
+    else:
+        v9 = n190 + 1
+
+    # 安全计算移位量（确保非负）
+    shift = 8 * (4 - (__clz(v9) &gt;&gt; 3))
+    shift = max(0, min(shift, 64))  # 限制在0-64范围内
+
+    # 计算掩码
+    mask = ~(-1 &lt;&lt; shift) if shift &gt; 0 else 0xFFFFFFFFFFFFFFFF
+    v9 = (v9 + 0xFEFEFEFEFEFEFF) &amp; mask
+
+    print(f&quot;&#123;hex(n190)&#125; -&gt; &#123;hex(v9)&#125;&quot;)
+</code></pre>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250507193410367.png" alt="image-20250507193410367"></p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/0a355f4c8421f31e5e526b41704d4578.png" alt="0a355f4c8421f31e5e526b41704d4578"></p>
+<p>这样一来就知道了那串可疑字符串中c2，c3的来处了。以及如果是c3开头的，在解密的时候要-0x40.</p>
+<p><strong>obfuscateString</strong>函数</p>
+<pre><code class="language-c++">void *__fastcall specialized ViewController.obfuscateString(_:)(__int64 _countAndFlagsBits, unsigned __int64 _object)
+&#123;
+  unsigned __int64 v2; // x8
+  void *_countAndFlagsBits_1; // x0
+  Swift::String_optional v4; // kr00_16
+  void *_object_2; // x19
+  __int64 v6; // x21
+  __int64 v7; // x20
+  __int64 v8; // x8
+  bool v9; // vf
+  __int64 v10; // x8
+  __int64 v11; // x8
+  bool v12; // nf
+  unsigned int v13; // w8
+  Swift::String v14; // x0
+  void *_object_3; // x19
+  Swift::String_optional v16; // kr10_16
+  _QWORD v17[2]; // [xsp+8h] [xbp-78h] BYREF
+  unsigned __int64 _object_1; // [xsp+18h] [xbp-68h]
+  __int64 v19; // [xsp+20h] [xbp-60h]
+  unsigned __int64 v20; // [xsp+28h] [xbp-58h]
+  void *_object_4; // [xsp+30h] [xbp-50h]
+  unsigned __int64 v22; // [xsp+38h] [xbp-48h]
+
+  _object_4 = 0;
+  v22 = 0xE000000000000000LL;
+  v2 = HIBYTE(_object) &amp; 0xF;
+  if ( (_object &amp; 0x2000000000000000LL) == 0 )
+    v2 = _countAndFlagsBits &amp; 0xFFFFFFFFFFFFLL;
+  v17[1] = _countAndFlagsBits;
+  _object_1 = _object;
+  v19 = 0;
+  v20 = v2;
+  swift_bridgeObjectRetain(_object);
+  v4 = String.Iterator.next()();
+  _countAndFlagsBits_1 = v4.value._countAndFlagsBits;
+  _object_2 = v4.value._object;
+  if ( v4.value._object )
+  &#123;
+    v6 = 0;
+    while ( !__OFADD__(v6, 1) )
+    &#123;
+      v7 = specialized Collection.first.getter(_countAndFlagsBits_1, _object_2);
+      _countAndFlagsBits_1 = swift_bridgeObjectRelease(_object_2);
+      v8 = v7;
+      if ( (v7 &amp; &amp;_mh_execute_header) != 0 )
+        v8 = 0;
+      v9 = __OFADD__(v8, v6);
+      v10 = v8 + v6;
+      if ( v9 )
+        goto LABEL_20;
+      v9 = __OFADD__(v10, 3735928559LL);
+      v11 = v10 + 3735928559LL;
+      if ( v9 )
+        goto LABEL_21;
+      v12 = -v11 &lt; 0;
+      v11 = v11;
+      if ( !v12 )
+        v11 = --v11;
+      if ( v11 &lt; 0 )
+        goto LABEL_22;
+      if ( (v11 &amp; 0xFFFFFF80) != 0 )
+        v13 = (((v11 &amp; 0x3F) &lt;&lt; 8) | (v11 &gt;&gt; 6)) + 33217;
+      else
+        v13 = v11 + 1;
+      v17[0] = (v13 + 0xFEFEFEFEFEFEFFLL) &amp; ~(-1LL &lt;&lt; (8 * (4 - (__clz(v13) &gt;&gt; 3))));
+      v14._countAndFlagsBits = static String._uncheckedFromUTF8(_:)(v17);
+      _object_3 = v14._object;
+      String.append(_:)(v14);
+      swift_bridgeObjectRelease(_object_3);
+      v16 = String.Iterator.next()();
+      _countAndFlagsBits_1 = v16.value._countAndFlagsBits;
+      _object_2 = v16.value._object;
+      ++v6;
+      if ( !v16.value._object )
+      &#123;
+        _object_2 = _object_4;
+        goto LABEL_18;
+      &#125;
+    &#125;
+    __break(1u);
+LABEL_20:
+    __break(1u);
+LABEL_21:
+    __break(1u);
+LABEL_22:
+    __break(1u);
+  &#125;
+  else
+  &#123;
+LABEL_18:
+    swift_bridgeObjectRelease(_object_1);
+    return _object_2;
+  &#125;
+  return _countAndFlagsBits_1;
+&#125;
+</code></pre>
+<p>加密逻辑：+索引index和常数0xDEADBEEF，然后&amp;0xFF</p>
+<p>那么就可以解密了</p>
+<pre><code class="language-python">hex_enc = &quot;c2a7c3b9c2acc3a5c2a2c3b6c391c295c2aac38cc28bc38ac2a6c3aec28bc28fc2a1c3aac287c382c2bfc3b6c282c38ec2b9c3a2c2a13cc28ac3adc2b1c280c2b2c384c28dc3bbc283c396c2b03dc28a3bc2b12cc287c3b0c2852bc282c39ac28432c29320c29d21c29ac392c291c3a1c296c3a06d1866396c256310c299c3946931c291c3917a2e470b632a7811730f65c385&quot;
+
+def de_utf(hex_str):
+    res = bytearray()
+    i = 0
+    while i &lt; len(hex_str):
+        prefix = hex_str[i:i+2]
+        if prefix == &quot;c2&quot;:
+            val = int(hex_str[i+2:i+4], 16)
+            res.append(val)
+            i += 4
+        elif prefix == &quot;c3&quot;:
+            val = int(hex_str[i+2:i+4], 16) + 0x40
+            res.append(val)
+            i += 4
+        else:
+            val = int(prefix, 16)
+            res.append(val)
+            i += 2
+    return res
+
+step1 = de_utf(hex_enc)
+
+for i in range(len(step1)):
+    step1[i] ^= 0xBE if i % 2 else 0xEF
+
+step2 = de_utf(step1.hex())
+
+for i in range(len(step2)):
+    step2[i] = (step2[i] - i - 0xDEADBEEF) &amp; 0xFF
+
+print(step2.decode(errors=&quot;ignore&quot;))
+</code></pre>
+<p>解得</p>
+<p>YWRiZTI5NzkzNTg3OTgzMDhjOTExZGQ0NjQ3YTJmNmExM2MwNDJjYzMyNDU5N2UxZWRiYzA4OWE5ZTkwMTVmYmE5</p>
+<p><img src="https://nshide.oss-cn-hangzhou.aliyuncs.com/img_temp/image-20250507202602256.png" alt="image-20250507202602256"></p>
+<p><strong>flag{N4nd3_H4ruhik4g3_Y4tt4n0?!!}</strong></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1621925986@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'Ov23lif2sndX4YqUPQwk',
+            clientSecret: 'c76a4c487d51bf36e4dd1496b3f44bdbea037d50',
+            repo: 'NshIdE1.github.io',
+            owner: 'NshIdE1',
+            admin: ['NshIdE1'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2025 NshIdE
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
